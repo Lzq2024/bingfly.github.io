@@ -304,15 +304,15 @@ if ($('#comments-template')) {
 	var gitalk = new Gitalk({
   		clientID: window.commentConfig.client_id,
  	        clientSecret: window.commentConfig.client_secret,
-  		repo: 'window.commentConfig.owner',
+  		repo: window.commentConfig.owner,
   		owner: window.commentConfig.id,
   		admin: ['Lzq2024'],
-  		id: location.pathname,      // Ensure uniqueness and length less than 50
-		labels: gitalk,
+  		id: location.pathname,
+		labels: 'gitalk',
    		perPage: 15,
 		pagerDirection: 'last',
 		createIssueManually: true,
-  		distractionFreeMode: true  // Facebook-like distraction free mode	
+  		distractionFreeMode: true
 	//	id: window.commentConfig.id,
 	//	owner: window.commentConfig.owner,
 	//	repo: window.commentConfig.repo,
