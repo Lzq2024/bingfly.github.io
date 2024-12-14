@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/68.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-1/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/68.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-1/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="NumPy的应用-1"><a href="#NumPy的应用-1" class="headerlink" title="NumPy的应用-1"></a>NumPy的应用-1</h2><p>Numpy 是一个开源的 Python 科学计算库，<strong>用于快速处理任意维度的数组</strong>。Numpy <strong>支持常见的数组和矩阵操作</strong>，对于同样的数值计算任务，使用 NumPy 不仅代码要简洁的多，而且 NumPy 在性能上也远远优于原生 Python，至少是一到两个数量级的差距，而且数据量越大，NumPy 的优势就越明显。</p>
+<p>NumPy 最为核心的数据类型是<code>ndarray</code>，使用<code>ndarray</code>可以处理一维、二维和多维数组，该对象相当于是一个快速而灵活的大数据容器。NumPy 底层代码使用 C 语言编写，解决了 GIL 的限制，<code>ndarray</code>在存取数据的时候，数据与数据的地址都是连续的，这确保了可以进行高效率的批量操作，性能上远远优于 Python 中的<code>list</code>；另一方面<code>ndarray</code>对象提供了更多的方法来处理数据，尤其获取数据统计特征的方法，这些方法也是 Python 原生的<code>list</code>没有的。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
+<li><p>启动 JupyterLab</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter lab</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：在启动 JupyterLab 之前，建议先安装好数据分析相关依赖项，包括之前提到的三大神器以及相关依赖项。如果使用 Anaconda，则无需单独安装，可以通过 Anaconda 的 Navigator 来启动。</p>
+</blockquote>
+</li>
+<li><p>导入</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：如果已经启动了 JupyterLab 但尚未安装相关依赖库，例如尚未安装<code>numpy</code>，可以在单元格中输入<code>%pip install numpy</code>并运行该单元格来安装 NumPy。当然，我们也可以在单元格中输入<code>%pip install numpy pandas matplotlib</code>把 Python 数据分析三个核心的三方库都安装上。注意上面的代码，我们不仅导入了 NumPy，还将 pandas 和 matplotlib 库一并导入了。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="创建数组对象"><a href="#创建数组对象" class="headerlink" title="创建数组对象"></a>创建数组对象</h3><p>创建<code>ndarray</code>对象有很多种方法，下面我们介绍一些常用的方法。</p>
+<p>方法一：使用<code>array</code>函数，通过<code>list</code>创建数组对象</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array1 = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])</span><br><span class="line">array1</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 2, 3, 4, 5])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array2 = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line">array2</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 2, 3],</span><br><span class="line">       [4, 5, 6]])</span><br></pre></td></tr></table></figure>
+
+<p>方法二：使用<code>arange</code>函数，指定取值范围和跨度创建数组对象</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array3 = np.arange(<span class="number">0</span>, <span class="number">20</span>, <span class="number">2</span>)</span><br><span class="line">array3</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([ 0,  2,  4,  6,  8, 10, 12, 14, 16, 18])</span><br></pre></td></tr></table></figure>
+
+<p>方法三：使用<code>linspace</code>函数，用指定范围和元素个数创建数组对象，生成等差数列</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array4 = np.linspace(-<span class="number">1</span>, <span class="number">1</span>, <span class="number">11</span>)</span><br><span class="line">array4</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([-1. , -0.8, -0.6, -0.4, -0.2,  0. ,  0.2,  0.4,  0.6,  0.8,  1. ])</span><br></pre></td></tr></table></figure>
+
+<p>方法四：使用<code>logspace</code>函数，生成等比数列</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array5 = np.logspace(<span class="number">1</span>, <span class="number">10</span>, num=<span class="number">10</span>, base=<span class="number">2</span>)</span><br><span class="line">array5</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：等比数列的起始值是$2^1$，等比数列的终止值是$2^{10}$，<code>num</code>是元素的个数，<code>base</code>就是底数。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([   2.,    4.,    8.,   16.,   32.,   64.,  128.,  256.,  512., 1024.])</span><br></pre></td></tr></table></figure>
+
+<p>方法五：通过<code>fromstring</code>函数从字符串提取数据创建数组对象</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array6 = np.fromstring(<span class="string">&#x27;1, 2, 3, 4, 5&#x27;</span>, sep=<span class="string">&#x27;,&#x27;</span>, dtype=<span class="string">&#x27;i8&#x27;</span>)</span><br><span class="line">array6 </span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 2, 3, 4, 5])</span><br></pre></td></tr></table></figure>
+
+<p>方法六：通过<code>fromiter</code>函数从生成器（迭代器）中获取数据创建数组对象</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">how_many</span>):</span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(how_many):</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">        <span class="keyword">yield</span> a</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gen = fib(<span class="number">20</span>)</span><br><span class="line">array7 = np.fromiter(gen, dtype=<span class="string">&#x27;i8&#x27;</span>)</span><br><span class="line">array7</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([   1,    1,    2,    3,    5,    8,   13,   21,   34,   55,   89,</span><br><span class="line">        144,  233,  377,  610,  987, 1597, 2584, 4181, 6765])</span><br></pre></td></tr></table></figure>
+
+<p>方法七：使用<code>numpy.random</code>模块的函数生成随机数创建数组对象</p>
+<p>产生10个$[0, 1)$范围的随机小数，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array8 = np.random.rand(<span class="number">10</span>)</span><br><span class="line">array8</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([0.45556132, 0.67871326, 0.4552213 , 0.96671509, 0.44086463,</span><br><span class="line">       0.72650875, 0.79877188, 0.12153022, 0.24762739, 0.6669852 ])</span><br></pre></td></tr></table></figure>
+
+<p>产生10个$[1, 100)$范围的随机整数，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array9 = np.random.randint(<span class="number">1</span>, <span class="number">100</span>, <span class="number">10</span>)</span><br><span class="line">array9</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([29, 97, 87, 47, 39, 19, 71, 32, 79, 34])</span><br></pre></td></tr></table></figure>
+
+<p>产生20个$\small{\mu&#x3D;50}$，$\small{\sigma&#x3D;10}$的正态分布随机数，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array10 = np.random.normal(<span class="number">50</span>, <span class="number">10</span>, <span class="number">20</span>)</span><br><span class="line">array10</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array([55.04155586, 46.43510797, 20.28371158, 62.67884053, 61.23185964,</span><br><span class="line">       38.22682148, 53.17126151, 43.54741592, 36.11268017, 40.94086676,</span><br><span class="line">       63.27911699, 46.92688903, 37.1593374 , 67.06525656, 67.47269463,</span><br><span class="line">       23.37925889, 31.45312239, 48.34532466, 55.09180924, 47.95702787])</span><br></pre></td></tr></table></figure>
+
+<p>产生$[0, 1)$范围的随机小数构成的3行4列的二维数组，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array11 = np.random.rand(<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line">array11</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[0.54017809, 0.46797771, 0.78291445, 0.79501326],</span><br><span class="line">       [0.93973783, 0.21434806, 0.03592874, 0.88838892],</span><br><span class="line">       [0.84130479, 0.3566601 , 0.99935473, 0.26353598]])</span><br></pre></td></tr></table></figure>
+
+<p>产生$[1, 100)$范围的随机整数构成的三维数组，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array12 = np.random.randint(<span class="number">1</span>, <span class="number">100</span>, (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))</span><br><span class="line">array12</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">array([[[94, 26, 49, 24, 43],</span><br><span class="line">        [27, 27, 33, 98, 33],</span><br><span class="line">        [13, 73,  6,  1, 77],</span><br><span class="line">        [54, 32, 51, 86, 59]],</span><br><span class="line"></span><br><span class="line">       [[62, 75, 62, 29, 87],</span><br><span class="line">        [90, 26,  6, 79, 41],</span><br><span class="line">        [31, 15, 32, 56, 64],</span><br><span class="line">        [37, 84, 61, 71, 71]],</span><br><span class="line"></span><br><span class="line">       [[45, 24, 78, 77, 41],</span><br><span class="line">        [75, 37,  4, 74, 93],</span><br><span class="line">        [ 1, 36, 36, 60, 43],</span><br><span class="line">        [23, 84, 44, 89, 79]]])</span><br></pre></td></tr></table></figure>
+
+<p>方法八：创建全0、全1或指定元素的数组</p>
+<p>使用<code>zeros</code>函数，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array13 = np.zeros((<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">array13</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[0., 0., 0., 0.],</span><br><span class="line">       [0., 0., 0., 0.],</span><br><span class="line">       [0., 0., 0., 0.]])</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>ones</code>函数，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array14 = np.ones((<span class="number">3</span>, <span class="number">4</span>))</span><br><span class="line">array14</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[1., 1., 1., 1.],</span><br><span class="line">       [1., 1., 1., 1.],</span><br><span class="line">       [1., 1., 1., 1.]])</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>full</code>函数，代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array15 = np.full((<span class="number">3</span>, <span class="number">4</span>), <span class="number">10</span>)</span><br><span class="line">array15</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[10, 10, 10, 10],</span><br><span class="line">       [10, 10, 10, 10],</span><br><span class="line">       [10, 10, 10, 10]])</span><br></pre></td></tr></table></figure>
+
+<p>方法九：使用<code>eye</code>函数创建单位矩阵</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.eye(<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array([[1., 0., 0., 0.],</span><br><span class="line">       [0., 1., 0., 0.],</span><br><span class="line">       [0., 0., 1., 0.],</span><br><span class="line">       [0., 0., 0., 1.]])</span><br></pre></td></tr></table></figure>
+
+<p>方法十：读取图片获得对应的三维数组</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array16 = plt.imread(<span class="string">&#x27;res/guido.jpg&#x27;</span>)</span><br><span class="line">array16</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">array([[[ 36,  33,  28],</span><br><span class="line">        [ 36,  33,  28],</span><br><span class="line">        [ 36,  33,  28],</span><br><span class="line">        ...,</span><br><span class="line">        [ 32,  31,  29],</span><br><span class="line">        [ 32,  31,  27],</span><br><span class="line">        [ 31,  32,  26]],</span><br><span class="line"></span><br><span class="line">       [[ 37,  34,  29],</span><br><span class="line">        [ 38,  35,  30],</span><br><span class="line">        [ 38,  35,  30],</span><br><span class="line">        ...,</span><br><span class="line">        [ 31,  30,  28],</span><br><span class="line">        [ 31,  30,  26],</span><br><span class="line">        [ 30,  31,  25]],</span><br><span class="line"></span><br><span class="line">       [[ 38,  35,  30],</span><br><span class="line">        [ 38,  35,  30],</span><br><span class="line">        [ 38,  35,  30],</span><br><span class="line">        ...,</span><br><span class="line">        [ 30,  29,  27],</span><br><span class="line">        [ 30,  29,  25],</span><br><span class="line">        [ 29,  30,  25]],</span><br><span class="line"></span><br><span class="line">       ...,</span><br><span class="line"></span><br><span class="line">       [[239, 178, 123],</span><br><span class="line">        [237, 176, 121],</span><br><span class="line">        [235, 174, 119],</span><br><span class="line">        ...,</span><br><span class="line">        [ 78,  68,  56],</span><br><span class="line">        [ 75,  67,  54],</span><br><span class="line">        [ 73,  65,  52]],</span><br><span class="line"></span><br><span class="line">       [[238, 177, 120],</span><br><span class="line">        [236, 175, 118],</span><br><span class="line">        [234, 173, 116],</span><br><span class="line">        ...,</span><br><span class="line">        [ 82,  70,  58],</span><br><span class="line">        [ 78,  68,  56],</span><br><span class="line">        [ 75,  66,  51]],</span><br><span class="line"></span><br><span class="line">       [[238, 176, 119],</span><br><span class="line">        [236, 175, 118],</span><br><span class="line">        [234, 173, 116],</span><br><span class="line">        ...,</span><br><span class="line">        [ 84,  70,  61],</span><br><span class="line">        [ 81,  69,  57],</span><br><span class="line">        [ 79,  67,  53]]], dtype=uint8)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面的代码读取了当前路径下<code>res</code>目录中名为<code>guido.jpg</code> 的图片文件，计算机系统中的图片通常由若干行若干列的像素点构成，而每个像素点又是由红绿蓝三原色构成的，刚好可以用三维数组来表示。读取图片用到了<code>matplotlib</code>库的<code>imread</code>函数。</p>
+</blockquote>
+<h3 id="数组对象的属性"><a href="#数组对象的属性" class="headerlink" title="数组对象的属性"></a>数组对象的属性</h3><p><code>size</code>属性：获取数组元素个数。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array17 = np.arange(<span class="number">1</span>, <span class="number">100</span>, <span class="number">2</span>)</span><br><span class="line">array18 = np.random.rand(<span class="number">3</span>, <span class="number">4</span>)</span><br><span class="line"><span class="built_in">print</span>(array16.size)</span><br><span class="line"><span class="built_in">print</span>(array17.size)</span><br><span class="line"><span class="built_in">print</span>(array18.size)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1125000</span><br><span class="line">50</span><br><span class="line">12</span><br></pre></td></tr></table></figure>
+
+<p><code>shape</code>属性：获取数组的形状。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array16.shape)</span><br><span class="line"><span class="built_in">print</span>(array17.shape)</span><br><span class="line"><span class="built_in">print</span>(array18.shape)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(750, 500, 3)</span><br><span class="line">(50,)</span><br><span class="line">(3, 4)</span><br></pre></td></tr></table></figure>
+
+<p><code>dtype</code>属性：获取数组元素的数据类型。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array16.dtype)</span><br><span class="line"><span class="built_in">print</span>(array17.dtype)</span><br><span class="line"><span class="built_in">print</span>(array18.dtype)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">uint8</span><br><span class="line">int64</span><br><span class="line">float64</span><br></pre></td></tr></table></figure>
+
+<p><code>ndarray</code>对象元素的数据类型可以参考如下所示的表格。</p>
+<img src="res/dtype.jpg" style="zoom:50%;">
+
+<p><code>ndim</code>属性：获取数组的维度。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array16.ndim)</span><br><span class="line"><span class="built_in">print</span>(array17.ndim)</span><br><span class="line"><span class="built_in">print</span>(array18.ndim)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p><code>itemsize</code>属性：获取数组单个元素占用内存空间的字节数。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array16.itemsize)</span><br><span class="line"><span class="built_in">print</span>(array17.itemsize)</span><br><span class="line"><span class="built_in">print</span>(array18.itemsize)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">8</span><br><span class="line">8</span><br></pre></td></tr></table></figure>
+
+<p><code>nbytes</code>属性：获取数组所有元素占用内存空间的字节数。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array16.nbytes)</span><br><span class="line"><span class="built_in">print</span>(array17.nbytes)</span><br><span class="line"><span class="built_in">print</span>(array18.nbytes)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1125000</span><br><span class="line">400</span><br><span class="line">96</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组的索引运算"><a href="#数组的索引运算" class="headerlink" title="数组的索引运算"></a>数组的索引运算</h3><p>和 Python 中的列表类似，NumPy 的<code>ndarray</code>对象可以进行索引和切片操作，通过索引可以获取或修改数组中的元素，通过切片操作可以取出数组的一部分，我们把切片操作也称为切片索引。</p>
+<h4 id="普通索引"><a href="#普通索引" class="headerlink" title="普通索引"></a>普通索引</h4><p>类似于 Python 中<code>list</code>类型的索引运算。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array19 = np.arange(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(array19[<span class="number">0</span>], array19[array19.size - <span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(array19[-array20.size], array19[-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1 9</span><br><span class="line">1 9</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array20 = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line">array20[<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([7, 8, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array20[<span class="number">0</span>][<span class="number">0</span>])</span><br><span class="line"><span class="built_in">print</span>(array20[-<span class="number">1</span>][-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">9</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array20[<span class="number">1</span>][<span class="number">1</span>])</span><br><span class="line"><span class="built_in">print</span>(array20[<span class="number">1</span>, <span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">5</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array20[<span class="number">1</span>][<span class="number">1</span>] = <span class="number">10</span></span><br><span class="line">array20</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[ 1,  2,  3],</span><br><span class="line">       [ 4, 10,  6],</span><br><span class="line">       [ 7,  8,  9]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array20[<span class="number">1</span>] = [<span class="number">10</span>, <span class="number">11</span>, <span class="number">12</span>]</span><br><span class="line">array20</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[ 1,  2,  3],</span><br><span class="line">       [10, 11, 12],</span><br><span class="line">       [ 7,  8,  9]])</span><br></pre></td></tr></table></figure>
+
+<h4 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h4><p>切片索引是形如<code>[开始索引:结束索引:跨度]</code>的语法，通过指定<strong>开始索引</strong>（默认值无穷小）、<strong>结束索引</strong>（默认值无穷大）和<strong>跨度</strong>（默认值1），从数组中取出指定部分的元素并构成新的数组。因为开始索引、结束索引和步长都有默认值，所以它们都可以省略，如果不指定步长，第二个冒号也可以省略。一维数组的切片运算跟 Python 中的<code>list</code>类型的切片非常类似，此处不再赘述，二维数组的切片可以参考下面的代码，相信非常容易理解。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[:<span class="number">2</span>, <span class="number">1</span>:]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[ 2,  3],</span><br><span class="line">       [11, 12]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[<span class="number">2</span>, :]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([7, 8, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[<span class="number">2</span>:, :]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([[7, 8, 9]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[:, :<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[ 1,  2],</span><br><span class="line">       [10, 11],</span><br><span class="line">       [ 7,  8]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[::<span class="number">2</span>, ::<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 3],</span><br><span class="line">       [7, 9]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[::-<span class="number">2</span>, ::-<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[9, 7],</span><br><span class="line">       [3, 1]])</span><br></pre></td></tr></table></figure>
+
+<p>关于数组的索引和切片运算，大家可以通过下面的两张图来增强印象，这两张图来自<a target="_blank" rel="noopener" href="https://item.jd.com/12398725.html">《利用Python进行数据分析》</a>一书，它是 pandas 库的作者 Wes McKinney 撰写的 Python 数据分析领域的经典教科书，有兴趣的读者可以购买和阅读原书。</p>
+<p>图1：二维数组的普通索引</p>
+<img src="res/ndarray-index.png" style="zoom:60%;">
+
+<p>图2：二维数组的切片索引</p>
+<img src="res/ndarray-slice.png" style="zoom:60%;">
+
+<h4 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h4><p>花式索引是用保存整数的数组充当一个数组的索引，这里所说的数组可以是 NumPy 的<code>ndarray</code>，也可以是 Python 中<code>list</code>、<code>tuple</code>等可迭代类型，可以使用正向或负向索引。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19[[<span class="number">0</span>, <span class="number">1</span>, <span class="number">1</span>, -<span class="number">1</span>, <span class="number">4</span>, -<span class="number">1</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 2, 2, 9, 5, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[[<span class="number">0</span>, <span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 2, 3],</span><br><span class="line">       [7, 8, 9]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[[<span class="number">0</span>, <span class="number">2</span>], [<span class="number">1</span>, <span class="number">2</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([2, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[[<span class="number">0</span>, <span class="number">2</span>], <span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([2, 8])</span><br></pre></td></tr></table></figure>
+
+<h4 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h4><p>布尔索引就是通过保存布尔值的数组充当一个数组的索引，布尔值为<code>True</code>的元素保留，布尔值为<code>False</code>的元素不会被选中。布尔值的数组可以手动构造，也可以通过关系运算来产生。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19[[<span class="literal">True</span>, <span class="literal">True</span>, <span class="literal">False</span>, <span class="literal">False</span>, <span class="literal">True</span>, <span class="literal">False</span>, <span class="literal">False</span>, <span class="literal">True</span>, <span class="literal">True</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 2, 5, 8, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19 &gt; <span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([False, False, False, False, False,  True,  True,  True,  True])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~(array19 &gt; <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([ True,  True,  True,  True,  True, False, False, False, False])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>~</code>运算符可以对布尔数组中的布尔值进行逻辑取反，也就是原来的<code>True</code>会变成<code>False</code>，原来的<code>False</code>会变成<code>True</code>。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19[array20 &gt; <span class="number">5</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([6, 7, 8, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19 % <span class="number">2</span> == <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([False,  True, False,  True, False,  True, False,  True, False])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19[array20 % <span class="number">2</span> == <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([2, 4, 6, 8])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(array19 &gt; <span class="number">5</span>) &amp; (array19 % <span class="number">2</span> == <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([False, False, False, False, False,  True, False,  True, False])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>&amp;</code>运算符可以作用于两个布尔数组，如果两个数组对应元素都是<code>True</code>，那么运算的结果就是<code>True</code>，否则就是<code>False</code>，该运算符的运算规则类似于 Python 中的 <code>and</code> 运算符，只不过作用的对象是两个布尔数组。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19[(array19 &gt; <span class="number">5</span>) &amp; (array19 % <span class="number">2</span> == <span class="number">0</span>)]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([6, 8])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array19[(array19 &gt; <span class="number">5</span>) | (array19 % <span class="number">2</span> == <span class="number">0</span>)]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([2, 4, 6, 7, 8, 9])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>|</code>运算符可以作用于两个布尔数组，如果两个数组对应元素都是<code>False</code>，那么运算的结果就是<code>False</code>，否则就是<code>True</code>，该运算符的运算规则类似于 Python 中的 <code>or</code> 运算符，只不过作用的对象是两个布尔数组。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array20[array21 % <span class="number">2</span> != <span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 3, 5, 7, 9])</span><br></pre></td></tr></table></figure>
+
+<p>关于索引运算需要说明的是，切片索引虽然创建了新的数组对象，但是新数组和原数组共享了数组中的数据，简单的说，无论你通过新数组对象或原数组对象修改数组中的数据，修改的其实是内存中的同一块数据。花式索引和布尔索引也会创建新的数组对象，而且新数组复制了原数组的元素，新数组和原数组并不是共享数据的关系，这一点可以查看数组对象的<code>base</code>属性，有兴趣的读者可以自行探索。</p>
+<h3 id="案例：通过数组切片处理图像"><a href="#案例：通过数组切片处理图像" class="headerlink" title="案例：通过数组切片处理图像"></a>案例：通过数组切片处理图像</h3><p>学习基础知识总是比较枯燥且没有成就感的，所以我们还是来个案例为大家演示下上面学习的数组索引和切片操作到底有什么用。前面我们说到过，可以用三维数组来表示图像，那么通过图像对应的三维数组进行操作，就可以实现对图像的处理，如下所示。</p>
+<p>读入图片创建三维数组对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">guido_image = plt.imread(<span class="string">&#x27;guido.jpg&#x27;</span>)</span><br><span class="line">plt.imshow(guido_image)</span><br></pre></td></tr></table></figure>
+
+<img src="res/guido_slice_1.png" style="zoom:65%;">
+
+<p>对数组的0轴进行反向切片，实现图像的垂直翻转。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(guido_image[::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="res/guido_slice_2.png" style="zoom:65%;">
+
+<p>对数组的1轴进行反向切片，实现图像的水平翻转。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(guido_image[:,::-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="res/guido_slice_3.png" style="zoom:65%;">
+
+<p>通过切片操作实现抠图，将吉多大叔的头抠出来。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(guido_image[<span class="number">30</span>:<span class="number">350</span>, <span class="number">90</span>:<span class="number">300</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="res/guido_slice_4.png" style="zoom:65%;">
+
+<p>通过切片操作实现降采样。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.imshow(guido_image[::<span class="number">10</span>, ::<span class="number">10</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="res/guido_slice_5.png" style="zoom:65%;">
+
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/78.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/52.%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/53.%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example01/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example02/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/html+css/example/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/68.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-1/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/68.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-1/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/68.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-1/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

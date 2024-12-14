@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/README/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/README/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="Python-100天从新手到大师"><a href="#Python-100天从新手到大师" class="headerlink" title="Python - 100天从新手到大师"></a>Python - 100天从新手到大师</h2><h3 id="Python应用领域和职业发展分析"><a href="#Python应用领域和职业发展分析" class="headerlink" title="Python应用领域和职业发展分析"></a>Python应用领域和职业发展分析</h3><p>简单的说，Python是一个“优雅”、“明确”、“简单”的编程语言。</p>
+<ul>
+<li>学习曲线低，非专业人士也能上手</li>
+<li>开源系统，拥有强大的生态圈</li>
+<li>解释型语言，完美的平台可移植性</li>
+<li>动态类型语言，支持面向对象和函数式编程</li>
+<li>代码规范程度高，可读性强</li>
+</ul>
+<p>Python在以下领域都有用武之地。</p>
+<ul>
+<li>后端开发 - Python &#x2F; Java &#x2F; Go &#x2F; PHP</li>
+<li>DevOps - Python &#x2F; Shell &#x2F; Ruby</li>
+<li>数据采集 - Python &#x2F; C++ &#x2F; Java</li>
+<li>量化交易 - Python &#x2F; C++ &#x2F; R</li>
+<li>数据科学 - Python &#x2F; R &#x2F; Julia &#x2F; Matlab</li>
+<li>机器学习 - Python &#x2F; R &#x2F; C++ &#x2F; Julia</li>
+<li>自动化测试 - Python &#x2F; Shell</li>
+</ul>
+<p>作为一名Python开发者，根据个人的喜好和职业规划，可以选择的就业领域也非常多。</p>
+<ul>
+<li>Python后端开发工程师（服务器、云平台、数据接口）</li>
+<li>Python运维工程师（自动化运维、SRE、DevOps）</li>
+<li>Python数据分析师（数据分析、商业智能、数字化运营）</li>
+<li>Python数据挖掘工程师（机器学习、深度学习、算法专家）</li>
+<li>Python爬虫工程师</li>
+<li>Python测试工程师（自动化测试、测试开发）</li>
+</ul>
+<blockquote>
+<p><strong>说明</strong>：目前，<strong>数据分析和数据挖掘是非常热门的方向</strong>，因为不管是互联网行业还是传统行业都已经积累了大量的数据，各行各业都需要数据分析师从已有的数据中发现更多的商业价值，从而为企业的决策提供数据的支撑，这就是所谓的数据驱动决策。</p>
+</blockquote>
+<p>给初学者的几个建议：</p>
+<ul>
+<li>Make English as your working language. （让英语成为你的工作语言）</li>
+<li>Practice makes perfect. （熟能生巧）</li>
+<li>All experience comes from mistakes. （所有的经验都源于你犯过的错误）</li>
+<li>Don’t be one of the leeches. （不要当伸手党）</li>
+<li>Either outstanding or out. （要么出众，要么出局）</li>
+</ul>
+<h3 id="Day01-15-Python语言基础"><a href="#Day01-15-Python语言基础" class="headerlink" title="Day01~15 - Python语言基础"></a>Day01~15 - Python语言基础</h3><h4 id="Day01-初识Python"><a href="#Day01-初识Python" class="headerlink" title="Day01 - 初识Python"></a>Day01 - <a href="./Day01-15/01.%E5%88%9D%E8%AF%86Python.md">初识Python</a></h4><ul>
+<li>Python简介 - Python的历史 &#x2F; Python的优缺点 &#x2F; Python的应用领域</li>
+<li>搭建编程环境 - Windows环境 &#x2F; Linux环境 &#x2F; MacOS环境</li>
+<li>从终端运行Python程序 - Hello, world &#x2F; <code>print</code>函数 &#x2F; 运行程序</li>
+<li>使用IDLE - 交互式环境(REPL) &#x2F; 编写多行代码 &#x2F; 运行程序 &#x2F; 退出IDLE</li>
+<li>注释 - 注释的作用 &#x2F; 单行注释 &#x2F; 多行注释</li>
+</ul>
+<h4 id="Day02-语言元素"><a href="#Day02-语言元素" class="headerlink" title="Day02 - 语言元素"></a>Day02 - <a href="./Day01-15/02.%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0.md">语言元素</a></h4><ul>
+<li>程序和进制 - 指令和程序 &#x2F; 冯诺依曼机 &#x2F; 二进制和十进制 &#x2F; 八进制和十六进制</li>
+<li>变量和类型 - 变量的命名 &#x2F; 变量的使用 &#x2F; <code>input</code>函数 &#x2F; 检查变量类型 &#x2F; 类型转换</li>
+<li>数字和字符串 - 整数 &#x2F; 浮点数 &#x2F; 复数 &#x2F; 字符串 &#x2F; 字符串基本操作 &#x2F; 字符编码</li>
+<li>运算符 - 数学运算符 &#x2F; 赋值运算符 &#x2F; 比较运算符 &#x2F; 逻辑运算符 &#x2F; 身份运算符 &#x2F; 运算符的优先级</li>
+<li>应用案例 - 华氏温度转换成摄氏温度 &#x2F; 输入圆的半径计算周长和面积 &#x2F; 输入年份判断是否是闰年</li>
+</ul>
+<h4 id="Day03-分支结构"><a href="#Day03-分支结构" class="headerlink" title="Day03 - 分支结构"></a>Day03 - <a href="./Day01-15/03.%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84.md">分支结构</a></h4><ul>
+<li>分支结构的应用场景 - 条件 &#x2F; 缩进 &#x2F; 代码块 &#x2F; 流程图</li>
+<li>if语句 - 简单的<code>if</code> &#x2F; <code>if</code>-<code>else</code>结构 &#x2F; <code>if</code>-<code>elif</code>-<code>else</code>结构 &#x2F; 嵌套的<code>if</code></li>
+<li>应用案例 - 用户身份验证 &#x2F; 英制单位与公制单位互换 &#x2F; 掷骰子决定做什么 &#x2F; 百分制成绩转等级制 &#x2F; 分段函数求值 &#x2F; 输入三条边的长度如果能构成三角形就计算周长和面积</li>
+</ul>
+<h4 id="Day04-循环结构"><a href="#Day04-循环结构" class="headerlink" title="Day04 - 循环结构"></a>Day04 - <a href="./Day01-15/04.%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84.md">循环结构</a></h4><ul>
+<li>循环结构的应用场景 - 条件 &#x2F; 缩进 &#x2F; 代码块 &#x2F; 流程图</li>
+<li>while循环 - 基本结构 &#x2F; <code>break</code>语句 &#x2F; <code>continue</code>语句</li>
+<li>for循环 - 基本结构 &#x2F; <code>range</code>类型 &#x2F; 循环中的分支结构 &#x2F; 嵌套的循环 &#x2F; 提前结束程序 </li>
+<li>应用案例 - 1~100求和 &#x2F; 判断素数 &#x2F; 猜数字游戏 &#x2F; 打印九九表 &#x2F; 打印三角形图案 &#x2F; 猴子吃桃 &#x2F; 百钱百鸡</li>
+</ul>
+<h4 id="Day05-构造程序逻辑"><a href="#Day05-构造程序逻辑" class="headerlink" title="Day05 - 构造程序逻辑"></a>Day05 - <a href="./Day01-15/05.%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91.md">构造程序逻辑</a></h4><ul>
+<li>经典案例：水仙花数 &#x2F; 百钱百鸡 &#x2F; Craps赌博游戏</li>
+<li>练习题目：斐波那契数列 &#x2F; 完美数 &#x2F; 素数</li>
+</ul>
+<h4 id="Day06-函数和模块的使用"><a href="#Day06-函数和模块的使用" class="headerlink" title="Day06 - 函数和模块的使用"></a>Day06 - <a href="./Day01-15/06.%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8.md">函数和模块的使用</a></h4><ul>
+<li>函数的作用 - 代码的坏味道 &#x2F; 用函数封装功能模块</li>
+<li>定义函数 - <code>def</code>关键字 &#x2F; 函数名 &#x2F; 参数列表 &#x2F; <code>return</code>语句 &#x2F; 调用自定义函数</li>
+<li>调用函数 - Python内置函数 &#x2F;  导入模块和函数</li>
+<li>函数的参数 - 默认参数 &#x2F; 可变参数 &#x2F; 关键字参数 &#x2F; 命名关键字参数</li>
+<li>函数的返回值 - 没有返回值  &#x2F; 返回单个值 &#x2F; 返回多个值</li>
+<li>作用域问题 - 局部作用域 &#x2F; 嵌套作用域 &#x2F; 全局作用域 &#x2F; 内置作用域 &#x2F; 和作用域相关的关键字</li>
+<li>用模块管理函数 - 模块的概念 &#x2F; 用自定义模块管理函数 &#x2F; 命名冲突的时候会怎样（同一个模块和不同的模块）</li>
+</ul>
+<h4 id="Day07-字符串和常用数据结构"><a href="#Day07-字符串和常用数据结构" class="headerlink" title="Day07 - 字符串和常用数据结构"></a>Day07 - <a href="./Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84.md">字符串和常用数据结构</a></h4><ul>
+<li>字符串的使用 - 计算长度 &#x2F; 下标运算 &#x2F; 切片 &#x2F; 常用方法</li>
+<li>列表基本用法 - 定义列表 &#x2F; 用下表访问元素 &#x2F; 下标越界 &#x2F; 添加元素 &#x2F; 删除元素 &#x2F; 修改元素 &#x2F; 切片 &#x2F; 循环遍历</li>
+<li>列表常用操作 - 连接 &#x2F; 复制(复制元素和复制数组) &#x2F; 长度 &#x2F; 排序 &#x2F; 倒转 &#x2F; 查找</li>
+<li>生成列表 - 使用<code>range</code>创建数字列表 &#x2F; 生成表达式 &#x2F; 生成器</li>
+<li>元组的使用 - 定义元组 &#x2F; 使用元组中的值 &#x2F; 修改元组变量 &#x2F; 元组和列表转换</li>
+<li>集合基本用法 - 集合和列表的区别 &#x2F;  创建集合 &#x2F; 添加元素 &#x2F; 删除元素 &#x2F;  清空</li>
+<li>集合常用操作 - 交集 &#x2F; 并集 &#x2F; 差集 &#x2F; 对称差 &#x2F; 子集 &#x2F; 超集</li>
+<li>字典的基本用法 - 字典的特点 &#x2F; 创建字典 &#x2F; 添加元素 &#x2F; 删除元素 &#x2F; 取值 &#x2F; 清空</li>
+<li>字典常用操作 - <code>keys</code>方法 &#x2F; <code>values</code>方法 &#x2F; <code>items</code>方法 &#x2F; <code>setdefault</code>方法</li>
+<li>基础练习 - 跑马灯效果 &#x2F; 列表找最大元素 &#x2F; 统计考试成绩的平均分 &#x2F; Fibonacci数列 &#x2F; 杨辉三角</li>
+<li>综合案例 - 双色球选号 &#x2F; 井字棋</li>
+</ul>
+<h4 id="Day08-面向对象编程基础"><a href="#Day08-面向对象编程基础" class="headerlink" title="Day08 - 面向对象编程基础"></a>Day08 - <a href="./Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80.md">面向对象编程基础</a></h4><ul>
+<li>类和对象 - 什么是类 &#x2F; 什么是对象 &#x2F; 面向对象其他相关概念</li>
+<li>定义类 - 基本结构 &#x2F; 属性和方法 &#x2F; 构造器 &#x2F; 析构器 &#x2F; <code>__str__</code>方法</li>
+<li>使用对象 - 创建对象 &#x2F; 给对象发消息</li>
+<li>面向对象的四大支柱 - 抽象 &#x2F; 封装 &#x2F; 继承 &#x2F; 多态</li>
+<li>基础练习 - 定义学生类 &#x2F; 定义时钟类 &#x2F; 定义图形类 &#x2F; 定义汽车类</li>
+</ul>
+<h4 id="Day09-面向对象进阶"><a href="#Day09-面向对象进阶" class="headerlink" title="Day09 - 面向对象进阶"></a>Day09 - <a href="./Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6.md">面向对象进阶</a></h4><ul>
+<li>属性 - 类属性 &#x2F; 实例属性 &#x2F; 属性访问器 &#x2F; 属性修改器 &#x2F; 属性删除器 &#x2F; 使用<code>__slots__</code></li>
+<li>类中的方法 - 实例方法 &#x2F; 类方法 &#x2F; 静态方法</li>
+<li>运算符重载 - <code>__add__</code> &#x2F; <code>__sub__</code> &#x2F; <code>__or__</code> &#x2F;<code>__getitem__</code> &#x2F; <code>__setitem__</code> &#x2F; <code>__len__</code> &#x2F; <code>__repr__</code> &#x2F; <code>__gt__</code> &#x2F; <code>__lt__</code> &#x2F; <code>__le__</code> &#x2F; <code>__ge__</code> &#x2F; <code>__eq__</code> &#x2F; <code>__ne__</code> &#x2F; <code>__contains__</code> </li>
+<li>类(的对象)之间的关系 - 关联 &#x2F; 继承 &#x2F; 依赖</li>
+<li>继承和多态 - 什么是继承 &#x2F; 继承的语法 &#x2F; 调用父类方法 &#x2F; 方法重写 &#x2F; 类型判定 &#x2F; 多重继承 &#x2F; 菱形继承(钻石继承)和C3算法</li>
+<li>综合案例 - 工资结算系统 &#x2F; 图书自动折扣系统 &#x2F; 自定义分数类</li>
+</ul>
+<h4 id="Day10-图形用户界面和游戏开发"><a href="#Day10-图形用户界面和游戏开发" class="headerlink" title="Day10 - 图形用户界面和游戏开发"></a>Day10 - <a href="./Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91.md">图形用户界面和游戏开发</a></h4><ul>
+<li>使用<code>tkinter</code>开发GUI程序</li>
+<li>使用<code>pygame</code>三方库开发游戏应用</li>
+<li>“大球吃小球”游戏</li>
+</ul>
+<h4 id="Day11-文件和异常"><a href="#Day11-文件和异常" class="headerlink" title="Day11 - 文件和异常"></a>Day11 - <a href="./Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8.md">文件和异常</a></h4><ul>
+<li>读文件 - 读取整个文件 &#x2F; 逐行读取 &#x2F; 文件路径</li>
+<li>写文件 - 覆盖写入 &#x2F; 追加写入 &#x2F; 文本文件 &#x2F; 二进制文件</li>
+<li>异常处理 - 异常机制的重要性 &#x2F; <code>try</code>-<code>except</code>代码块 &#x2F; <code>else</code>代码块 &#x2F; <code>finally</code>代码块 &#x2F; 内置异常类型 &#x2F; 异常栈 &#x2F; <code>raise</code>语句</li>
+<li>数据持久化 - CSV文件概述 &#x2F; <code>csv</code>模块的应用 &#x2F; JSON数据格式 &#x2F; <code>json</code>模块的应用</li>
+</ul>
+<h4 id="Day12-字符串和正则表达式"><a href="#Day12-字符串和正则表达式" class="headerlink" title="Day12 - 字符串和正则表达式"></a>Day12 - <a href="./Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.md">字符串和正则表达式</a></h4><ul>
+<li>字符串高级操作 - 转义字符 &#x2F; 原始字符串 &#x2F; 多行字符串 &#x2F; <code>in</code>和<code>not in</code>运算符 &#x2F; <code>is_xxx</code>方法 &#x2F; <code>join</code>和<code>split</code>方法 &#x2F; <code>strip</code>相关方法 &#x2F; <code>pyperclip</code>模块 &#x2F; 不变字符串和可变字符串 &#x2F; <code>StringIO</code>的使用</li>
+<li>正则表达式入门 - 正则表达式的作用 &#x2F; 元字符 &#x2F; 转义 &#x2F; 量词 &#x2F; 分组 &#x2F; 零宽断言 &#x2F;贪婪匹配与惰性匹配懒惰 &#x2F; 使用<code>re</code>模块实现正则表达式操作（匹配、搜索、替换、捕获）</li>
+<li>使用正则表达式 - <code>re</code>模块 &#x2F; <code>compile</code>函数 &#x2F; <code>group</code>和<code>groups</code>方法 &#x2F; <code>match</code>方法 &#x2F; <code>search</code>方法 &#x2F; <code>findall</code>和<code>finditer</code>方法 &#x2F; <code>sub</code>和<code>subn</code>方法 &#x2F; <code>split</code>方法</li>
+<li>应用案例 - 使用正则表达式验证输入的字符串</li>
+</ul>
+<h4 id="Day13-进程和线程"><a href="#Day13-进程和线程" class="headerlink" title="Day13 - 进程和线程"></a>Day13 - <a href="./Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B.md">进程和线程</a></h4><ul>
+<li>进程和线程的概念 - 什么是进程 &#x2F; 什么是线程 &#x2F; 多线程的应用场景</li>
+<li>使用进程 - <code>fork</code>函数 &#x2F; <code>multiprocessing</code>模块 &#x2F; 进程池 &#x2F; 进程间通信</li>
+<li>使用线程 -  <code>threading</code>模块 &#x2F; <code>Thread</code>类 &#x2F; <code>RLock</code>类 &#x2F; <code>Condition</code>类 &#x2F; 线程池</li>
+</ul>
+<h4 id="Day14-网络编程入门和网络应用开发"><a href="#Day14-网络编程入门和网络应用开发" class="headerlink" title="Day14 - 网络编程入门和网络应用开发"></a>Day14 - <a href="./Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91.md">网络编程入门和网络应用开发</a></h4><ul>
+<li>计算机网络基础 - 计算机网络发展史 &#x2F; “TCP-IP”模型 &#x2F; IP地址 &#x2F; 端口 &#x2F; 协议 &#x2F; 其他相关概念</li>
+<li>网络应用模式 - “客户端-服务器”模式 &#x2F; “浏览器-服务器”模式</li>
+<li>基于HTTP协议访问网络资源 - 网络API概述 &#x2F; 访问URL &#x2F; <code>requests</code>三方库 &#x2F; 解析JSON格式数据</li>
+<li>Python网络编程 - 套接字的概念 &#x2F; <code>socket</code>模块 &#x2F;  <code>socket</code>函数 &#x2F; 创建TCP服务器 &#x2F; 创建TCP客户端 &#x2F; 创建UDP服务器 &#x2F; 创建UDP客户端</li>
+<li>电子邮件 - SMTP协议 &#x2F; POP3协议 &#x2F; IMAP协议 &#x2F; <code>smtplib</code>模块 &#x2F; <code>poplib</code>模块 &#x2F; <code>imaplib</code>模块</li>
+<li>短信服务 - 调用短信服务网关</li>
+</ul>
+<h4 id="Day15-图像和文档处理"><a href="#Day15-图像和文档处理" class="headerlink" title="Day15 - 图像和文档处理"></a>Day15 - <a href="./Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86.md">图像和文档处理</a></h4><ul>
+<li>用Pillow处理图片 - 图片读写 &#x2F; 图片合成 &#x2F; 几何变换 &#x2F; 色彩转换 &#x2F; 滤镜效果</li>
+<li>读写Word文档 - 文本内容的处理 &#x2F; 段落 &#x2F; 页眉和页脚 &#x2F; 样式的处理</li>
+<li>读写Excel文件 - <code>xlrd</code> &#x2F; <code>xlwt</code> &#x2F; <code>openpyxl</code></li>
+</ul>
+<h3 id="Day16-Day20-Python语言进阶"><a href="#Day16-Day20-Python语言进阶" class="headerlink" title="Day16~Day20 - Python语言进阶 "></a>Day16~Day20 - <a href="./Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6.md">Python语言进阶 </a></h3><ul>
+<li>常用数据结构</li>
+<li>函数的高级用法 - “一等公民” &#x2F; 高阶函数 &#x2F; Lambda函数 &#x2F; 作用域和闭包 &#x2F; 装饰器</li>
+<li>面向对象高级知识 - “三大支柱” &#x2F; 类与类之间的关系 &#x2F; 垃圾回收 &#x2F; 魔术属性和方法 &#x2F; 混入 &#x2F; 元类 &#x2F; 面向对象设计原则 &#x2F; GoF设计模式</li>
+<li>迭代器和生成器 - 相关魔术方法 &#x2F; 创建生成器的两种方式 &#x2F; </li>
+<li>并发和异步编程 - 多线程 &#x2F; 多进程 &#x2F; 异步IO &#x2F; <code>async</code>和<code>awai</code>t</li>
+</ul>
+<h3 id="Day21-30-Web前端入门"><a href="#Day21-30-Web前端入门" class="headerlink" title="Day21~30 - Web前端入门"></a>Day21~30 - <a href="./Day21-30/21-30.Web%E5%89%8D%E7%AB%AF%E6%A6%82%E8%BF%B0.md">Web前端入门</a></h3><ul>
+<li>用HTML标签承载页面内容</li>
+<li>用CSS渲染页面</li>
+<li>用JavaScript处理交互式行为</li>
+<li>jQuery入门和提高</li>
+<li>Vue.js入门</li>
+<li>Element的使用</li>
+<li>Bootstrap的使用</li>
+</ul>
+<h3 id="Day31-35-玩转Linux操作系统"><a href="#Day31-35-玩转Linux操作系统" class="headerlink" title="Day31~35 - 玩转Linux操作系统"></a>Day31~35 - <a href="./Day31-35/31-35.%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F.md">玩转Linux操作系统</a></h3><ul>
+<li>操作系统发展史和Linux概述</li>
+<li>Linux基础命令</li>
+<li>Linux中的实用程序</li>
+<li>Linux的文件系统</li>
+<li>Vim编辑器的应用</li>
+<li>环境变量和Shell编程</li>
+<li>软件的安装和服务的配置</li>
+<li>网络访问和管理</li>
+<li>其他相关内容</li>
+</ul>
+<h3 id="Day36-45-数据库基础和进阶"><a href="#Day36-45-数据库基础和进阶" class="headerlink" title="Day36~45 - 数据库基础和进阶"></a>Day36~45 - 数据库基础和进阶</h3><h4 id="Day36-关系型数据库和MySQL概述"><a href="#Day36-关系型数据库和MySQL概述" class="headerlink" title="Day36 - 关系型数据库和MySQL概述"></a>Day36 - <a href="./Day36-45/36.%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8CMySQL%E6%A6%82%E8%BF%B0.md">关系型数据库和MySQL概述</a></h4><ul>
+<li>关系型数据库概述</li>
+<li>MySQL简介</li>
+<li>安装MySQL</li>
+<li>MySQL基本命令</li>
+</ul>
+<h4 id="Day37-SQL详解之DDL"><a href="#Day37-SQL详解之DDL" class="headerlink" title="Day37 - SQL详解之DDL"></a>Day37 - <a href="./Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL.md">SQL详解之DDL</a></h4><ul>
+<li>建库建表</li>
+<li>删除表和修改表</li>
+</ul>
+<h4 id="Day38-SQL详解之DML"><a href="#Day38-SQL详解之DML" class="headerlink" title="Day38 - SQL详解之DML"></a>Day38 - <a href="./Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML.md">SQL详解之DML</a></h4><ul>
+<li>insert操作</li>
+<li>delete操作</li>
+<li>update操作</li>
+</ul>
+<h4 id="Day39-SQL详解之DQL"><a href="#Day39-SQL详解之DQL" class="headerlink" title="Day39 - SQL详解之DQL"></a>Day39 - <a href="./Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL.md">SQL详解之DQL</a></h4><ul>
+<li>投影和别名</li>
+<li>筛选数据</li>
+<li>空值处理</li>
+<li>去重</li>
+<li>排序</li>
+<li>聚合函数</li>
+<li>嵌套查询</li>
+<li>分组</li>
+<li>表连接<ul>
+<li>笛卡尔积</li>
+<li>内连接</li>
+<li>自然连接</li>
+<li>外连接</li>
+</ul>
+</li>
+<li>窗口函数<ul>
+<li>定义窗口</li>
+<li>排名函数</li>
+<li>取数函数</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day40-SQL详解之DCL"><a href="#Day40-SQL详解之DCL" class="headerlink" title="Day40 - SQL详解之DCL"></a>Day40 - <a href="./Day36-45/40.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDCL.md">SQL详解之DCL</a></h4><ul>
+<li>创建用户</li>
+<li>授予权限</li>
+<li>召回权限</li>
+</ul>
+<h4 id="Day41-MySQL新特性"><a href="#Day41-MySQL新特性" class="headerlink" title="Day41 - MySQL新特性"></a>Day41 - <a href="./Day36-45/41.MySQL%E6%96%B0%E7%89%B9%E6%80%A7.md">MySQL新特性</a></h4><ul>
+<li>JSON类型</li>
+<li>窗口函数</li>
+<li>公共表表达式</li>
+</ul>
+<h4 id="Day42-视图、函数和过程"><a href="#Day42-视图、函数和过程" class="headerlink" title="Day42 - 视图、函数和过程"></a>Day42 - <a href="./Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B.md">视图、函数和过程</a></h4><ul>
+<li>视图<ul>
+<li>使用场景</li>
+<li>创建视图</li>
+<li>使用限制</li>
+</ul>
+</li>
+<li>函数<ul>
+<li>内置函数</li>
+<li>用户自定义函数（UDF）</li>
+</ul>
+</li>
+<li>过程<ul>
+<li>创建过程</li>
+<li>调用过程</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day43-索引"><a href="#Day43-索引" class="headerlink" title="Day43 - 索引"></a>Day43 - <a href="./Day36-45/43.%E7%B4%A2%E5%BC%95.md">索引</a></h4><ul>
+<li>执行计划</li>
+<li>索引的原理</li>
+<li>创建索引<ul>
+<li>普通索引</li>
+<li>唯一索引</li>
+<li>前缀索引</li>
+<li>复合索引</li>
+</ul>
+</li>
+<li>注意事项</li>
+</ul>
+<h4 id="Day44-Python接入MySQL数据库"><a href="#Day44-Python接入MySQL数据库" class="headerlink" title="Day44 - Python接入MySQL数据库"></a>Day44 - <a href="./Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93.md">Python接入MySQL数据库</a></h4><ul>
+<li>安装三方库</li>
+<li>创建连接</li>
+<li>获取游标</li>
+<li>执行SQL语句</li>
+<li>通过游标抓取数据</li>
+<li>事务提交和回滚</li>
+<li>释放连接</li>
+<li>编写ETL脚本</li>
+</ul>
+<h4 id="Day45-大数据平台和HiveSQL"><a href="#Day45-大数据平台和HiveSQL" class="headerlink" title="Day45 - 大数据平台和HiveSQL"></a>Day45 - <a href="./Day36-45/45.%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E5%92%8CHiveSQL.md">大数据平台和HiveSQL</a></h4><ul>
+<li>Hadoop生态圈</li>
+<li>Hive概述</li>
+<li>准备工作</li>
+<li>数据类型</li>
+<li>DDL操作</li>
+<li>DML操作</li>
+<li>数据查询</li>
+</ul>
+<h3 id="Day46-60-实战Django"><a href="#Day46-60-实战Django" class="headerlink" title="Day46~60 - 实战Django"></a>Day46~60 - 实战Django</h3><h4 id="Day46-Django快速上手"><a href="#Day46-Django快速上手" class="headerlink" title="Day46 - Django快速上手"></a>Day46 - <a href="./Day46-60/46.Django%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B.md">Django快速上手</a></h4><ul>
+<li>Web应用工作机制</li>
+<li>HTTP请求和响应</li>
+<li>Django框架概述</li>
+<li>5分钟快速上手</li>
+</ul>
+<h4 id="Day47-深入模型"><a href="#Day47-深入模型" class="headerlink" title="Day47 - 深入模型"></a>Day47 - <a href="./Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B.md">深入模型</a></h4><ul>
+<li>关系型数据库配置</li>
+<li>使用ORM完成对模型的CRUD操作</li>
+<li>管理后台的使用</li>
+<li>Django模型最佳实践</li>
+<li>模型定义参考</li>
+</ul>
+<h4 id="Day48-静态资源和Ajax请求"><a href="#Day48-静态资源和Ajax请求" class="headerlink" title="Day48 - 静态资源和Ajax请求"></a>Day48 - <a href="./Day46-60/48.%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82.md">静态资源和Ajax请求</a></h4><ul>
+<li>加载静态资源</li>
+<li>Ajax概述</li>
+<li>用Ajax实现投票功能</li>
+</ul>
+<h4 id="Day49-Cookie和Session"><a href="#Day49-Cookie和Session" class="headerlink" title="Day49 - Cookie和Session"></a>Day49 - <a href="./Day46-60/49.Cookie%E5%92%8CSession.md">Cookie和Session</a></h4><ul>
+<li>实现用户跟踪</li>
+<li>cookie和session的关系</li>
+<li>Django框架对session的支持</li>
+<li>视图函数中的cookie读写操作</li>
+</ul>
+<h4 id="Day50-报表和日志"><a href="#Day50-报表和日志" class="headerlink" title="Day50 - 报表和日志"></a>Day50 - <a href="./Day46-60/50.%E5%88%B6%E4%BD%9C%E6%8A%A5%E8%A1%A8.md">报表和日志</a></h4><ul>
+<li>通过<code>HttpResponse</code>修改响应头</li>
+<li>使用<code>StreamingHttpResponse</code>处理大文件</li>
+<li>使用<code>xlwt</code>生成Excel报表</li>
+<li>使用<code>reportlab</code>生成PDF报表</li>
+<li>使用ECharts生成前端图表</li>
+</ul>
+<h4 id="Day51-日志和调试工具栏"><a href="#Day51-日志和调试工具栏" class="headerlink" title="Day51 - 日志和调试工具栏"></a>Day51 - <a href="./Day46-60/51.%E6%97%A5%E5%BF%97%E5%92%8C%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E6%A0%8F.md">日志和调试工具栏</a></h4><ul>
+<li>配置日志</li>
+<li>配置Django-Debug-Toolbar</li>
+<li>优化ORM代码</li>
+</ul>
+<h4 id="Day52-中间件的应用"><a href="#Day52-中间件的应用" class="headerlink" title="Day52 - 中间件的应用"></a>Day52 - <a href="./Day46-60/52.%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8.md">中间件的应用</a></h4><ul>
+<li>什么是中间件</li>
+<li>Django框架内置的中间件</li>
+<li>自定义中间件及其应用场景</li>
+</ul>
+<h4 id="Day53-前后端分离开发入门"><a href="#Day53-前后端分离开发入门" class="headerlink" title="Day53 - 前后端分离开发入门"></a>Day53 - <a href="./Day46-60/53.%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8.md">前后端分离开发入门</a></h4><ul>
+<li>返回JSON格式的数据</li>
+<li>用Vue.js渲染页面</li>
+</ul>
+<h4 id="Day54-RESTful架构和DRF入门"><a href="#Day54-RESTful架构和DRF入门" class="headerlink" title="Day54 - RESTful架构和DRF入门"></a>Day54 - <a href="./Day46-60/54.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8.md">RESTful架构和DRF入门</a></h4><ul>
+<li>REST概述</li>
+<li>DRF库使用入门</li>
+<li>前后端分离开发</li>
+<li>JWT的应用</li>
+</ul>
+<h4 id="Day55-RESTful架构和DRF进阶"><a href="#Day55-RESTful架构和DRF进阶" class="headerlink" title="Day55 - RESTful架构和DRF进阶"></a>Day55 - <a href="./Day46-60/55.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6.md">RESTful架构和DRF进阶</a></h4><ul>
+<li>使用CBV</li>
+<li>数据分页</li>
+<li>数据筛选</li>
+</ul>
+<h4 id="Day56-使用缓存"><a href="#Day56-使用缓存" class="headerlink" title="Day56 - 使用缓存"></a>Day56 - <a href="./Day46-60/56.%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98.md">使用缓存</a></h4><ul>
+<li><p>网站优化第一定律</p>
+</li>
+<li><p>在Django项目中使用Redis提供缓存服务</p>
+</li>
+<li><p>在视图函数中读写缓存</p>
+</li>
+<li><p>使用装饰器实现页面缓存</p>
+</li>
+<li><p>为数据接口提供缓存服务</p>
+</li>
+</ul>
+<h4 id="Day57-接入三方平台"><a href="#Day57-接入三方平台" class="headerlink" title="Day57 - 接入三方平台"></a>Day57 - <a href="./Day46-60/57.%E6%8E%A5%E5%85%A5%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0.md">接入三方平台</a></h4><ul>
+<li>文件上传表单控件和图片文件预览</li>
+<li>服务器端如何处理上传的文件</li>
+</ul>
+<h4 id="Day58-异步任务和定时任务"><a href="#Day58-异步任务和定时任务" class="headerlink" title="Day58 - 异步任务和定时任务"></a>Day58 - <a href="./Day46-60/58.%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.md">异步任务和定时任务</a></h4><ul>
+<li>网站优化第二定律</li>
+<li>配置消息队列服务</li>
+<li>在项目中使用Celery实现任务异步化</li>
+<li>在项目中使用Celery实现定时任务</li>
+</ul>
+<h4 id="Day59-单元测试"><a href="#Day59-单元测试" class="headerlink" title="Day59 - 单元测试"></a>Day59 - <a href="./Day46-60/59.%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95.md">单元测试</a></h4><h4 id="Day60-项目上线"><a href="#Day60-项目上线" class="headerlink" title="Day60 - 项目上线"></a>Day60 - <a href="./Day46-60/60.%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF.md">项目上线</a></h4><ul>
+<li>Python中的单元测试</li>
+<li>Django框架对单元测试的支持</li>
+<li>使用版本控制系统</li>
+<li>配置和使用uWSGI</li>
+<li>动静分离和Nginx配置</li>
+<li>配置HTTPS</li>
+<li>配置域名解析</li>
+</ul>
+<h3 id="Day61-65-爬虫开发"><a href="#Day61-65-爬虫开发" class="headerlink" title="Day61~65 - 爬虫开发"></a>Day61~65 - <a href="./Day61-65">爬虫开发</a></h3><h4 id="Day61-网络数据采集概述"><a href="#Day61-网络数据采集概述" class="headerlink" title="Day61 - 网络数据采集概述"></a>Day61 - <a href="./Day61-65/61.%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E6%A6%82%E8%BF%B0.md">网络数据采集概述</a></h4><ul>
+<li>网络爬虫的概念及其应用领域</li>
+<li>网络爬虫的合法性探讨</li>
+<li>开发网络爬虫的相关工具</li>
+<li>一个爬虫程序的构成</li>
+</ul>
+<h4 id="Day62-数据抓取和解析"><a href="#Day62-数据抓取和解析" class="headerlink" title="Day62 - 数据抓取和解析"></a>Day62 - 数据抓取和解析</h4><ul>
+<li><a href="./Day61-65/62.%E7%94%A8Python%E8%8E%B7%E5%8F%96%E7%BD%91%E7%BB%9C%E8%B5%84%E6%BA%90-1.md">使用<code>requests</code>三方库实现数据抓取</a></li>
+<li><a href="./Day61-65/62.%E7%94%A8Python%E8%A7%A3%E6%9E%90HTML%E9%A1%B5%E9%9D%A2-2.md">页面解析的三种方式</a><ul>
+<li>正则表达式解析</li>
+<li>XPath解析</li>
+<li>CSS选择器解析</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day63-Python中的并发编程"><a href="#Day63-Python中的并发编程" class="headerlink" title="Day63 - Python中的并发编程"></a>Day63 - Python中的并发编程</h4><ul>
+<li><a href="./Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-1.md">多线程</a></li>
+<li><a href="./Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-2.md">多进程</a></li>
+<li><a href="./Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-3.md">异步I&#x2F;O</a></li>
+</ul>
+<h4 id="Day64-使用Selenium抓取网页动态内容"><a href="#Day64-使用Selenium抓取网页动态内容" class="headerlink" title="Day64 - 使用Selenium抓取网页动态内容"></a>Day64 - <a href="./Day61-65/64.%E4%BD%BF%E7%94%A8Selenium%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9.md">使用Selenium抓取网页动态内容</a></h4><ul>
+<li>安装Selenium</li>
+<li>加载页面</li>
+<li>查找元素和模拟用户行为</li>
+<li>隐式等待和显示等待</li>
+<li>执行JavaScript代码</li>
+<li>Selenium反爬破解</li>
+<li>设置无头浏览器</li>
+</ul>
+<h4 id="Day65-爬虫框架Scrapy简介"><a href="#Day65-爬虫框架Scrapy简介" class="headerlink" title="Day65 - 爬虫框架Scrapy简介"></a>Day65 - <a href="./Day61-65/65.%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6Scrapy%E7%AE%80%E4%BB%8B.md">爬虫框架Scrapy简介</a></h4><ul>
+<li>Scrapy核心组件</li>
+<li>Scrapy工作流程</li>
+<li>安装Scrapy和创建项目</li>
+<li>编写蜘蛛程序</li>
+<li>编写中间件和管道程序</li>
+<li>Scrapy配置文件</li>
+</ul>
+<h3 id="Day66-80-数据分析"><a href="#Day66-80-数据分析" class="headerlink" title="Day66~80 - 数据分析"></a>Day66~80 - 数据分析</h3><h4 id="Day66-数据分析概述"><a href="#Day66-数据分析概述" class="headerlink" title="Day66 - 数据分析概述"></a>Day66 - <a href="./Day66-80/66.%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0.md">数据分析概述</a></h4><ul>
+<li>数据分析师的职责</li>
+<li>数据分析师的技能栈</li>
+<li>数据分析相关库</li>
+</ul>
+<h4 id="Day67-环境准备"><a href="#Day67-环境准备" class="headerlink" title="Day67 - 环境准备"></a>Day67 - <a href="./Day66-80/67.%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87.md">环境准备</a></h4><ul>
+<li>安装和使用anaconda<ul>
+<li>conda相关命令</li>
+</ul>
+</li>
+<li>安装和使用jupyter-lab<ul>
+<li>安装和启动</li>
+<li>使用小技巧</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day68-NumPy的应用-1"><a href="#Day68-NumPy的应用-1" class="headerlink" title="Day68 - NumPy的应用-1"></a>Day68 - <a href="./Day66-80/68.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-1.md">NumPy的应用-1</a></h4><ul>
+<li>创建数组对象</li>
+<li>数组对象的属性</li>
+<li>数组对象的索引运算<ul>
+<li>普通索引</li>
+<li>花式索引</li>
+<li>布尔索引</li>
+<li>切片索引</li>
+</ul>
+</li>
+<li>案例：使用数组处理图像</li>
+</ul>
+<h4 id="Day69-NumPy的应用-2"><a href="#Day69-NumPy的应用-2" class="headerlink" title="Day69 - NumPy的应用-2"></a>Day69 - <a href="./Day66-80/69.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-2.md">NumPy的应用-2</a></h4><ul>
+<li>数组对象的相关方法<ul>
+<li>获取描述性统计信息</li>
+<li>其他相关方法</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day70-NumPy的应用-3"><a href="#Day70-NumPy的应用-3" class="headerlink" title="Day70 - NumPy的应用-3"></a>Day70 - <a href="./Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3.md">NumPy的应用-3</a></h4><ul>
+<li>数组的运算<ul>
+<li>数组跟标量的运算</li>
+<li>数组跟数组的运算</li>
+</ul>
+</li>
+<li>通用一元函数</li>
+<li>通用二元函数</li>
+<li>广播机制</li>
+<li>Numpy常用函数</li>
+</ul>
+<h4 id="Day71-NumPy的应用-4"><a href="#Day71-NumPy的应用-4" class="headerlink" title="Day71 - NumPy的应用-4"></a>Day71 - <a href="./Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4.md">NumPy的应用-4</a></h4><ul>
+<li>向量</li>
+<li>行列式</li>
+<li>矩阵</li>
+<li>多项式</li>
+</ul>
+<h4 id="Day72-深入浅出pandas-1"><a href="#Day72-深入浅出pandas-1" class="headerlink" title="Day72 - 深入浅出pandas-1"></a>Day72 - <a href="./Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1.md">深入浅出pandas-1</a></h4><ul>
+<li>创建<code>Series</code>对象</li>
+<li><code>Series</code>对象的运算</li>
+<li><code>Series</code>对象的属性和方法</li>
+</ul>
+<h4 id="Day73-深入浅出pandas-2"><a href="#Day73-深入浅出pandas-2" class="headerlink" title="Day73 - 深入浅出pandas-2"></a>Day73 - <a href="./Day66-80/73.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-2.md">深入浅出pandas-2</a></h4><ul>
+<li>创建<code>DataFrame</code>对象</li>
+<li><code>DataFrame</code>对象的属性和方法</li>
+<li>读写<code>DataFrame</code>中的数据</li>
+</ul>
+<h4 id="Day74-深入浅出pandas-3"><a href="#Day74-深入浅出pandas-3" class="headerlink" title="Day74 - 深入浅出pandas-3"></a>Day74 - <a href="./Day66-80/74.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-3.md">深入浅出pandas-3</a></h4><ul>
+<li>数据重塑<ul>
+<li>数据拼接</li>
+<li>数据合并</li>
+</ul>
+</li>
+<li>数据清洗<ul>
+<li>缺失值</li>
+<li>重复值</li>
+<li>异常值</li>
+<li>预处理</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day75-深入浅出pandas-4"><a href="#Day75-深入浅出pandas-4" class="headerlink" title="Day75 - 深入浅出pandas-4"></a>Day75 - <a href="./Day66-80/75.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-4.md">深入浅出pandas-4</a></h4><ul>
+<li>数据透视<ul>
+<li>获取描述性统计信息</li>
+<li>排序和头部值</li>
+<li>分组聚合</li>
+<li>透视表和交叉表</li>
+</ul>
+</li>
+<li>数据呈现</li>
+</ul>
+<h4 id="Day76-深入浅出pandas-5"><a href="#Day76-深入浅出pandas-5" class="headerlink" title="Day76 - 深入浅出pandas-5"></a>Day76 - <a href="./Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5.md">深入浅出pandas-5</a></h4><ul>
+<li>计算同比环比</li>
+<li>窗口计算</li>
+<li>相关性判定</li>
+</ul>
+<h4 id="Day77-深入浅出pandas-6"><a href="#Day77-深入浅出pandas-6" class="headerlink" title="Day77 - 深入浅出pandas-6"></a>Day77 - <a href="./Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6.md">深入浅出pandas-6</a></h4><ul>
+<li>索引的使用<ul>
+<li>范围索引</li>
+<li>分类索引</li>
+<li>多级索引</li>
+<li>间隔索引</li>
+<li>日期时间索引</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day78-数据可视化-1"><a href="#Day78-数据可视化-1" class="headerlink" title="Day78 - 数据可视化-1"></a>Day78 - <a href="./Day66-80/78.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-1.md">数据可视化-1</a></h4><ul>
+<li>安装和导入matplotlib</li>
+<li>创建画布</li>
+<li>创建坐标系</li>
+<li>绘制图表<ul>
+<li>折线图</li>
+<li>散点图</li>
+<li>柱状图</li>
+<li>饼状图</li>
+<li>直方图</li>
+<li>箱线图</li>
+</ul>
+</li>
+<li>显示和保存图表</li>
+</ul>
+<h4 id="Day79-数据可视化-2"><a href="#Day79-数据可视化-2" class="headerlink" title="Day79 - 数据可视化-2"></a>Day79 - <a href="./Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2.md">数据可视化-2</a></h4><ul>
+<li>高阶图表<ul>
+<li>气泡图</li>
+<li>面积图</li>
+<li>雷达图</li>
+<li>玫瑰图</li>
+<li>3D图表</li>
+</ul>
+</li>
+</ul>
+<h4 id="Day80-数据可视化-3"><a href="#Day80-数据可视化-3" class="headerlink" title="Day80 - 数据可视化-3"></a>Day80 - <a href="./Day66-80/80.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-3.md">数据可视化-3</a></h4><ul>
+<li>Seaborn</li>
+<li>Pyecharts</li>
+</ul>
+<h3 id="Day81-90-机器学习和深度学习"><a href="#Day81-90-机器学习和深度学习" class="headerlink" title="Day81~90 - 机器学习和深度学习"></a>Day81~90 - <a href="./Day81-90">机器学习和深度学习</a></h3><h4 id="Day81-机器学习基础"><a href="#Day81-机器学习基础" class="headerlink" title="Day81 - 机器学习基础"></a>Day81 - <a href="./Day81-90/81.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80.md">机器学习基础</a></h4><h4 id="Day82-k最近邻分类"><a href="#Day82-k最近邻分类" class="headerlink" title="Day82 - k最近邻分类"></a>Day82 - <a href="./Day81-90/82.k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB.md">k最近邻分类</a></h4><h4 id="Day83-决策树"><a href="#Day83-决策树" class="headerlink" title="Day83 - 决策树"></a>Day83 - <a href="./Day81-90/83.%E5%86%B3%E7%AD%96%E6%A0%91.md">决策树</a></h4><h4 id="Day84-贝叶斯分类"><a href="#Day84-贝叶斯分类" class="headerlink" title="Day84 - 贝叶斯分类"></a>Day84 - <a href="./Day81-90/84.%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB.md">贝叶斯分类</a></h4><h4 id="Day85-支持向量机"><a href="#Day85-支持向量机" class="headerlink" title="Day85 - 支持向量机"></a>Day85 - <a href="./Day81-90/85.%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA.md">支持向量机</a></h4><h4 id="Day86-K-均值聚类"><a href="#Day86-K-均值聚类" class="headerlink" title="Day86 - K-均值聚类"></a>Day86 - <a href="./Day81-90/86.K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB.md">K-均值聚类</a></h4><h4 id="Day87-回归分析"><a href="#Day87-回归分析" class="headerlink" title="Day87 - 回归分析"></a>Day87 - <a href="./Day81-90/87.%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90.md">回归分析</a></h4><h4 id="Day88-深度学习入门"><a href="#Day88-深度学习入门" class="headerlink" title="Day88 - 深度学习入门"></a>Day88 - <a href="./Day81-90/88.%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%85%A5%E9%97%A8.md">深度学习入门</a></h4><h4 id="Day89-PyTorch概述"><a href="#Day89-PyTorch概述" class="headerlink" title="Day89 - PyTorch概述"></a>Day89 - <a href="./Day81-90/89.PyTorch%E6%A6%82%E8%BF%B0.md">PyTorch概述</a></h4><h4 id="Day90-PyTorch实战"><a href="#Day90-PyTorch实战" class="headerlink" title="Day90 - PyTorch实战"></a>Day90 - <a href="./Day81-90/90.PyTorch%E5%AE%9E%E6%88%98.md">PyTorch实战</a></h4><h3 id="Day91-100-团队项目开发"><a href="#Day91-100-团队项目开发" class="headerlink" title="Day91~100 - 团队项目开发"></a>Day91~100 - <a href="./Day91-100">团队项目开发</a></h3><h4 id="第91天：团队项目开发的问题和解决方案"><a href="#第91天：团队项目开发的问题和解决方案" class="headerlink" title="第91天：团队项目开发的问题和解决方案"></a>第91天：<a href="./Day91-100/91.%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md">团队项目开发的问题和解决方案</a></h4><ol>
+<li><p>软件过程模型</p>
+<ul>
+<li><p>经典过程模型（瀑布模型）</p>
+<ul>
+<li>可行性分析（研究做还是不做），输出《可行性分析报告》。</li>
+<li>需求分析（研究做什么），输出《需求规格说明书》和产品界面原型图。</li>
+<li>概要设计和详细设计，输出概念模型图（ER图）、物理模型图、类图、时序图等。</li>
+<li>编码 &#x2F; 测试。</li>
+<li>上线 &#x2F; 维护。</li>
+</ul>
+<p>瀑布模型最大的缺点是无法拥抱需求变化，整套流程结束后才能看到产品，团队士气低落。</p>
+</li>
+<li><p>敏捷开发（Scrum）- 产品所有者、Scrum Master、研发人员 - Sprint</p>
+<ul>
+<li>产品的Backlog（用户故事、产品原型）。</li>
+<li>计划会议（评估和预算）。</li>
+<li>日常开发（站立会议、番茄工作法、结对编程、测试先行、代码重构……）。</li>
+<li>修复bug（问题描述、重现步骤、测试人员、被指派人）。</li>
+<li>发布版本。</li>
+<li>评审会议（Showcase，用户需要参与）。</li>
+<li>回顾会议（对当前迭代周期做一个总结）。</li>
+</ul>
+<blockquote>
+<p>补充：敏捷软件开发宣言</p>
+<ul>
+<li><strong>个体和互动</strong> 高于 流程和工具</li>
+<li><strong>工作的软件</strong> 高于 详尽的文档</li>
+<li><strong>客户合作</strong> 高于 合同谈判</li>
+<li><strong>响应变化</strong> 高于 遵循计划</li>
+</ul>
+</blockquote>
+<p><img src="/./res/agile-scrum-sprint-cycle.png"></p>
+<blockquote>
+<p>角色：产品所有者（决定做什么，能对需求拍板的人）、团队负责人（解决各种问题，专注如何更好的工作，屏蔽外部对开发团队的影响）、开发团队（项目执行人员，具体指开发人员和测试人员）。</p>
+</blockquote>
+<blockquote>
+<p>准备工作：商业案例和资金、合同、憧憬、初始产品需求、初始发布计划、入股、组建团队。</p>
+</blockquote>
+<blockquote>
+<p> 敏捷团队通常人数为8-10人。</p>
+</blockquote>
+<blockquote>
+<p> 工作量估算：将开发任务量化，包括原型、Logo设计、UI设计、前端开发等，尽量把每个工作分解到最小任务量，最小任务量标准为工作时间不能超过两天，然后估算总体项目时间。把每个任务都贴在看板上面，看板上分三部分：to do（待完成）、in progress（进行中）和done（已完成）。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>项目团队组建</p>
+<ul>
+<li><p>团队的构成和角色</p>
+<blockquote>
+<p>说明：感谢<strong>付祥英</strong>女士帮助我绘制了下面这张精美的公司组织架构图。</p>
+</blockquote>
+<p><img src="/./res/company_architecture.png" alt="company_architecture"></p>
+</li>
+<li><p>编程规范和代码审查（<code>flake8</code>、<code>pylint</code>）</p>
+<p><img src="/./res/pylint.png"></p>
+</li>
+<li><p>Python中的一些“惯例”（请参考<a href="Python%E6%83%AF%E4%BE%8B.md">《Python惯例-如何编写Pythonic的代码》</a>）</p>
+</li>
+<li><p>影响代码可读性的原因：</p>
+<ul>
+<li>代码注释太少或者没有注释</li>
+<li>代码破坏了语言的最佳实践</li>
+<li>反模式编程（意大利面代码、复制-黏贴编程、自负编程、……）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>团队开发工具介绍</p>
+<ul>
+<li>版本控制：Git、Mercury</li>
+<li>缺陷管理：<a target="_blank" rel="noopener" href="https://about.gitlab.com/">Gitlab</a>、<a target="_blank" rel="noopener" href="http://www.redmine.org.cn/">Redmine</a></li>
+<li>敏捷闭环工具：<a target="_blank" rel="noopener" href="https://www.zentao.net/">禅道</a>、<a target="_blank" rel="noopener" href="https://www.atlassian.com/software/jira/features">JIRA</a></li>
+<li>持续集成：<a target="_blank" rel="noopener" href="https://jenkins.io/">Jenkins</a>、<a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis-CI</a></li>
+</ul>
+<p>请参考<a href="Day91-100/91.%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88.md">《团队项目开发的问题和解决方案》</a>。</p>
+</li>
+</ol>
+<h5 id="项目选题和理解业务"><a href="#项目选题和理解业务" class="headerlink" title="项目选题和理解业务"></a>项目选题和理解业务</h5><ol>
+<li><p>选题范围设定</p>
+<ul>
+<li><p>CMS（用户端）：新闻聚合网站、问答&#x2F;分享社区、影评&#x2F;书评网站等。</p>
+</li>
+<li><p>MIS（用户端+管理端）：KMS、KPI考核系统、HRS、CRM系统、供应链系统、仓储管理系统等。</p>
+</li>
+<li><p>App后台（管理端+数据接口）：二手交易类、报刊杂志类、小众电商类、新闻资讯类、旅游类、社交类、阅读类等。</p>
+</li>
+<li><p>其他类型：自身行业背景和工作经验、业务容易理解和把控。</p>
+</li>
+</ul>
+</li>
+<li><p>需求理解、模块划分和任务分配</p>
+<ul>
+<li>需求理解：头脑风暴和竞品分析。</li>
+<li>模块划分：画思维导图（XMind），每个模块是一个枝节点，每个具体的功能是一个叶节点（用动词表述），需要确保每个叶节点无法再生出新节点，确定每个叶子节点的重要性、优先级和工作量。</li>
+<li>任务分配：由项目负责人根据上面的指标为每个团队成员分配任务。</li>
+</ul>
+<p><img src="/./res/requirements_by_xmind.png"></p>
+</li>
+<li><p>制定项目进度表（每日更新）</p>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能</th>
+<th>人员</th>
+<th>状态</th>
+<th>完成</th>
+<th>工时</th>
+<th>计划开始</th>
+<th>实际开始</th>
+<th>计划结束</th>
+<th>实际结束</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>评论</td>
+<td>添加评论</td>
+<td>王大锤</td>
+<td>正在进行</td>
+<td>50%</td>
+<td>4</td>
+<td>2018&#x2F;8&#x2F;7</td>
+<td></td>
+<td>2018&#x2F;8&#x2F;7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>删除评论</td>
+<td>王大锤</td>
+<td>等待</td>
+<td>0%</td>
+<td>2</td>
+<td>2018&#x2F;8&#x2F;7</td>
+<td></td>
+<td>2018&#x2F;8&#x2F;7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>查看评论</td>
+<td>白元芳</td>
+<td>正在进行</td>
+<td>20%</td>
+<td>4</td>
+<td>2018&#x2F;8&#x2F;7</td>
+<td></td>
+<td>2018&#x2F;8&#x2F;7</td>
+<td></td>
+<td>需要进行代码审查</td>
+</tr>
+<tr>
+<td></td>
+<td>评论投票</td>
+<td>白元芳</td>
+<td>等待</td>
+<td>0%</td>
+<td>4</td>
+<td>2018&#x2F;8&#x2F;8</td>
+<td></td>
+<td>2018&#x2F;8&#x2F;8</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+<li><p>OOAD和数据库设计</p>
+</li>
+</ol>
+<ul>
+<li><p>UML（统一建模语言）的类图</p>
+<p><img src="/./res/uml-class-diagram.png" alt="uml"></p>
+</li>
+<li><p>通过模型创建表（正向工程），例如在Django项目中可以通过下面的命令创建二维表。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python manage.py makemigrations app</span><br><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用PowerDesigner绘制物理模型图。</p>
+<p><img src="/./res/power-designer-pdm.png"></p>
+</li>
+<li><p>通过数据表创建模型（反向工程），例如在Django项目中可以通过下面的命令生成模型。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py inspectdb &gt; app/models.py</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="第92天：Docker容器技术详解"><a href="#第92天：Docker容器技术详解" class="headerlink" title="第92天：Docker容器技术详解"></a>第92天：<a href="./Day91-100/92.Docker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF%E8%AF%A6%E8%A7%A3.md">Docker容器技术详解</a></h4><ol>
+<li>Docker简介</li>
+<li>安装Docker</li>
+<li>使用Docker创建容器（Nginx、MySQL、Redis、Gitlab、Jenkins）</li>
+<li>构建Docker镜像（Dockerfile的编写和相关指令）</li>
+<li>容器编排（Docker-compose）</li>
+<li>集群管理（Kubernetes）</li>
+</ol>
+<h4 id="第93天：MySQL性能优化"><a href="#第93天：MySQL性能优化" class="headerlink" title="第93天：MySQL性能优化"></a>第93天：<a href="./Day91-100/93.MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.md">MySQL性能优化</a></h4><ol>
+<li>基本原则</li>
+<li>InnoDB引擎</li>
+<li>索引的使用和注意事项</li>
+<li>数据分区</li>
+<li>SQL优化</li>
+<li>配置优化</li>
+<li>架构优化</li>
+</ol>
+<h4 id="第94天：网络API接口设计"><a href="#第94天：网络API接口设计" class="headerlink" title="第94天：网络API接口设计"></a>第94天：<a href="./Day91-100/94.%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1.md">网络API接口设计</a></h4><ul>
+<li>设计原则<ul>
+<li>关键问题</li>
+<li>其他问题</li>
+</ul>
+</li>
+<li>文档撰写</li>
+</ul>
+<h4 id="第95天：-使用Django开发商业项目-Day91-100-95-使用Django开发商业项目-md"><a href="#第95天：-使用Django开发商业项目-Day91-100-95-使用Django开发商业项目-md" class="headerlink" title="第95天：[使用Django开发商业项目](.&#x2F;Day91-100&#x2F;95.使用Django开发商业项	目.md)"></a>第95天：[使用Django开发商业项目](.&#x2F;Day91-100&#x2F;95.使用Django开发商业项	目.md)</h4><h5 id="项目开发中的公共问题"><a href="#项目开发中的公共问题" class="headerlink" title="项目开发中的公共问题"></a>项目开发中的公共问题</h5><ol>
+<li>数据库的配置（多数据库、主从复制、数据库路由）</li>
+<li>缓存的配置（分区缓存、键设置、超时设置、主从复制、故障恢复（哨兵））</li>
+<li>日志的配置</li>
+<li>分析和调试（Django-Debug-ToolBar）</li>
+<li>好用的Python模块（日期计算、图像处理、数据加密、三方API）</li>
+</ol>
+<h5 id="REST-API设计"><a href="#REST-API设计" class="headerlink" title="REST API设计"></a>REST API设计</h5><ol>
+<li>RESTful架构<ul>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2011/09/restful.html">理解RESTful架构</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2014/05/restful_api.html">RESTful API设计指南</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">RESTful API最佳实践</a></li>
+</ul>
+</li>
+<li>API接口文档的撰写<ul>
+<li><a target="_blank" rel="noopener" href="http://rap2.taobao.org/">RAP2</a></li>
+<li><a target="_blank" rel="noopener" href="http://yapi.demo.qunar.com/">YAPI</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.django-rest-framework.org/">django-REST-framework</a>的应用</li>
+</ol>
+<h5 id="项目中的重点难点剖析"><a href="#项目中的重点难点剖析" class="headerlink" title="项目中的重点难点剖析"></a>项目中的重点难点剖析</h5><ol>
+<li>使用缓存缓解数据库压力 - Redis</li>
+<li>使用消息队列做解耦合和削峰 - Celery + RabbitMQ</li>
+</ol>
+<h4 id="第96天：软件测试和自动化测试"><a href="#第96天：软件测试和自动化测试" class="headerlink" title="第96天：软件测试和自动化测试"></a>第96天：<a href="Day91-100/96.%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95.md">软件测试和自动化测试</a></h4><h5 id="单元测试"><a href="#单元测试" class="headerlink" title="单元测试"></a>单元测试</h5><ol>
+<li>测试的种类</li>
+<li>编写单元测试（<code>unittest</code>、<code>pytest</code>、<code>nose2</code>、<code>tox</code>、<code>ddt</code>、……）</li>
+<li>测试覆盖率（<code>coverage</code>）</li>
+</ol>
+<h5 id="Django项目部署"><a href="#Django项目部署" class="headerlink" title="Django项目部署"></a>Django项目部署</h5><ol>
+<li>部署前的准备工作<ul>
+<li>关键设置（SECRET_KEY &#x2F; DEBUG &#x2F; ALLOWED_HOSTS &#x2F; 缓存 &#x2F; 数据库）</li>
+<li>HTTPS &#x2F; CSRF_COOKIE_SECUR  &#x2F; SESSION_COOKIE_SECURE  </li>
+<li>日志相关配置</li>
+</ul>
+</li>
+<li>Linux常用命令回顾</li>
+<li>Linux常用服务的安装和配置</li>
+<li>uWSGI&#x2F;Gunicorn和Nginx的使用<ul>
+<li>Gunicorn和uWSGI的比较<ul>
+<li>对于不需要大量定制化的简单应用程序，Gunicorn是一个不错的选择，uWSGI的学习曲线比Gunicorn要陡峭得多，Gunicorn的默认参数就已经能够适应大多数应用程序。</li>
+<li>uWSGI支持异构部署。</li>
+<li>由于Nginx本身支持uWSGI，在线上一般都将Nginx和uWSGI捆绑在一起部署，而且uWSGI属于功能齐全且高度定制的WSGI中间件。</li>
+<li>在性能上，Gunicorn和uWSGI其实表现相当。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>使用虚拟化技术（Docker）部署测试环境和生产环境</li>
+</ol>
+<h5 id="性能测试"><a href="#性能测试" class="headerlink" title="性能测试"></a>性能测试</h5><ol>
+<li>AB的使用</li>
+<li>SQLslap的使用</li>
+<li>sysbench的使用</li>
+</ol>
+<h5 id="自动化测试"><a href="#自动化测试" class="headerlink" title="自动化测试"></a>自动化测试</h5><ol>
+<li>使用Shell和Python进行自动化测试</li>
+<li>使用Selenium实现自动化测试<ul>
+<li>Selenium IDE</li>
+<li>Selenium WebDriver</li>
+<li>Selenium Remote Control</li>
+</ul>
+</li>
+<li>测试工具Robot Framework介绍</li>
+</ol>
+<h4 id="第97天：电商网站技术要点剖析"><a href="#第97天：电商网站技术要点剖析" class="headerlink" title="第97天：电商网站技术要点剖析"></a>第97天：<a href="./Day91-100/97.%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90.md">电商网站技术要点剖析</a></h4><ol>
+<li>商业模式和需求要点</li>
+<li>物理模型设计</li>
+<li>第三方登录</li>
+<li>缓存预热和查询缓存</li>
+<li>购物车的实现</li>
+<li>支付功能集成</li>
+<li>秒杀和超卖问题</li>
+<li>静态资源管理</li>
+<li>全文检索方案</li>
+</ol>
+<h4 id="第98天：项目部署上线和性能调优"><a href="#第98天：项目部署上线和性能调优" class="headerlink" title="第98天：项目部署上线和性能调优"></a>第98天：<a href="./Day91-100/98.%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98.md">项目部署上线和性能调优</a></h4><ol>
+<li>MySQL数据库调优</li>
+<li>Web服务器性能优化<ul>
+<li>Nginx负载均衡配置</li>
+<li>Keepalived实现高可用</li>
+</ul>
+</li>
+<li>代码性能调优<ul>
+<li>多线程</li>
+<li>异步化</li>
+</ul>
+</li>
+<li>静态资源访问优化<ul>
+<li>云存储</li>
+<li>CDN</li>
+</ul>
+</li>
+</ol>
+<h4 id="第99天：面试中的公共问题"><a href="#第99天：面试中的公共问题" class="headerlink" title="第99天：面试中的公共问题"></a>第99天：<a href="./Day91-100/99.%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98.md">面试中的公共问题</a></h4><ul>
+<li>计算机基础</li>
+<li>Python基础</li>
+<li>Web框架相关</li>
+<li>爬虫相关问题</li>
+<li>数据分析</li>
+<li>项目相关</li>
+</ul>
+<h4 id="第100天：Python面试题实录"><a href="#第100天：Python面试题实录" class="headerlink" title="第100天：Python面试题实录"></a>第100天：<a href="./Day91-100/100.Python%E9%9D%A2%E8%AF%95%E9%A2%98%E5%AE%9E%E5%BD%95.md">Python面试题实录</a></h4>
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/52.%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/59.%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/list_by_javascript/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_3/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/README/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/README/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/README/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:00 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:00 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

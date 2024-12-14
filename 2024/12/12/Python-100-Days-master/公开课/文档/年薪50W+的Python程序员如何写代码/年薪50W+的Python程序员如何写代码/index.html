@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="年薪50W-的Python程序员如何写代码"><a href="#年薪50W-的Python程序员如何写代码" class="headerlink" title="年薪50W+的Python程序员如何写代码"></a>年薪50W+的Python程序员如何写代码</h2><h3 id="为什么要用Python写代码"><a href="#为什么要用Python写代码" class="headerlink" title="为什么要用Python写代码"></a>为什么要用Python写代码</h3><h4 id="没有对比就没有伤害"><a href="#没有对比就没有伤害" class="headerlink" title="没有对比就没有伤害"></a>没有对比就没有伤害</h4><blockquote>
+<p><strong>很多互联网和移动互联网企业对开发效率的要求高于对执行效率的要求</strong>。</p>
+</blockquote>
+<h5 id="例子1：hello-world"><a href="#例子1：hello-world" class="headerlink" title="例子1：hello, world"></a>例子1：hello, world</h5><p>C的版本：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello, world\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Java的版本：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Example01</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;hello, world&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Python的版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello, world&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h5 id="例子2：1-100求和"><a href="#例子2：1-100求和" class="headerlink" title="例子2：1-100求和"></a>例子2：1-100求和</h5><p>C的版本：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="type">int</span> total = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100</span>; ++i) &#123;</span><br><span class="line">        total += i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, total);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Python的版本：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(sum(range(<span class="number">1</span>, <span class="number">101</span>)))</span><br></pre></td></tr></table></figure>
+
+<h5 id="例子3：创建和初始化数组（列表）"><a href="#例子3：创建和初始化数组（列表）" class="headerlink" title="例子3：创建和初始化数组（列表）"></a>例子3：创建和初始化数组（列表）</h5><p>Java的版本：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Example03</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">boolean</span>[] values = <span class="keyword">new</span> <span class="title class_">boolean</span>[<span class="number">10</span>];</span><br><span class="line">        Arrays.fill(values, <span class="literal">true</span>);</span><br><span class="line">        System.out.println(Arrays.toString(values));</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span>[] numbers = <span class="keyword">new</span> <span class="title class_">int</span>[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; numbers.length; ++i) &#123;</span><br><span class="line">            numbers[i] = i + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Arrays.toString(numbers));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Python的版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">values = [<span class="literal">True</span>] * <span class="number">10</span></span><br><span class="line"><span class="built_in">print</span>(values)</span><br><span class="line">numbers = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">11</span>)]</span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+
+<h5 id="例子4：双色球随机选号"><a href="#例子4：双色球随机选号" class="headerlink" title="例子4：双色球随机选号"></a>例子4：双色球随机选号</h5><p>Java的版本：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Example03</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 产生[min, max)范围的随机整数</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">randomInt</span><span class="params">(<span class="type">int</span> min, <span class="type">int</span> max)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="type">int</span>) (Math.random() * (max - min) + min);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 输出一组双色球号码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">display</span><span class="params">(List&lt;Integer&gt; balls)</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; balls.size(); ++i) &#123;</span><br><span class="line">            System.out.printf(<span class="string">&quot;%02d &quot;</span>, balls.get(i));</span><br><span class="line">            <span class="keyword">if</span> (i == balls.size() - <span class="number">2</span>) &#123;</span><br><span class="line">                System.out.print(<span class="string">&quot;| &quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 生成一组随机号码</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> List&lt;Integer&gt; <span class="title function_">generate</span><span class="params">()</span> &#123;</span><br><span class="line">        List&lt;Integer&gt; redBalls = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">33</span>; ++i) &#123;</span><br><span class="line">            redBalls.add(i);</span><br><span class="line">        &#125;</span><br><span class="line">        List&lt;Integer&gt; selectedBalls = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">6</span>; ++i) &#123;</span><br><span class="line">            selectedBalls.add(redBalls.remove(randomInt(<span class="number">0</span>, redBalls.size())));</span><br><span class="line">        &#125;</span><br><span class="line">        Collections.sort(selectedBalls);</span><br><span class="line">        selectedBalls.add(randomInt(<span class="number">1</span>, <span class="number">17</span>));</span><br><span class="line">        <span class="keyword">return</span> selectedBalls;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> (<span class="type">Scanner</span> <span class="variable">sc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in)) &#123;</span><br><span class="line">            System.out.print(<span class="string">&quot;机选几注: &quot;</span>);</span><br><span class="line">            <span class="type">int</span> <span class="variable">num</span> <span class="operator">=</span> sc.nextInt();</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; num; ++i) &#123;</span><br><span class="line">                display(generate());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Python的版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> random <span class="keyword">import</span> randint, sample</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">generate</span>():</span><br><span class="line">    <span class="string">&quot;&quot;&quot;生成一组随机号码&quot;&quot;&quot;</span></span><br><span class="line">    red_balls = [x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">34</span>)]</span><br><span class="line">    selected_balls = sample(red_balls, <span class="number">6</span>)</span><br><span class="line">    selected_balls.sort()</span><br><span class="line">    selected_balls.append(randint(<span class="number">1</span>, <span class="number">16</span>))</span><br><span class="line">    <span class="keyword">return</span> selected_balls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">display</span>(<span class="params">balls</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;输出一组双色球号码&quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">for</span> index, ball <span class="keyword">in</span> <span class="built_in">enumerate</span>(balls):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;ball:<span class="number">0</span>&gt;2d&#125;</span>&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        <span class="keyword">if</span> index == <span class="built_in">len</span>(balls) - <span class="number">2</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;|&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">num = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;机选几注: &#x27;</span>))</span><br><span class="line"><span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(num):</span><br><span class="line">    display(generate())</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>温馨提示</strong>：珍爱生命，远离任何形式的赌博。</p>
+</blockquote>
+<h5 id="例子5：实现一个简单的HTTP服务器。"><a href="#例子5：实现一个简单的HTTP服务器。" class="headerlink" title="例子5：实现一个简单的HTTP服务器。"></a>例子5：实现一个简单的HTTP服务器。</h5><p>Java的版本：</p>
+<blockquote>
+<p><strong>说明</strong>：JDK 1.6以前，需要通过套接字编程来实现，具体又可以分为多线程和NIO两种做法。JDK 1.6以后，可以使用<code>com.sun.net.httpserver</code>包提供的<code>HttpServer</code>类来实现。</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> com.sun.net.httpserver.HttpExchange;</span><br><span class="line"><span class="keyword">import</span> com.sun.net.httpserver.HttpHandler;</span><br><span class="line"><span class="keyword">import</span> com.sun.net.httpserver.HttpServer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStream;</span><br><span class="line"><span class="keyword">import</span> java.net.InetSocketAddress;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Example05</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] arg)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        <span class="type">HttpServer</span> <span class="variable">server</span> <span class="operator">=</span> HttpServer.create(<span class="keyword">new</span> <span class="title class_">InetSocketAddress</span>(<span class="number">8000</span>), <span class="number">0</span>);</span><br><span class="line">        server.createContext(<span class="string">&quot;/&quot;</span>, <span class="keyword">new</span> <span class="title class_">RequestHandler</span>());</span><br><span class="line">        server.start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">RequestHandler</span> <span class="keyword">implements</span> <span class="title class_">HttpHandler</span> &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">handle</span><span class="params">(HttpExchange exchange)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">            <span class="type">String</span> <span class="variable">response</span> <span class="operator">=</span> <span class="string">&quot;&lt;h1&gt;hello, world&lt;/h1&gt;&quot;</span>;</span><br><span class="line">            exchange.sendResponseHeaders(<span class="number">200</span>, <span class="number">0</span>);</span><br><span class="line">            <span class="keyword">try</span> (<span class="type">OutputStream</span> <span class="variable">os</span> <span class="operator">=</span> exchange.getResponseBody()) &#123;</span><br><span class="line">                os.write(response.getBytes());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Python的版本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> http.server <span class="keyword">import</span> HTTPServer, SimpleHTTPRequestHandler</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RequestHandler</span>(<span class="title class_ inherited__">SimpleHTTPRequestHandler</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">do_GET</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.send_response(<span class="number">200</span>)</span><br><span class="line">        <span class="variable language_">self</span>.end_headers()</span><br><span class="line">        <span class="variable language_">self</span>.wfile.write(<span class="string">&#x27;&lt;h1&gt;hello, world&lt;/h1&gt;&#x27;</span>.encode())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">server = HTTPServer((<span class="string">&#x27;&#x27;</span>, <span class="number">8000</span>), RequestHandler)</span><br><span class="line">server.serve_forever()</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m http.server <span class="number">8000</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="一行Python代码可以做什么"><a href="#一行Python代码可以做什么" class="headerlink" title="一行Python代码可以做什么"></a>一行Python代码可以做什么</h4><blockquote>
+<p><strong>很多时候，你的问题只需一行Python代码就能解决</strong>。</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 一行代码实现求阶乘函数</span></span><br><span class="line">fac = <span class="keyword">lambda</span> x: <span class="built_in">__import__</span>(<span class="string">&#x27;functools&#x27;</span>).reduce(<span class="built_in">int</span>.__mul__, <span class="built_in">range</span>(<span class="number">1</span>, x + <span class="number">1</span>), <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一行代码实现求最大公约数函数</span></span><br><span class="line">gcd = <span class="keyword">lambda</span> x, y: y % x <span class="keyword">and</span> gcd(y % x, x) <span class="keyword">or</span> x</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一行代码实现判断素数的函数</span></span><br><span class="line">is_prime = <span class="keyword">lambda</span> x: x &gt; <span class="number">1</span> <span class="keyword">and</span> <span class="keyword">not</span> [f <span class="keyword">for</span> f <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="built_in">int</span>(x ** <span class="number">0.5</span>) + <span class="number">1</span>) <span class="keyword">if</span> x % f == <span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一行代码实现快速排序</span></span><br><span class="line">quick_sort = <span class="keyword">lambda</span> items: <span class="built_in">len</span>(items) <span class="keyword">and</span> quick_sort([x <span class="keyword">for</span> x <span class="keyword">in</span> items[<span class="number">1</span>:] <span class="keyword">if</span> x &lt; items[<span class="number">0</span>]]) + [items[<span class="number">0</span>]] + quick_sort([x <span class="keyword">for</span> x <span class="keyword">in</span> items[<span class="number">1</span>:] <span class="keyword">if</span> x &gt; items[<span class="number">0</span>]]) <span class="keyword">or</span> items</span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成FizzBuzz列表</span></span><br><span class="line">[<span class="string">&#x27;Fizz&#x27;</span>[x % <span class="number">3</span> * <span class="number">4</span>:] + <span class="string">&#x27;Buzz&#x27;</span>[x % <span class="number">5</span> * <span class="number">4</span>:] <span class="keyword">or</span> x <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">101</span>)]</span><br></pre></td></tr></table></figure>
+
+<h4 id="设计模式从未如此简单"><a href="#设计模式从未如此简单" class="headerlink" title="设计模式从未如此简单"></a>设计模式从未如此简单</h4><blockquote>
+<p><strong>Python是动态类型语言，大量的设计模式在Python中被简化或弱化</strong>。</p>
+</blockquote>
+<p>思考：如何优化下面的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">if</span> num <span class="keyword">in</span> (<span class="number">1</span>, <span class="number">2</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> fib(num - <span class="number">1</span>) + fib(num - <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>代理模式在Python中可以通过内置的或自定义的装饰器来实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> lru_cache</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@lru_cache()</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">fib</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">if</span> num <span class="keyword">in</span> (<span class="number">1</span>, <span class="number">2</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> fib(num - <span class="number">1</span>) + fib(num - <span class="number">2</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">121</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&#x27;<span class="subst">&#123;n&#125;</span>: <span class="subst">&#123;fib(n)&#125;</span>&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：通过Python标准库<code>functools</code>模块的<code>lru_cache</code>装饰器为<code>fib</code>函数加上缓存代理，缓存函数执行的中间结果，优化代码的性能。</p>
+</blockquote>
+<p>单例模式在Python中可以通过自定义的装饰器或元类来实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> functools <span class="keyword">import</span> wraps</span><br><span class="line"><span class="keyword">from</span> threading <span class="keyword">import</span> RLock</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">singleton</span>(<span class="params">cls</span>):</span><br><span class="line">    instances = &#123;&#125;</span><br><span class="line">    lock = RLock()</span><br><span class="line"></span><br><span class="line"><span class="meta">    @wraps(<span class="params">cls</span>)</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">wrapper</span>(<span class="params">*args, **kwargs</span>):</span><br><span class="line">        <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> instances:</span><br><span class="line">            <span class="keyword">with</span> lock:</span><br><span class="line">                <span class="keyword">if</span> cls <span class="keyword">not</span> <span class="keyword">in</span> instances:</span><br><span class="line">                    instances[cls] = cls(*args, **kwargs)</span><br><span class="line">        <span class="keyword">return</span> instances[cls]</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：需要实现单例模式的类只需要添加上面的装饰器即可。</p>
+</blockquote>
+<p>原型模式在Python中可以通过元类来实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PrototypeMeta</span>(<span class="title class_ inherited__">type</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">cls, *args, **kwargs</span>):</span><br><span class="line">        <span class="built_in">super</span>().__init__(*args, **kwargs)</span><br><span class="line">        cls.clone = <span class="keyword">lambda</span> <span class="variable language_">self</span>, is_deep=<span class="literal">True</span>: \</span><br><span class="line">            copy.deepcopy(<span class="variable language_">self</span>) <span class="keyword">if</span> is_deep <span class="keyword">else</span> copy.copy(<span class="variable language_">self</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：通过元类给指定了<code>metaclass=PrototypeMeta</code>的类添加一个<code>clone</code>方法实现对象克隆，利用Python标准库<code>copy</code>模块的<code>copy</code>和<code>deepcopy</code>分别实现浅拷贝和深拷贝。</p>
+</blockquote>
+<h4 id="数据采集和数据分析从未如此简单"><a href="#数据采集和数据分析从未如此简单" class="headerlink" title="数据采集和数据分析从未如此简单"></a>数据采集和数据分析从未如此简单</h4><blockquote>
+<p><strong>网络数据采集是Python最擅长的领域之一。</strong></p>
+</blockquote>
+<p>例子：获取豆瓣电影“Top250”。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> page <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>):</span><br><span class="line">    resp = requests.get(</span><br><span class="line">        url=<span class="string">f&#x27;https://movie.douban.com/top250?start=<span class="subst">&#123;<span class="number">25</span> * page&#125;</span>&#x27;</span>,</span><br><span class="line">        headers=&#123;<span class="string">&#x27;User-Agent&#x27;</span>: <span class="string">&#x27;BaiduSpider&#x27;</span>&#125;</span><br><span class="line">    )</span><br><span class="line">    soup = BeautifulSoup(resp.text, <span class="string">&quot;lxml&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> elem <span class="keyword">in</span> soup.select(<span class="string">&#x27;a &gt; span.title:nth-child(1)&#x27;</span>):</span><br><span class="line">        <span class="built_in">print</span>(elem.text)</span><br><span class="line">    time.sleep(random.random() * <span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>利用NumPy、Pandas、Matplotlib可以轻松实现数据分析和可视化</strong>。</p>
+</blockquote>
+<p><img src="/res/use-pandas-in-jupyter-notebook.png"></p>
+<h3 id="写出Python代码的正确姿势"><a href="#写出Python代码的正确姿势" class="headerlink" title="写出Python代码的正确姿势"></a>写出Python代码的正确姿势</h3><blockquote>
+<p><strong>用Python写代码就要写出Pythonic的代码</strong>。</p>
+</blockquote>
+<h4 id="姿势1：选择结构的正确姿势"><a href="#姿势1：选择结构的正确姿势" class="headerlink" title="姿势1：选择结构的正确姿势"></a>姿势1：选择结构的正确姿势</h4><p>跨界开发者的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;jackfrued&#x27;</span></span><br><span class="line">fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>]</span><br><span class="line">owners = &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;骆昊&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">40</span>, <span class="string">&#x27;gender&#x27;</span>: <span class="literal">True</span>&#125;</span><br><span class="line"><span class="keyword">if</span> name != <span class="string">&#x27;&#x27;</span> <span class="keyword">and</span> <span class="built_in">len</span>(fruits) &gt; <span class="number">0</span> <span class="keyword">and</span> <span class="built_in">len</span>(owners.keys()) &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Jackfrued love fruits.&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Pythonic的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">name = <span class="string">&#x27;jackfrued&#x27;</span></span><br><span class="line">fruits = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>]</span><br><span class="line">owners = &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;骆昊&#x27;</span>, <span class="string">&#x27;age&#x27;</span>: <span class="number">40</span>, <span class="string">&#x27;gender&#x27;</span>: <span class="literal">True</span>&#125;</span><br><span class="line"><span class="keyword">if</span> name <span class="keyword">and</span> fruits <span class="keyword">and</span> owners:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;Jackfrued love fruits.&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="姿势2：交换两个变量的正确姿势"><a href="#姿势2：交换两个变量的正确姿势" class="headerlink" title="姿势2：交换两个变量的正确姿势"></a>姿势2：交换两个变量的正确姿势</h4><p>跨界开发者的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">temp = a</span><br><span class="line">a = b</span><br><span class="line">b = temp</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = a ^ b</span><br><span class="line">b = a ^ b</span><br><span class="line">a = a ^ b</span><br></pre></td></tr></table></figure>
+
+<p>Pythonic的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a, b = b, a</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="姿势3：用序列组装字符串的正确姿势"><a href="#姿势3：用序列组装字符串的正确姿势" class="headerlink" title="姿势3：用序列组装字符串的正确姿势"></a>姿势3：用序列组装字符串的正确姿势</h4><p>跨界开发者的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;d&#x27;</span>]</span><br><span class="line">name = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">for</span> char <span class="keyword">in</span> chars:</span><br><span class="line">    name += char</span><br></pre></td></tr></table></figure>
+
+<p>Pythonic的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chars = [<span class="string">&#x27;j&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;k&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;d&#x27;</span>]</span><br><span class="line">name = <span class="string">&#x27;&#x27;</span>.join(chars)</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="姿势4：遍历列表的正确姿势"><a href="#姿势4：遍历列表的正确姿势" class="headerlink" title="姿势4：遍历列表的正确姿势"></a>姿势4：遍历列表的正确姿势</h4><p>跨界开发者的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>, <span class="string">&#x27;pitaya&#x27;</span>, <span class="string">&#x27;blueberry&#x27;</span>]</span><br><span class="line">index = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> fruit <span class="keyword">in</span> fruits:</span><br><span class="line">    <span class="built_in">print</span>(index, <span class="string">&#x27;:&#x27;</span>, fruit)</span><br><span class="line">    index += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>Pythonic的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fruits = [<span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;grape&#x27;</span>, <span class="string">&#x27;pitaya&#x27;</span>, <span class="string">&#x27;blueberry&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> index, fruit <span class="keyword">in</span> <span class="built_in">enumerate</span>(fruits):</span><br><span class="line">    <span class="built_in">print</span>(index, <span class="string">&#x27;:&#x27;</span>, fruit)</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="姿势5：创建列表的正确姿势"><a href="#姿势5：创建列表的正确姿势" class="headerlink" title="姿势5：创建列表的正确姿势"></a>姿势5：创建列表的正确姿势</h4><p>跨界开发者的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">7</span>, <span class="number">20</span>, <span class="number">3</span>, <span class="number">15</span>, <span class="number">11</span>]</span><br><span class="line">result = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data:</span><br><span class="line">    <span class="keyword">if</span> i &gt; <span class="number">10</span>:</span><br><span class="line">        result.append(i * <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Pythonic的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data = [<span class="number">7</span>, <span class="number">20</span>, <span class="number">3</span>, <span class="number">15</span>, <span class="number">11</span>]</span><br><span class="line">result = [num * <span class="number">3</span> <span class="keyword">for</span> num <span class="keyword">in</span> data <span class="keyword">if</span> num &gt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="姿势6：确保代码健壮性的正确姿势"><a href="#姿势6：确保代码健壮性的正确姿势" class="headerlink" title="姿势6：确保代码健壮性的正确姿势"></a>姿势6：确保代码健壮性的正确姿势</h4><p>跨界开发者的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;<span class="string">&#x27;x&#x27;</span>: <span class="string">&#x27;5&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">if</span> <span class="string">&#x27;x&#x27;</span> <span class="keyword">in</span> data <span class="keyword">and</span> <span class="built_in">isinstance</span>(data[<span class="string">&#x27;x&#x27;</span>], (<span class="built_in">str</span>, <span class="built_in">int</span>, <span class="built_in">float</span>)) \</span><br><span class="line">        <span class="keyword">and</span> data[<span class="string">&#x27;x&#x27;</span>].isdigit():</span><br><span class="line">    value = <span class="built_in">int</span>(data[<span class="string">&#x27;x&#x27;</span>])</span><br><span class="line">    <span class="built_in">print</span>(value)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    value = <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+<p>Pythonic的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">data = &#123;<span class="string">&#x27;x&#x27;</span>: <span class="string">&#x27;5&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    value = <span class="built_in">int</span>(data[<span class="string">&#x27;x&#x27;</span>])</span><br><span class="line">    <span class="built_in">print</span>(value)</span><br><span class="line"><span class="keyword">except</span> (KeyError, TypeError, ValueError):</span><br><span class="line">    value = <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="使用Lint工具检查你的代码规范"><a href="#使用Lint工具检查你的代码规范" class="headerlink" title="使用Lint工具检查你的代码规范"></a>使用Lint工具检查你的代码规范</h3><p>阅读下面的代码，看看你能看出哪些地方是有毛病的或者说不符合Python的编程规范的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> enum <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line"><span class="meta">@unique</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Suite</span> (<span class="title class_ inherited__">Enum</span>):</span><br><span class="line">    SPADE, HEART, CLUB, DIAMOND = <span class="built_in">range</span>(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Card</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,suite,face </span>):</span><br><span class="line">        <span class="variable language_">self</span>.suite = suite</span><br><span class="line">        <span class="variable language_">self</span>.face = face</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__repr__</span>(<span class="params">self</span>):</span><br><span class="line">        suites=<span class="string">&#x27;♠♥♣♦&#x27;</span></span><br><span class="line">        faces=[<span class="string">&#x27;&#x27;</span>,<span class="string">&#x27;A&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>,<span class="string">&#x27;5&#x27;</span>,<span class="string">&#x27;6&#x27;</span>,<span class="string">&#x27;7&#x27;</span>,<span class="string">&#x27;8&#x27;</span>,<span class="string">&#x27;9&#x27;</span>,<span class="string">&#x27;10&#x27;</span>,<span class="string">&#x27;J&#x27;</span>,<span class="string">&#x27;Q&#x27;</span>,<span class="string">&#x27;K&#x27;</span>]</span><br><span class="line">        <span class="keyword">return</span> <span class="string">f&#x27;<span class="subst">&#123;suites[self.suite.value]&#125;</span><span class="subst">&#123;faces[self.face]&#125;</span>&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Poker</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.cards =[Card(suite, face) <span class="keyword">for</span> suite <span class="keyword">in</span> Suite</span><br><span class="line">            <span class="keyword">for</span> face <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">14</span>)]</span><br><span class="line">        <span class="variable language_">self</span>.current=<span class="number">0</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">shuffle</span> (<span class="variable language_">self</span>):</span><br><span class="line">        <span class="variable language_">self</span>.current=<span class="number">0</span></span><br><span class="line">        random.shuffle(<span class="variable language_">self</span>.cards)</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">deal</span> (<span class="variable language_">self</span>):</span><br><span class="line">        card = <span class="variable language_">self</span>.cards[<span class="variable language_">self</span>.current]</span><br><span class="line">        <span class="variable language_">self</span>.current+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> card</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">has_next</span> (<span class="variable language_">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.current&lt;<span class="built_in">len</span>(<span class="variable language_">self</span>.cards): <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">p = Poker()</span><br><span class="line">p.shuffle()</span><br><span class="line"><span class="built_in">print</span>(p.cards)</span><br></pre></td></tr></table></figure>
+
+<h4 id="PyLint的安装和使用"><a href="#PyLint的安装和使用" class="headerlink" title="PyLint的安装和使用"></a>PyLint的安装和使用</h4><p>Pylint是Python代码分析工具，它分析Python代码中的错误，查找不符合代码风格标准（默认使用的代码风格是 PEP 8）和有潜在问题的代码。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pylint</span><br><span class="line">pylint [options] module_or_package</span><br></pre></td></tr></table></figure>
+
+<p>Pylint输出格式如下所示。</p>
+<blockquote>
+<p>模块名:行号:列号:    消息类型    消息</p>
+</blockquote>
+<p>消息类型有以下几种：</p>
+<ol>
+<li>C - 惯例：违反了Python编程惯例（PEP 8）的代码。</li>
+<li>R - 重构：写得比较糟糕需要重构的代码。</li>
+<li>W - 警告：代码中存在的不影响代码运行的问题。</li>
+<li>E - 错误：代码中存在的影响代码运行的错误。</li>
+<li>F - 致命错误：导致Pylint无法继续运行的错误。</li>
+</ol>
+<p>Pylint命令的常用参数：</p>
+<ol>
+<li><code>--disable=&lt;msg ids&gt;</code>或<code>-d &lt;msg ids&gt;</code>：禁用指定类型的消息。</li>
+<li><code>--errors-only</code>或<code>-E</code>：只显示错误。</li>
+<li><code>--rcfile=&lt;file&gt;</code>：指定配置文件。</li>
+<li><code>--list-msgs</code>：列出Pylint的消息清单。</li>
+<li><code>--generate-rcfile</code>：生成配置文件的样例。</li>
+<li><code>--reports=&lt;y_or_n&gt;</code>或<code>-r &lt;y_or_n&gt;</code>：是否生成检查报告。</li>
+</ol>
+<h3 id="使用Profile工具剖析你的代码性能"><a href="#使用Profile工具剖析你的代码性能" class="headerlink" title="使用Profile工具剖析你的代码性能"></a>使用Profile工具剖析你的代码性能</h3><h4 id="cProfile模块"><a href="#cProfile模块" class="headerlink" title="cProfile模块"></a>cProfile模块</h4><p><code>example01.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> cProfile</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_prime</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">for</span> factor <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="built_in">int</span>(num ** <span class="number">0.5</span>) + <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> num % factor == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PrimeIter</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, total</span>):</span><br><span class="line">        <span class="variable language_">self</span>.counter = <span class="number">0</span></span><br><span class="line">        <span class="variable language_">self</span>.current = <span class="number">1</span></span><br><span class="line">        <span class="variable language_">self</span>.total = total</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__iter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__next__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.counter &lt; <span class="variable language_">self</span>.total:</span><br><span class="line">            <span class="variable language_">self</span>.current += <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> <span class="keyword">not</span> is_prime(<span class="variable language_">self</span>.current):</span><br><span class="line">                <span class="variable language_">self</span>.current += <span class="number">1</span></span><br><span class="line">            <span class="variable language_">self</span>.counter += <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">self</span>.current</span><br><span class="line">        <span class="keyword">raise</span> StopIteration()</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">cProfile.run(<span class="string">&#x27;list(PrimeIter(10000))&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>执行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">114734 function calls in 0.573 seconds</span><br><span class="line"></span><br><span class="line">Ordered by: standard name</span><br><span class="line"></span><br><span class="line">ncalls  tottime  percall  cumtime  percall filename:lineno(function)</span><br><span class="line">     1    0.006    0.006    0.573    0.573 &lt;string&gt;:1(&lt;module&gt;)</span><br><span class="line">     1    0.000    0.000    0.000    0.000 example.py:14(__init__)</span><br><span class="line">     1    0.000    0.000    0.000    0.000 example.py:19(__iter__)</span><br><span class="line"> 10001    0.086    0.000    0.567    0.000 example.py:22(__next__)</span><br><span class="line">104728    0.481    0.000    0.481    0.000 example.py:5(is_prime)</span><br><span class="line">     1    0.000    0.000    0.573    0.573 &#123;built-in method builtins.exec&#125;</span><br><span class="line">     1    0.000    0.000    0.000    0.000 &#123;method &#x27;disable&#x27; of &#x27;_lsprof.Profiler&#x27; objects&#125;</span><br></pre></td></tr></table></figure>
+
+<p>####line_profiler</p>
+<p>给需要剖析时间性能的函数加上一个<code>profile</code>装饰器，这个函数每行代码的执行次数和时间都会被剖析。</p>
+<p><code>example02.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@profile</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">is_prime</span>(<span class="params">num</span>):</span><br><span class="line">    <span class="keyword">for</span> factor <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, <span class="built_in">int</span>(num ** <span class="number">0.5</span>) + <span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> num % factor == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">PrimeIter</span>:</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, total</span>):</span><br><span class="line">        <span class="variable language_">self</span>.counter = <span class="number">0</span></span><br><span class="line">        <span class="variable language_">self</span>.current = <span class="number">1</span></span><br><span class="line">        <span class="variable language_">self</span>.total = total</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__iter__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> <span class="variable language_">self</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__next__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">if</span> <span class="variable language_">self</span>.counter &lt; <span class="variable language_">self</span>.total:</span><br><span class="line">            <span class="variable language_">self</span>.current += <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> <span class="keyword">not</span> is_prime(<span class="variable language_">self</span>.current):</span><br><span class="line">                <span class="variable language_">self</span>.current += <span class="number">1</span></span><br><span class="line">            <span class="variable language_">self</span>.counter += <span class="number">1</span></span><br><span class="line">            <span class="keyword">return</span> <span class="variable language_">self</span>.current</span><br><span class="line">        <span class="keyword">raise</span> StopIteration()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">list</span>(PrimeIter(<span class="number">1000</span>))</span><br></pre></td></tr></table></figure>
+
+<p>安装和使用<code>line_profiler</code>三方库。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">pip install line_profiler</span><br><span class="line">kernprof -lv example.py</span><br><span class="line"></span><br><span class="line">Wrote profile results to example02.py.lprof</span><br><span class="line">Timer unit: 1e-06 s</span><br><span class="line"></span><br><span class="line">Total time: 0.089513 s</span><br><span class="line">File: example02.py</span><br><span class="line">Function: is_prime at line 1</span><br><span class="line"></span><br><span class="line"> <span class="comment">#      Hits         Time  Per Hit   % Time  Line Contents</span></span><br><span class="line">==============================================================</span><br><span class="line"> 1                                           @profile</span><br><span class="line"> 2                                           def is_prime(num):</span><br><span class="line"> 3     86624      43305.0      0.5     48.4      <span class="keyword">for</span> <span class="built_in">factor</span> <span class="keyword">in</span> range(2, int(num ** 0.5) + 1):</span><br><span class="line"> 4     85624      42814.0      0.5     47.8          <span class="keyword">if</span> num % <span class="built_in">factor</span> == 0:</span><br><span class="line"> 5      6918       3008.0      0.4      3.4              <span class="built_in">return</span> False</span><br><span class="line"> 6      1000        386.0      0.4      0.4      <span class="built_in">return</span> True</span><br></pre></td></tr></table></figure>
+
+<p>####memory_profiler </p>
+<p>给需要剖析内存性能的函数加上一个<code>profile</code>装饰器，这个函数每行代码的内存使用情况都会被剖析。</p>
+<p><code>example03.py</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@profile</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">eat_memory</span>():</span><br><span class="line">    items = []</span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000000</span>):</span><br><span class="line">        items.append(<span class="built_in">object</span>())</span><br><span class="line">    <span class="keyword">return</span> items</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">eat_memory()</span><br></pre></td></tr></table></figure>
+
+<p>安装和使用<code>memory_profiler</code>三方库。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">pip install memory_profiler</span><br><span class="line">python3 -m memory_profiler example.py</span><br><span class="line"></span><br><span class="line">Filename: example03.py</span><br><span class="line"></span><br><span class="line">Line <span class="comment">#    Mem usage    Increment   Line Contents</span></span><br><span class="line">================================================</span><br><span class="line">     <span class="number">1</span>   <span class="number">38.672</span> MiB   <span class="number">38.672</span> MiB   @profile</span><br><span class="line">     <span class="number">2</span>                             <span class="keyword">def</span> <span class="title function_">eat_memory</span>():</span><br><span class="line">     <span class="number">3</span>   <span class="number">38.672</span> MiB    <span class="number">0.000</span> MiB       items = []</span><br><span class="line">     <span class="number">4</span>   <span class="number">68.727</span> MiB    <span class="number">0.000</span> MiB       <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000000</span>):</span><br><span class="line">     <span class="number">5</span>   <span class="number">68.727</span> MiB    <span class="number">1.797</span> MiB           items.append(<span class="built_in">object</span>())</span><br><span class="line">     <span class="number">6</span>   <span class="number">68.727</span> MiB    <span class="number">0.000</span> MiB       <span class="keyword">return</span> items</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何构建综合职业素养"><a href="#如何构建综合职业素养" class="headerlink" title="如何构建综合职业素养"></a>如何构建综合职业素养</h3><h4 id="学习总结"><a href="#学习总结" class="headerlink" title="学习总结"></a>学习总结</h4><ol>
+<li>了解全局</li>
+<li>确定范围</li>
+<li>定义目标</li>
+<li>寻找资源</li>
+<li>创建学习计划</li>
+<li>筛选资源</li>
+<li>开始学习，浅尝辄止（YAGNI）</li>
+<li>动手操作，边学边玩</li>
+<li>全面掌握，学以致用</li>
+<li>乐为人师，融会贯通</li>
+</ol>
+<h4 id="时间管理"><a href="#时间管理" class="headerlink" title="时间管理"></a>时间管理</h4><ol>
+<li><p>提升专注力</p>
+</li>
+<li><p>充分利用碎片时间</p>
+</li>
+<li><p>使用番茄工作法</p>
+</li>
+<li><p>时间是怎么浪费掉的</p>
+</li>
+<li><p>任何行动都比不采取行动好</p>
+<p><img src="/res/action.png"></p>
+</li>
+</ol>
+<h4 id="好书推荐"><a href="#好书推荐" class="headerlink" title="好书推荐"></a>好书推荐</h4><ol>
+<li>职业规划：《软技能 - 代码之外的生存指南》</li>
+<li>吴军系列：《浪潮之巅》、《硅谷之谜》、《数学之美》、……</li>
+<li>时间管理：《成为一个更高效的人》、《番茄工作法图解》</li>
+</ol>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/04.%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/36.%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8CMySQL%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/64.%E4%BD%BF%E7%94%A8Selenium%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/81.%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%92%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/94.%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E7%AC%AC06%E6%AC%A1%E5%85%AC%E5%BC%80%E8%AF%BE-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%9C%A8%E6%B0%B4%E4%B8%80%E6%96%B9/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972%20-%20%E5%9C%A8%E6%B0%B4%E4%B8%80%E6%96%B9/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_4/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:03 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:03 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

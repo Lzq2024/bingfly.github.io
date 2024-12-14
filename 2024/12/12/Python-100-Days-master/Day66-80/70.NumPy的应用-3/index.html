@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="NumPy的应用-3"><a href="#NumPy的应用-3" class="headerlink" title="NumPy的应用-3"></a>NumPy的应用-3</h2><h3 id="数组的运算"><a href="#数组的运算" class="headerlink" title="数组的运算"></a>数组的运算</h3><p>使用 NumPy 最为方便的是当需要对数组元素进行运算时，不用编写循环代码遍历每个元素，所有的运算都会自动的<strong>矢量化</strong>。简单的说就是，NumPy 中的数学运算和数学函数会自动作用于数组中的每个成员。</p>
+<h4 id="数组跟标量的运算"><a href="#数组跟标量的运算" class="headerlink" title="数组跟标量的运算"></a>数组跟标量的运算</h4><p>NumPy 的数组可以跟一个数值进行加、减、乘、除、求模、求幂等运算，对应的运算会作用到数组的每一个元素上，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array1 = np.arange(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(array1 + <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(array1 * <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[11 12 13 14 15 16 17 18 19]</span><br><span class="line">[10 20 30 40 50 60 70 80 90]</span><br></pre></td></tr></table></figure>
+
+<p>除了上述的运算，关系运算也是没有问题的，之前讲布尔索引的时候已经遇到过了。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array1 &gt; <span class="number">5</span>)</span><br><span class="line"><span class="built_in">print</span>(array1 % <span class="number">2</span> == <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[False False False False False  True  True  True  True]</span><br><span class="line">[False  True False  True False  True False  True False]</span><br></pre></td></tr></table></figure>
+
+<h4 id="数组跟数组的运算"><a href="#数组跟数组的运算" class="headerlink" title="数组跟数组的运算"></a>数组跟数组的运算</h4><p>NumPy 的数组跟数组也可以执行算术运算和关系运算，运算会作用于两个数组对应的元素上，这就要求两个数组的形状（<code>shape</code>属性）要相同，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array2 = np.array([<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(array1 + array2)</span><br><span class="line"><span class="built_in">print</span>(array1 * array2)</span><br><span class="line"><span class="built_in">print</span>(array1 ** array2)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[ 2  3  4  6  7  8 10 11 12]</span><br><span class="line">[ 1  2  3  8 10 12 21 24 27]</span><br><span class="line">[  1   2   3  16  25  36 343 512 729]</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(array1 &gt; array2)</span><br><span class="line"><span class="built_in">print</span>(array1 % array2 == <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[False  True  True  True  True  True  True  True  True]</span><br><span class="line">[ True  True  True  True False  True False False  True]</span><br></pre></td></tr></table></figure>
+
+<h4 id="通用一元函数"><a href="#通用一元函数" class="headerlink" title="通用一元函数"></a>通用一元函数</h4><p>NumPy 中通用一元函数的参数是一个数组对象，函数会对数组进行元素级的处理，例如：<code>sqrt</code>函数会对数组中的每个元素计算平方根，而<code>log2</code>函数会对数组中的每个元素计算以2为底的对数，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(np.sqrt(array1))</span><br><span class="line"><span class="built_in">print</span>(np.log2(array1))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[1.         1.41421356 1.73205081 2.         2.23606798 2.44948974</span><br><span class="line"> 2.64575131 2.82842712 3.        ]</span><br><span class="line">[0.         1.         1.5849625  2.         2.32192809 2.5849625</span><br><span class="line"> 2.80735492 3.         3.169925  ]</span><br></pre></td></tr></table></figure>
+
+<p><strong>表1：通用一元函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>abs</code> &#x2F; <code>fabs</code></td>
+<td>求绝对值的函数</td>
+</tr>
+<tr>
+<td><code>sqrt</code></td>
+<td>求平方根的函数，相当于<code>array ** 0.5 </code></td>
+</tr>
+<tr>
+<td><code>square</code></td>
+<td>求平方的函数，相当于<code>array ** 2</code></td>
+</tr>
+<tr>
+<td><code>exp</code></td>
+<td>计算$e^x$的函数</td>
+</tr>
+<tr>
+<td><code>log</code> &#x2F; <code>log10</code> &#x2F; <code>log2</code></td>
+<td>对数函数（<code>e</code>为底 &#x2F; <code>10</code>为底 &#x2F; <code>2</code>为底）</td>
+</tr>
+<tr>
+<td><code>sign</code></td>
+<td>符号函数（<code>1</code> - 正数；<code>0</code> - 零；<code>-1</code> - 负数）</td>
+</tr>
+<tr>
+<td><code>ceil</code> &#x2F; <code>floor</code></td>
+<td>上取整 &#x2F;  下取整</td>
+</tr>
+<tr>
+<td><code>isnan</code></td>
+<td>返回布尔数组，NaN对应<code>True</code>，非NaN对应<code>False</code></td>
+</tr>
+<tr>
+<td><code>isfinite</code> &#x2F; <code>isinf</code></td>
+<td>判断数值是否为无穷大的函数</td>
+</tr>
+<tr>
+<td><code>cos</code> &#x2F; <code>cosh</code> &#x2F; <code>sin</code></td>
+<td>三角函数</td>
+</tr>
+<tr>
+<td><code>sinh</code> &#x2F; <code>tan</code> &#x2F; <code>tanh</code></td>
+<td>三角函数</td>
+</tr>
+<tr>
+<td><code>arccos</code> &#x2F; <code>arccosh</code> &#x2F; <code>arcsin</code></td>
+<td>反三角函数</td>
+</tr>
+<tr>
+<td><code>arcsinh</code> &#x2F; <code>arctan</code> &#x2F; <code>arctanh</code></td>
+<td>反三角函数</td>
+</tr>
+<tr>
+<td><code>rint</code> &#x2F; <code>round</code></td>
+<td>四舍五入函数</td>
+</tr>
+</tbody></table>
+<h4 id="通用二元函数"><a href="#通用二元函数" class="headerlink" title="通用二元函数"></a>通用二元函数</h4><p>NumPy 中通用二元函数的参数是两个数组对象，函数会对两个数组中的对应元素进行运算，例如：<code>maximum</code>函数会对两个数组中对应的元素找最大值，而<code>power</code>函数会对两个数组中对应的元素进行求幂操作，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array3 = np.array([[<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>], [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]])</span><br><span class="line">array4 = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br><span class="line"><span class="built_in">print</span>(np.maximum(array3, array4))</span><br><span class="line"><span class="built_in">print</span>(np.power(array3, array4))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[[4 5 6]</span><br><span class="line"> [7 8 9]]</span><br><span class="line">[[  4  25 216]</span><br><span class="line"> [343  64   9]]</span><br></pre></td></tr></table></figure>
+
+<p><strong>表2：通用二元函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>add(x, y)</code> &#x2F; <code>substract(x, y)</code></td>
+<td>加法函数 &#x2F; 减法函数</td>
+</tr>
+<tr>
+<td><code>multiply(x, y)</code> &#x2F; <code>divide(x, y)</code></td>
+<td>乘法函数 &#x2F; 除法函数</td>
+</tr>
+<tr>
+<td><code>floor_divide(x, y)</code> &#x2F; <code>mod(x, y)</code></td>
+<td>整除函数 &#x2F; 求模函数</td>
+</tr>
+<tr>
+<td><code>allclose(x, y)</code></td>
+<td>检查数组<code>x</code>和<code>y</code>元素是否几乎相等</td>
+</tr>
+<tr>
+<td><code>power(x, y)</code></td>
+<td>数组$x$的元素$x_i$和数组$y$的元素$y_i$，计算$x_i^{y_i}$</td>
+</tr>
+<tr>
+<td><code>maximum(x, y)</code> &#x2F; <code>fmax(x, y)</code></td>
+<td>两两比较元素获取最大值 &#x2F; 获取最大值（忽略NaN）</td>
+</tr>
+<tr>
+<td><code>minimum(x, y)</code> &#x2F; <code>fmin(x, y)</code></td>
+<td>两两比较元素获取最小值 &#x2F; 获取最小值（忽略NaN）</td>
+</tr>
+<tr>
+<td><code>dot(x, y)</code></td>
+<td>点积运算（数量积，通常记为$\cdot$，用于欧几里得空间（Euclidean space））</td>
+</tr>
+<tr>
+<td><code>inner(x, y)</code></td>
+<td>内积运算（内积的含义要高于点积，点积相当于是内积在欧几里得空间$\mathbb{R}^n$的特例，而内积可以推广到赋范向量空间，只要它满足平行四边形法则即可）</td>
+</tr>
+<tr>
+<td><code>cross(x, y) </code></td>
+<td>叉积运算（向量积，通常记为$\times$，运算结果是一个向量）</td>
+</tr>
+<tr>
+<td><code>outer(x, y)</code></td>
+<td>外积运算（张量积，通常记为$\bigotimes$，运算结果通常是一个矩阵）</td>
+</tr>
+<tr>
+<td><code>intersect1d(x, y)</code></td>
+<td>计算<code>x</code>和<code>y</code>的交集，返回这些元素构成的有序数组</td>
+</tr>
+<tr>
+<td><code>union1d(x, y)</code></td>
+<td>计算<code>x</code>和<code>y</code>的并集，返回这些元素构成的有序数组</td>
+</tr>
+<tr>
+<td><code>in1d(x, y)</code></td>
+<td>返回由判断<code>x</code> 的元素是否在<code>y</code>中得到的布尔值构成的数组</td>
+</tr>
+<tr>
+<td><code>setdiff1d(x, y)</code></td>
+<td>计算<code>x</code>和<code>y</code>的差集，返回这些元素构成的数组</td>
+</tr>
+<tr>
+<td><code>setxor1d(x, y)</code></td>
+<td>计算<code>x</code>和<code>y</code>的对称差，返回这些元素构成的数组</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>说明</strong>：关于向量和矩阵的运算，我们在下一个章节加以说明。</p>
+</blockquote>
+<h4 id="广播机制"><a href="#广播机制" class="headerlink" title="广播机制"></a>广播机制</h4><p>上面数组运算的例子中，两个数组的形状（<code>shape</code>属性）是完全相同的，我们再来研究一下，两个形状不同的数组是否可以直接做二元运算或使用通用二元函数进行运算，请看下面的例子。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array5 = np.array([[<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>], [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>]])</span><br><span class="line">array6 = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">array5 + array6</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 2, 3],</span><br><span class="line">       [2, 3, 4],</span><br><span class="line">       [3, 4, 5],</span><br><span class="line">       [4, 5, 6]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array7 = np.array([[<span class="number">1</span>], [<span class="number">2</span>], [<span class="number">3</span>], [<span class="number">4</span>]])</span><br><span class="line">array5 + array7</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 1, 1],</span><br><span class="line">       [3, 3, 3],</span><br><span class="line">       [5, 5, 5],</span><br><span class="line">       [7, 7, 7]])</span><br></pre></td></tr></table></figure>
+
+<p>通过上面的例子，我们发现形状不同的数组仍然有机会进行二元运算，但这不代表任意形状的数组都可以进行二元运算。简单的说，只有两个数组后缘维度相同或者后缘维度不同但其中一个数组后缘维度为1时，广播机制才会被触发。通过广播机制，NumPy 将两个原本形状不相同的数组变成形状相同，才能进行二元运算。所谓后缘维度，指的是数组形状（<code>shape</code>属性）从后往前看对应的部分，我们举例说明。</p>
+<img src="res/broadcast-1.png" style="zoom:100%;">
+
+<p>上图中，一个数组的形状是<code>(4, 3)</code>，另一个数组的形状是<code>(3, )</code>，从后往前看对应的部分都是<code>3</code>，属于后缘维度相同，可以应用广播机制，第二个数组会沿着缺失元素那个轴的方向去广播自己，最终让两个数组形状达成一致。</p>
+<img src="res/broadcast-3.png" style="zoom:100%;">
+
+<p>上图中，一个数组的形状是<code>(3, 4, 2)</code>，另一个数组的形状是<code>(4, 2)</code>，从后往前看对应的部分都是<code>(4, 2)</code>，属于后缘维度相同，可以应用广播机制，第二个数组会沿着缺失元素那个轴的方向去广播自己，最终让两个数组形状达成一致。</p>
+<img src="res/broadcast-2.png" style="zoom:100%;">
+
+<p>上图中，一个数组的形状是<code>(4, 3)</code>，另一个数组的形状是<code>(4, 1)</code>，这是后缘维度不相同的情况，但是第二个数组跟第一个数组不同的地方为<code>1</code>，第二个数组可以沿着为<code>1</code> 的那个轴广播自己，最终让两个数组形状达成一致。</p>
+<blockquote>
+<p><strong>思考</strong>：一个3行1列的二维数组和一个1行3列的二维数组能够执行加法运算吗？</p>
+</blockquote>
+<h3 id="其他常用函数"><a href="#其他常用函数" class="headerlink" title="其他常用函数"></a>其他常用函数</h3><p>除了上面讲到的函数外，NumPy 中还提供了很多用于处理数组的函数，<code>ndarray</code>对象的很多方法也可以通过调用函数来实现，下表给出了一些常用的函数。</p>
+<p><strong>表3：NumPy其他常用函数</strong></p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>unique</code></td>
+<td>去除数组重复元素，返回唯一元素构成的有序数组</td>
+</tr>
+<tr>
+<td><code>copy</code></td>
+<td>返回拷贝数组得到的数组</td>
+</tr>
+<tr>
+<td><code>sort</code></td>
+<td>返回数组元素排序后的拷贝</td>
+</tr>
+<tr>
+<td><code>split</code> &#x2F; <code>hsplit</code> &#x2F; <code>vsplit</code></td>
+<td>将数组拆成若干个子数组</td>
+</tr>
+<tr>
+<td><code>stack</code> &#x2F; <code>hstack</code> &#x2F; <code>vstack</code></td>
+<td>将多个数组堆叠成新数组</td>
+</tr>
+<tr>
+<td><code>concatenate</code></td>
+<td>沿着指定的轴连接多个数组构成新数组</td>
+</tr>
+<tr>
+<td><code>append</code> &#x2F; <code>insert</code></td>
+<td>向数组末尾追加元素 &#x2F; 在数组指定位置插入元素</td>
+</tr>
+<tr>
+<td><code>argwhere</code></td>
+<td>找出数组中非0元素的位置</td>
+</tr>
+<tr>
+<td><code>extract</code> &#x2F; <code>select</code> &#x2F; <code>where</code></td>
+<td>按照指定的条件从数组中抽取或处理数组元素</td>
+</tr>
+<tr>
+<td><code>flip</code></td>
+<td>沿指定的轴翻转数组中的元素</td>
+</tr>
+<tr>
+<td><code>fromregex</code></td>
+<td>通过读取文件和正则表达式解析获取数据创建数组对象</td>
+</tr>
+<tr>
+<td><code>repeat</code> &#x2F; <code>tile</code></td>
+<td>通过对元素的重复来创建新数组</td>
+</tr>
+<tr>
+<td><code>roll</code></td>
+<td>沿指定轴对数组元素进行移位</td>
+</tr>
+<tr>
+<td><code>resize</code></td>
+<td>重新调整数组的大小</td>
+</tr>
+<tr>
+<td><code>place</code> &#x2F; <code>put</code></td>
+<td>将数组中满足条件的元素&#x2F;指定的元素替换为指定的值</td>
+</tr>
+<tr>
+<td><code>partition</code></td>
+<td>用选定的元素对数组进行一次划分并返回划分后的数组</td>
+</tr>
+</tbody></table>
+<p><strong>去重（重复元素只保留一项）</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.unique(array5)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([0, 1, 2, 3])</span><br></pre></td></tr></table></figure>
+
+<p><strong>堆叠和拼接</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array8 = np.array([[<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">3</span>, <span class="number">3</span>]])</span><br><span class="line">array9 = np.array([[<span class="number">4</span>, <span class="number">4</span>, <span class="number">4</span>], [<span class="number">5</span>, <span class="number">5</span>, <span class="number">5</span>], [<span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>]])</span><br><span class="line">np.hstack((array8, array9))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 1, 1, 4, 4, 4],</span><br><span class="line">       [2, 2, 2, 5, 5, 5],</span><br><span class="line">       [3, 3, 3, 6, 6, 6]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.vstack((array8, array9))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 1, 1],</span><br><span class="line">       [2, 2, 2],</span><br><span class="line">       [3, 3, 3],</span><br><span class="line">       [4, 4, 4],</span><br><span class="line">       [5, 5, 5],</span><br><span class="line">       [6, 6, 6]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.concatenate((array8, array9))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 1, 1],</span><br><span class="line">       [2, 2, 2],</span><br><span class="line">       [3, 3, 3],</span><br><span class="line">       [4, 4, 4],</span><br><span class="line">       [5, 5, 5],</span><br><span class="line">       [6, 6, 6]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.concatenate((array8, array9), axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 1, 1, 4, 4, 4],</span><br><span class="line">       [2, 2, 2, 5, 5, 5],</span><br><span class="line">       [3, 3, 3, 6, 6, 6]])</span><br></pre></td></tr></table></figure>
+
+<p><strong>追加和插入元素</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.append(array1, [<span class="number">10</span>, <span class="number">100</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([  1,   2,   3,   4,   5,   6,   7,   8,   9,  10, 100])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.insert(array1, <span class="number">1</span>, [<span class="number">98</span>, <span class="number">99</span>, <span class="number">100</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([  1,  98,  99, 100,   2,   3,   4,   5,   6,   7,   8,   9])</span><br></pre></td></tr></table></figure>
+
+<p><strong>抽取和处理元素</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.extract(array1 % <span class="number">2</span> != <span class="number">0</span>, array1)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 3, 5, 7, 9])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面<code>extract</code>函数的操作相当于我们之前讲的布尔索引。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.select([array1 &lt;= <span class="number">3</span>, array1 &gt;= <span class="number">7</span>], [array1 * <span class="number">10</span>, array1 ** <span class="number">2</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([10, 20, 30,  0,  0,  0, 49, 64, 81])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面<code>select</code>函数的第一个参数设置了两个条件，满足第一个条件的元素执行了乘以10的操作，满足第二个条件的元素执行了求平方的操作，两个条件都不能满足的数组元素会被处理为0。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.where(array1 &lt;= <span class="number">5</span>, array1 * <span class="number">10</span>, array1 ** <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([10, 20, 30, 40, 50, 36, 49, 64, 81])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面<code>where</code>函数的第一个参数给出了条件，满足条件的元素执行了乘以10的操作，不能满足条件的元素执行了求平方的操作。</p>
+</blockquote>
+<p><strong>重复数组元素创建新数组</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.repeat(array1, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9, 9])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.tile(array1, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span><br></pre></td></tr></table></figure>
+
+<p><strong>调整数组大小</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.resize(array1, (<span class="number">5</span>, <span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">array([[1, 2, 3],</span><br><span class="line">       [4, 5, 6],</span><br><span class="line">       [7, 8, 9],</span><br><span class="line">       [1, 2, 3],</span><br><span class="line">       [4, 5, 6]])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：<code>array1</code>原本是一个有9个元素的一维数组，通过<code>resize</code>函数调整成为5行3列共15个元素的二维数组，缺少的元素通过复用原数组中的元素来补充。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.resize(array5, (<span class="number">2</span>, <span class="number">4</span>))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[0, 0, 0, 1],</span><br><span class="line">       [1, 1, 2, 2]])</span><br></pre></td></tr></table></figure>
+
+<p><strong>替换数组元素</strong>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.put(array1, [<span class="number">0</span>, <span class="number">1</span>, -<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>], [<span class="number">100</span>, <span class="number">200</span>])</span><br><span class="line">array1</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([100, 200,   3, 200,   5, 100,   7,   8, 100])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面<code>put</code>函的第二个参数给出了要被替换的元素的索引，但是用来作为替换值的元素只有<code>100</code>和<code>200</code>，所以这两个值会被循环使用，因此索引为<code>0</code>、<code>1</code>、<code>-1</code>、<code>3</code>、<code>5</code>的元素被依次替换成了<code>100</code>、<code>200</code>、<code>100</code>、<code>200</code>、<code>100</code>。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">np.place(array1, array1 &gt; <span class="number">5</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line">array1</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([1, 2, 3, 3, 5, 1, 2, 3, 1])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：<code>put</code>函数和<code>place</code>函数都没有返回新的数组对象，而是在原来的数组上直接进行替换。</p>
+</blockquote>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/01.%E5%88%9D%E8%AF%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/66.%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/Python%E4%B9%8B%E7%A6%85%E7%9A%84%E6%9C%80%E4%BD%B3%E7%BF%BB%E8%AF%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/html+css/qq_link/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

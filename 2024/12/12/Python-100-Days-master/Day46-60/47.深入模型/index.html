@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="深入模型"><a href="#深入模型" class="headerlink" title="深入模型"></a>深入模型</h2><p>在上一个章节中，我们提到了Django是基于MVC架构的Web框架，MVC架构追求的是“模型”和“视图”的解耦合。所谓“模型”说得更直白一些就是数据（的表示），所以通常也被称作“数据模型”。在实际的项目中，数据模型通常通过数据库实现持久化操作，而关系型数据库在过去和当下都是持久化的首选方案，下面我们通过完成一个投票项目来讲解和模型相关的知识点。投票项目的首页会展示某在线教育平台所有的学科；点击学科可以查看到该学科的老师及其信息；用户登录后在查看老师的页面为老师投票，可以投赞成票和反对票；未登录的用户可以通过登录页进行登录；尚未注册的用户可以通过注册页输入个人信息进行注册。在这个项目中，我们使用MySQL数据库来实现数据持久化操作。</p>
+<h3 id="创建项目和应用"><a href="#创建项目和应用" class="headerlink" title="创建项目和应用"></a>创建项目和应用</h3><p>我们首先创建Django项目<code>vote</code>并为其添加虚拟环境和依赖项。接下来，在项目下创建名为<code>polls</code>的应用和保存模板页的文件夹<code>tempaltes</code>，项目文件夹的结构如下所示。</p>
+<p><img src="/res/pycharm-vote-project.png"></p>
+<p>根据上面描述的项目需求，我们准备了四个静态页面，分别是展示学科的页面<code>subjects.html</code>，显示学科老师的页面<code>teachers.html</code>，登录页面<code>login.html</code>，注册页面<code>register.html</code>，稍后我们会将静态页修改为Django项目所需的模板页。</p>
+<h3 id="配置关系型数据库MySQL"><a href="#配置关系型数据库MySQL" class="headerlink" title="配置关系型数据库MySQL"></a>配置关系型数据库MySQL</h3><ol>
+<li><p>在MySQL中创建数据库，创建用户，授权用户访问该数据库。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> database vote <span class="keyword">default</span> charset utf8;</span><br><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> <span class="string">&#x27;hellokitty&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified <span class="keyword">by</span> <span class="string">&#x27;Hellokitty.618&#x27;</span>;</span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">all</span> privileges <span class="keyword">on</span> vote.<span class="operator">*</span> <span class="keyword">to</span> <span class="string">&#x27;hellokitty&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在MySQL中创建保存学科和老师信息的二维表（保存用户信息的表稍后处理）。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">use vote;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建学科表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_subject`</span><br><span class="line">(</span><br><span class="line">	`<span class="keyword">no</span>` <span class="type">integer</span> auto_increment comment <span class="string">&#x27;学科编号&#x27;</span>,</span><br><span class="line">    `name` <span class="type">varchar</span>(<span class="number">50</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;学科名称&#x27;</span>,</span><br><span class="line">    `intro` <span class="type">varchar</span>(<span class="number">1000</span>) <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span> comment <span class="string">&#x27;学科介绍&#x27;</span>,</span><br><span class="line">    `is_hot` <span class="type">boolean</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="number">0</span> comment <span class="string">&#x27;是不是热门学科&#x27;</span>,</span><br><span class="line">    <span class="keyword">primary</span> key (`<span class="keyword">no</span>`)</span><br><span class="line">);</span><br><span class="line"><span class="comment">-- 创建老师表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_teacher`</span><br><span class="line">(</span><br><span class="line">    `<span class="keyword">no</span>` <span class="type">integer</span> auto_increment comment <span class="string">&#x27;老师编号&#x27;</span>,</span><br><span class="line">    `name` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;老师姓名&#x27;</span>,</span><br><span class="line">    `sex` <span class="type">boolean</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="number">1</span> comment <span class="string">&#x27;老师性别&#x27;</span>,</span><br><span class="line">    `birth` <span class="type">date</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;出生日期&#x27;</span>,</span><br><span class="line">    `intro` <span class="type">varchar</span>(<span class="number">1000</span>) <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span> comment <span class="string">&#x27;老师介绍&#x27;</span>,</span><br><span class="line">    `photo` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span> comment <span class="string">&#x27;老师照片&#x27;</span>,</span><br><span class="line">    `gcount` <span class="type">integer</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="number">0</span> comment <span class="string">&#x27;好评数&#x27;</span>,</span><br><span class="line">    `bcount` <span class="type">integer</span> <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="number">0</span> comment <span class="string">&#x27;差评数&#x27;</span>,</span><br><span class="line">    `sno` <span class="type">integer</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;所属学科&#x27;</span>,</span><br><span class="line">    <span class="keyword">primary</span> key (`<span class="keyword">no</span>`),</span><br><span class="line">    <span class="keyword">foreign</span> key (`sno`) <span class="keyword">references</span> `tb_subject` (`<span class="keyword">no</span>`)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在虚拟环境中安装连接MySQL数据库所需的依赖项。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install mysqlclient</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：如果因为某些原因无法安装<code>mysqlclient</code>三方库，可以使用它的替代品<code>pymysql</code>，<code>pymysql</code>是用纯Python开发的连接MySQL的Python库，安装更容易成功，但是需要在Django项目文件夹的<code>__init__.py</code>中添加如下所示的代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">pymysql.install_as_MySQLdb()</span><br></pre></td></tr></table></figure>
+
+<p>如果使用Django 2.2及以上版本，还会遇到PyMySQL跟Django框架的兼容性问题，兼容性问题会导致项目无法运行，需要按照GitHub上PyMySQL仓库<a target="_blank" rel="noopener" href="https://github.com/PyMySQL/PyMySQL/issues/790">Issues</a>中提供的方法进行处理。总体来说，使用<code>pymysql</code>会比较麻烦，强烈建议大家首选安装<code>mysqlclient</code>。</p>
+</blockquote>
+</li>
+<li><p>修改项目的settings.py文件，首先将我们创建的应用<code>polls</code>添加已安装的项目（<code>INSTALLED_APPS</code>）中，然后配置MySQL作为持久化方案。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">    <span class="string">&#x27;django.contrib.admin&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.auth&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.contenttypes&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.sessions&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.messages&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;django.contrib.staticfiles&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;polls&#x27;</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">DATABASES = &#123;</span><br><span class="line">    <span class="string">&#x27;default&#x27;</span>: &#123;</span><br><span class="line">        <span class="comment"># 数据库引擎配置</span></span><br><span class="line">        <span class="string">&#x27;ENGINE&#x27;</span>: <span class="string">&#x27;django.db.backends.mysql&#x27;</span>,</span><br><span class="line">        <span class="comment"># 数据库的名字</span></span><br><span class="line">        <span class="string">&#x27;NAME&#x27;</span>: <span class="string">&#x27;vote&#x27;</span>,</span><br><span class="line">        <span class="comment"># 数据库服务器的IP地址（本机可以写localhost或127.0.0.1）</span></span><br><span class="line">        <span class="string">&#x27;HOST&#x27;</span>: <span class="string">&#x27;localhost&#x27;</span>,</span><br><span class="line">        <span class="comment"># 启动MySQL服务的端口号</span></span><br><span class="line">        <span class="string">&#x27;PORT&#x27;</span>: <span class="number">3306</span>,</span><br><span class="line">        <span class="comment"># 数据库用户名和口令</span></span><br><span class="line">        <span class="string">&#x27;USER&#x27;</span>: <span class="string">&#x27;hellokitty&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;PASSWORD&#x27;</span>: <span class="string">&#x27;Hellokitty.618&#x27;</span>,</span><br><span class="line">        <span class="comment"># 数据库使用的字符集</span></span><br><span class="line">        <span class="string">&#x27;CHARSET&#x27;</span>: <span class="string">&#x27;utf8&#x27;</span>,</span><br><span class="line">        <span class="comment"># 数据库时间日期的时区设定</span></span><br><span class="line">        <span class="string">&#x27;TIME_ZONE&#x27;</span>: <span class="string">&#x27;Asia/Chongqing&#x27;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在配置ENGINE属性时，常用的可选值包括：</p>
+<ul>
+<li><code>&#39;django.db.backends.sqlite3&#39;</code>：SQLite嵌入式数据库。</li>
+<li><code>&#39;django.db.backends.postgresql&#39;</code>：BSD许可证下发行的开源关系型数据库产品。</li>
+<li><code>&#39;django.db.backends.mysql&#39;</code>：甲骨文公司经济高效的数据库产品。</li>
+<li><code>&#39;django.db.backends.oracle&#39;</code>：甲骨文公司关系型数据库旗舰产品。</li>
+</ul>
+<p>其他的配置可以参考官方文档中<a target="_blank" rel="noopener" href="https://docs.djangoproject.com/zh-hans/2.0/ref/databases/#third-party-notes">数据库配置</a>的部分。</p>
+</li>
+<li><p>Django框架提供了ORM来解决数据持久化问题，ORM翻译成中文叫“对象关系映射”。因为Python是面向对象的编程语言，我们在Python程序中使用对象模型来保存数据，而关系型数据库使用关系模型，用二维表来保存数据，这两种模型并不匹配。使用ORM是为了实现对象模型到关系模型的<strong>双向转换</strong>，这样就不用在Python代码中书写SQL语句和游标操作，因为这些都会由ORM自动完成。利用Django的ORM，我们可以直接将刚才创建的学科表和老师表变成Django中的模型类。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py inspectdb &gt; polls/models.py</span><br></pre></td></tr></table></figure>
+
+<p>我们可以对自动生成的模型类稍作调整，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.db <span class="keyword">import</span> models</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Subject</span>(models.Model):</span><br><span class="line">    no = models.AutoField(primary_key=<span class="literal">True</span>, verbose_name=<span class="string">&#x27;编号&#x27;</span>)</span><br><span class="line">    name = models.CharField(max_length=<span class="number">50</span>, verbose_name=<span class="string">&#x27;名称&#x27;</span>)</span><br><span class="line">    intro = models.CharField(max_length=<span class="number">1000</span>, verbose_name=<span class="string">&#x27;介绍&#x27;</span>)</span><br><span class="line">    is_hot = models.BooleanField(verbose_name=<span class="string">&#x27;是否热门&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        managed = <span class="literal">False</span></span><br><span class="line">        db_table = <span class="string">&#x27;tb_subject&#x27;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Teacher</span>(models.Model):</span><br><span class="line">    no = models.AutoField(primary_key=<span class="literal">True</span>, verbose_name=<span class="string">&#x27;编号&#x27;</span>)</span><br><span class="line">    name = models.CharField(max_length=<span class="number">20</span>, verbose_name=<span class="string">&#x27;姓名&#x27;</span>)</span><br><span class="line">    sex = models.BooleanField(default=<span class="literal">True</span>, verbose_name=<span class="string">&#x27;性别&#x27;</span>)</span><br><span class="line">    birth = models.DateField(verbose_name=<span class="string">&#x27;出生日期&#x27;</span>)</span><br><span class="line">    intro = models.CharField(max_length=<span class="number">1000</span>, verbose_name=<span class="string">&#x27;个人介绍&#x27;</span>)</span><br><span class="line">    photo = models.ImageField(max_length=<span class="number">255</span>, verbose_name=<span class="string">&#x27;照片&#x27;</span>)</span><br><span class="line">    good_count = models.IntegerField(default=<span class="number">0</span>, db_column=<span class="string">&#x27;gcount&#x27;</span>, verbose_name=<span class="string">&#x27;好评数&#x27;</span>)</span><br><span class="line">    bad_count = models.IntegerField(default=<span class="number">0</span>, db_column=<span class="string">&#x27;bcount&#x27;</span>, verbose_name=<span class="string">&#x27;差评数&#x27;</span>)</span><br><span class="line">    subject = models.ForeignKey(Subject, models.DO_NOTHING, db_column=<span class="string">&#x27;sno&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">class</span> <span class="title class_">Meta</span>:</span><br><span class="line">        managed = <span class="literal">False</span></span><br><span class="line">        db_table = <span class="string">&#x27;tb_teacher&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：模型类都直接或间接继承自<code>Model</code>类，模型类跟关系型数据库的二维表对应，模型对象跟表中的记录对应，模型对象的属性跟表中的字段对应。如果对上面模型类的属性定义不是特别理解，可以看看本文后面提供的“模型定义参考”部分的内容。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="使用ORM完成模型的CRUD操作"><a href="#使用ORM完成模型的CRUD操作" class="headerlink" title="使用ORM完成模型的CRUD操作"></a>使用ORM完成模型的CRUD操作</h3><p>有了Django框架的ORM，我们可以直接使用面向对象的方式来实现对数据的CRUD（增删改查）操作。我们可以在PyCharm的终端中输入下面的命令进入到Django项目的交互式环境，然后尝试对模型的操作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py shell</span><br></pre></td></tr></table></figure>
+
+<h4 id="新增"><a href="#新增" class="headerlink" title="新增"></a>新增</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> polls.models <span class="keyword">import</span> Subject</span><br><span class="line"></span><br><span class="line">subject1 = Subject(name=<span class="string">&#x27;Python全栈开发&#x27;</span>, intro=<span class="string">&#x27;当下最热门的学科&#x27;</span>, is_hot=<span class="literal">True</span>)</span><br><span class="line">subject1.save()</span><br><span class="line">subject2 = Subject(name=<span class="string">&#x27;全栈软件测试&#x27;</span>, intro=<span class="string">&#x27;学习自动化测试的学科&#x27;</span>, is_hot=<span class="literal">False</span>)</span><br><span class="line">subject2.save()</span><br><span class="line">subject3 = Subject(name=<span class="string">&#x27;JavaEE分布式开发&#x27;</span>, intro=<span class="string">&#x27;基于Java语言的服务器应用开发&#x27;</span>, is_hot=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">subject = Subject.objects.get(no=<span class="number">2</span>)</span><br><span class="line">subject.delete()</span><br></pre></td></tr></table></figure>
+
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">subject = Subject.objects.get(no=1)</span><br><span class="line">subject.name = &#x27;Python全栈+人工智能&#x27;</span><br><span class="line">subject.save()</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h4><ol>
+<li>查询所有对象。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Subjects.objects.all()</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>过滤数据。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询名称为“Python全栈+人工智能”的学科</span></span><br><span class="line">Subject.objects.filter(name=&#x27;Python全栈+人工智能&#x27;)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询名称包含“全栈”的学科（模糊查询）</span></span><br><span class="line">Subject.objects.filter(name__contains=&#x27;全栈&#x27;)</span><br><span class="line">Subject.objects.filter(name__startswith=&#x27;全栈&#x27;)</span><br><span class="line">Subject.objects.filter(name__endswith=&#x27;全栈&#x27;)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询所有热门学科</span></span><br><span class="line">Subject.objects.filter(is_hot=True)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询编号大于3小于10的学科</span></span><br><span class="line">Subject.objects.filter(no__gt=3).filter(no__lt=10)</span><br><span class="line">Subject.objects.filter(no__gt=3, no__lt=10)</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询编号在3到7之间的学科</span></span><br><span class="line">Subject.objects.filter(no__ge=3, no__le=7)</span><br><span class="line">Subject.objects.filter(no__range=(3, 7))</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>查询单个对象。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询主键为1的学科</span></span><br><span class="line">Subject.objects.get(pk=1)</span><br><span class="line">Subject.objects.get(no=1)</span><br><span class="line">Subject.objects.filter(no=1).first()</span><br><span class="line">Subject.objects.filter(no=1).last()</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>排序。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询所有学科按编号升序排列</span></span><br><span class="line">Subject.objects.order_by(&#x27;no&#x27;)</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询所有部门按部门编号降序排列</span></span><br><span class="line">Subject.objects.order_by(&#x27;-no&#x27;)</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>切片（分页查询）。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">按编号从小到大查询前3个学科</span></span><br><span class="line">Subject.objects.order_by(&#x27;no&#x27;)[:3]</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>计数。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询一共有多少个学科</span></span><br><span class="line">Subject.objects.count()</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>高级查询。</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询编号为1的学科的老师</span></span><br><span class="line">Teacher.objects.filter(subject__no=1)</span><br><span class="line">Subject.objects.get(pk=1).teacher_set.all() </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查询学科名称有“全栈”二字的学科的老师</span></span><br><span class="line">Teacher.objects.filter(subject__name__contains=&#x27;全栈&#x27;) </span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明1</strong>：由于老师与学科之间存在多对一外键关联，所以能通过学科反向查询到该学科的老师（从一对多关系中“一”的一方查询“多”的一方），反向查询属性默认的名字是<code>类名小写_set</code>（如上面例子中的<code>teacher_set</code>），当然也可以在创建模型时通过<code>ForeingKey</code>的<code>related_name</code>属性指定反向查询属性的名字。如果不希望执行反向查询可以将<code>related_name</code>属性设置为<code>&#39;+&#39;</code>或者以<code>&#39;+&#39;</code>开头的字符串。</p>
+</blockquote>
+<blockquote>
+<p><strong>说明2</strong>：ORM查询多个对象时会返回QuerySet对象，QuerySet使用了惰性查询，即在创建QuerySet对象的过程中不涉及任何数据库活动，等真正用到对象时（对QuerySet求值）才向数据库发送SQL语句并获取对应的结果，这一点在实际开发中需要引起注意！</p>
+</blockquote>
+<blockquote>
+<p><strong>说明3</strong>：如果希望更新多条数据，不用先逐一获取模型对象再修改对象属性，可以直接使用QuerySet对象的<code>update()</code>方法一次性更新多条数据。</p>
+</blockquote>
+<h3 id="利用Django后台管理模型"><a href="#利用Django后台管理模型" class="headerlink" title="利用Django后台管理模型"></a>利用Django后台管理模型</h3><p>在创建好模型类之后，可以通过Django框架自带的后台管理应用（<code>admin</code>应用）实现对模型的管理。虽然实际应用中，这个后台可能并不能满足我们的需求，但是在学习Django框架时，我们可以利用<code>admin</code>应用来管理我们的模型，同时也通过它来了解一个项目的后台管理系统需要哪些功能。使用Django自带的<code>admin</code>应用步骤如下所示。</p>
+<ol>
+<li><p>将<code>admin</code>应用所需的表迁移到数据库中。<code>admin</code>应用本身也需要数据库的支持，而且在<code>admin</code>应用中已经定义好了相关的数据模型类，我们只需要通过模型迁移操作就能自动在数据库中生成所需的二维表。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py migrate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建访问<code>admin</code>应用的超级用户账号，这里需要输入用户名、邮箱和口令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python manage.py createsuperuser</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：输入口令时没有回显也不能退格，需要一气呵成完成输入。</p>
+</blockquote>
+</li>
+<li><p>运行项目，在浏览器中访问<code>http://127.0.0.1:8000/admin</code>，输入刚才创建的超级用户账号和密码进行登录。</p>
+<p><img src="/Users/Hao/Desktop/Python-100-Days/Day41-55/res/django-admin-login.png"></p>
+<p>登录后进入管理员操作平台。</p>
+<p><img src="/res/django-admin-apps.png"></p>
+<p>注意，我们暂时还没能在<code>admin</code>应用中看到之前创建的模型类，为此需要在<code>polls</code>应用的<code>admin.py</code>文件中对需要管理的模型进行注册。</p>
+</li>
+<li><p>注册模型类。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> polls.models <span class="keyword">import</span> Subject, Teacher</span><br><span class="line"></span><br><span class="line">admin.site.register(Subject)</span><br><span class="line">admin.site.register(Teacher)</span><br></pre></td></tr></table></figure>
+
+<p>注册模型类后，就可以在后台管理系统中看到它们。</p>
+<p><img src="/./res/django-admin-models.png"></p>
+</li>
+<li><p>对模型进行CRUD操作。</p>
+<p>可以在管理员平台对模型进行C（新增）、R（查看）、U（更新）、D（删除）操作，如下图所示。</p>
+<ul>
+<li><p>添加学科。</p>
+<p>  <img src="/res/django-admin-add-model.png"></p>
+</li>
+<li><p>查看所有学科。</p>
+<p>  <img src="/res/django-admin-view-models.png"></p>
+</li>
+<li><p>删除和更新学科。</p>
+<p>  <img src="/res/django-admin-delete-update-model.png"></p>
+</li>
+</ul>
+</li>
+<li><p>注册模型管理类。</p>
+<p>可能大家已经注意到了，刚才在后台查看部门信息的时候，显示的部门信息并不直观，为此我们再修改<code>admin.py</code>文件，通过注册模型管理类，可以在后台管理系统中更好的管理模型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> polls.models <span class="keyword">import</span> Subject, Teacher</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SubjectModelAdmin</span>(admin.ModelAdmin):</span><br><span class="line">    list_display = (<span class="string">&#x27;no&#x27;</span>, <span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;intro&#x27;</span>, <span class="string">&#x27;is_hot&#x27;</span>)</span><br><span class="line">    search_fields = (<span class="string">&#x27;name&#x27;</span>, )</span><br><span class="line">    ordering = (<span class="string">&#x27;no&#x27;</span>, )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">TeacherModelAdmin</span>(admin.ModelAdmin):</span><br><span class="line">    list_display = (<span class="string">&#x27;no&#x27;</span>, <span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;sex&#x27;</span>, <span class="string">&#x27;birth&#x27;</span>, <span class="string">&#x27;good_count&#x27;</span>, <span class="string">&#x27;bad_count&#x27;</span>, <span class="string">&#x27;subject&#x27;</span>)</span><br><span class="line">    search_fields = (<span class="string">&#x27;name&#x27;</span>, )</span><br><span class="line">    ordering = (<span class="string">&#x27;no&#x27;</span>, )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">admin.site.register(Subject, SubjectModelAdmin)</span><br><span class="line">admin.site.register(Teacher, TeacherModelAdmin)</span><br></pre></td></tr></table></figure>
+
+<p><img src="/res/django-admin-view-models-subject.png"></p>
+<p><img src="/res/django-admin-view-models-teacher.png"></p>
+<p>为了更好的查看模型，我们为<code>Subject</code>类添加<code>__str__</code>魔法方法，并在该方法中返回学科名字。这样在如上图所示的查看老师的页面上显示老师所属学科时，就不再是<code>Subject object(1)</code>这样晦涩的信息，而是学科的名称。</p>
+</li>
+</ol>
+<h3 id="实现学科页和老师页效果"><a href="#实现学科页和老师页效果" class="headerlink" title="实现学科页和老师页效果"></a>实现学科页和老师页效果</h3><ol>
+<li><p>修改<code>polls/views.py</code>文件，编写视图函数实现对学科页和老师页的渲染。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.shortcuts <span class="keyword">import</span> render, redirect</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> polls.models <span class="keyword">import</span> Subject, Teacher</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">show_subjects</span>(<span class="params">request</span>):</span><br><span class="line">    subjects = Subject.objects.<span class="built_in">all</span>().order_by(<span class="string">&#x27;no&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> render(request, <span class="string">&#x27;subjects.html&#x27;</span>, &#123;<span class="string">&#x27;subjects&#x27;</span>: subjects&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">show_teachers</span>(<span class="params">request</span>):</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        sno = <span class="built_in">int</span>(request.GET.get(<span class="string">&#x27;sno&#x27;</span>))</span><br><span class="line">        teachers = []</span><br><span class="line">        <span class="keyword">if</span> sno:</span><br><span class="line">            subject = Subject.objects.only(<span class="string">&#x27;name&#x27;</span>).get(no=sno)</span><br><span class="line">            teachers = Teacher.objects.<span class="built_in">filter</span>(subject=subject).order_by(<span class="string">&#x27;no&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> render(request, <span class="string">&#x27;teachers.html&#x27;</span>, &#123;</span><br><span class="line">            <span class="string">&#x27;subject&#x27;</span>: subject,</span><br><span class="line">            <span class="string">&#x27;teachers&#x27;</span>: teachers</span><br><span class="line">        &#125;)</span><br><span class="line">    <span class="keyword">except</span> (ValueError, Subject.DoesNotExist):</span><br><span class="line">        <span class="keyword">return</span> redirect(<span class="string">&#x27;/&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>templates/subjects.html</code>和<code>templates/teachers.html</code>模板页。</p>
+<p> <code>subjects.html</code></p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>学科信息<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#container</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">80%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">10px</span> auto;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.user</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">float</span>: right;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.user</span>&gt;<span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-right</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#main</span>&gt;<span class="selector-tag">dl</span>&gt;<span class="selector-tag">dt</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">1.5em</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-weight</span>: bold;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#main</span>&gt;<span class="selector-tag">dl</span>&gt;<span class="selector-tag">dd</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">font-size</span>: <span class="number">1.2em</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: darkcyan;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;user&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;login.html&quot;</span>&gt;</span>用户登录<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;register.html&quot;</span>&gt;</span>快速注册<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>扣丁学堂所有学科<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line">            &#123;% for subject in subjects %&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">dl</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dt</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/teachers/?sno=&#123;&#123; subject.no &#125;&#125;&quot;</span>&gt;</span>&#123;&#123; subject.name &#125;&#125;<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">                    &#123;% if subject.is_hot %&#125;</span><br><span class="line">                    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/static/images/hot-icon-small.png&quot;</span>&gt;</span></span><br><span class="line">                    &#123;% endif %&#125;</span><br><span class="line">                <span class="tag">&lt;/<span class="name">dt</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dd</span>&gt;</span>&#123;&#123; subject.intro &#125;&#125;<span class="tag">&lt;/<span class="name">dd</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dl</span>&gt;</span></span><br><span class="line">            &#123;% endfor %&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> <code>teachers.html</code></p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>老师信息<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">        <span class="selector-id">#container</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">80%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">10px</span> auto;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.teacher</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">0</span> auto;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">padding</span>: <span class="number">10px</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border-bottom</span>: <span class="number">1px</span> dashed gray;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">overflow</span>: auto;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.teacher</span>&gt;<span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">float</span>: left;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.photo</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">height</span>: <span class="number">140px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">border-radius</span>: <span class="number">75px</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">overflow</span>: hidden;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-left</span>: <span class="number">20px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.info</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">width</span>: <span class="number">75%</span>;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-left</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.info</span> <span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">clear</span>: both;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin</span>: <span class="number">5px</span> <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.info</span> <span class="selector-tag">span</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">margin-right</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">        <span class="selector-class">.info</span> <span class="selector-tag">a</span> &#123;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css">            <span class="attribute">color</span>: darkcyan;</span></span><br><span class="line"><span class="language-css">        &#125;</span></span><br><span class="line"><span class="language-css">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;container&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>&#123;&#123; subject.name &#125;&#125;学科的老师信息<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">hr</span>&gt;</span></span><br><span class="line">        &#123;% if not teachers %&#125;</span><br><span class="line">            <span class="tag">&lt;<span class="name">h2</span>&gt;</span>暂无该学科老师信息<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        &#123;% endif %&#125;</span><br><span class="line">        &#123;% for teacher in teachers %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;teacher&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;photo&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;/static/images/&#123;&#123; teacher.photo &#125;&#125;&quot;</span> <span class="attr">height</span>=<span class="string">&quot;140&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;info&quot;</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span>&gt;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>姓名：&#123;&#123; teacher.name &#125;&#125;<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span>&gt;</span>性别：&#123;&#123; teacher.sex | yesno:&#x27;男,女&#x27; &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">span</span>&gt;</span>出生日期：&#123;&#123; teacher.birth | date:&#x27;Y年n月j日&#x27;&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;intro&quot;</span>&gt;</span>&#123;&#123; teacher.intro &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;comment&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>好评<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="symbol">&amp;nbsp;</span>(<span class="tag">&lt;<span class="name">strong</span>&gt;</span>&#123;&#123; teacher.good_count &#125;&#125;<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>)</span><br><span class="line">                    <span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span><span class="symbol">&amp;nbsp;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&quot;</span>&gt;</span>差评<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="symbol">&amp;nbsp;</span><span class="tag">&lt;<span class="name">strong</span>&gt;</span>&#123;&#123; teacher.bad_count &#125;&#125;<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>)</span><br><span class="line">                <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        &#123;% endfor %&#125;</span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;/&quot;</span>&gt;</span>返回首页<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改<code>vote/urls.py</code>文件，实现映射URL。</p>
+ <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> django.contrib <span class="keyword">import</span> admin</span><br><span class="line"><span class="keyword">from</span> django.urls <span class="keyword">import</span> path</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> polls.views <span class="keyword">import</span> show_subjects, show_teachers</span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(<span class="string">&#x27;admin/&#x27;</span>, admin.site.urls),</span><br><span class="line">    path(<span class="string">&#x27;&#x27;</span>, show_subjects),</span><br><span class="line">    path(<span class="string">&#x27;teachers/&#x27;</span>, show_teachers),</span><br><span class="line">]</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>到此为止，页面上需要的图片（静态资源）还没有能够正常展示，我们在下一章节中为大家介绍如何处理模板页上的需要的静态资源。</p>
+<h3 id="补充内容"><a href="#补充内容" class="headerlink" title="补充内容"></a>补充内容</h3><h4 id="Django模型最佳实践"><a href="#Django模型最佳实践" class="headerlink" title="Django模型最佳实践"></a>Django模型最佳实践</h4><ol>
+<li>正确的为模型和关系字段命名。</li>
+<li>设置适当的<code>related_name</code>属性。</li>
+<li>用<code>OneToOneField</code>代替<code>ForeignKeyField(unique=True)</code>。</li>
+<li>通过“迁移操作”（migrate）来添加模型。</li>
+<li>用NoSQL来应对需要降低范式级别的场景。</li>
+<li>如果布尔类型可以为空要使用<code>NullBooleanField</code>。</li>
+<li>在模型中放置业务逻辑。</li>
+<li>用<code>&lt;ModelName&gt;.DoesNotExists</code>取代<code>ObjectDoesNotExists</code>。</li>
+<li>在数据库中不要出现无效数据。</li>
+<li>不要对<code>QuerySet</code>调用<code>len()</code>函数。</li>
+<li>将<code>QuerySet</code>的<code>exists()</code>方法的返回值用于<code>if</code>条件。</li>
+<li>用<code>DecimalField</code>来存储货币相关数据而不是<code>FloatField</code>。</li>
+<li>定义<code>__str__</code>方法。</li>
+<li>不要将数据文件放在同一个目录中。</li>
+</ol>
+<blockquote>
+<p><strong>说明</strong>：以上内容来自于STEELKIWI网站的<a target="_blank" rel="noopener" href="https://steelkiwi.com/blog/best-practices-working-django-models-python/"><em>Best Practice working with Django models in Python</em></a>，有兴趣的小伙伴可以阅读原文。</p>
+</blockquote>
+<h4 id="模型定义参考"><a href="#模型定义参考" class="headerlink" title="模型定义参考"></a>模型定义参考</h4><h5 id="字段"><a href="#字段" class="headerlink" title="字段"></a>字段</h5><p>对字段名称的限制</p>
+<ul>
+<li>字段名不能是Python的保留字，否则会导致语法错误</li>
+<li>字段名不能有多个连续下划线，否则影响ORM查询操作</li>
+</ul>
+<p>Django模型字段类</p>
+<table>
+<thead>
+<tr>
+<th>字段类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>AutoField</code></td>
+<td>自增ID字段</td>
+</tr>
+<tr>
+<td><code>BigIntegerField</code></td>
+<td>64位有符号整数</td>
+</tr>
+<tr>
+<td><code>BinaryField</code></td>
+<td>存储二进制数据的字段，对应Python的<code>bytes</code>类型</td>
+</tr>
+<tr>
+<td><code>BooleanField</code></td>
+<td>存储<code>True</code>或<code>False</code></td>
+</tr>
+<tr>
+<td><code>CharField</code></td>
+<td>长度较小的字符串</td>
+</tr>
+<tr>
+<td><code>DateField</code></td>
+<td>存储日期，有<code>auto_now</code>和<code>auto_now_add</code>属性</td>
+</tr>
+<tr>
+<td><code>DateTimeField</code></td>
+<td>存储日期和日期，两个附加属性同上</td>
+</tr>
+<tr>
+<td><code>DecimalField</code></td>
+<td>存储固定精度小数，有<code>max_digits</code>（有效位数）和<code>decimal_places</code>（小数点后面）两个必要的参数</td>
+</tr>
+<tr>
+<td><code>DurationField</code></td>
+<td>存储时间跨度</td>
+</tr>
+<tr>
+<td><code>EmailField</code></td>
+<td>与<code>CharField</code>相同，可以用<code>EmailValidator</code>验证</td>
+</tr>
+<tr>
+<td><code>FileField</code></td>
+<td>文件上传字段</td>
+</tr>
+<tr>
+<td><code>FloatField</code></td>
+<td>存储浮点数</td>
+</tr>
+<tr>
+<td><code>ImageField</code></td>
+<td>其他同<code>FileFiled</code>，要验证上传的是不是有效图像</td>
+</tr>
+<tr>
+<td><code>IntegerField</code></td>
+<td>存储32位有符号整数。</td>
+</tr>
+<tr>
+<td><code>GenericIPAddressField</code></td>
+<td>存储IPv4或IPv6地址</td>
+</tr>
+<tr>
+<td><code>NullBooleanField</code></td>
+<td>存储<code>True</code>、<code>False</code>或<code>null</code>值</td>
+</tr>
+<tr>
+<td><code>PositiveIntegerField</code></td>
+<td>存储无符号整数（只能存储正数）</td>
+</tr>
+<tr>
+<td><code>SlugField</code></td>
+<td>存储slug（简短标注）</td>
+</tr>
+<tr>
+<td><code>SmallIntegerField</code></td>
+<td>存储16位有符号整数</td>
+</tr>
+<tr>
+<td><code>TextField</code></td>
+<td>存储数据量较大的文本</td>
+</tr>
+<tr>
+<td><code>TimeField</code></td>
+<td>存储时间</td>
+</tr>
+<tr>
+<td><code>URLField</code></td>
+<td>存储URL的<code>CharField</code></td>
+</tr>
+<tr>
+<td><code>UUIDField</code></td>
+<td>存储全局唯一标识符</td>
+</tr>
+</tbody></table>
+<h5 id="字段属性"><a href="#字段属性" class="headerlink" title="字段属性"></a>字段属性</h5><p>通用字段属性</p>
+<table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>null</code></td>
+<td>数据库中对应的字段是否允许为<code>NULL</code>，默认为<code>False</code></td>
+</tr>
+<tr>
+<td><code>blank</code></td>
+<td>后台模型管理验证数据时，是否允许为<code>NULL</code>，默认为<code>False</code></td>
+</tr>
+<tr>
+<td><code>choices</code></td>
+<td>设定字段的选项，各元组中的第一个值是设置在模型上的值，第二值是人类可读的值</td>
+</tr>
+<tr>
+<td><code>db_column</code></td>
+<td>字段对应到数据库表中的列名，未指定时直接使用字段的名称</td>
+</tr>
+<tr>
+<td><code>db_index</code></td>
+<td>设置为<code>True</code>时将在该字段创建索引</td>
+</tr>
+<tr>
+<td><code>db_tablespace</code></td>
+<td>为有索引的字段设置使用的表空间，默认为<code>DEFAULT_INDEX_TABLESPACE</code></td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td>字段的默认值</td>
+</tr>
+<tr>
+<td><code>editable</code></td>
+<td>字段在后台模型管理或<code>ModelForm</code>中是否显示，默认为<code>True</code></td>
+</tr>
+<tr>
+<td><code>error_messages</code></td>
+<td>设定字段抛出异常时的默认消息的字典，其中的键包括<code>null</code>、<code>blank</code>、<code>invalid</code>、<code>invalid_choice</code>、<code>unique</code>和<code>unique_for_date</code></td>
+</tr>
+<tr>
+<td><code>help_text</code></td>
+<td>表单小组件旁边显示的额外的帮助文本。</td>
+</tr>
+<tr>
+<td><code>primary_key</code></td>
+<td>将字段指定为模型的主键，未指定时会自动添加<code>AutoField</code>用于主键，只读。</td>
+</tr>
+<tr>
+<td><code>unique</code></td>
+<td>设置为<code>True</code>时，表中字段的值必须是唯一的</td>
+</tr>
+<tr>
+<td><code>verbose_name</code></td>
+<td>字段在后台模型管理显示的名称，未指定时使用字段的名称</td>
+</tr>
+</tbody></table>
+<p><code>ForeignKey</code>属性</p>
+<ol>
+<li><code>limit_choices_to</code>：值是一个Q对象或返回一个Q对象，用于限制后台显示哪些对象。</li>
+<li><code>related_name</code>：用于获取关联对象的关联管理器对象（反向查询），如果不允许反向，该属性应该被设置为<code>&#39;+&#39;</code>，或者以<code>&#39;+&#39;</code>结尾。</li>
+<li><code>to_field</code>：指定关联的字段，默认关联对象的主键字段。</li>
+<li><code>db_constraint</code>：是否为外键创建约束，默认值为<code>True</code>。</li>
+<li><code>on_delete</code>：外键关联的对象被删除时对应的动作，可取的值包括<code>django.db.models</code>中定义的：<ul>
+<li><code>CASCADE</code>：级联删除。</li>
+<li><code>PROTECT</code>：抛出<code>ProtectedError</code>异常，阻止删除引用的对象。</li>
+<li><code>SET_NULL</code>：把外键设置为<code>null</code>，当<code>null</code>属性被设置为<code>True</code>时才能这么做。</li>
+<li><code>SET_DEFAULT</code>：把外键设置为默认值，提供了默认值才能这么做。</li>
+</ul>
+</li>
+</ol>
+<p><code>ManyToManyField</code>属性</p>
+<ol>
+<li><code>symmetrical</code>：是否建立对称的多对多关系。</li>
+<li><code>through</code>：指定维持多对多关系的中间表的Django模型。</li>
+<li><code>throughfields</code>：定义了中间模型时可以指定建立多对多关系的字段。</li>
+<li><code>db_table</code>：指定维持多对多关系的中间表的表名。</li>
+</ol>
+<h5 id="模型元数据选项"><a href="#模型元数据选项" class="headerlink" title="模型元数据选项"></a>模型元数据选项</h5><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>abstract</code></td>
+<td>设置为True时模型是抽象父类</td>
+</tr>
+<tr>
+<td><code>app_label</code></td>
+<td>如果定义模型的应用不在INSTALLED_APPS中可以用该属性指定</td>
+</tr>
+<tr>
+<td><code>db_table</code></td>
+<td>模型使用的数据表名称</td>
+</tr>
+<tr>
+<td><code>db_tablespace</code></td>
+<td>模型使用的数据表空间</td>
+</tr>
+<tr>
+<td><code>default_related_name</code></td>
+<td>关联对象回指这个模型时默认使用的名称，默认为<model_name>_set</td>
+</tr>
+<tr>
+<td><code>get_latest_by</code></td>
+<td>模型中可排序字段的名称。</td>
+</tr>
+<tr>
+<td><code>managed</code></td>
+<td>设置为True时，Django在迁移中创建数据表并在执行flush管理命令时把表移除</td>
+</tr>
+<tr>
+<td><code>order_with_respect_to</code></td>
+<td>标记对象为可排序的</td>
+</tr>
+<tr>
+<td><code>ordering</code></td>
+<td>对象的默认排序</td>
+</tr>
+<tr>
+<td><code>permissions</code></td>
+<td>创建对象时写入权限表的额外权限</td>
+</tr>
+<tr>
+<td><code>default_permissions</code></td>
+<td>默认为<code>(&#39;add&#39;, &#39;change&#39;, &#39;delete&#39;)</code></td>
+</tr>
+<tr>
+<td><code>unique_together</code></td>
+<td>设定组合在一起时必须独一无二的字段名</td>
+</tr>
+<tr>
+<td><code>index_together</code></td>
+<td>设定一起建立索引的多个字段名</td>
+</tr>
+<tr>
+<td><code>verbose_name</code></td>
+<td>为对象设定人类可读的名称</td>
+</tr>
+<tr>
+<td><code>verbose_name_plural</code></td>
+<td>设定对象的复数名称</td>
+</tr>
+</tbody></table>
+<h4 id="查询参考"><a href="#查询参考" class="headerlink" title="查询参考"></a>查询参考</h4><h5 id="按字段查找可以用的条件"><a href="#按字段查找可以用的条件" class="headerlink" title="按字段查找可以用的条件"></a>按字段查找可以用的条件</h5><ol>
+<li><code>exact</code> &#x2F; <code>iexact</code>：精确匹配&#x2F;忽略大小写的精确匹配查询</li>
+<li><code>contains</code> &#x2F; <code>icontains</code> &#x2F; <code>startswith</code> &#x2F; <code>istartswith</code> &#x2F; <code>endswith</code> &#x2F; <code>iendswith</code>：基于<code>like</code>的模糊查询</li>
+<li><code>in</code> ：集合运算</li>
+<li><code>gt</code> &#x2F; <code>gte</code> &#x2F; <code>lt</code> &#x2F; <code>lte</code>：大于&#x2F;大于等于&#x2F;小于&#x2F;小于等于关系运算</li>
+<li><code>range</code>：指定范围查询（SQL中的<code>between…and…</code>）</li>
+<li><code>year</code> &#x2F; <code>month</code> &#x2F; <code>day</code> &#x2F; <code>week_day</code> &#x2F; <code>hour</code> &#x2F; <code>minute</code> &#x2F; <code>second</code>：查询时间日期</li>
+<li><code>isnull</code>：查询空值（True）或非空值（False）</li>
+<li><code>search</code>：基于全文索引的全文检索（一般很少使用）</li>
+<li><code>regex</code> &#x2F; <code>iregex</code>：基于正则表达式的模糊匹配查询</li>
+</ol>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/69.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_3.result/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example07/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example09/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework03/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="深入浅出pandas-1"><a href="#深入浅出pandas-1" class="headerlink" title="深入浅出pandas-1"></a>深入浅出pandas-1</h2><p>Pandas 是 Wes McKinney 在2008年开发的一个强大的<strong>分析结构化数据</strong>的工具集。Pandas 以 NumPy 为基础（实现数据存储和运算），提供了专门用于数据分析的类型、方法和函数，对数据分析和数据挖掘提供了很好的支持；同时 pandas 还可以跟数据可视化工具 matplotlib 很好的整合在一起，非常轻松愉快的实现数据可视化呈现。</p>
+<p>Pandas 核心的数据类型是<code>Series</code>（数据系列）、<code>DataFrame</code>（数据窗&#x2F;数据框），分别用于处理一维和二维的数据，除此之外，还有一个名为<code>Index</code>的类型及其子类型，它们为<code>Series</code>和<code>DataFrame</code>提供了索引功能。日常工作中<code>DataFrame</code>使用得最为广泛，因为二维的数据结构刚好可以对应有行有列的表格。<code>Series</code>和<code>DataFrame</code>都提供了大量的处理数据的方法，数据分析师以此为基础，可以实现对数据的筛选、合并、拼接、清洗、预处理、聚合、透视和可视化等各种操作。</p>
+<h3 id="创建Series对象"><a href="#创建Series对象" class="headerlink" title="创建Series对象"></a>创建Series对象</h3><p>Pandas 库中的<code>Series</code>对象可以用来表示一维数据结构，但是多了索引和一些额外的功能。<code>Series</code>类型的内部结构包含了两个数组，其中一个用来保存数据，另一个用来保存数据的索引。我们可以通过列表或数组创建<code>Series</code>对象，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">ser1 = pd.Series(data=[<span class="number">120</span>, <span class="number">380</span>, <span class="number">250</span>, <span class="number">360</span>], index=[<span class="string">&#x27;一季度&#x27;</span>, <span class="string">&#x27;二季度&#x27;</span>, <span class="string">&#x27;三季度&#x27;</span>, <span class="string">&#x27;四季度&#x27;</span>])</span><br><span class="line">ser1</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>Series</code>构造器中的<code>data</code>参数表示数据，<code>index</code>参数表示数据的索引，相当于数据对应的标签。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    120</span><br><span class="line">二季度    380</span><br><span class="line">三季度    250</span><br><span class="line">四季度    360</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>通过字典创建Series对象。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser2 = pd.Series(&#123;<span class="string">&#x27;一季度&#x27;</span>: <span class="number">320</span>, <span class="string">&#x27;二季度&#x27;</span>: <span class="number">180</span>, <span class="string">&#x27;三季度&#x27;</span>: <span class="number">300</span>, <span class="string">&#x27;四季度&#x27;</span>: <span class="number">405</span>&#125;)</span><br><span class="line">ser2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：通过字典创建<code>Series</code>对象时，字典的键就是数据的标签（索引），键对应的值就是数据。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    320</span><br><span class="line">二季度    180</span><br><span class="line">三季度    300</span><br><span class="line">四季度    405</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="Series对象的运算"><a href="#Series对象的运算" class="headerlink" title="Series对象的运算"></a>Series对象的运算</h3><h4 id="标量运算"><a href="#标量运算" class="headerlink" title="标量运算"></a>标量运算</h4><p>我们尝试给刚才的<code>ser1</code>每个季度加上<code>10</code>，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser1 += <span class="number">10</span></span><br><span class="line">ser1</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    130</span><br><span class="line">二季度    390</span><br><span class="line">三季度    260</span><br><span class="line">四季度    370</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h4 id="矢量运算"><a href="#矢量运算" class="headerlink" title="矢量运算"></a>矢量运算</h4><p>我们尝试把<code>ser1</code>和<code>ser2</code>对应季度的数据加起来，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser1 + ser2</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    450</span><br><span class="line">二季度    570</span><br><span class="line">三季度    560</span><br><span class="line">四季度    775</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h4 id="索引运算"><a href="#索引运算" class="headerlink" title="索引运算"></a>索引运算</h4><h5 id="普通索引"><a href="#普通索引" class="headerlink" title="普通索引"></a>普通索引</h5><p>跟数组一样，<code>Series</code>对象也可以进行索引和切片操作，不同的是<code>Series</code>对象因为内部维护了一个保存索引的数组，所以除了可以使用整数索引检索数据外，还可以通过自己设置的索引（标签）获取对应的数据。</p>
+<p>使用整数索引。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser1[<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">260</span><br></pre></td></tr></table></figure>
+
+<p>使用自定义索引。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser1[<span class="string">&#x27;三季度&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">260</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser1[<span class="string">&#x27;一季度&#x27;</span>] = <span class="number">380</span></span><br><span class="line">ser1</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    380</span><br><span class="line">二季度    390</span><br><span class="line">三季度    260</span><br><span class="line">四季度    370</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h5 id="切片索引"><a href="#切片索引" class="headerlink" title="切片索引"></a>切片索引</h5><p><code>Series</code>对象的切片操作跟列表、数组类似，通过给出起始和结束索引，从原来的<code>Series</code>对象中取出或修改部分数据，这里也可以使用整数索引和自定义的索引，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser2[<span class="number">1</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">二季度    180</span><br><span class="line">三季度    300</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser2[<span class="string">&#x27;二季度&#x27;</span>:<span class="string">&#x27;四季度&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">二季度    180</span><br><span class="line">三季度    300</span><br><span class="line">四季度    405</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：在使用自定义索引进行切片时，结束索引对应的元素也是可以取到的。</p>
+</blockquote>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser2[<span class="number">1</span>:<span class="number">3</span>] = <span class="number">400</span>, <span class="number">500</span></span><br><span class="line">ser2</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    320</span><br><span class="line">二季度    400</span><br><span class="line">三季度    500</span><br><span class="line">四季度    405</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h5 id="花式索引"><a href="#花式索引" class="headerlink" title="花式索引"></a>花式索引</h5><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser2[[<span class="string">&#x27;二季度&#x27;</span>, <span class="string">&#x27;四季度&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">二季度    400</span><br><span class="line">四季度    405</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser2[[<span class="string">&#x27;二季度&#x27;</span>, <span class="string">&#x27;四季度&#x27;</span>]] = <span class="number">600</span>, <span class="number">520</span></span><br><span class="line">ser2</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">一季度    320</span><br><span class="line">二季度    600</span><br><span class="line">三季度    500</span><br><span class="line">四季度    520</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h5 id="布尔索引"><a href="#布尔索引" class="headerlink" title="布尔索引"></a>布尔索引</h5><p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser2[ser2 &gt;= <span class="number">500</span>]</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">二季度    600</span><br><span class="line">三季度    500</span><br><span class="line">四季度    520</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="Series对象的属性和方法"><a href="#Series对象的属性和方法" class="headerlink" title="Series对象的属性和方法"></a>Series对象的属性和方法</h3><p><code>Series</code>对象的属性和方法非常多，我们就捡着重要的跟大家讲吧。先看看下面的表格，它展示了<code>Series</code>对象常用的属性。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>dtype</code> &#x2F; <code>dtypes</code></td>
+<td>返回<code>Series</code>对象的数据类型</td>
+</tr>
+<tr>
+<td><code>hasnans</code></td>
+<td>判断<code>Series</code>对象中有没有空值</td>
+</tr>
+<tr>
+<td><code>at</code> &#x2F; <code>iat</code></td>
+<td>通过索引访问<code>Series</code>对象中的单个值</td>
+</tr>
+<tr>
+<td><code>loc</code> &#x2F; <code>iloc</code></td>
+<td>通过索引访问<code>Series</code>对象中的单个值或一组值</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>返回<code>Series</code>对象的索引（<code>Index</code>对象）</td>
+</tr>
+<tr>
+<td><code>is_monotonic</code></td>
+<td>判断<code>Series</code>对象中的数据是否单调</td>
+</tr>
+<tr>
+<td><code>is_monotonic_increasing</code></td>
+<td>判断<code>Series</code>对象中的数据是否单调递增</td>
+</tr>
+<tr>
+<td><code>is_monotonic_decreasing</code></td>
+<td>判断<code>Series</code>对象中的数据是否单调递减</td>
+</tr>
+<tr>
+<td><code>is_unique</code></td>
+<td>判断<code>Series</code>对象中的数据是否独一无二</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>返回<code>Series</code>对象中元素的个数</td>
+</tr>
+<tr>
+<td><code>values</code></td>
+<td>以<code>ndarray</code>的方式返回<code>Series</code>对象中的值（<code>ndarray</code>对象）</td>
+</tr>
+</tbody></table>
+<p>我们可以通过下面的代码来了解<code>Series</code>对象的属性。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(ser2.dtype)                    <span class="comment"># 数据类型</span></span><br><span class="line"><span class="built_in">print</span>(ser2.hasnans)                  <span class="comment"># 有没有空值</span></span><br><span class="line"><span class="built_in">print</span>(ser2.index)                    <span class="comment"># 索引</span></span><br><span class="line"><span class="built_in">print</span>(ser2.values)                   <span class="comment"># 值</span></span><br><span class="line"><span class="built_in">print</span>(ser2.is_monotonic_increasing)  <span class="comment"># 是否单调递增</span></span><br><span class="line"><span class="built_in">print</span>(ser2.is_unique)                <span class="comment"># 是否每个值都独一无二</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int64</span><br><span class="line">False</span><br><span class="line">Index([&#x27;一季度&#x27;, &#x27;二季度&#x27;, &#x27;三季度&#x27;, &#x27;四季度&#x27;], dtype=&#x27;object&#x27;)</span><br><span class="line">[320 600 500 520]</span><br><span class="line">False</span><br><span class="line">True</span><br></pre></td></tr></table></figure>
+
+<p><code>Series</code>对象的方法很多，下面我们通过一些代码片段为大家介绍常用的方法。</p>
+<h4 id="统计相关"><a href="#统计相关" class="headerlink" title="统计相关"></a>统计相关</h4><p><code>Series</code>对象支持各种获取描述性统计信息的方法。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(ser2.count())   <span class="comment"># 计数</span></span><br><span class="line"><span class="built_in">print</span>(ser2.<span class="built_in">sum</span>())     <span class="comment"># 求和</span></span><br><span class="line"><span class="built_in">print</span>(ser2.mean())    <span class="comment"># 求平均</span></span><br><span class="line"><span class="built_in">print</span>(ser2.median())  <span class="comment"># 找中位数</span></span><br><span class="line"><span class="built_in">print</span>(ser2.<span class="built_in">max</span>())     <span class="comment"># 找最大</span></span><br><span class="line"><span class="built_in">print</span>(ser2.<span class="built_in">min</span>())     <span class="comment"># 找最小</span></span><br><span class="line"><span class="built_in">print</span>(ser2.std())     <span class="comment"># 求标准差</span></span><br><span class="line"><span class="built_in">print</span>(ser2.var())     <span class="comment"># 求方差</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">1940</span><br><span class="line">485.0</span><br><span class="line">510.0</span><br><span class="line">600</span><br><span class="line">320</span><br><span class="line">118.18065267490557</span><br><span class="line">13966.666666666666</span><br></pre></td></tr></table></figure>
+
+<p><code>Series</code>对象还有一个名为<code>describe()</code>的方法，可以获得上述所有的描述性统计信息，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser2.describe()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">count      4.000000</span><br><span class="line">mean     485.000000</span><br><span class="line">std      118.180653</span><br><span class="line">min      320.000000</span><br><span class="line">25%      455.000000</span><br><span class="line">50%      510.000000</span><br><span class="line">75%      540.000000</span><br><span class="line">max      600.000000</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：因为<code>describe()</code>返回的也是一个<code>Series</code>对象，所以也可以用<code>ser2.describe()[&#39;mean&#39;]</code>来获取平均值，用<code>ser2.describe()[[&#39;max&#39;, &#39;min&#39;]]</code>来获取最大值和最小值。</p>
+</blockquote>
+<p>如果<code>Series</code>对象有重复的值，我们可以使用<code>unique()</code>方法获得由独一无二的值构成的数组；可以使用<code>nunique()</code>方法统计不重复值的数量；如果想要统计每个值重复的次数，可以使用<code>value_counts()</code>方法，这个方法会返回一个<code>Series</code>对象，它的索引就是原来的<code>Series</code>对象中的值，而每个值出现的次数就是返回的<code>Series</code>对象中的数据，在默认情况下会按照出现次数做降序排列，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser3 = pd.Series(data=[<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;pitaya&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;pitaya&#x27;</span>, <span class="string">&#x27;durian&#x27;</span>])</span><br><span class="line">ser3.value_counts()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apple     3</span><br><span class="line">pitaya    2</span><br><span class="line">durian    1</span><br><span class="line">banana    1</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser3.nunique()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<p>对于<code>ser3</code>，我们还可以用<code>mode()</code>方法来找出数据的众数，由于众数可能不唯一，所以<code>mode()</code>方法的返回值仍然是一个<code>Series</code>对象。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser3.mode()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">0    apple</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+<h4 id="处理数据"><a href="#处理数据" class="headerlink" title="处理数据"></a>处理数据</h4><p><code>Series</code>对象的<code>isna()</code>和<code>isnull()</code>方法可以用于空值的判断，<code>notna()</code>和<code>notnull()</code>方法可以用于非空值的判断，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser4 = pd.Series(data=[<span class="number">10</span>, <span class="number">20</span>, np.nan, <span class="number">30</span>, np.nan])</span><br><span class="line">ser4.isna()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>np.nan</code>是一个IEEE 754标准的浮点小数，专门用来表示“不是一个数”，在上面的代码中我们用它来代表空值；当然，也可以用 Python 中的<code>None</code>来表示空值，在 pandas 中<code>None</code>也会被处理为<code>np.nan</code>。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    False</span><br><span class="line">1    False</span><br><span class="line">2     True</span><br><span class="line">3    False</span><br><span class="line">4     True</span><br><span class="line">dtype: bool</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser4.notna()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0     True</span><br><span class="line">1     True</span><br><span class="line">2    False</span><br><span class="line">3     True</span><br><span class="line">4    False</span><br><span class="line">dtype: bool</span><br></pre></td></tr></table></figure>
+
+<p><code>Series</code>对象的<code>dropna()</code>和<code>fillna()</code>方法分别用来删除空值和填充空值，具体的用法如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser4.dropna()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0    10.0</span><br><span class="line">1    20.0</span><br><span class="line">3    30.0</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser4.fillna(value=<span class="number">40</span>)  <span class="comment"># 将空值填充为40</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    10.0</span><br><span class="line">1    20.0</span><br><span class="line">2    40.0</span><br><span class="line">3    30.0</span><br><span class="line">4    40.0</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser4.fillna(method=<span class="string">&#x27;ffill&#x27;</span>)  <span class="comment"># 用空值前面的非空值填充</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    10.0</span><br><span class="line">1    20.0</span><br><span class="line">2    20.0</span><br><span class="line">3    30.0</span><br><span class="line">4    30.0</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+
+<p>需要提醒大家注意的是，<code>dropna()</code>和<code>fillna()</code>方法都有一个名为<code>inplace</code>的参数，它的默认值是<code>False</code>，表示删除空值或填充空值不会修改原来的<code>Series</code>对象，而是返回一个新的<code>Series</code>对象。如果将<code>inplace</code>参数的值修改为<code>True</code>，那么删除或填充空值会就地操作，直接修改原来的<code>Series</code>对象，此时方法的返回值是<code>None</code>。后面我们会接触到的很多方法，包括<code>DataFrame</code>对象的很多方法都会有这个参数，它们的意义跟这里是一样的。</p>
+<p><code>Series</code>对象的<code>mask()</code>和<code>where()</code>方法可以将满足或不满足条件的值进行替换，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser5 = pd.Series(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line">ser5.where(ser5 &gt; <span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    NaN</span><br><span class="line">1    1.0</span><br><span class="line">2    2.0</span><br><span class="line">3    3.0</span><br><span class="line">4    4.0</span><br><span class="line">dtype: float64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser5.where(ser5 &gt; <span class="number">1</span>, <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0    10</span><br><span class="line">1    10</span><br><span class="line">2     2</span><br><span class="line">3     3</span><br><span class="line">4     4</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser5.mask(ser5 &gt; <span class="number">1</span>, <span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">0     0</span><br><span class="line">1     1</span><br><span class="line">2    10</span><br><span class="line">3    10</span><br><span class="line">4    10</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p><code>Series</code>对象的<code>duplicated()</code>方法可以帮助我们找出重复的数据，而<code>drop_duplicates()</code>方法可以帮我们删除重复数据。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser3.duplicated()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">0    False</span><br><span class="line">1    False</span><br><span class="line">2     True</span><br><span class="line">3    False</span><br><span class="line">4     True</span><br><span class="line">5     True</span><br><span class="line">6    False</span><br><span class="line">dtype: bool</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser3.drop_duplicates()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0     apple</span><br><span class="line">1    banana</span><br><span class="line">3    pitaya</span><br><span class="line">6    durian</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+<p><code>Series</code>对象的<code>apply()</code>和<code>map()</code>方法非常重要，它们可以通过字典或者指定的函数来处理数据，把数据映射或转换成我们想要的样子。这两个方法在数据准备阶段非常重要，我们先来试一试这个名为<code>map</code>的方法。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser6 = pd.Series([<span class="string">&#x27;cat&#x27;</span>, <span class="string">&#x27;dog&#x27;</span>, np.nan, <span class="string">&#x27;rabbit&#x27;</span>])</span><br><span class="line">ser6</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0       cat</span><br><span class="line">1       dog</span><br><span class="line">2       NaN</span><br><span class="line">3    rabbit</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser6.<span class="built_in">map</span>(&#123;<span class="string">&#x27;cat&#x27;</span>: <span class="string">&#x27;kitten&#x27;</span>, <span class="string">&#x27;dog&#x27;</span>: <span class="string">&#x27;puppy&#x27;</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：通过字典给出的映射规则对数据进行处理。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0    kitten</span><br><span class="line">1     puppy</span><br><span class="line">2       NaN</span><br><span class="line">3       NaN</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser6.<span class="built_in">map</span>(<span class="string">&#x27;I am a &#123;&#125;&#x27;</span>.<span class="built_in">format</span>, na_action=<span class="string">&#x27;ignore&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：将指定字符串的<code>format</code>方法作用到数据系列的数据上，忽略掉所有的空值。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">0       I am a cat</span><br><span class="line">1       I am a dog</span><br><span class="line">2              NaN</span><br><span class="line">3    I am a rabbit</span><br><span class="line">dtype: object</span><br></pre></td></tr></table></figure>
+
+<p>我们创建一个新的<code>Series</code>对象，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser7 = pd.Series([<span class="number">20</span>, <span class="number">21</span>, <span class="number">12</span>],  index=[<span class="string">&#x27;London&#x27;</span>, <span class="string">&#x27;New York&#x27;</span>, <span class="string">&#x27;Helsinki&#x27;</span>])</span><br><span class="line">ser7</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">London      20</span><br><span class="line">New York    21</span><br><span class="line">Helsinki    12</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser7.apply(np.square)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：将求平方的函数作用到数据系列的数据上，也可以将参数<code>np.square</code>替换为<code>lambda x: x ** 2</code>。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">London      400</span><br><span class="line">New York    441</span><br><span class="line">Helsinki    144</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser7.apply(<span class="keyword">lambda</span> x, value: x - value, args=(<span class="number">5</span>, ))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：上面<code>apply</code>方法中的<code>lambda</code>函数有两个参数，第一个参数是数据系列中的数据，而第二个参数需要我们传入，所以我们给<code>apply</code>方法增加了<code>args</code>参数，用于给<code>lambda</code>函数的第二个参数传值。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">London      15</span><br><span class="line">New York    16</span><br><span class="line">Helsinki     7</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h4 id="取头部值和排序"><a href="#取头部值和排序" class="headerlink" title="取头部值和排序"></a>取头部值和排序</h4><p><code>Series</code>对象的<code>sort_index()</code>和<code>sort_values()</code>方法可以用于对索引和数据的排序，排序方法有一个名为<code>ascending</code>的布尔类型参数，该参数用于控制排序的结果是升序还是降序；而名为<code>kind</code>的参数则用来控制排序使用的算法，默认使用了<code>quicksort</code>，也可以选择<code>mergesort</code>或<code>heapsort</code>；如果存在空值，那么可以用<code>na_position</code>参数空值放在最前还是最后，默认是<code>last</code>，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ser8 = pd.Series(</span><br><span class="line">    data=[<span class="number">35</span>, <span class="number">96</span>, <span class="number">12</span>, <span class="number">57</span>, <span class="number">25</span>, <span class="number">89</span>], </span><br><span class="line">    index=[<span class="string">&#x27;grape&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>, <span class="string">&#x27;pitaya&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;peach&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>]</span><br><span class="line">)</span><br><span class="line">ser8.sort_values()  <span class="comment"># 按值从小到大排序</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pitaya    12</span><br><span class="line">peach     25</span><br><span class="line">grape     35</span><br><span class="line">apple     57</span><br><span class="line">orange    89</span><br><span class="line">banana    96</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser8.sort_index(ascending=<span class="literal">False</span>)  <span class="comment"># 按索引从大到小排序</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">pitaya    12</span><br><span class="line">peach     25</span><br><span class="line">orange    89</span><br><span class="line">grape     35</span><br><span class="line">banana    96</span><br><span class="line">apple     57</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>如果要从<code>Series</code>对象中找出元素中最大或最小的“Top-N”，我们不需要对所有的值进行排序的，可以使用<code>nlargest()</code>和<code>nsmallest()</code>方法来完成，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser8.nlargest(<span class="number">3</span>)  <span class="comment"># 值最大的3个</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">banana    96</span><br><span class="line">orange    89</span><br><span class="line">apple     57</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser8.nsmallest(<span class="number">2</span>)  <span class="comment"># 值最小的2个</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pitaya    12</span><br><span class="line">peach     25</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h4 id="绘制图表"><a href="#绘制图表" class="headerlink" title="绘制图表"></a>绘制图表</h4><p><code>Series</code>对象有一个名为<code>plot</code>的方法可以用来生成图表，如果选择生成折线图、饼图、柱状图等，默认会使用<code>Series</code>对象的索引作为横坐标，使用<code>Series</code>对象的数据作为纵坐标。下面我们创建一个<code>Series</code>对象并基于它绘制柱状图，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">ser9 = pd.Series(&#123;<span class="string">&#x27;Q1&#x27;</span>: <span class="number">400</span>, <span class="string">&#x27;Q2&#x27;</span>: <span class="number">520</span>, <span class="string">&#x27;Q3&#x27;</span>: <span class="number">180</span>, <span class="string">&#x27;Q4&#x27;</span>: <span class="number">380</span>&#125;)</span><br><span class="line"><span class="comment"># 通过plot方法的kind指定图表类型为柱状图</span></span><br><span class="line">ser9.plot(kind=<span class="string">&#x27;bar&#x27;</span>)</span><br><span class="line"><span class="comment"># 定制纵轴的取值范围</span></span><br><span class="line">plt.ylim(<span class="number">0</span>, <span class="number">600</span>)</span><br><span class="line"><span class="comment"># 定制横轴刻度（旋转到0度）</span></span><br><span class="line">plt.xticks(rotation=<span class="number">0</span>)</span><br><span class="line"><span class="comment"># 为柱子增加数据标签</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(ser9.size):</span><br><span class="line">    plt.text(i, ser9[i] + <span class="number">5</span>, ser9[i], ha=<span class="string">&#x27;center&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/ser_bar_graph.png" style="zoom:35%;">
+
+<p>我们也可以将其绘制为饼图，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># plot方法的kind参数指定了图表类型为饼图</span></span><br><span class="line"><span class="comment"># autopct会自动计算并显示百分比</span></span><br><span class="line"><span class="comment"># pctdistance用来控制百分比到圆心的距离</span></span><br><span class="line">ser9.plot(kind=<span class="string">&#x27;pie&#x27;</span>, autopct=<span class="string">&#x27;%.1f%%&#x27;</span>, pctdistance=<span class="number">0.65</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/ser_pie_graph.png" style="zoom:35%;">
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/01.%E5%88%9D%E8%AF%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/02.%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/62.%E7%94%A8Python%E8%A7%A3%E6%9E%90HTML%E9%A1%B5%E9%9D%A2-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/50.%E5%88%B6%E4%BD%9C%E6%8A%A5%E8%A1%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/87.%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_audio_video/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example03/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example07/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/index/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

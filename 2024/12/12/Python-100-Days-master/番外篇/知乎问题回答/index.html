@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="知乎问题回答"><a href="#知乎问题回答" class="headerlink" title="知乎问题回答"></a>知乎问题回答</h2><h3 id="Python学习完基础语法知识后，如何进一步提高？"><a href="#Python学习完基础语法知识后，如何进一步提高？" class="headerlink" title="Python学习完基础语法知识后，如何进一步提高？"></a>Python学习完基础语法知识后，如何进一步提高？</h3><p>如果你已经完成了Python基础语法的学习，想要知道接下来如何提高，那么你得先问问自己你要用Python来做什么？目前学习Python后可能的就业方向包括以下几个领域，我把每个领域需要的技术作为了一个简单的关键词摘要。</p>
+<blockquote>
+<p>说明：以下数据参考了主要的招聘门户网站以及职友集。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>职位</th>
+<th>所需技能</th>
+<th>招聘需求量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Python后端开发工程师</td>
+<td>Python基础<br>Django &#x2F; Flask &#x2F; Tornado &#x2F; Sanic<br>RESTful &#x2F; 接口文档撰写<br>MySQL &#x2F; Redis &#x2F; MongoDB &#x2F; ElasticSearch<br>Linux &#x2F; Git &#x2F; Scrum &#x2F; PyCharm</td>
+<td>一般</td>
+</tr>
+<tr>
+<td>Python爬虫开发工程师</td>
+<td>Python基础<br>常用标准库和三方库<br>Scrapy &#x2F; PySpider<br>Selenium &#x2F; Appnium<br>Redis &#x2F; MongoDB &#x2F; MySQL<br>前端 &#x2F; HTTP(S) &#x2F; 抓包工具</td>
+<td>较少</td>
+</tr>
+<tr>
+<td>Python量化交易开发工程师</td>
+<td>Python基础<br>数据结构 &#x2F; 算法 &#x2F; 设计模式<br>NoSQL（KV数据库）<br>金融学（两融、期权、期货、股票） &#x2F; 数字货币</td>
+<td>一般</td>
+</tr>
+<tr>
+<td>Python数据分析工程师 &#x2F;<br>Python机器学习工程师</td>
+<td>统计学专业 &#x2F; 数学专业 &#x2F; 计算机专业<br>Python基础 &#x2F; 算法设计<br>SQL &#x2F; NoSQL &#x2F; Hive &#x2F; Hadoop &#x2F; Spark<br>NumPy &#x2F; Scikit-Learn &#x2F; Pandas &#x2F; Seaborn<br>PyTorch &#x2F; Tensorflow &#x2F; OpenCV</td>
+<td>大</td>
+</tr>
+<tr>
+<td>Python自动化测试工程师</td>
+<td>Python基础 &#x2F; 单元测试 &#x2F; 软件测试基础<br>Linux &#x2F; Shell &#x2F; JIRA &#x2F; 禅道 &#x2F; Jenkins &#x2F; CI &#x2F; CD<br>Selenium &#x2F; Robot Framework &#x2F; Appnium<br>ab &#x2F; sysbench &#x2F; JMeter &#x2F; LoadRunner &#x2F; QTP</td>
+<td>大</td>
+</tr>
+<tr>
+<td>Python自动化运维工程师</td>
+<td>Python基础 &#x2F; Linux &#x2F; Shell <br>Fabric &#x2F; Ansible &#x2F; Playbook<br>Zabbix &#x2F; Saltstack &#x2F; Puppet<br>Docker &#x2F; paramiko</td>
+<td>大</td>
+</tr>
+<tr>
+<td>Python云平台开发工程师</td>
+<td>Python基础<br>OpenStack &#x2F; CloudStack<br>Ovirt &#x2F; KVM<br>Docker &#x2F; K8S</td>
+<td>较少</td>
+</tr>
+</tbody></table>
+<p>如果弄清了自己将来要做的方向，就可以开始有针对性的学习了，下面给大家一个推荐书籍的清单。</p>
+<ol>
+<li><p>入门读物</p>
+<ul>
+<li>《Python基础教程》（<em>Beginning Python From Novice to Professional</em>）</li>
+<li>《Python学习手册》（<em>Learning Python</em>）</li>
+<li>《Python编程》（<em>Programming Python</em>）</li>
+<li>《Python编程从入门到实践》（<em>Python Crash Course</em>）</li>
+<li>《Python Cookbook》</li>
+</ul>
+</li>
+<li><p>进阶读物</p>
+<ul>
+<li>《软件架构 - Python语言实现》（<em>Software Architecture with Python</em>）</li>
+<li>《流畅的Python》（<em>Fluent Python</em>）</li>
+<li>《Python设计模式》（<em>Learning Python Design Patterns</em>）</li>
+<li>《Python高级编程》（<em>Expert Python Programming</em>）</li>
+<li>《Python性能分析与优化》（<em>Mastering Python High Performance</em>）</li>
+</ul>
+</li>
+<li><p>数据库相关</p>
+<ul>
+<li>《MySQL必知必会》（<em>MySQL Crash Course</em>）</li>
+<li>《深入浅出MySQL - 数据库开发、优化与管理维护》</li>
+<li>《MongoDB权威指南》（<em>MongoDB: The Definitive Guide</em>）</li>
+<li>《Redis实战》（<em>Redis in Action</em>）</li>
+<li>《Redis开发与运维》</li>
+</ul>
+</li>
+<li><p>Linux &#x2F; Shell &#x2F; Docker &#x2F; 运维</p>
+<ul>
+<li>《鸟哥的Linux私房菜》</li>
+<li>《Linux命令行与shell脚本编程大全》（<em>Linux Command Line and Shell Scripting Bible</em>）</li>
+<li>《Python自动化运维:技术与最佳实践》</li>
+<li>《第一本Docker书》（<em>The Docker Book</em>）</li>
+<li>《Docker经典实例》（Docker Cookbook）</li>
+</ul>
+</li>
+<li><p>Django &#x2F; Flask &#x2F; Tornado</p>
+<ul>
+<li><p>《Django基础教程》（<em>Tango with Django</em>）</p>
+</li>
+<li><p>《轻量级Django》（<em>Lightweight Django</em>）</p>
+</li>
+<li><p>《精通Django》（<em>Mastering Django: Core</em>）</p>
+</li>
+<li><p>《Python Web开发：测试驱动方法》（<em>Test-Driven Development with Python</em>）</p>
+</li>
+<li><p>《Two Scoops of Django: Best Practice of Django 1.8》</p>
+</li>
+<li><p>《Flask Web开发：基于Python的Web应用开发实战》（<em>Flask Web Development: Developing Web Applications with Python</em>）</p>
+</li>
+<li><p>《深入理解Flask》（<em>Mastering Flask</em>）</p>
+</li>
+<li><p>《Introduction to Tornado》</p>
+</li>
+</ul>
+</li>
+<li><p>爬虫开发</p>
+<ul>
+<li><p>《用Python写网络爬虫》（<em>Web Scraping with Python</em>）</p>
+</li>
+<li><p>《精通Python爬虫框架Scrapy》（<em>Learning Scrapy</em>）</p>
+</li>
+<li><p>《Python网络数据采集》（<em>Web Scraping with Python</em>）</p>
+</li>
+<li><p>《Python爬虫开发与项目实战》</p>
+</li>
+<li><p>《Python 3网络爬虫开发实战》</p>
+</li>
+</ul>
+</li>
+<li><p>数据分析</p>
+<ul>
+<li>《利用Python进行数据分析》（<em>Python for Data Analysis</em>）</li>
+<li>《Python数据科学手册》（<em>Python Data Science Handbook</em>）</li>
+<li>《Python金融大数据分析》（<em>Python for Finance</em>）</li>
+<li>《Python数据可视化编程实战》（<em>Python Data Visualization Cookbook</em>）</li>
+<li>《Python数据处理》（<em>Data Wrangling with Python</em>）</li>
+</ul>
+</li>
+<li><p>机器学习</p>
+<ul>
+<li><p>《Python机器学习基础教程》（<em>Introduction to Machine Learning with Python</em>）</p>
+</li>
+<li><p>《Python机器学习实践指南》（<em>Python Machine Learning Blueprints</em>）</p>
+</li>
+<li><p>《Python机器学习实践：测试驱动的开发方法》（<em>Thoughtful Machine Learning with Python A Test Driven Approach</em>）</p>
+</li>
+<li><p>《Python机器学习经典实例》（<em>Python Machine Learning Cookbook</em>）</p>
+</li>
+<li><p>《TensorFlow：实战Google深度学习框架》</p>
+</li>
+</ul>
+</li>
+<li><p>其他书籍</p>
+<ul>
+<li>《Pro Git》</li>
+<li>《Selenium自动化测试 - 基于Python语言》（<em>Learning Selenium Testing Tools with Python</em>）</li>
+<li>《Selenium自动化测试之道》</li>
+<li>《Scrum敏捷软件开发》（<em>Software Development using Scrum</em>）</li>
+<li>《高效团队开发 - 工具与方法》</li>
+</ul>
+</li>
+</ol>
+<p>当然学习编程，最重要的通过项目实战来提升自己的综合能力，Github上有大量的优质开源项目，其中不乏优质的Python项目。有一个名为<a target="_blank" rel="noopener" href="https://github.com/mahmoud/awesome-python-applications">“awesome-python-applications”</a>的项目对这些优质的资源进行了归类并提供了传送门，大家可以了解下。如果自学能力不是那么强，可以通过网络上免费或者付费的视频课程来学习对应的知识；如果自律性没有那么强，那就只能建议花钱参加培训班了，因为花钱在有人监督的环境下学习对很多人来说确实是一个捷径，但是要记得：“师傅领进门，修行靠各人”。选择自己热爱的东西并全力以赴，不要盲目的跟风学习，这一点算是过来人的忠告吧。记得我自己刚开始进入软件开发这个行业时，有人跟我说过这么一句话，现在也分享出来与诸君共勉：“浮躁的人有两种：只观望而不学习的人，只学习而不坚持的人；浮躁的人都不是高手。”</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/84.%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/list_by_javascript/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_4/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example04/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example09/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:03 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:03 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

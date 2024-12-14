@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="深入浅出pandas-5"><a href="#深入浅出pandas-5" class="headerlink" title="深入浅出pandas-5"></a>深入浅出pandas-5</h2><p>我们再来补充一些使用<code>DataFrame</code>做数据分析时会使用到的操作，这些操作不仅常见而且也非常重要。</p>
+<h3 id="计算同比环比"><a href="#计算同比环比" class="headerlink" title="计算同比环比"></a>计算同比环比</h3><p>我们之前讲过一个统计月度销售额的例子，我们可以通过<code>groupby</code>方法做分组聚合，也可以通过<code>pivot_table</code>生成透视表，如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sales_df = pd.read_excel(<span class="string">&#x27;data/2020年销售数据.xlsx&#x27;</span>)</span><br><span class="line">sales_df[<span class="string">&#x27;月份&#x27;</span>] = sales_df.销售日期.dt.month</span><br><span class="line">sales_df[<span class="string">&#x27;销售额&#x27;</span>] = sales_df.售价 * sales_df.销售数量</span><br><span class="line">result_df = sales_df.pivot_table(index=<span class="string">&#x27;月份&#x27;</span>, values=<span class="string">&#x27;销售额&#x27;</span>, aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line">result_df.rename(columns=&#123;<span class="string">&#x27;销售额&#x27;</span>: <span class="string">&#x27;本月销售额&#x27;</span>&#125;, inplace=<span class="literal">True</span>)</span><br><span class="line">result_df</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">      本月销售额</span><br><span class="line">月份         </span><br><span class="line">1       5409855</span><br><span class="line">2       4608455</span><br><span class="line">3       4164972</span><br><span class="line">4       3996770</span><br><span class="line">5       3239005</span><br><span class="line">6       2817936</span><br><span class="line">7       3501304</span><br><span class="line">8       2948189</span><br><span class="line">9       2632960</span><br><span class="line">10      2375385</span><br><span class="line">11      2385283</span><br><span class="line">12      1691973</span><br></pre></td></tr></table></figure>
+
+<p>在得到月度销售额之后，如果我们需要计算月环比，这里有两种方案。第一种方案是我们可以使用<code>shift</code>方法对数据进行移动，将上一个月的数据与本月数据对齐，然后通过<code>(本月销售额 - 上月销售额) / 上月销售额</code>来计算月环比，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result_df[<span class="string">&#x27;上月销售额&#x27;</span>] = result_df.本月销售额.shift(<span class="number">1</span>)</span><br><span class="line">result_df</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">      本月销售额      上月销售额</span><br><span class="line">月份                    </span><br><span class="line">1       5409855            NaN</span><br><span class="line">2       4608455      5409855.0</span><br><span class="line">3       4164972      4608455.0</span><br><span class="line">4       3996770      4164972.0</span><br><span class="line">5       3239005      3996770.0</span><br><span class="line">6       2817936      3239005.0</span><br><span class="line">7       3501304      2817936.0</span><br><span class="line">8       2948189      3501304.0</span><br><span class="line">9       2632960      2948189.0</span><br><span class="line">10      2375385      2632960.0</span><br><span class="line">11      2385283      2375385.0</span><br><span class="line">12      1691973      2385283.0</span><br></pre></td></tr></table></figure>
+
+<p>在上面的例子中，<code>shift</code>方法的参数为<code>1</code>表示将数据向下移动一个单元，当然我们可以使用参数<code>-1</code>将数据向上移动一个单元。相信大家能够想到，如果我们有更多年份的数据，我们可以将参数设置为<code>12</code>，这样就可以计算今年的每个月与去年的每个月之间的同比。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result_df[<span class="string">&#x27;环比&#x27;</span>] = (result_df.本月销售额 - result_df.上月销售额) / result_df.上月销售额</span><br><span class="line">result_df.style.<span class="built_in">format</span>(</span><br><span class="line">    formatter=&#123;<span class="string">&#x27;上月销售额&#x27;</span>: <span class="string">&#x27;&#123;:.0f&#125;&#x27;</span>, <span class="string">&#x27;环比&#x27;</span>: <span class="string">&#x27;&#123;:.2%&#125;&#x27;</span>&#125;,</span><br><span class="line">    na_rep=<span class="string">&#x27;--------&#x27;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">      本月销售额      上月销售额         环比</span><br><span class="line">月份                    </span><br><span class="line">1       5409855       --------     -------- </span><br><span class="line">2       4608455        5409855      -14.81%     </span><br><span class="line">3       4164972        4608455       -9.62%</span><br><span class="line">4       3996770        4164972       -4.04%</span><br><span class="line">5       3239005        3996770      -18.96%</span><br><span class="line">6       2817936        3239005      -13.00%</span><br><span class="line">7       3501304        2817936       24.25%</span><br><span class="line">8       2948189        3501304      -15.80%</span><br><span class="line">9       2632960        2948189      -10.69%</span><br><span class="line">10      2375385        2632960       -9.78%</span><br><span class="line">11      2385283        2375385        0.42%</span><br><span class="line">12      1691973        2385283      -29.07%</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：使用 JupyterLab 时，可以通过<code>DataFrame</code>对象的<code>style</code>属性在网页中对其进行渲染，上面的代码通过<code>Styler</code>对象的<code>format</code>方法将环比格式化为百分比进行显示，此外还指定了将空值替换为<code>--------</code>。</p>
+</blockquote>
+<p>更为简单的第二种方案是直接使用<code>pct_change</code>方法计算变化的百分比，我们先将之前的上月销售额和环比列删除掉。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result_df.drop(columns=[<span class="string">&#x27;上月销售额&#x27;</span>, <span class="string">&#x27;环比&#x27;</span>], inplace=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>接下来，我们使用<code>DataFrame</code>对象的<code>pct_change</code>方法完成环比的计算。值得一提的是，<code>pct_change</code>方法有一个名为<code>periods</code>的参数，它的默认值是<code>1</code>，计算相邻两项数据变化的百分比，这不就是我们想要的环比吗？如果我们有很多年的数据，在计算时把这个参数的值修改为<code>12</code>，就可以得到相邻两年的月同比。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">result_df[<span class="string">&#x27;环比&#x27;</span>] = result_df.pct_change()</span><br><span class="line">result_df</span><br></pre></td></tr></table></figure>
+
+<h3 id="窗口计算"><a href="#窗口计算" class="headerlink" title="窗口计算"></a>窗口计算</h3><p><code>DataFrame</code>对象的<code>rolling</code>方法允许我们将数据置于窗口中，然后用函数对窗口中的数据进行运算和处理。例如，我们获取了某只股票近期的数据，想制作5日均线和10日均线，那么就需要先设置窗口再进行运算。我们先用如下所示的代码读取2022年百度的股票数据，数据文件可以通过下面的链接来获取。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baidu_df = pd.read_excel(<span class="string">&#x27;data/2022年股票数据.xlsx&#x27;</span>, sheet_name=<span class="string">&#x27;BIDU&#x27;</span>)</span><br><span class="line">baidu_df.sort_index(inplace=<span class="literal">True</span>)</span><br><span class="line">baidu_df</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock.png" style="zoom:50%;">
+
+<p>上面的<code>DataFrame</code>有<code>Open</code>、<code>High</code>、<code>Low</code>、<code>Close</code>、<code>Volume</code>五个列，分别代表股票的开盘价、最高价、最低价、收盘价和成交量，接下来我们对百度的股票数据进行窗口计算。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_df.rolling(<span class="number">5</span>).mean()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_ma5.png" style="zoom:50%;">
+
+<p>我们也可以在<code>Series</code>上使用<code>rolling</code>设置窗口并在窗口内完成运算，例如我们可以对上面的百度股票收盘价（<code>Close</code>列）计算5日均线和10日均线，并使用<code>merge</code>函数将其组装到一个<code>DataFrame</code>对象中并绘制出双均线图，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">close_ma5 = baidu_df.Close.rolling(<span class="number">5</span>).mean()</span><br><span class="line">close_ma10 = baidu_df.Close.rolling(<span class="number">10</span>).mean()</span><br><span class="line">result_df = pd.merge(close_ma5, close_ma10, left_index=<span class="literal">True</span>, right_index=<span class="literal">True</span>)</span><br><span class="line">result_df.rename(columns=&#123;<span class="string">&#x27;Close_x&#x27;</span>: <span class="string">&#x27;MA5&#x27;</span>, <span class="string">&#x27;Close_y&#x27;</span>: <span class="string">&#x27;MA10&#x27;</span>&#125;, inplace=<span class="literal">True</span>)</span><br><span class="line">result_df.plot(kind=<span class="string">&#x27;line&#x27;</span>, figsize=(<span class="number">10</span>, <span class="number">6</span>))</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_double_MA.png" style="zoom:50%;">
+
+<h3 id="相关性判定"><a href="#相关性判定" class="headerlink" title="相关性判定"></a>相关性判定</h3><p>在统计学中，我们通常使用协方差（covariance）来衡量两个随机变量的联合变化程度。如果变量 $X$ 的较大值主要与另一个变量 $Y$ 的较大值相对应，而两者较小值也相对应，那么两个变量倾向于表现出相似的行为，协方差为正。如果一个变量的较大值主要对应于另一个变量的较小值，则两个变量倾向于表现出相反的行为，协方差为负。简单的说，协方差的正负号显示着两个变量的相关性。方差是协方差的一种特殊情况，即变量与自身的协方差。</p>
+<p>$$<br>cov(X,Y) &#x3D; E((X - \mu)(Y - \upsilon)) &#x3D; E(X \cdot Y) - \mu\upsilon<br>$$</p>
+<p>如果 $X$ 和 $Y$ 是统计独立的，那么二者的协方差为0，这是因为在 $X$ 和 $Y$ 独立的情况下：</p>
+<p>$$<br>E(X \cdot Y) &#x3D; E(X) \cdot E(Y) &#x3D; \mu\upsilon<br>$$</p>
+<p>协方差的数值大小取决于变量的大小，通常是不容易解释的，但是正态形式的协方差可以显示两变量线性关系的强弱。在统计学中，皮尔逊积矩相关系数就是正态形式的协方差，它用于度量两个变量 $X$ 和 $Y$ 之间的相关程度（线性相关），其值介于<code>-1</code>到<code>1</code>之间。</p>
+<p>$$<br>\frac {cov(X, Y)} {\sigma_{X}\sigma_{Y}}<br>$$</p>
+<p>估算样本的协方差和标准差，可以得到样本皮尔逊系数，通常用希腊字母 $\rho$ 表示。</p>
+<p>$$<br>\rho &#x3D; \frac {\sum_{i&#x3D;1}^{n}(X_i - \bar{X})(Y_i - \bar{Y})} {\sqrt{\sum_{i&#x3D;1}^{n}(X_i - \bar{X})^2} \sqrt{\sum_{i&#x3D;1}^{n}(Y_i - \bar{Y})^2}}<br>$$</p>
+<p>我们用 $\rho$ 值判断指标的相关性时遵循以下两个步骤。</p>
+<ol>
+<li>判断指标间是正相关、负相关，还是不相关。<ul>
+<li>当 $ \rho \gt 0 $，认为变量之间是正相关，也就是两者的趋势一致。</li>
+<li>当 $ \rho \lt 0 $，认为变量之间是负相关，也就是两者的趋势相反。</li>
+<li>当 $ \rho \approx 0 $，认为变量之间是不相关的，但并不代表两个指标是统计独立的。</li>
+</ul>
+</li>
+<li>判断指标间的相关程度。<ul>
+<li>当 $ \rho $ 的绝对值在 $ [0.6,1] $ 之间，认为变量之间是强相关的。</li>
+<li>当 $ \rho $ 的绝对值在 $ [0.1,0.6) $ 之间，认为变量之间是弱相关的。</li>
+<li>当 $ \rho $ 的绝对值在 $ [0,0.1) $ 之间，认为变量之间没有相关性。</li>
+</ul>
+</li>
+</ol>
+<p>皮尔逊相关系数适用于：</p>
+<ol>
+<li>两个变量之间是线性关系，都是连续数据。</li>
+<li>两个变量的总体是正态分布，或接近正态的单峰分布。</li>
+<li>两个变量的观测值是成对的，每对观测值之间相互独立。</li>
+</ol>
+<p>这里，我们顺便说一下，如果两组变量并不是来自于正态总体的连续值，我们该如何判断相关性呢？对于定序尺度（等级），我们可以使用斯皮尔曼秩相关系数，其计算公式如下所示：<br>$$<br>r_{s}&#x3D;1-{\frac {6\sum d_{i}^{2}}{n(n^{2}-1)}}<br>$$<br>其中，$d_{i}&#x3D;\operatorname {R} (X_{i})-\operatorname {R} (Y_{i})$，即每组观测中两个变量的等级差值，$n$为观测样本数。</p>
+<p>对于定类尺度（类别），我们可以使用卡方检验的方式来判定其是否相关。其实很多时候，连续值也可以通过分箱的方式处理成离散的等级或类别，然后使用斯皮尔曼秩相关系数或卡方检验的方式来判定相关性。</p>
+<p><code>DataFrame</code>对象的<code>cov</code>方法和<code>corr</code>方法分别用于计算协方差和相关系数，<code>corr</code>方法有一个名为<code>method</code>的参数，其默认值是<code>pearson</code>，表示计算皮尔逊相关系数；除此之外，还可以指定<code>kendall</code>或<code>spearman</code>来计算肯德尔系数或斯皮尔曼秩相关系数。</p>
+<p>我们从名为<code>boston_house_price.csv</code>的文件中获取著名的波士顿房价数据集来创建一个<code>DataFrame</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">boston_df = pd.read_csv(<span class="string">&#x27;data/boston_house_price.csv&#x27;</span>)</span><br><span class="line">boston_df</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="/Users/Hao/Desktop/Python-Data-Analysis/res/boston_house_price.png" style="zoom:50%;">
+
+<blockquote>
+<p><strong>说明</strong>：上面代码中使用了相对路径来访问 CSV 文件，也就是说 CSV 文件在当前工作路径下名为<code>data</code>的文件夹中。如果需要上面例子中的 CSV 文件，可以通过下面的百度云盘地址进行获取。链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g?pwd=e7b4">https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g?pwd=e7b4</a>，提取码：e7b4。</p>
+</blockquote>
+<p>可以看出，该数据集中包含了诸多影响房价的特征，包括犯罪率、一氧化氮浓度、平均房间数、低收入人群占比等，其中<code>PRICE</code>代表房价，具体情况如下所示。</p>
+<img src="res/boston_house_price_features.png" style="zoom:50%;">
+
+<p>接下来，我们将其中可以视为来自于正态总体的连续值，通过<code>corr</code>方法计算皮尔逊相关系数，看看哪些跟房价是正相关或负相关的关系，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">boston_df[[<span class="string">&#x27;NOX&#x27;</span>, <span class="string">&#x27;RM&#x27;</span>, <span class="string">&#x27;PTRATIO&#x27;</span>, <span class="string">&#x27;LSTAT&#x27;</span>, <span class="string">&#x27;PRICE&#x27;</span>]].corr()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/boston_person_correlation.png" style="zoom:50%;">
+
+<p>可以看出，平均房间数（<code>RM</code>）跟房价有较强的正相关性，而低收入人群占比（<code>LSTAT</code>）跟房价之间存在明显的负相关性。</p>
+<p>斯皮尔曼秩相关系数对数据条件的要求没有皮尔逊相关系数严格，只要两个变量的观测值是成对的等级数据，或者是由连续变量转化成等级的数据，不论两个变量的总体分布形态、样本容量的大小如何，都可以用斯皮尔曼等级相关系数来进行研究。我们可以通过下面的方式对部分特征进行预处理，然后计算斯皮尔曼秩相关系数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">boston_df[<span class="string">&#x27;CRIM&#x27;</span>] = boston_df.CRIM.apply(<span class="keyword">lambda</span> x: x // <span class="number">5</span> <span class="keyword">if</span> x &lt; <span class="number">25</span> <span class="keyword">else</span> <span class="number">5</span>).<span class="built_in">map</span>(<span class="built_in">int</span>)</span><br><span class="line">boston_df[<span class="string">&#x27;ZN&#x27;</span>] = pd.qcut(boston_df.ZN, q=[<span class="number">0</span>, <span class="number">0.75</span>, <span class="number">0.8</span>, <span class="number">0.85</span>, <span class="number">0.9</span>, <span class="number">0.95</span>, <span class="number">1</span>], labels=np.arange(<span class="number">6</span>))</span><br><span class="line">boston_df[<span class="string">&#x27;AGE&#x27;</span>] = (boston_df.AGE // <span class="number">20</span>).<span class="built_in">map</span>(<span class="built_in">int</span>)</span><br><span class="line">boston_df[<span class="string">&#x27;DIS&#x27;</span>] = (boston_df.DIS // <span class="number">2.05</span>).<span class="built_in">map</span>(<span class="built_in">int</span>)</span><br><span class="line">boston_df[<span class="string">&#x27;B&#x27;</span>] = (boston_df.B // <span class="number">66</span>).<span class="built_in">map</span>(<span class="built_in">int</span>)</span><br><span class="line">boston_df[<span class="string">&#x27;PRICE&#x27;</span>] = pd.qcut(boston_df.PRICE, q=[<span class="number">0</span>, <span class="number">0.15</span>, <span class="number">0.3</span>, <span class="number">0.5</span>, <span class="number">0.7</span>, <span class="number">0.85</span>, <span class="number">1</span>], labels=np.arange(<span class="number">6</span>))</span><br><span class="line">boston_df[[<span class="string">&#x27;CRIM&#x27;</span>, <span class="string">&#x27;ZN&#x27;</span>, <span class="string">&#x27;AGE&#x27;</span>, <span class="string">&#x27;DIS&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;PRICE&#x27;</span>]].corr(method=<span class="string">&#x27;spearman&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/boston_spearman_correlation.png" style="zoom:50%;">
+
+<p>可以看出，房价跟犯罪率（<code>CRIM</code>）和房龄（<code>AGE</code>）之间存在较为明显的负相关关系，跟住房用地尺寸（<code>ZN</code>）存在微弱的正相关关系。相关性可以帮助我们在实际工作中找到业务抓手，即找到那些能够影响或改变工作结果的相关因素。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/40.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDCL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/52.%E4%B8%AD%E9%97%B4%E4%BB%B6%E7%9A%84%E5%BA%94%E7%94%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/shopping_cart/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

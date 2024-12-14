@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="视图、函数和过程"><a href="#视图、函数和过程" class="headerlink" title="视图、函数和过程"></a>视图、函数和过程</h2><p>为了讲解视图、函数和过程，我们首先用下面的 DDL 和 DML 创建名为 hrs 的数据库并为其二维表添加如下所示的数据。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 创建名为hrs的数据库并指定默认的字符集</span></span><br><span class="line"><span class="keyword">create</span> database `hrs` <span class="keyword">default</span> charset utf8mb4;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 切换到hrs数据库</span></span><br><span class="line">use `hrs`;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建部门表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_dept`</span><br><span class="line">(</span><br><span class="line">`dno` <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;编号&#x27;</span>,</span><br><span class="line">`dname` <span class="type">varchar</span>(<span class="number">10</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;名称&#x27;</span>,</span><br><span class="line">`dloc` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;所在地&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`dno`)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入4个部门</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_dept` <span class="keyword">values</span> </span><br><span class="line">    (<span class="number">10</span>, <span class="string">&#x27;会计部&#x27;</span>, <span class="string">&#x27;北京&#x27;</span>),</span><br><span class="line">    (<span class="number">20</span>, <span class="string">&#x27;研发部&#x27;</span>, <span class="string">&#x27;成都&#x27;</span>),</span><br><span class="line">    (<span class="number">30</span>, <span class="string">&#x27;销售部&#x27;</span>, <span class="string">&#x27;重庆&#x27;</span>),</span><br><span class="line">    (<span class="number">40</span>, <span class="string">&#x27;运维部&#x27;</span>, <span class="string">&#x27;深圳&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建员工表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_emp`</span><br><span class="line">(</span><br><span class="line">`eno` <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;员工编号&#x27;</span>,</span><br><span class="line">`ename` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;员工姓名&#x27;</span>,</span><br><span class="line">`job` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;员工职位&#x27;</span>,</span><br><span class="line">`mgr` <span class="type">int</span> comment <span class="string">&#x27;主管编号&#x27;</span>,</span><br><span class="line">`sal` <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;员工月薪&#x27;</span>,</span><br><span class="line">`comm` <span class="type">int</span> comment <span class="string">&#x27;每月补贴&#x27;</span>,</span><br><span class="line">`dno` <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;所在部门编号&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`eno`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_emp_mgr` <span class="keyword">foreign</span> key (`mgr`) <span class="keyword">references</span> tb_emp (`eno`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_emp_dno` <span class="keyword">foreign</span> key (`dno`) <span class="keyword">references</span> tb_dept (`dno`)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入14个员工</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_emp` <span class="keyword">values</span> </span><br><span class="line">    (<span class="number">7800</span>, <span class="string">&#x27;张三丰&#x27;</span>, <span class="string">&#x27;总裁&#x27;</span>, <span class="keyword">null</span>, <span class="number">9000</span>, <span class="number">1200</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">2056</span>, <span class="string">&#x27;乔峰&#x27;</span>, <span class="string">&#x27;分析师&#x27;</span>, <span class="number">7800</span>, <span class="number">5000</span>, <span class="number">1500</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">3088</span>, <span class="string">&#x27;李莫愁&#x27;</span>, <span class="string">&#x27;设计师&#x27;</span>, <span class="number">2056</span>, <span class="number">3500</span>, <span class="number">800</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">3211</span>, <span class="string">&#x27;张无忌&#x27;</span>, <span class="string">&#x27;程序员&#x27;</span>, <span class="number">2056</span>, <span class="number">3200</span>, <span class="keyword">null</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">3233</span>, <span class="string">&#x27;丘处机&#x27;</span>, <span class="string">&#x27;程序员&#x27;</span>, <span class="number">2056</span>, <span class="number">3400</span>, <span class="keyword">null</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">3251</span>, <span class="string">&#x27;张翠山&#x27;</span>, <span class="string">&#x27;程序员&#x27;</span>, <span class="number">2056</span>, <span class="number">4000</span>, <span class="keyword">null</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">5566</span>, <span class="string">&#x27;宋远桥&#x27;</span>, <span class="string">&#x27;会计师&#x27;</span>, <span class="number">7800</span>, <span class="number">4000</span>, <span class="number">1000</span>, <span class="number">10</span>),</span><br><span class="line">    (<span class="number">5234</span>, <span class="string">&#x27;郭靖&#x27;</span>, <span class="string">&#x27;出纳&#x27;</span>, <span class="number">5566</span>, <span class="number">2000</span>, <span class="keyword">null</span>, <span class="number">10</span>),</span><br><span class="line">    (<span class="number">3344</span>, <span class="string">&#x27;黄蓉&#x27;</span>, <span class="string">&#x27;销售主管&#x27;</span>, <span class="number">7800</span>, <span class="number">3000</span>, <span class="number">800</span>, <span class="number">30</span>),</span><br><span class="line">    (<span class="number">1359</span>, <span class="string">&#x27;胡一刀&#x27;</span>, <span class="string">&#x27;销售员&#x27;</span>, <span class="number">3344</span>, <span class="number">1800</span>, <span class="number">200</span>, <span class="number">30</span>),</span><br><span class="line">    (<span class="number">4466</span>, <span class="string">&#x27;苗人凤&#x27;</span>, <span class="string">&#x27;销售员&#x27;</span>, <span class="number">3344</span>, <span class="number">2500</span>, <span class="keyword">null</span>, <span class="number">30</span>),</span><br><span class="line">    (<span class="number">3244</span>, <span class="string">&#x27;欧阳锋&#x27;</span>, <span class="string">&#x27;程序员&#x27;</span>, <span class="number">3088</span>, <span class="number">3200</span>, <span class="keyword">null</span>, <span class="number">20</span>),</span><br><span class="line">    (<span class="number">3577</span>, <span class="string">&#x27;杨过&#x27;</span>, <span class="string">&#x27;会计&#x27;</span>, <span class="number">5566</span>, <span class="number">2200</span>, <span class="keyword">null</span>, <span class="number">10</span>),</span><br><span class="line">    (<span class="number">3588</span>, <span class="string">&#x27;朱九真&#x27;</span>, <span class="string">&#x27;会计&#x27;</span>, <span class="number">5566</span>, <span class="number">2500</span>, <span class="keyword">null</span>, <span class="number">10</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h3><p>视图是关系型数据库中将一组查询指令构成的结果集组合成可查询的数据表的对象。简单的说，视图就是虚拟的表，但与数据表不同的是，数据表是一种实体结构，而视图是一种虚拟结构，你也可以将视图理解为保存在数据库中被赋予名字的 SQL 语句。</p>
+<p>使用视图可以获得以下好处：</p>
+<ol>
+<li>可以将实体数据表隐藏起来，让外部程序无法得知实际的数据结构，让访问者可以使用表的组成部分而不是整个表，降低数据库被攻击的风险。</li>
+<li>在大多数的情况下视图是只读的（更新视图的操作通常都有诸多的限制），外部程序无法直接透过视图修改数据。</li>
+<li>重用 SQL 语句，将高度复杂的查询包装在视图表中，直接访问该视图即可取出需要的数据；也可以将视图视为数据表进行连接查询。</li>
+<li>视图可以返回与实体数据表不同格式的数据，在创建视图的时候可以对数据进行格式化处理。</li>
+</ol>
+<p>创建视图。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">view</span> `vw_emp_simple`</span><br><span class="line"><span class="keyword">as</span></span><br><span class="line"><span class="keyword">select</span>  `eno`,</span><br><span class="line">        `ename`,</span><br><span class="line">        `job`,</span><br><span class="line">        `dno`</span><br><span class="line">  <span class="keyword">from</span>  `tb_emp`;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：因为视图不包含数据，所以每次使用视图时，都必须执行查询以获得数据，如果你使用了连接查询、嵌套查询创建了较为复杂的视图，你可能会发现查询性能下降得很厉害。因此，在使用复杂的视图前，应该进行测试以确保其性能能够满足应用的需求。</p>
+</blockquote>
+<p>有了上面的视图，我们就可以使用之前讲过的 DCL， 限制某些用户只能从视图中获取员工信息，这样员工表中的工资（<code>sal</code>）、补贴（<code>comm</code>）等敏感字段便不会暴露给用户。下面的代码演示了如何从视图中获取数据。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> `vw_emp_simple`;</span><br></pre></td></tr></table></figure>
+
+<p>查询结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">+------+-----------+--------------+-----+</span><br><span class="line">| eno  | ename     | job          | dno |</span><br><span class="line">+------+-----------+--------------+-----+</span><br><span class="line">| 1359 | 胡二刀    | 销售员       |  30 |</span><br><span class="line">| 2056 | 乔峰      | 分析师       |  20 |</span><br><span class="line">| 3088 | 李莫愁    | 设计师       |  20 |</span><br><span class="line">| 3211 | 张无忌    | 程序员       |  20 |</span><br><span class="line">| 3233 | 丘处机    | 程序员       |  20 |</span><br><span class="line">| 3244 | 欧阳锋    | 程序员       |  20 |</span><br><span class="line">| 3251 | 张翠山    | 程序员       |  20 |</span><br><span class="line">| 3344 | 黄蓉      | 销售主管     |  30 |</span><br><span class="line">| 3577 | 杨过      | 会计         |  10 |</span><br><span class="line">| 3588 | 朱九真    | 会计         |  10 |</span><br><span class="line">| 4466 | 苗人凤    | 销售员       |  30 |</span><br><span class="line">| 5234 | 郭靖      | 出纳         |  10 |</span><br><span class="line">| 5566 | 宋远桥    | 会计师       |  10 |</span><br><span class="line">| 7800 | 张三丰    | 总裁         |  20 |</span><br><span class="line">+------+-----------+--------------+-----+</span><br></pre></td></tr></table></figure>
+
+<p>既然视图是一张虚拟的表，那么视图的中的数据可以更新吗？视图的可更新性要视具体情况而定，以下类型的视图是不能更新的：</p>
+<ol>
+<li>使用了聚合函数（<code>SUM</code>、<code>MIN</code>、<code>MAX</code>、<code>AVG</code>、<code>COUNT</code>等）、<code>DISTINCT</code>、<code>GROUP BY</code>、<code>HAVING</code>、<code>UNION</code>或者<code>UNION ALL</code>的视图。</li>
+<li><code>SELECT</code>中包含了子查询的视图。</li>
+<li><code>FROM</code>子句中包含了一个不能更新的视图的视图。</li>
+<li><code>WHERE</code>子句的子查询引用了<code>FROM</code>子句中的表的视图。</li>
+</ol>
+<p>删除视图。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">view</span> if <span class="keyword">exists</span> `vw_emp_simple`;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：如果希望更新视图，可以先用上面的命令删除视图，也可以通过<code>create or replace view</code>来更新视图。</p>
+</blockquote>
+<p>视图的规则和限制。</p>
+<ol>
+<li>视图可以嵌套，可以利用从其他视图中检索的数据来构造一个新的视图。视图也可以和表一起使用。</li>
+<li>创建视图时可以使用<code>order by</code>子句，但如果从视图中检索数据时也使用了<code>order by</code>，那么该视图中原先的<code>order by</code>会被覆盖。</li>
+<li>视图无法使用索引，也不会激发触发器（实际开发中因为性能等各方面的考虑，通常不建议使用触发器，所以我们也不对这个概念进行介绍）的执行。</li>
+</ol>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>MySQL 中的函数跟 Python 中的函数大同小异，因为函数都是用来封装功能上相对独立且会被重复使用的代码的。如果非要找出一些差别来，那么 MySQL 中的函数是可以执行 SQL 语句的。下面的例子，我们通过自定义函数实现了截断超长字符串的功能。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">delimiter $$</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">function</span> fn_truncate_string(</span><br><span class="line">    content <span class="type">varchar</span>(<span class="number">10000</span>),</span><br><span class="line">    max_length <span class="type">int</span> unsigned</span><br><span class="line">) <span class="keyword">returns</span> <span class="type">varchar</span>(<span class="number">10000</span>) <span class="keyword">no</span> <span class="keyword">sql</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">declare</span> <span class="keyword">result</span> <span class="type">varchar</span>(<span class="number">10000</span>) <span class="keyword">default</span> content;</span><br><span class="line">    if <span class="keyword">char_length</span>(content) <span class="operator">&gt;</span> max_length <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">set</span> <span class="keyword">result</span> <span class="operator">=</span> <span class="keyword">left</span>(content, max_length);</span><br><span class="line">        <span class="keyword">set</span> <span class="keyword">result</span> <span class="operator">=</span> concat(<span class="keyword">result</span>, <span class="string">&#x27;……&#x27;</span>);</span><br><span class="line">    <span class="keyword">end</span> if;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">result</span>;</span><br><span class="line"><span class="keyword">end</span> $$</span><br><span class="line"></span><br><span class="line">delimiter ;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明1</strong>：函数声明后面的<code>no sql</code>是声明函数体并没有使用 SQL 语句；如果函数体中需要通过 SQL 读取数据，需要声明为<code>reads sql data</code>。</p>
+<p><strong>说明2</strong>：定义函数前后的<code>delimiter</code>命令是为了修改终止符（定界符），因为函数体中的语句都是用<code>;</code>表示结束，如果不重新定义定界符，那么遇到的<code>;</code>的时候代码就会被截断执行，显然这不是我们想要的效果。</p>
+</blockquote>
+<p>在查询中调用自定义函数。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> fn_truncate_string(<span class="string">&#x27;和我在成都的街头走一走，直到所有的灯都熄灭了也不停留&#x27;</span>, <span class="number">10</span>) <span class="keyword">as</span> short_string;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+--------------------------------------+</span><br><span class="line">| short_string                         |</span><br><span class="line">+--------------------------------------+</span><br><span class="line">| 和我在成都的街头走一……                 |</span><br><span class="line">+--------------------------------------+</span><br></pre></td></tr></table></figure>
+
+<h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>过程（又称存储过程）是事先编译好存储在数据库中的一组 SQL 的集合，调用过程可以简化应用程序开发人员的工作，减少与数据库服务器之间的通信，对于提升数据操作的性能也是有帮助的。其实迄今为止，我们使用的 SQL 语句都是针对一个或多个表的单条语句，但在实际开发中经常会遇到某个操作需要多条 SQL 语句才能完成的情况。例如，电商网站在受理用户订单时，需要做以下一系列的处理。 </p>
+<ol>
+<li>通过查询来核对库存中是否有对应的物品以及库存是否充足。</li>
+<li>如果库存有物品，需要锁定库存以确保这些物品不再卖给别人， 并且要减少可用的物品数量以反映正确的库存量。</li>
+<li>如果库存不足，可能需要进一步与供应商进行交互或者至少产生一条系统提示消息。 </li>
+<li>不管受理订单是否成功，都需要产生流水记录，而且需要给对应的用户产生一条通知信息。</li>
+</ol>
+<p>我们可以通过过程将复杂的操作封装起来，这样不仅有助于保证数据的一致性，而且将来如果业务发生了变动，只需要调整和修改过程即可。对于调用过程的用户来说，过程并没有暴露数据表的细节，而且执行过程比一条条的执行一组 SQL 要快得多。</p>
+<p>下面的过程实现 hrs 数据库中员工工资的普调，具体的规则是：<code>10</code>部门的员工薪资上浮<code>300</code>， <code>20</code>部门的员工薪资上浮<code>800</code>，<code>30</code>部门的员工薪资上浮<code>500</code>。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">delimiter $$</span><br><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">procedure</span> sp_upgrade_salary()</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">declare</span> flag <span class="type">boolean</span> <span class="keyword">default</span> <span class="number">1</span>;</span><br><span class="line">    <span class="comment">-- 定义一个异常处理器</span></span><br><span class="line">    <span class="keyword">declare</span> continue handler <span class="keyword">for</span> <span class="keyword">sqlexception</span> <span class="keyword">set</span> flag<span class="operator">=</span><span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">-- 开启事务环境</span></span><br><span class="line">    <span class="keyword">start</span> transaction;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">update</span> tb_emp <span class="keyword">set</span> sal<span class="operator">=</span>sal<span class="operator">+</span><span class="number">300</span> <span class="keyword">where</span> dno<span class="operator">=</span><span class="number">10</span>;</span><br><span class="line">    <span class="keyword">update</span> tb_emp <span class="keyword">set</span> sal<span class="operator">=</span>sal<span class="operator">+</span><span class="number">800</span> <span class="keyword">where</span> dno<span class="operator">=</span><span class="number">20</span>;</span><br><span class="line">    <span class="keyword">update</span> tb_emp <span class="keyword">set</span> sal<span class="operator">=</span>sal<span class="operator">+</span><span class="number">500</span> <span class="keyword">where</span> dno<span class="operator">=</span><span class="number">30</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">-- 提交或回滚事务</span></span><br><span class="line">    if flag <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">commit</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">rollback</span>;</span><br><span class="line">    <span class="keyword">end</span> if;</span><br><span class="line"><span class="keyword">end</span> $$</span><br><span class="line"></span><br><span class="line">delimiter ;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面的过程代码中使用了<code>start transaction</code>来开启事务环境，关于事务，在本课的最后有一个简单的介绍。为了确定代码中是否发生异常，从而提交或回滚事务，上面的过程中定义了一个名为<code>flag</code>的变量和一个异常处理器，如果发生了异常，<code>flag</code>将会被赋值为<code>0</code>，后面的分支结构会根据<code>flag</code>的值来决定是执行<code>commit</code>，还是执行<code>rollback</code>。</p>
+</blockquote>
+<p>调用过程。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">call</span> sp_upgrade_salary();</span><br></pre></td></tr></table></figure>
+
+<p>删除过程。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">procedure</span> if <span class="keyword">exists</span> sp_upgrade_salary;</span><br></pre></td></tr></table></figure>
+
+<p>在过程中，我们可以定义变量、条件，可以使用分支和循环语句，可以通过游标操作查询结果，还可以使用事件调度器，这些内容我们暂时不在此处进行介绍。虽然我们说了很多过程的好处，但是在实际开发中，如果频繁的使用过程并将大量复杂的运算放到过程中，会给据库服务器造成巨大的压力，而数据库往往都是性能瓶颈所在，使用过程无疑是雪上加霜的操作。所以，对于互联网产品开发，我们一般建议让数据库只做好存储，复杂的运算和处理交给应用服务器上的程序去完成，如果应用服务器变得不堪重负了，我们可以比较容易的部署多台应用服务器来分摊这些压力。</p>
+<p>如果大家对上面讲到的视图、函数、过程包括我们没有讲到的触发器这些知识有兴趣，建议大家阅读 MySQL 的入门读物<a target="_blank" rel="noopener" href="https://item.jd.com/12818982.html">《MySQL必知必会》</a>进行一般性了解即可，因为这些知识点在大家将来的工作中未必用得上，学了也可能仅仅是为了应付面试而已。</p>
+<h3 id="其他内容"><a href="#其他内容" class="headerlink" title="其他内容"></a>其他内容</h3><h4 id="范式理论"><a href="#范式理论" class="headerlink" title="范式理论"></a>范式理论</h4><p>范式理论是设计关系型数据库中二维表的指导思想。</p>
+<ol>
+<li>第一范式：数据表的每个列的值域都是由原子值组成的，不能够再分割。</li>
+<li>第二范式：数据表里的所有数据都要和该数据表的键（主键与候选键）有完全依赖关系。</li>
+<li>第三范式：所有非键属性都只和候选键有相关性，也就是说非键属性之间应该是独立无关的。</li>
+</ol>
+<blockquote>
+<p><strong>说明</strong>：实际工作中，出于效率的考虑，我们在设计表时很有可能做出反范式设计，即故意降低方式级别，增加冗余数据来获得更好的操作性能。</p>
+</blockquote>
+<h4 id="数据完整性"><a href="#数据完整性" class="headerlink" title="数据完整性"></a>数据完整性</h4><ol>
+<li><p>实体完整性 - 每个实体都是独一无二的</p>
+<ul>
+<li>主键（<code>primary key</code>） &#x2F; 唯一约束（<code>unique</code>）</li>
+</ul>
+</li>
+<li><p>引用完整性（参照完整性）- 关系中不允许引用不存在的实体</p>
+<ul>
+<li>外键（<code>foreign key</code>）</li>
+</ul>
+</li>
+<li><p>域（domain）完整性 - 数据是有效的</p>
+<ul>
+<li><p>数据类型及长度</p>
+</li>
+<li><p>非空约束（<code>not null</code>）</p>
+</li>
+<li><p>默认值约束（<code>default</code>）</p>
+</li>
+<li><p>检查约束（<code>check</code>）</p>
+<blockquote>
+<p><strong>说明</strong>：在 MySQL 8.x 以前，检查约束并不起作用。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="数据一致性"><a href="#数据一致性" class="headerlink" title="数据一致性"></a>数据一致性</h4><ol>
+<li><p>事务：一系列对数据库进行读&#x2F;写的操作，这些操作要么全都成功，要么全都失败。</p>
+</li>
+<li><p>事务的 ACID 特性</p>
+<ul>
+<li>原子性：事务作为一个整体被执行，包含在其中的对数据库的操作要么全部被执行，要么都不执行</li>
+<li>一致性：事务应确保数据库的状态从一个一致状态转变为另一个一致状态</li>
+<li>隔离性：多个事务并发执行时，一个事务的执行不应影响其他事务的执行</li>
+<li>持久性：已被提交的事务对数据库的修改应该永久保存在数据库中</li>
+</ul>
+</li>
+<li><p>MySQL 中的事务操作</p>
+<ul>
+<li><p>开启事务环境</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">start</span> transaction</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>提交事务</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">commit</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回滚事务</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">rollback</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>查看事务隔离级别</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> variables <span class="keyword">like</span> <span class="string">&#x27;transaction_isolation&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------+-----------------+</span><br><span class="line">| Variable_name         | Value           |</span><br><span class="line">+-----------------------+-----------------+</span><br><span class="line">| transaction_isolation | REPEATABLE-READ |</span><br><span class="line">+-----------------------+-----------------+</span><br></pre></td></tr></table></figure>
+
+<p> 可以看出，MySQL 默认的事务隔离级别是<code>REPEATABLE-READ</code>。</p>
+</li>
+<li><p>修改（当前会话）事务隔离级别</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> session transaction isolation level read committed;</span><br></pre></td></tr></table></figure>
+
+<p> 重新查看事务隔离级别，结果如下所示。</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+-----------------------+----------------+</span><br><span class="line">| Variable_name         | Value          |</span><br><span class="line">+-----------------------+----------------+</span><br><span class="line">| transaction_isolation | READ-COMMITTED |</span><br><span class="line">+-----------------------+----------------+</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>关系型数据库的事务是一个很大的话题，因为当存在多个并发事务访问数据时，就有可能出现三类读数据的问题（脏读、不可重复读、幻读）和两类更新数据的问题（第一类丢失更新、第二类丢失更新）。想了解这五类问题的，可以阅读我发布在 CSDN 网站上的<a target="_blank" rel="noopener" href="https://blog.csdn.net/jackfrued/article/details/44921941">《Java面试题全集（上）》</a>一文的第80题。为了避免这些问题，关系型数据库底层是有对应的锁机制的，按锁定对象不同可以分为表级锁和行级锁，按并发事务锁定关系可以分为共享锁和独占锁。然而直接使用锁是非常麻烦的，为此数据库为用户提供了自动锁机制，只要用户指定适当的事务隔离级别，数据库就会通过分析 SQL 语句，然后为事务访问的资源加上合适的锁。此外，数据库还会维护这些锁通过各种手段提高系统的性能，这些对用户来说都是透明的。想了解 MySQL 事务和锁的细节知识，推荐大家阅读进阶读物<a target="_blank" rel="noopener" href="https://item.jd.com/11220393.html">《高性能MySQL》</a>，这也是数据库方面的经典书籍。</p>
+<p>ANSI&#x2F;ISO SQL 92标准定义了4个等级的事务隔离级别，如下表所示。需要说明的是，事务隔离级别和数据访问的并发性是对立的，事务隔离级别越高并发性就越差。所以要根据具体的应用来确定到底使用哪种事务隔离级别，这个地方没有万能的原则。</p>
+<img src="http://localhost/mypic/20211121225327.png" style="zoom:50%;">
+
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>关于 MySQL 的知识肯定远远不止上面列出的这些，比如 MySQL 性能调优、MySQL 运维相关工具、MySQL 数据的备份和恢复、监控 MySQL 服务、部署高可用架构等，这一系列的问题在这里都没有办法逐一展开来讨论，那就留到有需要的时候再进行讲解吧，各位读者也可以自行探索。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/43.%E7%B4%A2%E5%BC%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/45.%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E5%92%8CHiveSQL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/76.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-5/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/46.Django%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/48.%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%92%8CAjax%E8%AF%B7%E6%B1%82/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_bootstrap/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example03/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:01 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:01 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

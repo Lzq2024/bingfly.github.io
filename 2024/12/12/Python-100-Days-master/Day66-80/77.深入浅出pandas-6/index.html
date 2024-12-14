@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="深入浅出pandas-6"><a href="#深入浅出pandas-6" class="headerlink" title="深入浅出pandas-6"></a>深入浅出pandas-6</h2><p>我们再来看看<code>Index</code>类型，它为<code>Series</code>和<code>DataFrame</code>对象提供了索引服务，有了索引我们就可以排序数据（<code>sort_index</code>方法）、对齐数据（在运算和合并数据时非常重要）并实现对数据的快速检索（索引运算）。由于<code>DataFrame</code>类型表示的是二维数据，所以它的行和列都有索引，分别是<code>index</code>和<code>columns</code>。<code>Index</code>类型的创建的比较简单，通常给出<code>data</code>、<code>dtype</code>和<code>name</code>三个参数即可，分别表示作为索引的数据、索引的数据类型和索引的名称。由于<code>Index</code>本身也是一维的数据，索引它的方法和属性跟<code>Series</code>非常类似，你可以尝试创建一个<code>Index</code>对象，然后尝试一下之前学过的属性和方法在<code>Index</code>类型上是否生效。接下来，我们主要看看<code>Index</code>的几种子类型。</p>
+<h3 id="范围索引"><a href="#范围索引" class="headerlink" title="范围索引"></a>范围索引</h3><p>范围索引是由具有单调性的整数构成的索引，我们可以通过<code>RangeIndex</code>构造器来创建范围索引，也可以通过<code>RangeIndex</code>类的类方法<code>from_range</code>来创建范围索引，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sales_data = np.random.randint(<span class="number">400</span>, <span class="number">1000</span>, <span class="number">12</span>)</span><br><span class="line">index = pd.RangeIndex(<span class="number">1</span>, <span class="number">13</span>, name=<span class="string">&#x27;月份&#x27;</span>)</span><br><span class="line">ser = pd.Series(data=sales_data, index=index)</span><br><span class="line">ser</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">月份</span><br><span class="line">1     703</span><br><span class="line">2     705</span><br><span class="line">3     557</span><br><span class="line">4     943</span><br><span class="line">5     961</span><br><span class="line">6     615</span><br><span class="line">7     788</span><br><span class="line">8     985</span><br><span class="line">9     921</span><br><span class="line">10    951</span><br><span class="line">11    874</span><br><span class="line">12    609</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="分类索引"><a href="#分类索引" class="headerlink" title="分类索引"></a>分类索引</h3><p>分类索引是由定类尺度构成的索引。如果我们需要通过索引将数据分组，然后再进行聚合操作，分类索引就可以派上用场。分类索引还有一个名为<code>reorder_categories</code>的方法，可以给索引指定一个顺序，分组聚合的结果会按照这个指定的顺序进行呈现，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sales_data = [<span class="number">6</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">6</span>]</span><br><span class="line">index = pd.CategoricalIndex(</span><br><span class="line">    data=[<span class="string">&#x27;苹果&#x27;</span>, <span class="string">&#x27;香蕉&#x27;</span>, <span class="string">&#x27;苹果&#x27;</span>, <span class="string">&#x27;苹果&#x27;</span>, <span class="string">&#x27;桃子&#x27;</span>, <span class="string">&#x27;香蕉&#x27;</span>],</span><br><span class="line">    categories=[<span class="string">&#x27;苹果&#x27;</span>, <span class="string">&#x27;香蕉&#x27;</span>, <span class="string">&#x27;桃子&#x27;</span>],</span><br><span class="line">    ordered=<span class="literal">True</span></span><br><span class="line">)</span><br><span class="line">ser = pd.Series(data=sales_data, index=index)</span><br><span class="line">ser</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">苹果    6</span><br><span class="line">香蕉    6</span><br><span class="line">苹果    7</span><br><span class="line">苹果    6</span><br><span class="line">桃子    8</span><br><span class="line">香蕉    6</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>基于索引分组数据，然后使用<code>sum</code>进行求和。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser.groupby(level=<span class="number">0</span>).<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">苹果    19</span><br><span class="line">香蕉    12</span><br><span class="line">桃子     8</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>指定索引的顺序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ser.index = index.reorder_categories([<span class="string">&#x27;香蕉&#x27;</span>, <span class="string">&#x27;桃子&#x27;</span>, <span class="string">&#x27;苹果&#x27;</span>])</span><br><span class="line">ser.groupby(level=<span class="number">0</span>).<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">香蕉    12</span><br><span class="line">桃子     8</span><br><span class="line">苹果    19</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<h3 id="多级索引"><a href="#多级索引" class="headerlink" title="多级索引"></a>多级索引</h3><p>Pandas 中的<code>MultiIndex</code>类型用来表示层次或多级索引。可以使用<code>MultiIndex</code>类的类方法<code>from_arrays</code>、<code>from_product</code>、<code>from_tuples</code>等来创建多级索引，我们给大家举几个例子。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tuples = [(<span class="number">1</span>, <span class="string">&#x27;red&#x27;</span>), (<span class="number">1</span>, <span class="string">&#x27;blue&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;red&#x27;</span>), (<span class="number">2</span>, <span class="string">&#x27;blue&#x27;</span>)]</span><br><span class="line">index = pd.MultiIndex.from_tuples(tuples, names=[<span class="string">&#x27;no&#x27;</span>, <span class="string">&#x27;color&#x27;</span>])</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MultiIndex([(1,  &#x27;red&#x27;),</span><br><span class="line">            (1, &#x27;blue&#x27;),</span><br><span class="line">            (2,  &#x27;red&#x27;),</span><br><span class="line">            (2, &#x27;blue&#x27;)],</span><br><span class="line">           names=[&#x27;no&#x27;, &#x27;color&#x27;])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">arrays = [[<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>], [<span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>, <span class="string">&#x27;red&#x27;</span>, <span class="string">&#x27;blue&#x27;</span>]]</span><br><span class="line">index = pd.MultiIndex.from_arrays(arrays, names=[<span class="string">&#x27;no&#x27;</span>, <span class="string">&#x27;color&#x27;</span>])</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">MultiIndex([(1,  &#x27;red&#x27;),</span><br><span class="line">            (1, &#x27;blue&#x27;),</span><br><span class="line">            (2,  &#x27;red&#x27;),</span><br><span class="line">            (2, &#x27;blue&#x27;)],</span><br><span class="line">           names=[&#x27;no&#x27;, &#x27;color&#x27;])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sales_data = np.random.randint(<span class="number">1</span>, <span class="number">100</span>, <span class="number">4</span>)</span><br><span class="line">ser = pd.Series(data=sales_data, index=index)</span><br><span class="line">ser</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">no  color</span><br><span class="line">1   red      43</span><br><span class="line">    blue     31</span><br><span class="line">2   red      55</span><br><span class="line">    blue     75</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser.groupby(<span class="string">&#x27;no&#x27;</span>).<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">no</span><br><span class="line">1     74</span><br><span class="line">2    130</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ser.groupby(level=<span class="number">1</span>).<span class="built_in">sum</span>()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">color</span><br><span class="line">blue    106</span><br><span class="line">red      98</span><br><span class="line">dtype: int64</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">stu_ids = np.arange(<span class="number">1001</span>, <span class="number">1006</span>)</span><br><span class="line">semisters = [<span class="string">&#x27;期中&#x27;</span>, <span class="string">&#x27;期末&#x27;</span>]</span><br><span class="line">index = pd.MultiIndex.from_product((stu_ids, semisters), names=[<span class="string">&#x27;学号&#x27;</span>, <span class="string">&#x27;学期&#x27;</span>])</span><br><span class="line">courses = [<span class="string">&#x27;语文&#x27;</span>, <span class="string">&#x27;数学&#x27;</span>, <span class="string">&#x27;英语&#x27;</span>]</span><br><span class="line">scores = np.random.randint(<span class="number">60</span>, <span class="number">101</span>, (<span class="number">10</span>, <span class="number">3</span>))</span><br><span class="line">df = pd.DataFrame(data=scores, columns=courses, index=index)</span><br><span class="line">df</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">             语文 数学 英语</span><br><span class="line">学号	学期			</span><br><span class="line">1001  期中	93	77	60</span><br><span class="line">      期末	93	98	84</span><br><span class="line">1002  期中	64	78	71</span><br><span class="line">      期末	70	71	97</span><br><span class="line">1003  期中	72	88	97</span><br><span class="line">      期末	99	100	63</span><br><span class="line">1004  期中	80	71	61</span><br><span class="line">      期末	91	62	72</span><br><span class="line">1005  期中	82	95	67</span><br><span class="line">      期末	84	78	86</span><br></pre></td></tr></table></figure>
+
+<p>根据第一级索引分组数据，按照期中成绩占<code>25%</code>，期末成绩占<code>75%</code> 的方式计算每个学生每门课的成绩。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.groupby(level=<span class="number">0</span>).agg(<span class="keyword">lambda</span> x: x.values[<span class="number">0</span>] * <span class="number">0.25</span> + x.values[<span class="number">1</span>] * <span class="number">0.75</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">        语文    数学    英语</span><br><span class="line">学号			</span><br><span class="line">1001	93.00	92.75	78.00</span><br><span class="line">1002	68.50	72.75	90.50</span><br><span class="line">1003	92.25	97.00	71.50</span><br><span class="line">1004	88.25	64.25	69.25</span><br><span class="line">1005	83.50	82.25	81.25</span><br></pre></td></tr></table></figure>
+
+<h3 id="间隔索引"><a href="#间隔索引" class="headerlink" title="间隔索引"></a>间隔索引</h3><p>间隔索引顾名思义是使用固定的间隔范围充当索引，我们通常会使用<code>interval_range</code>函数来创建间隔索引，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index = pd.interval_range(start=<span class="number">0</span>, end=<span class="number">5</span>)</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IntervalIndex([(0, 1], (1, 2], (2, 3], (3, 4], (4, 5]], dtype=&#x27;interval[int64, right]&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><code>IntervalIndex</code>有一个名为<code>contains</code>的方法，可以检查范围内是否包含了某个元素，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index.contains(<span class="number">1.5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([False,  True, False, False, False])</span><br></pre></td></tr></table></figure>
+
+<p><code>IntervalIndex</code>还有一个名为<code>overlaps</code>的方法，可以检查一个范围跟其他的范围是否有重叠，如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index.overlaps(pd.Interval(<span class="number">1.5</span>, <span class="number">3.5</span>))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([False,  True,  True,  True, False])</span><br></pre></td></tr></table></figure>
+
+<p>如果希望间隔范围是左闭右开的状态，可以在创建间隔索引时通过<code>closed=&#39;left&#39;</code>来做到；如果希望两边都是关闭状态，可以将<code>close</code>参数的值赋值为<code>both</code>，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index = pd.interval_range(start=<span class="number">0</span>, end=<span class="number">5</span>, closed=<span class="string">&#x27;left&#x27;</span>)</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IntervalIndex([[0, 1), [1, 2), [2, 3), [3, 4), [4, 5)], dtype=&#x27;interval[int64, left]&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index = pd.interval_range(start=pd.Timestamp(<span class="string">&#x27;2022-01-01&#x27;</span>), end=pd.Timestamp(<span class="string">&#x27;2022-01-04&#x27;</span>), closed=<span class="string">&#x27;both&#x27;</span>)</span><br><span class="line">index</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IntervalIndex([[2022-01-01, 2022-01-02], [2022-01-02, 2022-01-03], [2022-01-03, 2022-01-04]], dtype=&#x27;interval[datetime64[ns], both]&#x27;)</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="日期时间索引"><a href="#日期时间索引" class="headerlink" title="日期时间索引"></a>日期时间索引</h3><p><code>DatetimeIndex</code>应该是众多索引中最复杂最重要的一种索引，我们通常会使用<code>date_range()</code>函数来创建日期时间索引，该函数有几个非常重要的参数<code>start</code>、<code>end</code>、<code>periods</code>、<code>freq</code>、<code>tz</code>，分别代表起始日期时间、结束日期时间、生成周期、采样频率和时区。我们先来看看如何创建<code>DatetimeIndex</code>对象，再来讨论它的相关运算和操作，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.date_range(<span class="string">&#x27;2021-1-1&#x27;</span>, <span class="string">&#x27;2021-6-30&#x27;</span>, periods=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DatetimeIndex([&#x27;2021-01-01&#x27;, &#x27;2021-01-21&#x27;, &#x27;2021-02-10&#x27;, &#x27;2021-03-02&#x27;,</span><br><span class="line">               &#x27;2021-03-22&#x27;, &#x27;2021-04-11&#x27;, &#x27;2021-05-01&#x27;, &#x27;2021-05-21&#x27;,</span><br><span class="line">               &#x27;2021-06-10&#x27;, &#x27;2021-06-30&#x27;],</span><br><span class="line">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pd.date_range(<span class="string">&#x27;2021-1-1&#x27;</span>, <span class="string">&#x27;2021-6-30&#x27;</span>, freq=<span class="string">&#x27;W&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>freq=W</code>表示采样周期为一周，它会默认星期日是一周的开始；如果你希望星期一表示一周的开始，你可以将其修改为<code>freq=W-MON</code>；你也可以试着将该参数的值修改为<code>12H</code>，<code>M</code>，<code>Q</code>等，看看会发生什么，相信你不难猜到它们的含义。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DatetimeIndex([&#x27;2021-01-03&#x27;, &#x27;2021-01-10&#x27;, &#x27;2021-01-17&#x27;, &#x27;2021-01-24&#x27;,</span><br><span class="line">               &#x27;2021-01-31&#x27;, &#x27;2021-02-07&#x27;, &#x27;2021-02-14&#x27;, &#x27;2021-02-21&#x27;,</span><br><span class="line">               &#x27;2021-02-28&#x27;, &#x27;2021-03-07&#x27;, &#x27;2021-03-14&#x27;, &#x27;2021-03-21&#x27;,</span><br><span class="line">               &#x27;2021-03-28&#x27;, &#x27;2021-04-04&#x27;, &#x27;2021-04-11&#x27;, &#x27;2021-04-18&#x27;,</span><br><span class="line">               &#x27;2021-04-25&#x27;, &#x27;2021-05-02&#x27;, &#x27;2021-05-09&#x27;, &#x27;2021-05-16&#x27;,</span><br><span class="line">               &#x27;2021-05-23&#x27;, &#x27;2021-05-30&#x27;, &#x27;2021-06-06&#x27;, &#x27;2021-06-13&#x27;,</span><br><span class="line">               &#x27;2021-06-20&#x27;, &#x27;2021-06-27&#x27;],</span><br><span class="line">              dtype=&#x27;datetime64[ns]&#x27;, freq=&#x27;W-SUN&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p><code>DatatimeIndex</code>可以跟<code>DateOffset</code>类型进行运算，这一点很好理解，以为我们可以设置一个时间差让时间向前或向后偏移，具体的操作如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">index = pd.date_range(<span class="string">&#x27;2021-1-1&#x27;</span>, <span class="string">&#x27;2021-6-30&#x27;</span>, freq=<span class="string">&#x27;W&#x27;</span>)</span><br><span class="line">index - pd.DateOffset(days=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">DatetimeIndex([&#x27;2021-01-01&#x27;, &#x27;2021-01-08&#x27;, &#x27;2021-01-15&#x27;, &#x27;2021-01-22&#x27;,</span><br><span class="line">               &#x27;2021-01-29&#x27;, &#x27;2021-02-05&#x27;, &#x27;2021-02-12&#x27;, &#x27;2021-02-19&#x27;,</span><br><span class="line">               &#x27;2021-02-26&#x27;, &#x27;2021-03-05&#x27;, &#x27;2021-03-12&#x27;, &#x27;2021-03-19&#x27;,</span><br><span class="line">               &#x27;2021-03-26&#x27;, &#x27;2021-04-02&#x27;, &#x27;2021-04-09&#x27;, &#x27;2021-04-16&#x27;,</span><br><span class="line">               &#x27;2021-04-23&#x27;, &#x27;2021-04-30&#x27;, &#x27;2021-05-07&#x27;, &#x27;2021-05-14&#x27;,</span><br><span class="line">               &#x27;2021-05-21&#x27;, &#x27;2021-05-28&#x27;, &#x27;2021-06-04&#x27;, &#x27;2021-06-11&#x27;,</span><br><span class="line">               &#x27;2021-06-18&#x27;, &#x27;2021-06-25&#x27;],</span><br><span class="line">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">index + pd.DateOffset(hours=<span class="number">2</span>, minutes=<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">DatetimeIndex([&#x27;2021-01-03 02:10:00&#x27;, &#x27;2021-01-10 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-01-17 02:10:00&#x27;, &#x27;2021-01-24 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-01-31 02:10:00&#x27;, &#x27;2021-02-07 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-02-14 02:10:00&#x27;, &#x27;2021-02-21 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-02-28 02:10:00&#x27;, &#x27;2021-03-07 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-03-14 02:10:00&#x27;, &#x27;2021-03-21 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-03-28 02:10:00&#x27;, &#x27;2021-04-04 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-04-11 02:10:00&#x27;, &#x27;2021-04-18 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-04-25 02:10:00&#x27;, &#x27;2021-05-02 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-05-09 02:10:00&#x27;, &#x27;2021-05-16 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-05-23 02:10:00&#x27;, &#x27;2021-05-30 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-06-06 02:10:00&#x27;, &#x27;2021-06-13 02:10:00&#x27;,</span><br><span class="line">               &#x27;2021-06-20 02:10:00&#x27;, &#x27;2021-06-27 02:10:00&#x27;],</span><br><span class="line">              dtype=&#x27;datetime64[ns]&#x27;, freq=None)</span><br></pre></td></tr></table></figure>
+
+<p>如果<code>Series</code>对象或<code>DataFrame</code>对象使用了<code>DatetimeIndex</code>类型的索引，此时我们可以通过<code>asfreq()</code>方法指定一个时间频率来实现对数据的抽样，我们仍然以之前讲过的百度股票数据为例，给大家做一个演示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baidu_df = pd.read_excel(<span class="string">&#x27;data/2022年股票数据.xlsx&#x27;</span>, sheet_name=<span class="string">&#x27;BIDU&#x27;</span>, index_col=<span class="string">&#x27;Date&#x27;</span>)</span><br><span class="line">baidu_df.sort_index(inplace=<span class="literal">True</span>)</span><br><span class="line">baidu_df.asfreq(<span class="string">&#x27;5D&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_asfreq.png" style="zoom:50%;">
+
+<p>大家可能注意到了，每5天抽取1天有可能会抽中非交易日，那么对应的列都变成了空值，为了解决这个问题，在使用<code>asfreq</code>方法时可以通过<code>method</code>参数来指定一种填充空值的方法，可以将相邻的交易日的数据填入进来。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_df.asfreq(<span class="string">&#x27;5D&#x27;</span>, method=<span class="string">&#x27;ffill&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_asfreq_ffill.png" style="zoom:50%;">
+
+<p>当使用<code>DatetimeIndex</code>索引时，我们也可以通过<code>resample()</code>方法基于时间对数据进行重采样，相当于根据时间周期对数据进行了分组操作，分组之后还可以进行聚合统计，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_df.resample(<span class="string">&#x27;1M&#x27;</span>).mean()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_resample.png" style="zoom:50%;">
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_df.resample(<span class="string">&#x27;1M&#x27;</span>).agg([<span class="string">&#x27;mean&#x27;</span>, <span class="string">&#x27;std&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_resample_agg.png" style="zoom:100%;">
+
+<blockquote>
+<p><strong>提示</strong>：不知大家是否注意到，上面输出的<code>DataFrame</code> 的列索引是一个<code>MultiIndex</code>对象。你可以访问上面的<code>DataFrame</code>对象的<code>columns</code>属性看看。</p>
+</blockquote>
+<p>如果要实现日期时间的时区转换，我们可以先用<code>tz_localize()</code>方法将日期时间本地化，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">baidu_df = baidu_df.tz_localize(<span class="string">&#x27;Asia/Chongqing&#x27;</span>)</span><br><span class="line">baidu_df</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_tz_localize.png" style="zoom:50%;">
+
+<p>在对时间本地化以后，我们再使用<code>tz_convert()</code>方法就可以实现转换时区，代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">baidu_df.tz_convert(<span class="string">&#x27;America/New_York&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/baidu_stock_tz_convert.png" style="zoom:50%;">
+
+<p>如果你的数据使用了<code>DatetimeIndex</code>类型的索引，那么你就很有可能要对数据进行时间序列分析，关于时间序列分析的方法和模型并不是本章节要探讨的内容，我们在其他的专栏中为大家分享。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/67.%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/49.Cookie%E5%92%8CSession/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/84.%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_5/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example11/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework06/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/js/mylib/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/77.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-6/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="NumPy的应用-4"><a href="#NumPy的应用-4" class="headerlink" title="NumPy的应用-4"></a>NumPy的应用-4</h2><h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><p><strong>向量</strong>（<em>vector</em>）也叫<strong>矢量</strong>，是一个同时具有大小和方向，且满足平行四边形法则的几何对象。与向量相对的概念叫<strong>标量</strong>或<strong>数量</strong>，标量只有大小，绝大多数情况下没有方向。我们通常用带箭头的线段来表示向量，在平面直角坐标系中的向量如下图所示。需要注意的是，向量是表达大小和方向的量，并没有规定起点和终点，所以相同的向量可以画在任意位置，例如下图中$\boldsymbol{w}$和$\boldsymbol{v}$两个向量并没有什么区别。</p>
+<img src="res/vector_1.png" style="zoom:40%;">
+
+<p>向量有很多种代数表示法，对于二维空间的向量，下面几种写法都是可以的。<br>$$<br>\boldsymbol{a} &#x3D; \langle a_1, a_2 \rangle &#x3D; (a_1, a_2) &#x3D; \begin{pmatrix} a_1 \ a_2 \end{pmatrix} &#x3D; \begin{bmatrix} a_1 \ a_2 \end{bmatrix}<br>$$<br>向量的大小称为向量的模，它是一个标量，对于二维空间的向量，模可以通过下面的公式计算。<br>$$<br>\lvert \boldsymbol{a} \rvert &#x3D; \sqrt{a_{1}^{2} + a_{2}^{2}}<br>$$<br>注意，这里的$\lvert \boldsymbol{a} \rvert$并不是绝对值，你可以将其称为向量$\boldsymbol{a}$的二范数，这是数学中的符号重用现象。上面的写法和概念也可以推广到$n$维空间，我们通常用$\boldsymbol{R^n}$表示$n$维空间，我们刚才说的二维空间可以记为$\boldsymbol{R^2}$，三维空间可以记为$\boldsymbol{R^3}$。虽然生活在三维空间的我们很难想象四维空间、五维空间是什么样子，但是这并不影响我们探讨高维空间，机器学习中，我们经常把有$n$个特征的训练样本称为一个$n$维向量。</p>
+<h4 id="向量的加法"><a href="#向量的加法" class="headerlink" title="向量的加法"></a>向量的加法</h4><p>相同维度的向量可以相加得到一个新的向量，运算的方法是将向量的每个分量相加，如下所示。<br>$$<br>\boldsymbol{u} &#x3D; \begin{bmatrix} u_1 \ u_2 \ \vdots \ u_n \end{bmatrix}, \quad<br>\boldsymbol{v} &#x3D; \begin{bmatrix} v_1 \ v_2 \ \vdots \ v_n \end{bmatrix}, \quad<br>\boldsymbol{u} + \boldsymbol{v} &#x3D; \begin{bmatrix} u_1 + v_1 \ u_2 + v_2 \ \vdots \ u_n + v_n \end{bmatrix}<br>$$<br>向量的加法满足“平行四边形法则”，即两个向量$\boldsymbol{u}$和$\boldsymbol{v}$构成了平行四边形的两条邻边，相加的结果是平行四边形的对角线，如下图所示。</p>
+<img src="res/vector_2.png" style="zoom:58%;">
+
+<h4 id="向量的数乘"><a href="#向量的数乘" class="headerlink" title="向量的数乘"></a>向量的数乘</h4><p>一个向量$\boldsymbol{v}$可以和一个标量$k$相乘，运算的方法是将向量中的每个分量与该标量相乘即可，如下所示。<br>$$<br>\boldsymbol{v} &#x3D; \begin{bmatrix} v_1 \ v_2 \ \vdots \ v_n \end{bmatrix}, \quad<br>k \cdot \boldsymbol{v} &#x3D; \begin{bmatrix} k \cdot v_1 \ k \cdot v_2 \ \vdots \ k \cdot v_n \end{bmatrix}<br>$$<br>我们可以用 NumPy 的数组来表示向量，向量的加法可以通过两个数组的加法来实现，向量的数乘可以通过数组和标量的乘法来实现，此处不再进行赘述。</p>
+<h4 id="向量的点积"><a href="#向量的点积" class="headerlink" title="向量的点积"></a>向量的点积</h4><p>点积（<em>dot product</em>）是两个向量之间最为重要的运算之一，运算的方法是将两个向量对应分量的乘积求和，所以点积的结果是一个标量，其几何意义是两个向量的模乘以二者夹角的余弦如下所示。<br>$$<br>\boldsymbol{u} &#x3D; \begin{bmatrix} u_1 \ u_2 \ \vdots \ u_n \end{bmatrix}, \quad<br>\boldsymbol{v} &#x3D; \begin{bmatrix} v_1 \ v_2 \ \vdots \ v_n \end{bmatrix} \quad \<br>\boldsymbol{u} \cdot \boldsymbol{v} &#x3D; \sum_{i&#x3D;1}^{n}{u_iv_i} &#x3D; \lvert \boldsymbol{u} \rvert \lvert \boldsymbol{v} \rvert cos\theta<br>$$<br>假如我们用3维向量来表示用户对喜剧片、言情片和动作片这三类电影的偏好，我们用1到5的数字来表示喜欢的程度，其中5表示非常喜欢，4表示比较喜欢，3表示无感，2表示比较反感，1表示特别反感。那么，下面的向量表示用户非常喜欢喜剧片，特别反感言情片，对动作片不喜欢也不反感。<br>$$<br>\boldsymbol{u} &#x3D; \begin{pmatrix} 5 \ 1 \ 3 \end{pmatrix}<br>$$<br>现在有两部电影上映了，一部属于言情喜剧片，一部属于喜剧动作片，我们把两部电影也通过3维向量的方式进行表示，如下所示。<br>$$<br>\boldsymbol{m_1} &#x3D; \begin{pmatrix} 4 \ 5 \ 1 \end{pmatrix}, \quad \boldsymbol{m_2} &#x3D; \begin{pmatrix} 5 \ 1 \ 5 \end{pmatrix}<br>$$<br>如果现在我们需要向刚才的用户推荐一部电影，我们应该给他推荐哪一部呢？我们可以将代表用户的向量$\boldsymbol{u}$和代表电影的向量$\boldsymbol{m_1}$和$\boldsymbol{m_2}$分别进行点积运算，再除以向量的模长，得到向量夹角的余弦值，余弦值越接近1，说明向量的夹角越接近0度，也就是两个向量的相似度越高。很显然，我们应该向用户推荐跟他观影喜好相似度更高的电影。<br>$$<br>cos\theta_1 &#x3D; \frac{\boldsymbol{u} \cdot \boldsymbol{m1}}{|\boldsymbol{u}||\boldsymbol{m1}|} \approx \frac{4 \times 5 + 5 \times 1 + 3 \times 1}{5.92 \times 6.48} \approx 0.73 \<br>cos\theta_2 &#x3D; \frac{\boldsymbol{u} \cdot \boldsymbol{m2}}{|\boldsymbol{u}||\boldsymbol{m2}|} \approx \frac{5 \times 5 + 1 \times 1 + 3 \times 5}{5.92 \times 7.14} \approx 0.97<br>$$<br>大家可能会说，向量$\boldsymbol{m_2}$代表的电影肉眼可见跟用户是更加匹配的。的确，对于一个三维向量我们凭借直觉也能够给出正确的答案，但是对于一个$n$维向量，当$n$的值非常大时，你还有信心凭借肉眼的观察和本能的直觉给出准确的答案吗？向量的点积可以通过<code>dot</code>函数来计算，而向量的模长可以通过 NumPy 的<code>linalg</code>模块中的<code>norm</code>函数来计算，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">u = np.array([<span class="number">5</span>, <span class="number">1</span>, <span class="number">3</span>])</span><br><span class="line">m1 = np.array([<span class="number">4</span>, <span class="number">5</span>, <span class="number">1</span>])</span><br><span class="line">m2 = np.array([<span class="number">5</span>, <span class="number">1</span>, <span class="number">5</span>])</span><br><span class="line"><span class="built_in">print</span>(np.dot(u, m1) / (np.linalg.norm(u) * np.linalg.norm(m1)))  <span class="comment"># 0.7302967433402214</span></span><br><span class="line"><span class="built_in">print</span>(np.dot(u, m2) / (np.linalg.norm(u) * np.linalg.norm(m2)))  <span class="comment"># 0.9704311900788593</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="向量的叉积"><a href="#向量的叉积" class="headerlink" title="向量的叉积"></a>向量的叉积</h4><p>在二维空间，两个向量的叉积是这样定义的：<br>$$<br>\boldsymbol{A} &#x3D; \begin{pmatrix} a_{1} \ a_{2} \end{pmatrix}, \quad \boldsymbol{B} &#x3D; \begin{pmatrix} b_{1} \ b_{2} \end{pmatrix} \<br>\boldsymbol{A} \times \boldsymbol{B} &#x3D; \begin{vmatrix} a_{1} \quad a_{2} \ b_{1} \quad b_{2} \end{vmatrix} &#x3D; a_{1}b_{2} - a_{2}b_{1}<br>$$<br>对于三维空间，两个向量的叉积结果是一个向量，如下所示：<br>$$<br>\boldsymbol{A} &#x3D; \begin{pmatrix} a_{1} \ a_{2} \ a_{3} \end{pmatrix}, \quad \boldsymbol{B} &#x3D; \begin{pmatrix} b_{1} \ b_{2} \ b_{3} \end{pmatrix} \<br>\boldsymbol{A} \times \boldsymbol{B} &#x3D; \begin{vmatrix} \boldsymbol{\hat{i}} \quad \boldsymbol{\hat{j}} \quad \boldsymbol{\hat{k}} \ a_{1} \quad a_{2} \quad a_{3} \ b_{1} \quad b_{2} \quad b_{3} \end{vmatrix} &#x3D; \langle \boldsymbol{\hat{i}}\begin{vmatrix} a_{2} \quad a_{3} \ b_{2} \quad b_{3} \end{vmatrix}, -\boldsymbol{\hat{j}}\begin{vmatrix} a_{1} \quad a_{3} \ b_{1} \quad b_{3} \end{vmatrix}, \boldsymbol{\hat{k}}\begin{vmatrix} a_{1} \quad a_{2} \ b_{1} \quad b_{2} \end{vmatrix} \rangle<br>$$<br>因为叉积的结果是向量，所以$\boldsymbol{A} \times \boldsymbol{B}$和$\boldsymbol{B} \times \boldsymbol{A}$的结果并不相同，事实上：<br>$$<br>\boldsymbol{A} \times \boldsymbol{B} &#x3D; -(\boldsymbol{B} \times \boldsymbol{A})<br>$$<br>NumPy 中可以通过<code>cross</code>函数来计算向量的叉积，代码如下所示。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(np.cross(u, m1))  <span class="comment"># [-14   7  21]</span></span><br><span class="line"><span class="built_in">print</span>(np.cross(m1, u))  <span class="comment"># [ 14  -7 -21]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="行列式"><a href="#行列式" class="headerlink" title="行列式"></a>行列式</h3><p><strong>行列式</strong>（<em>determinant</em>）通常记作$det(\boldsymbol{A})$或$|\boldsymbol{A}|$，其中$\boldsymbol{A}$是一个$n$阶方阵。行列式可以看做是有向面积或体积的概念在一般欧几里得空间的推广，或者说行列式描述的是一个线性变换对“体积”所造成的影响。行列式的概念最早出现在解线性方程组的过程中，十七世纪晚期，关孝和（日本江户时代的数学家）与莱布尼茨的著作中已经使用行列式来确定线性方程组解的个数以及形式；十八世纪开始，行列式开始作为独立的数学概念被研究；十九世纪以后，行列式理论进一步得到发展和完善。</p>
+<img src="res/Parallelogramme.jpeg" style="zoom:125%;">
+
+<h4 id="行列式的性质"><a href="#行列式的性质" class="headerlink" title="行列式的性质"></a>行列式的性质</h4><p>行列式是由向量引出的，所以行列式解释的其实是向量的性质。</p>
+<p><strong>性质1</strong>：如果$det(\boldsymbol{A})$中某行（或某列）的元素全部为0，那么$det(\boldsymbol{A}) &#x3D; 0$。</p>
+<p><strong>性质2</strong>：如果$det(\boldsymbol{A})$中某行（或某列）有公共因子$k$，则可以提出$k$，得到行列式$det(\boldsymbol{A^{‘}})$，且$det(\boldsymbol{A}) &#x3D; k \cdot det(\boldsymbol{A^{‘}})$。<br>$$<br>det(\boldsymbol{A})&#x3D;{\begin{vmatrix}a_{11}&amp;a_{12}&amp;\dots &amp;a_{1n}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \{\color {blue}k}a_{i1}&amp;{\color {blue}k}a_{i2}&amp;\dots &amp;{\color {blue}k}a_{in}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{n1}&amp;a_{n2}&amp;\dots &amp;a_{nn}\end{vmatrix}}&#x3D;{\color {blue}k}{\begin{vmatrix}a_{11}&amp;a_{12}&amp;\dots &amp;a_{1n}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{i1}&amp;a_{i2}&amp;\dots &amp;a_{in}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{n1}&amp;a_{n2}&amp;\dots &amp;a_{nn}\end{vmatrix}}&#x3D;{\color {blue}k} \cdot det(\boldsymbol{A^{‘}})<br>$$</p>
+<p><strong>性质3</strong>：如果$det(\boldsymbol{A})$中某行（或某列）的每个元素是两数之和，则此行列式可拆分为两个行列式相加，如下所示。<br>$$<br>{\begin{vmatrix}a_{11}&amp;a_{12}&amp;\dots &amp;a_{1n}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \{\color {blue}a_{i1}}+{\color {OliveGreen}b_{i1}}&amp;{\color {blue}a_{i2}}+{\color {OliveGreen}b_{i2}}&amp;\dots &amp;{\color {blue}a_{in}}+{\color {OliveGreen}b_{in}}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{n1}&amp;a_{n2}&amp;\dots &amp;a_{nn}\end{vmatrix}}&#x3D;{\begin{vmatrix}a_{11}&amp;a_{12}&amp;\dots &amp;a_{1n}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \{\color {blue}a_{i1}}&amp;{\color {blue}a_{i2}}&amp;\dots &amp;{\color {blue}a_{in}}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{n1}&amp;a_{n2}&amp;\dots &amp;a_{nn}\end{vmatrix}}+{\begin{vmatrix}a_{11}&amp;a_{12}&amp;\dots &amp;a_{1n}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \{\color {OliveGreen}b_{i1}}&amp;{\color {OliveGreen}b_{i2}}&amp;\dots &amp;{\color {OliveGreen}b_{in}}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{n1}&amp;a_{n2}&amp;\dots &amp;a_{nn}\end{vmatrix}}<br>$$<br><strong>性质4</strong>：如果$det(\boldsymbol{A})$中两行（或两列）元素对应成比例，那么$det(\boldsymbol{A}) &#x3D; 0$。</p>
+<p><strong>性质5</strong>：如果$det(\boldsymbol{A})$中两行（或两列）互换得到$det(\boldsymbol{A^{‘}})$，那么$det(\boldsymbol{A}) &#x3D; -det(\boldsymbol{A^{‘}})$。</p>
+<p><strong>性质6</strong>：将$det(\boldsymbol{A})$中某行（或某列）的$k$倍加进另一行（或另一列）里，行列式的值不变，如下所示。<br>$$<br>{\begin{vmatrix}\vdots &amp;\vdots &amp;\vdots &amp;\vdots \a_{i1}&amp;a_{i2}&amp;\dots &amp;a_{in}\a_{j1}&amp;a_{j2}&amp;\dots &amp;a_{jn}\\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\end{vmatrix}}&#x3D;{\begin{vmatrix}\vdots &amp;\vdots &amp;\vdots &amp;\vdots \a_{i1}&amp;a_{i2}&amp;\dots &amp;a_{in}\a_{j1}{\color {blue}+ka_{i1}}&amp;a_{j2}{\color {blue}+ka_{i2}}&amp;\dots &amp;a_{jn}{\color {blue}+ka_{in}}\\vdots &amp;\vdots &amp;\vdots &amp;\vdots \\end{vmatrix}}<br>$$<br><strong>性质7</strong>：将行列式的行列互换，行列式的值不变，如下所示。<br>$$<br>{\begin{vmatrix}a_{11}&amp;a_{12}&amp;\dots &amp;a_{1n}\a_{21}&amp;a_{22}&amp;\dots &amp;a_{2n}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{n1}&amp;a_{n2}&amp;\dots &amp;a_{nn}\end{vmatrix}}&#x3D;{\begin{vmatrix}a_{11}&amp;a_{21}&amp;\dots &amp;a_{n1}\a_{12}&amp;a_{22}&amp;\dots &amp;a_{n2}\\vdots &amp;\vdots &amp;\ddots &amp;\vdots \a_{1n}&amp;a_{2n}&amp;\dots &amp;a_{nn}\end{vmatrix}}<br>$$<br><strong>性质8</strong>：方块矩阵$\boldsymbol{A}$和$\boldsymbol{B}$的乘积的行列式等于其行列式的乘积，即$det(\boldsymbol{A}\boldsymbol{B}) &#x3D; det(\boldsymbol{A})det(\boldsymbol{B})$。特别的，若将矩阵中的每一行都乘以常数$r$，那么行列式的值将是原来的$r^{n}$倍，即$det(r\boldsymbol{A}) &#x3D; det(r\boldsymbol{I_{n}} \cdot \boldsymbol{A}) &#x3D; r^{n}det(\boldsymbol{A})$，其中$\boldsymbol{I_{n}}$是$n$阶单位矩阵。</p>
+<p><strong>性质9</strong>：若$\boldsymbol{A}$是可逆矩阵，那么$det(\boldsymbol{A}^{-1}) &#x3D; (det(\boldsymbol{A}))^{-1}$。</p>
+<h4 id="行列式的计算"><a href="#行列式的计算" class="headerlink" title="行列式的计算"></a>行列式的计算</h4><p>$n$阶行列式的计算公式如下所示：<br>$$<br>det(\boldsymbol{A})&#x3D;\sum_{n!} \pm {a_{1\alpha}a_{2\beta} \cdots a_{n\omega}}<br>$$</p>
+<p>对于二阶行列式，上面的公式相当于：<br>$$<br>\begin{vmatrix} a_{11} \quad a_{12} \ a_{21} \quad a_{22} \end{vmatrix} &#x3D; a_{11}a_{22} - a_{12}a_{21}<br>$$<br>对于三阶行列式，上面的计算公式相当于：<br>$$<br>\begin{vmatrix} a_{11} \quad a_{12} \quad a_{13} \ a_{21} \quad a_{22} \quad a_{23} \ a_{31} \quad a_{32} \quad a_{33} \end{vmatrix} &#x3D; a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33} - a_{13}a_{22}a_{31}<br>$$<br>高阶行列式可以用<strong>代数余子式</strong>（<em>cofactor</em>）展开成多个低阶行列式，如下所示：<br>$$<br>det(\boldsymbol{A})&#x3D;a_{11}C_{11}+a_{12}C_{12}+ \cdots +a_{1n}C_{1n} &#x3D; \sum_{i&#x3D;1}^{n}{a_{1i}C_{1i}}<br>$$<br>其中，$C_{11}$是原行列式去掉$a_{11}$所在行和列之后剩余的部分构成的行列式，以此类推。</p>
+<h3 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h3><p><strong>矩阵</strong>（<em>matrix</em>）是由一系列元素排成的矩形阵列，矩阵里的元素可以是数字、符号或数学公式。矩阵可以进行<strong>加法</strong>、<strong>减法</strong>、<strong>数乘</strong>、<strong>转置</strong>、<strong>矩阵乘法</strong>等运算，如下图所示。</p>
+<img src="res/matrix_operation.png" style="zoom:62%;">
+
+<p>值得一提的是矩阵乘法运算，该运算仅当第一个矩阵$\boldsymbol{A}$的列数和另一个矩阵$\boldsymbol{B}$的行数相等时才能定义。如果$\boldsymbol{A}$是一个$m \times n$的矩阵，$\boldsymbol{B}$是一个$n \times k$矩阵，它们的乘积是一个$m \times k$的矩阵，其中元素的计算公式如下所示：<br>$$<br> [\mathbf{AB}]<em>{i,j} &#x3D; A</em>{i,1}B_{1,j} + A_{i,2}B_{2,j} + \cdots + A_{i,n}B_{n,j} &#x3D; \sum_{r&#x3D;1}^n A_{i,r}B_{r,j}<br>$$<br><img src="res/matrix_multiply.png" style="zoom:35%;"></p>
+<h1 id="例如：-begin-bmatrix-1-0-2-1-3-1-end-bmatrix-times-begin-bmatrix-3-1-2-1-1-0-end-bmatrix"><a href="#例如：-begin-bmatrix-1-0-2-1-3-1-end-bmatrix-times-begin-bmatrix-3-1-2-1-1-0-end-bmatrix" class="headerlink" title="例如：$$\begin{bmatrix}    1 &amp; 0 &amp; 2 \    -1 &amp; 3 &amp; 1 \  \end{bmatrix}\times  \begin{bmatrix}    3 &amp; 1 \    2 &amp; 1 \    1 &amp; 0  \end{bmatrix}"></a>例如：<br>$$<br>\begin{bmatrix}<br>    1 &amp; 0 &amp; 2 \<br>    -1 &amp; 3 &amp; 1 \<br>  \end{bmatrix}<br>\times<br>  \begin{bmatrix}<br>    3 &amp; 1 \<br>    2 &amp; 1 \<br>    1 &amp; 0<br>  \end{bmatrix}</h1><h1 id="begin-bmatrix-1-times-3-0-times-2-2-times-1-1-times-1-0-times-1-2-times-0-1-times-3-3-times-2-1-times-1-1-times-1-3-times-1-1-times-0-end-bmatrix"><a href="#begin-bmatrix-1-times-3-0-times-2-2-times-1-1-times-1-0-times-1-2-times-0-1-times-3-3-times-2-1-times-1-1-times-1-3-times-1-1-times-0-end-bmatrix" class="headerlink" title="  \begin{bmatrix}     (1 \times 3  +  0 \times 2  +  2 \times 1) &amp; (1 \times 1   +   0 \times 1   +   2 \times 0) \    (-1 \times 3  +  3 \times 2  +  1 \times 1) &amp; (-1 \times 1   +   3 \times 1   +   1 \times 0) \  \end{bmatrix}"></a>  \begin{bmatrix}<br>     (1 \times 3  +  0 \times 2  +  2 \times 1) &amp; (1 \times 1   +   0 \times 1   +   2 \times 0) \<br>    (-1 \times 3  +  3 \times 2  +  1 \times 1) &amp; (-1 \times 1   +   3 \times 1   +   1 \times 0) \<br>  \end{bmatrix}</h1><p>  \begin{bmatrix}<br>    5 &amp; 1 \<br>    4 &amp; 2 \<br>  \end{bmatrix}<br>$$<br>矩阵的乘法满足结合律和对矩阵加法的分配律：</p>
+<p>结合律： $(\boldsymbol{AB})\boldsymbol{C} &#x3D; \boldsymbol{A}(\boldsymbol{BC})$。</p>
+<p>左分配律：$(\boldsymbol{A} + \boldsymbol{B})\boldsymbol{C} &#x3D; \boldsymbol{AC} + \boldsymbol{BC}$。</p>
+<p>右分配律：$\boldsymbol{C}(\boldsymbol{A} + \boldsymbol{B}) &#x3D; \boldsymbol{CA} + \boldsymbol{CB}$。</p>
+<p><strong>矩阵乘法不满足交换律</strong>。一般情况下，矩阵$\boldsymbol{A}$和$\boldsymbol{B}$的乘积$\boldsymbol{AB}$存在，但$\boldsymbol{BA}$不一定存在，即便$\boldsymbol{BA}$存在，大多数时候$\boldsymbol{AB} \neq \boldsymbol{BA}$。</p>
+<p>矩阵乘法的一个基本应用是在线性方程组上。线性方程组是方程组的一种，它符合以下的形式：<br>$$<br>\begin{cases}<br>     a_{1,1}x_{1} + a_{1,2}x_{2} + \cdots + a_{1,n}x_{n}&#x3D;  b_{1} \<br>     a_{2,1}x_{1} + a_{2,2}x_{2} + \cdots + a_{2,n}x_{n}&#x3D;  b_{2} \<br>     \vdots \quad \quad \quad \vdots \<br>     a_{m,1}x_{1} + a_{m,2}x_{2} + \cdots + a_{m,n}x_{n}&#x3D;  b_{m}<br> \end{cases}<br>$$<br>运用矩阵的方式，可以将线性方程组写成一个向量方程：<br>$$<br>\boldsymbol{Ax} &#x3D; \boldsymbol{b}<br>$$<br>其中，$\boldsymbol{A}$是由方程组里未知数的系数排成的$m \times n$矩阵，$\boldsymbol{x}$是含有$n$个元素的行向量，$\boldsymbol{b}$是含有$m$个元素的行向量。</p>
+<p>矩阵是线性变换（保持向量加法和标量乘法的函数）的便利表达法。矩阵乘法的本质在联系到线性变换的时候最能体现，因为矩阵乘法和线性变换的合成有以下的联系，即每个$m \times n$的矩阵$\boldsymbol{A}$都代表了一个从$\boldsymbol{R}^{n}$射到$\boldsymbol{R}^{m}$的线性变换。如果无法理解上面这些内容，推荐大家看看B站上名为<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ib411t7YR/">《线性代数的本质》</a>的视频，相信这套视频会让你对线性代数有一个更好的认知。</p>
+<p>下图是一个来自于维基百科的例子，图中展示了一些典型的二维实平面上的线性变换对平面向量（图形）造成的效果以及它们对应的二维矩阵，其中每个线性变换将蓝色图形映射成绿色图形；平面的原点$(0, 0)$用黑点表示。</p>
+<img src="res/linear_transformation.png" style="zoom:45%;">
+
+<h4 id="矩阵对象"><a href="#矩阵对象" class="headerlink" title="矩阵对象"></a>矩阵对象</h4><p>NumPy 中提供了专门用于线性代数（<em>linear algebra</em>）的模块和表示矩阵的类型<code>matrix</code>，当然我们通过二维数组也可以表示一个矩阵，官方并不推荐使用<code>matrix</code>类而是建议使用二维数组，而且有可能在将来的版本中会移除<code>matrix</code>类。无论如何，利用这些已经封装好的类和函数，我们可以轻松愉快的实现很多对矩阵的操作。</p>
+<p>我们可以通过下面的代码来创建矩阵（<code>matrix</code>）对象。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m1 = np.matrix(<span class="string">&#x27;1 2 3; 4 5 6&#x27;</span>)</span><br><span class="line">m1</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>matrix</code>构造器可以传入类数组对象也可以传入字符串来构造矩阵对象。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">matrix([[1, 2, 3],</span><br><span class="line">        [4, 5, 6]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m2 = np.asmatrix(np.array([[<span class="number">1</span>, <span class="number">1</span>], [<span class="number">2</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">3</span>]]))</span><br><span class="line">m2</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>asmatrix</code>函数也可以用<code>mat</code>函数代替，这两个函数其实是同一个函数。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">matrix([[1, 1],</span><br><span class="line">        [2, 2],</span><br><span class="line">        [3, 3]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m1 * m2</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">matrix([[14, 14],</span><br><span class="line">        [32, 32]])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：注意<code>matrix</code>对象和<code>ndarray</code>对象乘法运算的差别，<code>matrix</code>对象的<code>*</code>运算是矩阵乘法运算。如果两个二维数组要做矩阵乘法运算，应该使用<code>@</code>运算符或<code>matmul</code>函数，而不是<code>*</code>运算符。</p>
+</blockquote>
+<p>矩阵对象的属性如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>A</code></td>
+<td>获取矩阵对象对应的<code>ndarray</code>对象</td>
+</tr>
+<tr>
+<td><code>A1</code></td>
+<td>获取矩阵对象对应的扁平化后的<code>ndarray</code>对象</td>
+</tr>
+<tr>
+<td><code>I</code></td>
+<td>可逆矩阵的逆矩阵</td>
+</tr>
+<tr>
+<td><code>T</code></td>
+<td>矩阵的转置</td>
+</tr>
+<tr>
+<td><code>H</code></td>
+<td>矩阵的共轭转置</td>
+</tr>
+<tr>
+<td><code>shape</code></td>
+<td>矩阵的形状</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>矩阵元素的个数</td>
+</tr>
+</tbody></table>
+<p>矩阵对象的方法跟之前讲过的<code>ndarray</code>数组对象的方法基本差不多，此处不再进行赘述。</p>
+<h4 id="线性代数模块"><a href="#线性代数模块" class="headerlink" title="线性代数模块"></a>线性代数模块</h4><p>NumPy 的<code>linalg</code>模块中有一组标准的矩阵分解运算以及诸如求逆和行列式之类的函数，它们跟 MATLAB 和 R 等语言所使用的是相同的行业标准线性代数库，下面的表格列出了<code>numpy</code>以及<code>linalg</code>模块中一些常用的线性代数相关函数。</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>diag</code></td>
+<td>以一维数组的形式返回方阵的对角线元素或将一维数组转换为方阵（非对角元素元素为0）</td>
+</tr>
+<tr>
+<td><code>matmul</code></td>
+<td>矩阵乘法运算</td>
+</tr>
+<tr>
+<td><code>trace</code></td>
+<td>计算对角线元素的和</td>
+</tr>
+<tr>
+<td><code>norm</code></td>
+<td>求矩阵或向量的范数</td>
+</tr>
+<tr>
+<td><code>det</code></td>
+<td>计算行列式的值</td>
+</tr>
+<tr>
+<td><code>matrix_rank</code></td>
+<td>计算矩阵的秩</td>
+</tr>
+<tr>
+<td><code>eig</code></td>
+<td>计算矩阵的特征值（<em>eigenvalue</em>）和特征向量（<em>eigenvector</em>）</td>
+</tr>
+<tr>
+<td><code>inv</code></td>
+<td>计算非奇异矩阵（$n$阶方阵）的逆矩阵</td>
+</tr>
+<tr>
+<td><code>pinv</code></td>
+<td>计算矩阵的摩尔-彭若斯（<em>Moore-Penrose</em>）广义逆</td>
+</tr>
+<tr>
+<td><code>qr</code></td>
+<td>QR分解（把矩阵分解成一个正交矩阵与一个上三角矩阵的积）</td>
+</tr>
+<tr>
+<td><code>svd</code></td>
+<td>计算奇异值分解（<em>singular value decomposition</em>）</td>
+</tr>
+<tr>
+<td><code>solve</code></td>
+<td>解线性方程组$\boldsymbol{Ax}&#x3D;\boldsymbol{b}$，其中$\boldsymbol{A}$是一个方阵</td>
+</tr>
+<tr>
+<td><code>lstsq</code></td>
+<td>计算$\boldsymbol{Ax}&#x3D;\boldsymbol{b}$的最小二乘解</td>
+</tr>
+</tbody></table>
+<p>下面我们简单尝试一下上面的函数，先试一试求逆矩阵。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">m3 = np.array([[<span class="number">1.</span>, <span class="number">2.</span>], [<span class="number">3.</span>, <span class="number">4.</span>]])</span><br><span class="line">m4 = np.linalg.inv(m3)</span><br><span class="line">m4</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[-2. ,  1. ],</span><br><span class="line">       [ 1.5, -0.5]])</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.around(m3 @ m4)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>around</code>函数对数组元素进行四舍五入操作，默认小数点后面的位数为0。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[1., 0.],</span><br><span class="line">       [0., 1.]])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：矩阵和它的逆矩阵做矩阵乘法会得到单位矩阵。</p>
+</blockquote>
+<p>计算行列式的值。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">m5 = np.array([[<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>], [<span class="number">4</span>, <span class="number">7</span>, <span class="number">9</span>]])</span><br><span class="line">np.linalg.det(m5)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p>计算矩阵的秩。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.matrix_rank(m5)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p>求解线性方程组。<br>$$<br>\begin{cases}<br>x_1 + 2x_2 + x_3 &#x3D; 8 \<br>3x_1 + 7x_2 + 2x_3 &#x3D; 23 \<br>2x_1 + 2x_2 + x_3 &#x3D; 9<br>\end{cases}<br>$$</p>
+<p>对于上面的线性方程组，我们可以用矩阵的形式来表示它，如下所示。<br>$$<br>\boldsymbol{A} &#x3D; \begin{bmatrix}<br>1 &amp; 2 &amp; 1\<br>3 &amp; 7 &amp; 2\<br>2 &amp; 2 &amp; 1<br>\end{bmatrix}, \quad<br>\boldsymbol{x} &#x3D; \begin{bmatrix}<br>x_1 \<br>x_2\<br>x_3<br>\end{bmatrix}, \quad<br>\boldsymbol{b} &#x3D; \begin{bmatrix}<br>8 \<br>23\<br>9<br>\end{bmatrix}<br>$$</p>
+<p>$$<br>\boldsymbol{Ax} &#x3D; \boldsymbol{b}<br>$$</p>
+<p>线性方程组有唯一解的条件：系数矩阵$\boldsymbol{A}$的秩等于增广矩阵$\boldsymbol{Ab}$的秩，而且跟未知数的个数相同。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">1</span>], [<span class="number">3</span>, <span class="number">7</span>, <span class="number">2</span>], [<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>]])</span><br><span class="line">b = np.array([<span class="number">8</span>, <span class="number">23</span>, <span class="number">9</span>]).reshape(-<span class="number">1</span>, <span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(np.linalg.matrix_rank(A))</span><br><span class="line"><span class="built_in">print</span>(np.linalg.matrix_rank(np.hstack((A, b))))</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：使用数组对象的<code>reshape</code>方法调形时，如果其中一个参数为-1，那么该维度有多少个元素是通过数组元素个数（<code>size</code>属性）和其他维度的元素个数自动计算出来的。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.solve(A, b)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[1.],</span><br><span class="line">       [2.],</span><br><span class="line">       [3.]])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面的结果表示，线性方程组的解为：$x_1 &#x3D; 1, x_2 &#x3D; 2, x_3 &#x3D; 3$。</p>
+</blockquote>
+<p>下面是另一种求解线性方程组的方法，大家可以停下来思考下为什么。<br>$$<br>\boldsymbol{x} &#x3D; \boldsymbol{A}^{-1} \cdot \boldsymbol{b}<br>$$<br>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.linalg.inv(A) @ b</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">array([[1.],</span><br><span class="line">       [2.],</span><br><span class="line">       [3.]])</span><br></pre></td></tr></table></figure>
+
+<h3 id="多项式"><a href="#多项式" class="headerlink" title="多项式"></a>多项式</h3><p>除了数组，NumPy 中还封装了用于<strong>多项式</strong>（<em>polynomial</em>）运算的数据类型。多项式是变量的整数次幂与系数的乘积之和，形如：<br>$$<br>f(x)&#x3D;a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x^{1} + a_0x^{0}<br>$$<br>在 NumPy 1.4版本之前，我们可以用<code>poly1d</code>类型来表示多项式，目前它仍然可用，但是官方提供了新的模块<code>numpy.polynomial</code>，它除了支持基本的幂级数多项式外，还可以支持切比雪夫多项式、拉盖尔多项式等。</p>
+<h4 id="创建多项式对象"><a href="#创建多项式对象" class="headerlink" title="创建多项式对象"></a>创建多项式对象</h4><p>创建<code>poly1d</code>对象，例如：$\small{f(x)&#x3D;3x^{2}+2x+1}$。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p1 = np.poly1d([<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>])</span><br><span class="line">p2 = np.poly1d([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="built_in">print</span>(p1)</span><br><span class="line"><span class="built_in">print</span>(p2)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   2</span><br><span class="line">3 x + 2 x + 1</span><br><span class="line">   2</span><br><span class="line">1 x + 2 x + 3</span><br></pre></td></tr></table></figure>
+
+<h4 id="多项式的操作"><a href="#多项式的操作" class="headerlink" title="多项式的操作"></a>多项式的操作</h4><p><strong>获取多项式的系数</strong></p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(p1.coefficients)</span><br><span class="line"><span class="built_in">print</span>(p2.coeffs)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[3 2 1]</span><br><span class="line">[1 2 3]</span><br></pre></td></tr></table></figure>
+
+<p><strong>两个多项式的四则运算</strong></p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(p1 + p2)</span><br><span class="line"><span class="built_in">print</span>(p1 * p2)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   2</span><br><span class="line">4 x + 4 x + 4</span><br><span class="line">   4     3      2</span><br><span class="line">3 x + 8 x + 14 x + 8 x + 3</span><br></pre></td></tr></table></figure>
+
+<p><strong>带入$\small{x}$求多项式的值</strong></p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(p1(<span class="number">3</span>))</span><br><span class="line"><span class="built_in">print</span>(p2(<span class="number">3</span>))</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">34</span><br><span class="line">18</span><br></pre></td></tr></table></figure>
+
+<p><strong>多项式求导和不定积分</strong></p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(p1.deriv())</span><br><span class="line"><span class="built_in">print</span>(p1.integ())</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6 x + 2</span><br><span class="line">   3     2</span><br><span class="line">1 x + 1 x + 1 x</span><br></pre></td></tr></table></figure>
+
+<p><strong>求多项式的根</strong></p>
+<p>例如有多项式$\small{f(x)&#x3D;x^2+3x+2}$，多项式的根即一元二次方程$\small{x^2+3x+2&#x3D;0}$的解。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p3 = np.poly1d([<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>])</span><br><span class="line"><span class="built_in">print</span>(p3.roots)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[-2. -1.]</span><br></pre></td></tr></table></figure>
+
+<p>如果使用<code>numpy.polynomial</code>模块的<code>Polynomial</code>类来表示多项式对象，那么对应的操作如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy.polynomial <span class="keyword">import</span> Polynomial</span><br><span class="line"></span><br><span class="line">p3 = Polynomial((<span class="number">2</span>, <span class="number">3</span>, <span class="number">1</span>))</span><br><span class="line"><span class="built_in">print</span>(p3)           <span class="comment"># 输出多项式</span></span><br><span class="line"><span class="built_in">print</span>(p3(<span class="number">3</span>))        <span class="comment"># 令x=3，计算多项式的值</span></span><br><span class="line"><span class="built_in">print</span>(p3.roots())   <span class="comment"># 计算多项式的根</span></span><br><span class="line"><span class="built_in">print</span>(p3.degree())  <span class="comment"># 获得多项式的次数</span></span><br><span class="line"><span class="built_in">print</span>(p3.deriv())   <span class="comment"># 求导</span></span><br><span class="line"><span class="built_in">print</span>(p3.integ())   <span class="comment"># 求不定积分</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2.0 + 3.0·x + 1.0·x²</span><br><span class="line">20.0</span><br><span class="line">[-2. -1.]</span><br><span class="line">2</span><br><span class="line">3.0 + 2.0·x</span><br><span class="line">0.0 + 2.0·x + 1.5·x² + 0.33333333·x³</span><br></pre></td></tr></table></figure>
+
+<h4 id="最小二乘解"><a href="#最小二乘解" class="headerlink" title="最小二乘解"></a>最小二乘解</h4><p><code>Polynomial</code>类还有一个名为<code>fit</code>的类方法，它可以给多项式求最小二乘解。所谓最小二乘解（least-squares solution），是用最小二乘法通过最小化误差的平方和来寻找数据的最佳匹配函数的系数。假设多项式为$\small{f(x)&#x3D;ax+b}$，最小二乘解就是让下面的残差平方和$\small{RSS}$达到最小的$\small{a}$和$\small{b}$。<br>$$<br>RSS &#x3D; \sum_{i&#x3D;0}^{k}(f(x_i) - y_i)^{2}<br>$$<br>例如，我们想利用收集到的月收入和网购支出的历史数据来建立一个预测模型，以达到通过某人的月收入预测他网购支出金额的目标，下面是我们收集到的收入和网购支出的数据，保存在两个数组中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">x = np.array([</span><br><span class="line">    <span class="number">25000</span>, <span class="number">15850</span>, <span class="number">15500</span>, <span class="number">20500</span>, <span class="number">22000</span>, <span class="number">20010</span>, <span class="number">26050</span>, <span class="number">12500</span>, <span class="number">18500</span>, <span class="number">27300</span>,</span><br><span class="line">    <span class="number">15000</span>,  <span class="number">8300</span>, <span class="number">23320</span>,  <span class="number">5250</span>,  <span class="number">5800</span>,  <span class="number">9100</span>,  <span class="number">4800</span>, <span class="number">16000</span>, <span class="number">28500</span>, <span class="number">32000</span>,</span><br><span class="line">    <span class="number">31300</span>, <span class="number">10800</span>,  <span class="number">6750</span>,  <span class="number">6020</span>, <span class="number">13300</span>, <span class="number">30020</span>,  <span class="number">3200</span>, <span class="number">17300</span>,  <span class="number">8835</span>,  <span class="number">3500</span></span><br><span class="line">])</span><br><span class="line">y = np.array([</span><br><span class="line">    <span class="number">2599</span>, <span class="number">1400</span>, <span class="number">1120</span>, <span class="number">2560</span>, <span class="number">1900</span>, <span class="number">1200</span>, <span class="number">2320</span>,  <span class="number">800</span>, <span class="number">1650</span>, <span class="number">2200</span>,</span><br><span class="line">     <span class="number">980</span>,  <span class="number">580</span>, <span class="number">1885</span>,  <span class="number">600</span>,  <span class="number">400</span>,  <span class="number">800</span>,  <span class="number">420</span>, <span class="number">1380</span>, <span class="number">1980</span>, <span class="number">3999</span>,</span><br><span class="line">    <span class="number">3800</span>,  <span class="number">725</span>,  <span class="number">520</span>,  <span class="number">420</span>, <span class="number">1200</span>, <span class="number">4020</span>,  <span class="number">350</span>, <span class="number">1500</span>,  <span class="number">560</span>,  <span class="number">500</span></span><br><span class="line">])</span><br></pre></td></tr></table></figure>
+
+<p>我们可以先绘制散点图来了解两组数据是否具有正相关或负相关关系。正相关意味着数组<code>x</code>中较大的值对应到数组<code>y</code>中也是较大的值，而负相关则意味着数组<code>x</code>中较大的值对应到数组<code>y</code>中较小的值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.figure(dpi=<span class="number">120</span>)</span><br><span class="line">plt.scatter(x, y, color=<span class="string">&#x27;blue&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/in_out_scatter_plot.png" style="zoom:50%;">
+
+<p>如果需要定量的研究两组数据的相关性，我们可以计算协方差或相关系数，对应的 NumPy 函数分别是<code>cov</code>和<code>corrcoef</code>。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">np.corrcoef(x, y)</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array([[1.        , 0.92275889],</span><br><span class="line">       [0.92275889, 1.        ]])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：相关系数是一个<code>-1</code>到<code>1</code>之间的值，越靠近<code>1</code> 说明正相关性越强，越靠近<code>-1</code>说明负相关性越强，靠近<code>0</code>则说明两组数据没有明显的相关性。上面月收入和网购支出之间的相关系数是<code>0.92275889</code>，说明二者是强正相关关系。</p>
+</blockquote>
+<p>通过上面的操作，我们确定了收入和网购支出之前存在强正相关关系，于是我们用这些数据来创建一个回归模型，找出一条能够很好的拟合这些数据点的直线。这里，我们就可以用到上面提到的<code>fit</code>方法，具体的代码如下所示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy.polynomial <span class="keyword">import</span> Polynomial</span><br><span class="line"></span><br><span class="line">Polynomial.fit(x, y, deg=<span class="number">1</span>).convert().coef</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：<code>deg=1</code>说明回归模型最高次项就是1次项，回归模型形如$\small{y&#x3D;ax+b}$；如果要生一个类似于$\small{y&#x3D;ax^2+bx+c}$的模型，就需要设置<code>deg=2</code>，以此类推。</p>
+</blockquote>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array([-2.94883437e+02,  1.10333716e-01])</span><br></pre></td></tr></table></figure>
+
+<p>根据上面输出的结果，我们的回归方程应该是$\small{y&#x3D;0.110333716x-294.883437}$。我们将这个回归方程绘制到刚才的散点图上，红色的点是我们的预测值，蓝色的点是历史数据，也就是真实值。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">plt.scatter(x, y, color=<span class="string">&#x27;blue&#x27;</span>)</span><br><span class="line">plt.scatter(x, <span class="number">0.110333716</span> * x - <span class="number">294.883437</span>, color=<span class="string">&#x27;red&#x27;</span>)</span><br><span class="line">plt.plot(x, <span class="number">0.110333716</span> * x - <span class="number">294.883437</span>, color=<span class="string">&#x27;darkcyan&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/in_out_regression_result.png" style="zoom:50%;">
+
+<p>如果不使用<code>Polynomial</code>类型的<code>fit</code>方法，我们也可以通过 NumPy 提供的<code>polyfit</code>函数来完成同样的操作，有兴趣的读者可以自行研究。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/55.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/86.K-%E5%9D%87%E5%80%BC%E8%81%9A%E7%B1%BB/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/89.PyTorch%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/Python%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%B8%88%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_4/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_5/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_vue_element/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/index/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

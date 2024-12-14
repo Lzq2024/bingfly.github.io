@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="Python接入MySQL数据库"><a href="#Python接入MySQL数据库" class="headerlink" title="Python接入MySQL数据库"></a>Python接入MySQL数据库</h2><p>在 Python3 中，我们可以使用<code>mysqlclient</code>或者<code>pymysql</code>三方库来接入 MySQL 数据库并实现数据持久化操作。二者的用法完全相同，只是导入的模块名不一样。我们推荐大家使用纯 Python 的三方库<code>pymysql</code>，因为它更容易安装成功。下面我们仍然以之前创建的名为<code>hrs</code>的数据库为例，为大家演示如何通过 Python 程序操作 MySQL 数据库实现数据持久化操作。</p>
+<h3 id="接入MySQL"><a href="#接入MySQL" class="headerlink" title="接入MySQL"></a>接入MySQL</h3><p>首先，我们可以在命令行或者 PyCharm 的终端中通过下面的命令安装<code>pymysql</code>，如果需要接入 MySQL 8，还需要安装一个名为<code>cryptography</code>的三方库来支持 MySQL 8 的密码认证方式。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pymysql cryptography</span><br></pre></td></tr></table></figure>
+
+<p>使用<code>pymysql</code>操作 MySQL 的步骤如下所示：</p>
+<ol>
+<li>创建连接。MySQL 服务器启动后，提供了基于 TCP （传输控制协议）的网络服务。我们可以通过<code>pymysql</code>模块的<code>connect</code>函数连接 MySQL 服务器。在调用<code>connect</code>函数时，需要指定主机（<code>host</code>）、端口（<code>port</code>）、用户名（<code>user</code>）、口令（<code>password</code>）、数据库（<code>database</code>）、字符集（<code>charset</code>）等参数，该函数会返回一个<code>Connection</code>对象。</li>
+<li>获取游标。连接 MySQL 服务器成功后，接下来要做的就是向数据库服务器发送 SQL 语句，MySQL 会执行接收到的 SQL 并将执行结果通过网络返回。要实现这项操作，需要先通过连接对象的<code>cursor</code>方法获取游标（<code>Cursor</code>）对象。</li>
+<li>发出 SQL。通过游标对象的<code>execute</code>方法，我们可以向数据库发出 SQL 语句。</li>
+<li>如果执行<code>insert</code>、<code>delete</code>或<code>update</code>操作，需要根据实际情况提交或回滚事务。因为创建连接时，默认开启了事务环境，在操作完成后，需要使用连接对象的<code>commit</code>或<code>rollback</code>方法，实现事务的提交或回滚，<code>rollback</code>方法通常会放在异常捕获代码块<code>except</code>中。如果执行<code>select</code>操作，需要通过游标对象抓取查询的结果，对应的方法有三个，分别是：<code>fetchone</code>、<code>fetchmany</code>和<code>fetchall</code>。其中<code>fetchone</code>方法会抓取到一条记录，并以元组或字典的方式返回；<code>fetchmany</code>和<code>fetchall</code>方法会抓取到多条记录，以嵌套元组或列表装字典的方式返回。</li>
+<li>关闭连接。在完成持久化操作后，请不要忘记关闭连接，释放外部资源。我们通常会在<code>finally</code>代码块中使用连接对象的<code>close</code>方法来关闭连接。</li>
+</ol>
+<h3 id="代码实操"><a href="#代码实操" class="headerlink" title="代码实操"></a>代码实操</h3><p>下面，我们通过代码实操的方式为大家演示上面说的五个步骤。</p>
+<h4 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">no = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;部门编号: &#x27;</span>))</span><br><span class="line">name = <span class="built_in">input</span>(<span class="string">&#x27;部门名称: &#x27;</span>)</span><br><span class="line">location = <span class="built_in">input</span>(<span class="string">&#x27;部门所在地: &#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建连接（Connection）</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">&#x27;127.0.0.1&#x27;</span>, port=<span class="number">3306</span>,</span><br><span class="line">                       user=<span class="string">&#x27;guest&#x27;</span>, password=<span class="string">&#x27;Guest.618&#x27;</span>,</span><br><span class="line">                       database=<span class="string">&#x27;hrs&#x27;</span>, charset=<span class="string">&#x27;utf8mb4&#x27;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 2. 获取游标对象（Cursor）</span></span><br><span class="line">    <span class="keyword">with</span> conn.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">        <span class="comment"># 3. 通过游标对象向数据库服务器发出SQL语句</span></span><br><span class="line">        affected_rows = cursor.execute(</span><br><span class="line">            <span class="string">&#x27;insert into `tb_dept` values (%s, %s, %s)&#x27;</span>,</span><br><span class="line">            (no, name, location)</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> affected_rows == <span class="number">1</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;新增部门成功!!!&#x27;</span>)</span><br><span class="line">    <span class="comment"># 4. 提交事务（transaction）</span></span><br><span class="line">    conn.commit()</span><br><span class="line"><span class="keyword">except</span> pymysql.MySQLError <span class="keyword">as</span> err:</span><br><span class="line">    <span class="comment"># 4. 回滚事务</span></span><br><span class="line">    conn.rollback()</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">type</span>(err), err)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 5. 关闭连接释放资源</span></span><br><span class="line">    conn.close()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面的<code>127.0.0.1</code>称为回环地址，它代表的是本机。下面的<code>guest</code>是我提前创建好的用户，该用户拥有对<code>hrs</code>数据库的<code>insert</code>、<code>delete</code>、<code>update</code>和<code>select</code>权限。我们不建议大家在项目中直接使用<code>root</code>超级管理员账号访问数据库，这样做实在是太危险了。我们可以使用下面的命令创建名为<code>guest</code>的用户并为其授权。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> <span class="string">&#x27;guest&#x27;</span>@<span class="string">&#x27;%&#x27;</span> identified <span class="keyword">by</span> <span class="string">&#x27;Guest.618&#x27;</span>;</span><br><span class="line"><span class="keyword">grant</span> <span class="keyword">insert</span>, <span class="keyword">delete</span>, <span class="keyword">update</span>, <span class="keyword">select</span> <span class="keyword">on</span> `hrs`.<span class="operator">*</span> <span class="keyword">to</span> <span class="string">&#x27;guest&#x27;</span>@<span class="string">&#x27;%&#x27;</span>;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>如果要插入大量数据，建议使用游标对象的<code>executemany</code>方法做批处理（一个<code>insert</code>操作后面跟上多组数据），大家可以尝试向一张表插入10000条记录，然后看看不使用批处理一条条的插入和使用批处理有什么差别。游标对象的<code>executemany</code>方法第一个参数仍然是 SQL 语句，第二个参数可以是包含多组数据的列表或元组。</p>
+<h4 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">no = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;部门编号: &#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建连接（Connection）</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">&#x27;127.0.0.1&#x27;</span>, port=<span class="number">3306</span>,</span><br><span class="line">                       user=<span class="string">&#x27;guest&#x27;</span>, password=<span class="string">&#x27;Guest.618&#x27;</span>,</span><br><span class="line">                       database=<span class="string">&#x27;hrs&#x27;</span>, charset=<span class="string">&#x27;utf8mb4&#x27;</span>,</span><br><span class="line">                       autocommit=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 2. 获取游标对象（Cursor）</span></span><br><span class="line">    <span class="keyword">with</span> conn.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">        <span class="comment"># 3. 通过游标对象向数据库服务器发出SQL语句</span></span><br><span class="line">        affected_rows = cursor.execute(</span><br><span class="line">            <span class="string">&#x27;delete from `tb_dept` where `dno`=%s&#x27;</span>,</span><br><span class="line">            (no, )</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> affected_rows == <span class="number">1</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;删除部门成功!!!&#x27;</span>)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 5. 关闭连接释放资源</span></span><br><span class="line">    conn.close()</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：如果不希望每次 SQL 操作之后手动提交或回滚事务，可以<code>connect</code>函数中加一个名为<code>autocommit</code>的参数并将它的值设置为<code>True</code>，表示每次执行 SQL 成功后自动提交。但是我们建议大家手动提交或回滚，这样可以根据实际业务需要来构造事务环境。如果不愿意捕获异常并进行处理，可以在<code>try</code>代码块后直接跟<code>finally</code>块，省略<code>except</code>意味着发生异常时，代码会直接崩溃并将异常栈显示在终端中。</p>
+</blockquote>
+<h4 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">no = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;部门编号: &#x27;</span>))</span><br><span class="line">name = <span class="built_in">input</span>(<span class="string">&#x27;部门名称: &#x27;</span>)</span><br><span class="line">location = <span class="built_in">input</span>(<span class="string">&#x27;部门所在地: &#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建连接（Connection）</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">&#x27;127.0.0.1&#x27;</span>, port=<span class="number">3306</span>,</span><br><span class="line">                       user=<span class="string">&#x27;guest&#x27;</span>, password=<span class="string">&#x27;Guest.618&#x27;</span>,</span><br><span class="line">                       database=<span class="string">&#x27;hrs&#x27;</span>, charset=<span class="string">&#x27;utf8mb4&#x27;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 2. 获取游标对象（Cursor）</span></span><br><span class="line">    <span class="keyword">with</span> conn.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">        <span class="comment"># 3. 通过游标对象向数据库服务器发出SQL语句</span></span><br><span class="line">        affected_rows = cursor.execute(</span><br><span class="line">            <span class="string">&#x27;update `tb_dept` set `dname`=%s, `dloc`=%s where `dno`=%s&#x27;</span>,</span><br><span class="line">            (name, location, no)</span><br><span class="line">        )</span><br><span class="line">        <span class="keyword">if</span> affected_rows == <span class="number">1</span>:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">&#x27;更新部门信息成功!!!&#x27;</span>)</span><br><span class="line">    <span class="comment"># 4. 提交事务</span></span><br><span class="line">    conn.commit()</span><br><span class="line"><span class="keyword">except</span> pymysql.MySQLError <span class="keyword">as</span> err:</span><br><span class="line">    <span class="comment"># 4. 回滚事务</span></span><br><span class="line">    conn.rollback()</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">type</span>(err), err)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 5. 关闭连接释放资源</span></span><br><span class="line">    conn.close()</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询数据"><a href="#查询数据" class="headerlink" title="查询数据"></a>查询数据</h4><ol>
+<li>查询部门表的数据。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建连接（Connection）</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">&#x27;127.0.0.1&#x27;</span>, port=<span class="number">3306</span>,</span><br><span class="line">                       user=<span class="string">&#x27;guest&#x27;</span>, password=<span class="string">&#x27;Guest.618&#x27;</span>,</span><br><span class="line">                       database=<span class="string">&#x27;hrs&#x27;</span>, charset=<span class="string">&#x27;utf8mb4&#x27;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 2. 获取游标对象（Cursor）</span></span><br><span class="line">    <span class="keyword">with</span> conn.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">        <span class="comment"># 3. 通过游标对象向数据库服务器发出SQL语句</span></span><br><span class="line">        cursor.execute(<span class="string">&#x27;select `dno`, `dname`, `dloc` from `tb_dept`&#x27;</span>)</span><br><span class="line">        <span class="comment"># 4. 通过游标对象抓取数据</span></span><br><span class="line">        row = cursor.fetchone()</span><br><span class="line">        <span class="keyword">while</span> row:</span><br><span class="line">            <span class="built_in">print</span>(row)</span><br><span class="line">            row = cursor.fetchone()</span><br><span class="line"><span class="keyword">except</span> pymysql.MySQLError <span class="keyword">as</span> err:</span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">type</span>(err), err)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 5. 关闭连接释放资源</span></span><br><span class="line">    conn.close()</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>说明</strong>：上面的代码中，我们通过构造一个<code>while</code>循环实现了逐行抓取查询结果的操作。这种方式特别适合查询结果有非常多行的场景。因为如果使用<code>fetchall</code>一次性将所有记录抓取到一个嵌套元组中，会造成非常大的内存开销，这在很多场景下并不是一个好主意。如果不愿意使用<code>while</code>循环，还可以考虑使用<code>iter</code>函数构造一个迭代器来逐行抓取数据，有兴趣的读者可以自行研究。</p>
+</blockquote>
+<ol start="2">
+<li>分页查询员工表的数据。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line">page = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;页码: &#x27;</span>))</span><br><span class="line">size = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;大小: &#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1. 创建连接（Connection）</span></span><br><span class="line">con = pymysql.connect(host=<span class="string">&#x27;127.0.0.1&#x27;</span>, port=<span class="number">3306</span>,</span><br><span class="line">                      user=<span class="string">&#x27;guest&#x27;</span>, password=<span class="string">&#x27;Guest.618&#x27;</span>,</span><br><span class="line">                      database=<span class="string">&#x27;hrs&#x27;</span>, charset=<span class="string">&#x27;utf8&#x27;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 2. 获取游标对象（Cursor）</span></span><br><span class="line">    <span class="keyword">with</span> con.cursor(pymysql.cursors.DictCursor) <span class="keyword">as</span> cursor:</span><br><span class="line">        <span class="comment"># 3. 通过游标对象向数据库服务器发出SQL语句</span></span><br><span class="line">        cursor.execute(</span><br><span class="line">            <span class="string">&#x27;select `eno`, `ename`, `job`, `sal` from `tb_emp` order by `sal` desc limit %s,%s&#x27;</span>,</span><br><span class="line">            ((page - <span class="number">1</span>) * size, size)</span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># 4. 通过游标对象抓取数据</span></span><br><span class="line">        <span class="keyword">for</span> emp_dict <span class="keyword">in</span> cursor.fetchall():</span><br><span class="line">            <span class="built_in">print</span>(emp_dict)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 5. 关闭连接释放资源</span></span><br><span class="line">    con.close()</span><br></pre></td></tr></table></figure>
+
+<h3 id="案例讲解"><a href="#案例讲解" class="headerlink" title="案例讲解"></a>案例讲解</h3><p>下面我们为大家讲解一个将数据库表数据导出到 Excel 文件的例子，我们需要先安装<code>openpyxl</code>三方库，命令如下所示。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install openpyxl</span><br></pre></td></tr></table></figure>
+
+<p>接下来，我们通过下面的代码实现了将数据库<code>hrs</code>中所有员工的编号、姓名、职位、月薪、补贴和部门名称导出到一个 Excel 文件中。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> openpyxl</span><br><span class="line"><span class="keyword">import</span> pymysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建工作簿对象</span></span><br><span class="line">workbook = openpyxl.Workbook()</span><br><span class="line"><span class="comment"># 获得默认的工作表</span></span><br><span class="line">sheet = workbook.active</span><br><span class="line"><span class="comment"># 修改工作表的标题</span></span><br><span class="line">sheet.title = <span class="string">&#x27;员工基本信息&#x27;</span></span><br><span class="line"><span class="comment"># 给工作表添加表头</span></span><br><span class="line">sheet.append((<span class="string">&#x27;工号&#x27;</span>, <span class="string">&#x27;姓名&#x27;</span>, <span class="string">&#x27;职位&#x27;</span>, <span class="string">&#x27;月薪&#x27;</span>, <span class="string">&#x27;补贴&#x27;</span>, <span class="string">&#x27;部门&#x27;</span>))</span><br><span class="line"><span class="comment"># 创建连接（Connection）</span></span><br><span class="line">conn = pymysql.connect(host=<span class="string">&#x27;127.0.0.1&#x27;</span>, port=<span class="number">3306</span>,</span><br><span class="line">                       user=<span class="string">&#x27;guest&#x27;</span>, password=<span class="string">&#x27;Guest.618&#x27;</span>,</span><br><span class="line">                       database=<span class="string">&#x27;hrs&#x27;</span>, charset=<span class="string">&#x27;utf8mb4&#x27;</span>)</span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment"># 获取游标对象（Cursor）</span></span><br><span class="line">    <span class="keyword">with</span> conn.cursor() <span class="keyword">as</span> cursor:</span><br><span class="line">        <span class="comment"># 通过游标对象执行SQL语句</span></span><br><span class="line">        cursor.execute(</span><br><span class="line">            <span class="string">&#x27;select `eno`, `ename`, `job`, `sal`, coalesce(`comm`, 0), `dname` &#x27;</span></span><br><span class="line">            <span class="string">&#x27;from `tb_emp` natural join `tb_dept`&#x27;</span></span><br><span class="line">        )</span><br><span class="line">        <span class="comment"># 通过游标抓取数据</span></span><br><span class="line">        row = cursor.fetchone()</span><br><span class="line">        <span class="keyword">while</span> row:</span><br><span class="line">            <span class="comment"># 将数据逐行写入工作表中</span></span><br><span class="line">            sheet.append(row)</span><br><span class="line">            row = cursor.fetchone()</span><br><span class="line">    <span class="comment"># 保存工作簿</span></span><br><span class="line">    workbook.save(<span class="string">&#x27;hrs.xlsx&#x27;</span>)</span><br><span class="line"><span class="keyword">except</span> pymysql.MySQLError <span class="keyword">as</span> err:</span><br><span class="line">    <span class="built_in">print</span>(err)</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">    <span class="comment"># 关闭连接释放资源</span></span><br><span class="line">    conn.close()</span><br></pre></td></tr></table></figure>
+
+<p>大家可以参考上面的例子，试一试把 Excel 文件的数据导入到指定数据库的指定表中，看看是否可以成功。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/57.%E6%8E%A5%E5%85%A5%E4%B8%89%E6%96%B9%E5%B9%B3%E5%8F%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/87.%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2/index-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2/index/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css/style/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js/jquery.min/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/44.Python%E6%8E%A5%E5%85%A5MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:01 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:01 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

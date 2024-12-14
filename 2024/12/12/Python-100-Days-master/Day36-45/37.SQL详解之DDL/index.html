@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="SQL详解之DDL"><a href="#SQL详解之DDL" class="headerlink" title="SQL详解之DDL"></a>SQL详解之DDL</h2><p>我们通常可以将 SQL 分为四类，分别是 DDL（数据定义语言）、DML（数据操作语言）、 DCL（数据控制语言）和 TCL（事务控制语言）。DDL 主要用于创建、删除、修改数据库中的对象，比如创建、删除和修改二维表，核心的关键字包括<code>create</code>、<code>drop</code>和<code>alter</code>；DML 主要负责数据的插入、删除、更新和查询，关键词包括<code>insert</code>、<code>delete</code>、<code>update</code>和<code>select</code>；DCL 用于授予和召回权限，核心关键词是<code>grant</code>和<code>revoke</code>；TCL 通常用于事务控制。</p>
+<blockquote>
+<p><strong>说明</strong>：SQL 是不区分大小写的语言，有人会建议将关键字大写，其他部分小写。为了书写和识别方便，下面的 SQL 我都是使用小写字母进行书写的。 如果公司的 SQL 编程规范有强制规定，那么就按照公司的要求来，个人的喜好不应该凌驾于公司的编程规范之上，这一点对职业人来说应该是常识。</p>
+</blockquote>
+<h3 id="建库建表"><a href="#建库建表" class="headerlink" title="建库建表"></a>建库建表</h3><p>下面我们来实现一个非常简单的学校选课系统的数据库。我们将数据库命名为<code>school</code>，四个关键的实体分别是学院、老师、学生和课程，其中，学生跟学院是从属关系，这个关系从数量上来讲是多对一关系，因为一个学院可以有多名学生，而一个学生通常只属于一个学院；同理，老师跟学院的从属关系也是多对一关系。一名老师可以讲授多门课程，一门课程如果只有一个授课老师的话，那么课程跟老师也是多对一关系；如果允许多个老师合作讲授一门课程，那么课程和老师就是多对多关系。简单起见，我们将课程和老师设计为多对一关系。学生和课程是典型的多对多关系，因为一个学生可以选择多门课程，一门课程也可以被多个学生选择，而关系型数据库需要借助中间表才能维持维持两个实体的多对多关系。最终，我们的学校选课系统一共有五张表，分别是学院表（<code>tb_college</code>）、学生表（<code>tb_student</code>）、教师表（<code>tb_teacher</code>）、课程表（<code>tb_course</code>）和选课记录表（<code>tb_record</code>），其中选课记录表就是维持学生跟课程多对多关系的中间表。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 如果存在名为school的数据库就删除它</span></span><br><span class="line"><span class="keyword">drop</span> database if <span class="keyword">exists</span> `school`;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建名为school的数据库并设置默认的字符集和排序方式</span></span><br><span class="line"><span class="keyword">create</span> database `school` <span class="keyword">default</span> <span class="type">character</span> <span class="keyword">set</span> utf8mb4 <span class="keyword">collate</span> utf8mb4_general_ci;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 切换到school数据库上下文环境</span></span><br><span class="line">use `school`;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建学院表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_college`</span><br><span class="line">(</span><br><span class="line">`col_id` <span class="type">int</span> unsigned auto_increment comment <span class="string">&#x27;编号&#x27;</span>,</span><br><span class="line">`col_name` <span class="type">varchar</span>(<span class="number">50</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;名称&#x27;</span>,</span><br><span class="line">`col_intro` <span class="type">varchar</span>(<span class="number">500</span>) <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span> comment <span class="string">&#x27;介绍&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`col_id`)</span><br><span class="line">) engine<span class="operator">=</span>innodb auto_increment<span class="operator">=</span><span class="number">1</span> comment <span class="string">&#x27;学院表&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建学生表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_student`</span><br><span class="line">(</span><br><span class="line">`stu_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;学号&#x27;</span>,</span><br><span class="line">`stu_name` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;姓名&#x27;</span>,</span><br><span class="line">`stu_sex` <span class="type">boolean</span> <span class="keyword">default</span> <span class="number">1</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;性别&#x27;</span>,</span><br><span class="line">`stu_birth` <span class="type">date</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;出生日期&#x27;</span>,</span><br><span class="line">`stu_addr` <span class="type">varchar</span>(<span class="number">255</span>) <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span> comment <span class="string">&#x27;籍贯&#x27;</span>,</span><br><span class="line">`col_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;所属学院&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`stu_id`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_student_col_id` <span class="keyword">foreign</span> key (`col_id`) <span class="keyword">references</span> `tb_college` (`col_id`)</span><br><span class="line">) engine<span class="operator">=</span>innodb comment <span class="string">&#x27;学生表&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建教师表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_teacher`</span><br><span class="line">(</span><br><span class="line">`tea_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;工号&#x27;</span>,</span><br><span class="line">`tea_name` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;姓名&#x27;</span>,</span><br><span class="line">`tea_title` <span class="type">varchar</span>(<span class="number">10</span>) <span class="keyword">default</span> <span class="string">&#x27;助教&#x27;</span> comment <span class="string">&#x27;职称&#x27;</span>,</span><br><span class="line">`col_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;所属学院&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`tea_id`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_teacher_col_id` <span class="keyword">foreign</span> key (`col_id`) <span class="keyword">references</span> `tb_college` (`col_id`)</span><br><span class="line">) engine<span class="operator">=</span>innodb comment <span class="string">&#x27;老师表&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建课程表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_course`</span><br><span class="line">(</span><br><span class="line">`cou_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;编号&#x27;</span>,</span><br><span class="line">`cou_name` <span class="type">varchar</span>(<span class="number">50</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;名称&#x27;</span>,</span><br><span class="line">`cou_credit` <span class="type">int</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;学分&#x27;</span>,</span><br><span class="line">`tea_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;授课老师&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`cou_id`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_course_tea_id` <span class="keyword">foreign</span> key (`tea_id`) <span class="keyword">references</span> `tb_teacher` (`tea_id`)</span><br><span class="line">) engine<span class="operator">=</span>innodb comment <span class="string">&#x27;课程表&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 创建选课记录表</span></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `tb_record`</span><br><span class="line">(</span><br><span class="line">`rec_id` <span class="type">bigint</span> unsigned auto_increment comment <span class="string">&#x27;选课记录号&#x27;</span>,</span><br><span class="line">`stu_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;学号&#x27;</span>,</span><br><span class="line">`cou_id` <span class="type">int</span> unsigned <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;课程编号&#x27;</span>,</span><br><span class="line">`sel_date` <span class="type">date</span> <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;选课日期&#x27;</span>,</span><br><span class="line">`score` <span class="type">decimal</span>(<span class="number">4</span>,<span class="number">1</span>) comment <span class="string">&#x27;考试成绩&#x27;</span>,</span><br><span class="line"><span class="keyword">primary</span> key (`rec_id`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_record_stu_id` <span class="keyword">foreign</span> key (`stu_id`) <span class="keyword">references</span> `tb_student` (`stu_id`),</span><br><span class="line"><span class="keyword">constraint</span> `fk_record_cou_id` <span class="keyword">foreign</span> key (`cou_id`) <span class="keyword">references</span> `tb_course` (`cou_id`),</span><br><span class="line"><span class="keyword">constraint</span> `uk_record_stu_cou` <span class="keyword">unique</span> (`stu_id`, `cou_id`)</span><br><span class="line">) engine<span class="operator">=</span>innodb comment <span class="string">&#x27;选课记录表&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>上面的DDL有几个地方需要强调一下：</p>
+<ul>
+<li><p>首先，上面 SQL 中的数据库名、表名、字段名都被反引号（&#96;）包裹起来，反引号并不是必须的，但是却可以解决表名、字段名等跟 SQL 关键字（SQL 中有特殊含义的单词）冲突的问题。</p>
+</li>
+<li><p>创建数据库时，我们通过<code>default character set utf8mb4</code>指定了数据库默认使用的字符集为<code>utf8mb4</code>（最大<code>4</code>字节的<code>utf-8</code>编码），我们推荐使用该字符集，它也是 MySQL 8.x 默认使用的字符集，因为它能够支持国际化编码，还可以存储 Emoji 字符。可以通过下面的命令查看 MySQL 支持的字符集以及默认的排序规则。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="type">character</span> <span class="keyword">set</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">+----------+---------------------------------+---------------------+--------+</span><br><span class="line">| Charset  | Description                     | Default collation   | Maxlen |</span><br><span class="line">+----------+---------------------------------+---------------------+--------+</span><br><span class="line">| big5     | Big5 Traditional Chinese        | big5_chinese_ci     |      2 |</span><br><span class="line">| dec8     | DEC West European               | dec8_swedish_ci     |      1 |</span><br><span class="line">| cp850    | DOS West European               | cp850_general_ci    |      1 |</span><br><span class="line">| hp8      | HP West European                | hp8_english_ci      |      1 |</span><br><span class="line">| koi8r    | KOI8-R Relcom Russian           | koi8r_general_ci    |      1 |</span><br><span class="line">| latin1   | cp1252 West European            | latin1_swedish_ci   |      1 |</span><br><span class="line">| latin2   | ISO 8859-2 Central European     | latin2_general_ci   |      1 |</span><br><span class="line">| swe7     | 7bit Swedish                    | swe7_swedish_ci     |      1 |</span><br><span class="line">| ascii    | US ASCII                        | ascii_general_ci    |      1 |</span><br><span class="line">| ujis     | EUC-JP Japanese                 | ujis_japanese_ci    |      3 |</span><br><span class="line">| sjis     | Shift-JIS Japanese              | sjis_japanese_ci    |      2 |</span><br><span class="line">| hebrew   | ISO 8859-8 Hebrew               | hebrew_general_ci   |      1 |</span><br><span class="line">| tis620   | TIS620 Thai                     | tis620_thai_ci      |      1 |</span><br><span class="line">| euckr    | EUC-KR Korean                   | euckr_korean_ci     |      2 |</span><br><span class="line">| koi8u    | KOI8-U Ukrainian                | koi8u_general_ci    |      1 |</span><br><span class="line">| gb2312   | GB2312 Simplified Chinese       | gb2312_chinese_ci   |      2 |</span><br><span class="line">| greek    | ISO 8859-7 Greek                | greek_general_ci    |      1 |</span><br><span class="line">| cp1250   | Windows Central European        | cp1250_general_ci   |      1 |</span><br><span class="line">| gbk      | GBK Simplified Chinese          | gbk_chinese_ci      |      2 |</span><br><span class="line">| latin5   | ISO 8859-9 Turkish              | latin5_turkish_ci   |      1 |</span><br><span class="line">| armscii8 | ARMSCII-8 Armenian              | armscii8_general_ci |      1 |</span><br><span class="line">| utf8     | UTF-8 Unicode                   | utf8_general_ci     |      3 |</span><br><span class="line">| ucs2     | UCS-2 Unicode                   | ucs2_general_ci     |      2 |</span><br><span class="line">| cp866    | DOS Russian                     | cp866_general_ci    |      1 |</span><br><span class="line">| keybcs2  | DOS Kamenicky Czech-Slovak      | keybcs2_general_ci  |      1 |</span><br><span class="line">| macce    | Mac Central European            | macce_general_ci    |      1 |</span><br><span class="line">| macroman | Mac West European               | macroman_general_ci |      1 |</span><br><span class="line">| cp852    | DOS Central European            | cp852_general_ci    |      1 |</span><br><span class="line">| latin7   | ISO 8859-13 Baltic              | latin7_general_ci   |      1 |</span><br><span class="line">| utf8mb4  | UTF-8 Unicode                   | utf8mb4_general_ci  |      4 |</span><br><span class="line">| cp1251   | Windows Cyrillic                | cp1251_general_ci   |      1 |</span><br><span class="line">| utf16    | UTF-16 Unicode                  | utf16_general_ci    |      4 |</span><br><span class="line">| utf16le  | UTF-16LE Unicode                | utf16le_general_ci  |      4 |</span><br><span class="line">| cp1256   | Windows Arabic                  | cp1256_general_ci   |      1 |</span><br><span class="line">| cp1257   | Windows Baltic                  | cp1257_general_ci   |      1 |</span><br><span class="line">| utf32    | UTF-32 Unicode                  | utf32_general_ci    |      4 |</span><br><span class="line">| binary   | Binary pseudo charset           | binary              |      1 |</span><br><span class="line">| geostd8  | GEOSTD8 Georgian                | geostd8_general_ci  |      1 |</span><br><span class="line">| cp932    | SJIS for Windows Japanese       | cp932_japanese_ci   |      2 |</span><br><span class="line">| eucjpms  | UJIS for Windows Japanese       | eucjpms_japanese_ci |      3 |</span><br><span class="line">| gb18030  | China National Standard GB18030 | gb18030_chinese_ci  |      4 |</span><br><span class="line">+----------+---------------------------------+---------------------+--------+</span><br><span class="line">41 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p>如果要设置 MySQL 服务启动时默认使用的字符集，可以修改MySQL的配置并添加以下内容。</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[mysqld]</span></span><br><span class="line"><span class="attr">character-set-server</span>=utf8</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：如果不清楚如何修改 MySQL 的配置文件就先不要管它。</p>
+</blockquote>
+</li>
+<li><p>创建和删除数据库时，关键字<code>database</code>也可以替换为<code>schema</code>，二者作用相同。</p>
+</li>
+<li><p>建表语句中的<code>not null</code>是非空约束，它限定了字段不能为空；<code>default</code>用于为字段指定默认值，我们称之为默认值约束；<code>primary key</code>是主键约束，它设定了能够唯一确定一条记录的列，也确保了每条记录都是独一无二的，因为主键不允许重复；<code>foreign key</code>是外键约束，它维持了两张表的参照完整性，举个例子，由于学生表中为 col_id 字段添加了外键约束，限定其必须引用（<code>references</code>）学院表中的 col_id，因此学生表中的学院编号必须来自于学院表中的学院编号，不能够随意为该字段赋值。如果需要给主键约束、外键约束等起名字，可以使用<code>constriant</code>关键字并在后面跟上约束的名字。</p>
+</li>
+<li><p>建表语句中的<code>comment</code> 关键字用来给列和表添加注释，增强代码的可读性和可维护性。</p>
+</li>
+<li><p>在创建表的时候，可以自行选择底层的存储引擎。MySQL 支持多种存储引擎，可以通过<code>show engines</code>命令进行查看。MySQL 5.5 以后的版本默认使用的存储引擎是 InnoDB，它是我们推荐大家使用的存储引擎（因为更适合当下互联网应用对高并发、性能以及事务支持等方面的需求），为了 SQL 语句的向下兼容性，我们可以在建表语句结束处右圆括号的后面通过<code>engine=innodb</code>来指定使用 InnoDB 存储引擎。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> engines\G</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：上面的 \G 是为了换一种输出方式，在命令行客户端中，如果表的字段很多一行显示不完，就会导致输出的内容看起来非常不舒服，使用 \G 可以将记录的每个列以独占整行的的方式输出，这种输出方式在命令行客户端中看起来会舒服很多。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">*************************** 1. row ***************************</span><br><span class="line">      Engine: InnoDB</span><br><span class="line">     Support: DEFAULT</span><br><span class="line">     Comment: Supports transactions, row-level locking, and foreign keys</span><br><span class="line">Transactions: YES</span><br><span class="line">          XA: YES</span><br><span class="line">  Savepoints: YES</span><br><span class="line">*************************** 2. row ***************************</span><br><span class="line">      Engine: MRG_MYISAM</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: Collection of identical MyISAM tables</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 3. row ***************************</span><br><span class="line">      Engine: MEMORY</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: Hash based, stored in memory, useful for temporary tables</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 4. row ***************************</span><br><span class="line">      Engine: BLACKHOLE</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: /dev/null storage engine (anything you write to it disappears)</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 5. row ***************************</span><br><span class="line">      Engine: MyISAM</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: MyISAM storage engine</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 6. row ***************************</span><br><span class="line">      Engine: CSV</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: CSV storage engine</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 7. row ***************************</span><br><span class="line">      Engine: ARCHIVE</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: Archive storage engine</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 8. row ***************************</span><br><span class="line">      Engine: PERFORMANCE_SCHEMA</span><br><span class="line">     Support: YES</span><br><span class="line">     Comment: Performance Schema</span><br><span class="line">Transactions: NO</span><br><span class="line">          XA: NO</span><br><span class="line">  Savepoints: NO</span><br><span class="line">*************************** 9. row ***************************</span><br><span class="line">      Engine: FEDERATED</span><br><span class="line">     Support: NO</span><br><span class="line">     Comment: Federated MySQL storage engine</span><br><span class="line">Transactions: NULL</span><br><span class="line">          XA: NULL</span><br><span class="line">  Savepoints: NULL</span><br><span class="line">9 rows in set (0.00 sec)</span><br></pre></td></tr></table></figure>
+
+<p>下面的表格对MySQL几种常用的数据引擎进行了简单的对比。</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>InnoDB</th>
+<th>MRG_MYISAM</th>
+<th>MEMORY</th>
+<th>MyISAM</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>存储限制</td>
+<td>有</td>
+<td>没有</td>
+<td>有</td>
+<td>有</td>
+</tr>
+<tr>
+<td>事务</td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>锁机制</td>
+<td>行锁</td>
+<td>表锁</td>
+<td>表锁</td>
+<td>表锁</td>
+</tr>
+<tr>
+<td>B树索引</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>哈希索引</td>
+<td></td>
+<td></td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>全文检索</td>
+<td>支持（5.6+）</td>
+<td></td>
+<td></td>
+<td>支持</td>
+</tr>
+<tr>
+<td>集群索引</td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>数据缓存</td>
+<td>支持</td>
+<td></td>
+<td>支持</td>
+<td></td>
+</tr>
+<tr>
+<td>索引缓存</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+<td>支持</td>
+</tr>
+<tr>
+<td>数据可压缩</td>
+<td></td>
+<td></td>
+<td></td>
+<td>支持</td>
+</tr>
+<tr>
+<td>内存使用</td>
+<td>高</td>
+<td>低</td>
+<td>中</td>
+<td>低</td>
+</tr>
+<tr>
+<td>存储空间使用</td>
+<td>高</td>
+<td>低</td>
+<td></td>
+<td>低</td>
+</tr>
+<tr>
+<td>批量插入性能</td>
+<td>低</td>
+<td>高</td>
+<td>高</td>
+<td>高</td>
+</tr>
+<tr>
+<td>是否支持外键</td>
+<td>支持</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>通过上面的比较我们可以了解到，InnoDB 是唯一能够支持外键、事务以及行锁的存储引擎，所以我们之前说它更适合互联网应用，而且在较新版本的 MySQL 中，它也是默认使用的存储引擎。</p>
+</li>
+<li><p>在定义表结构为每个字段选择数据类型时，如果不清楚哪个数据类型更合适，可以通过 MySQL 的帮助系统来了解每种数据类型的特性、数据的长度和精度等相关信息。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? data types</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：在 MySQLWorkbench 中，不能使用<code>?</code>获取帮助，要使用对应的命令<code>help</code>。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">You asked for help about help category: &quot;Data Types&quot;</span><br><span class="line">For more information, type &#x27;help &lt;item&gt;&#x27;, where &lt;item&gt; is one of the following</span><br><span class="line">topics:</span><br><span class="line">   AUTO_INCREMENT</span><br><span class="line">   BIGINT</span><br><span class="line">   BINARY</span><br><span class="line">   BIT</span><br><span class="line">   BLOB</span><br><span class="line">   BLOB DATA TYPE</span><br><span class="line">   BOOLEAN</span><br><span class="line">   CHAR</span><br><span class="line">   CHAR BYTE</span><br><span class="line">   DATE</span><br><span class="line">   DATETIME</span><br><span class="line">   DEC</span><br><span class="line">   DECIMAL</span><br><span class="line">   DOUBLE</span><br><span class="line">   DOUBLE PRECISION</span><br><span class="line">   ENUM</span><br><span class="line">   FLOAT</span><br><span class="line">   INT</span><br><span class="line">   INTEGER</span><br><span class="line">   LONGBLOB</span><br><span class="line">   LONGTEXT</span><br><span class="line">   MEDIUMBLOB</span><br><span class="line">   MEDIUMINT</span><br><span class="line">   MEDIUMTEXT</span><br><span class="line">   SET DATA TYPE</span><br><span class="line">   SMALLINT</span><br><span class="line">   TEXT</span><br><span class="line">   TIME</span><br><span class="line">   TIMESTAMP</span><br><span class="line">   TINYBLOB</span><br><span class="line">   TINYINT</span><br><span class="line">   TINYTEXT</span><br><span class="line">   VARBINARY</span><br><span class="line">   VARCHAR</span><br><span class="line">   YEAR DATA TYPE</span><br></pre></td></tr></table></figure>
+
+<p>获取 varchar 类型的帮助：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">? <span class="type">varchar</span></span><br></pre></td></tr></table></figure>
+
+<p>执行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">Name: &#x27;VARCHAR&#x27;</span><br><span class="line">Description:</span><br><span class="line">[NATIONAL] VARCHAR(M) [CHARACTER SET charset_name] [COLLATE</span><br><span class="line">collation_name]</span><br><span class="line"></span><br><span class="line">A variable-length string. M represents the maximum column length in</span><br><span class="line">characters. The range of M is 0 to 65,535. The effective maximum length</span><br><span class="line">of a VARCHAR is subject to the maximum row size (65,535 bytes, which is</span><br><span class="line">shared among all columns) and the character set used. For example, utf8</span><br><span class="line">characters can require up to three bytes per character, so a VARCHAR</span><br><span class="line">column that uses the utf8 character set can be declared to be a maximum</span><br><span class="line">of 21,844 characters. See</span><br><span class="line">http://dev.mysql.com/doc/refman/5.7/en/column-count-limit.html.</span><br><span class="line"></span><br><span class="line">MySQL stores VARCHAR values as a 1-byte or 2-byte length prefix plus</span><br><span class="line">data. The length prefix indicates the number of bytes in the value. A</span><br><span class="line">VARCHAR column uses one length byte if values require no more than 255</span><br><span class="line">bytes, two length bytes if values may require more than 255 bytes.</span><br><span class="line"></span><br><span class="line">*Note*:</span><br><span class="line"></span><br><span class="line">MySQL follows the standard SQL specification, and does not remove</span><br><span class="line">trailing spaces from VARCHAR values.</span><br><span class="line"></span><br><span class="line">VARCHAR is shorthand for CHARACTER VARYING. NATIONAL VARCHAR is the</span><br><span class="line">standard SQL way to define that a VARCHAR column should use some</span><br><span class="line">predefined character set. MySQL uses utf8 as this predefined character</span><br><span class="line">set. http://dev.mysql.com/doc/refman/5.7/en/charset-national.html.</span><br><span class="line">NVARCHAR is shorthand for NATIONAL VARCHAR.</span><br><span class="line"></span><br><span class="line">URL: http://dev.mysql.com/doc/refman/5.7/en/string-type-overview.html</span><br></pre></td></tr></table></figure>
+
+<p>在数据类型的选择上，保存字符串数据通常都使用 VARCHAR 和 CHAR 两种类型，前者通常称为变长字符串，而后者通常称为定长字符串；对于 InnoDB 存储引擎，行存储格式没有区分固定长度和可变长度列，因此 VARCHAR 类型和 CHAR 类型没有本质区别，后者不一定比前者性能更好。如果要保存的很大字符串，可以使用 TEXT 类型；如果要保存很大的字节串，可以使用 BLOB（二进制大对象）类型。在 MySQL 中，TEXT 和 BLOB又分别包括 TEXT、MEDIUMTEXT、LONGTEXT 和 BLOB、MEDIUMBLOB、LONGBLOB 三种不同的类型，它们主要的区别在于存储数据的最大大小不同。保存浮点数可以用 FLOAT 或 DOUBLE 类型，FLOAT 已经不推荐使用了，而且在 MySQL 后续的版本中可能会被移除掉。而保存定点数应该使用 DECIMAL 类型，它可以指定小数点前后有效数字的位数。如果要保存时间日期，DATETIME 类型优于 TIMESTAMP 类型，因为前者能表示的时间日期范围更大，后者底层其实就是一个整数，记录了指定的日期时间和 1970-01-01 00:00:00 相差多少个毫秒，该类型在 2038-01-19 03:14:07 之后就会溢出。</p>
+<p>对于自增字段 AUTO_INCREMENT，如果使用 MySQL 5.x 版本要注意自增字段的回溯问题，当然这个问题在 MySQL 8.x 中已经得到了很好的解决，当然，MySQL 8.x 还有很多其他的好处，不管是功能还是性能上都有很多的优化和调整，因此强烈推荐大家使用 MySQL 8.x 版本。对于高并发访问数据库的场景，AUTO_INCREMENT 不仅存在性能上的问题，还可能在多机结构上产生重复的 ID 值，在这种场景下，使用分布式 ID 生成算法（SnowFlake、TinyID等）才是最好的选择，有兴趣的读者可以自行研究。</p>
+</li>
+</ul>
+<h3 id="删除表和修改表"><a href="#删除表和修改表" class="headerlink" title="删除表和修改表"></a>删除表和修改表</h3><p>下面以学生表为例，为大家说明如何删除表和修改表。删除表可以使用<code>drop table</code>，代码如下所示。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> `tb_student`;</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> if <span class="keyword">exists</span> `tb_student`;</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是，如果学生表已经录入了数据而且该数据被其他表引用了，那么就不能删除学生表，否则上面的操作会报错。在下一课中，我们会讲解如何向表中插入数据，到时候大家可以试一试，能否顺利删除学生表。</p>
+<p>如果要修改学生表，可以使用<code>alter table</code>，具体可以分为以下几种情况：</p>
+<p>修改表，添加一个新列，例如给学生表添加一个联系电话的列。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` <span class="keyword">add</span> <span class="keyword">column</span> `stu_tel` <span class="type">varchar</span>(<span class="number">20</span>) <span class="keyword">not</span> <span class="keyword">null</span> comment <span class="string">&#x27;联系电话&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：如果新增列的时候指定了非空约束（<code>not null</code>），那么学生表不能够有数据，否则原来的数据增加了 stu_tel 列之后是没有数据的，这就违反了非空约束的要求；当然，我们在添加列的时候也可以使用默认值约束来解决这个问题。</p>
+</blockquote>
+<p>修改表，删除指定的列，例如将上面添加的联系电话列删除掉。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` <span class="keyword">drop</span> <span class="keyword">column</span> `stu_tel`;</span><br></pre></td></tr></table></figure>
+
+<p>修改表，修改列的数据类型，例如将学生表的 stu_sex 修改为字符。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` modify <span class="keyword">column</span> `stu_sex` <span class="type">char</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="keyword">null</span> <span class="keyword">default</span> <span class="string">&#x27;M&#x27;</span> comment <span class="string">&#x27;性别&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>修改表，修改列的命名，例如将学生表的 stu_sex 修改为 stu_gender。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` change <span class="keyword">column</span> `stu_sex` `stu_gender` <span class="type">boolean</span> <span class="keyword">default</span> <span class="number">1</span> comment <span class="string">&#x27;性别&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>修改表，删除约束条件，例如删除学生表的 col_id 列的外键约束。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` <span class="keyword">drop</span> <span class="keyword">foreign</span> key `fk_student_col_id`;</span><br></pre></td></tr></table></figure>
+
+<p>修改表，添加约束条件，例如给学生表的 col_id 列加上外键约束。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` <span class="keyword">add</span> <span class="keyword">foreign</span> key (`col_id`) <span class="keyword">references</span> `tb_college` (`col_id`);</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` <span class="keyword">add</span> <span class="keyword">constraint</span> `fk_student_col_id` <span class="keyword">foreign</span> key (`col_id`) <span class="keyword">references</span> `tb_college` (`col_id`);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>说明</strong>：在添加外键约束时，还可以通过<code>on update</code>和<code>on delete</code>来指定在被引用的表发生删除和更新操作时，应该进行何种处理，二者的默认值都是<code>restrict</code>，表示如果存在外键约束，则不允许更新和删除被引用的数据。除了<code>restrict</code>之外，这里可能的取值还有<code>cascade</code>（级联操作）和<code>set null</code>（设置为空），有兴趣的读者可以自行研究。</p>
+</blockquote>
+<p>修改表的名字，例如将学生表的名字修改为 tb_stu_info。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> `tb_student` rename <span class="keyword">to</span> `tb_stu_info`;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>提示</strong>：一般情况下，请不要轻易修改数据库或表的名字。</p>
+</blockquote>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/36.%E5%85%B3%E7%B3%BB%E5%9E%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8CMySQL%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/78.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/50.%E5%88%B6%E4%BD%9C%E6%8A%A5%E8%A1%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/56.%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/97.%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99%E6%8A%80%E6%9C%AF%E8%A6%81%E7%82%B9%E5%89%96%E6%9E%90/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/index/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example01/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/html+css/example/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:01 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:01 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

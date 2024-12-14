@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="数据可视化-2"><a href="#数据可视化-2" class="headerlink" title="数据可视化-2"></a>数据可视化-2</h2><p>本章我们尝试用 matplotlib 来绘制一些高阶统计图表。正如前面所说的，大家可以通过 matplotlib 官方网站上提供的<a target="_blank" rel="noopener" href="https://matplotlib.org/stable/tutorials/index.html">文档</a>和<a target="_blank" rel="noopener" href="https://matplotlib.org/stable/gallery/index.html">示例</a>来学习如何使用 matplotlib 并绘制出更加高级的统计图表；尤其是在定制一些比较复杂的图表时，我们建议大家直接找到官网提供的示例，然后只需要做出相应的修改，就可以绘制出自己想要的图表。这种“拷贝+修改”的做法应该会大大提高你的工作效率，因为大多数时候，你的代码跟官网上的代码就仅仅是数据有差别而已，没有必要去做重复乏味的事情。</p>
+<h3 id="气泡图"><a href="#气泡图" class="headerlink" title="气泡图"></a>气泡图</h3><p>气泡图可以用来了解三个变量之间的关系，通过比较气泡位置和大小来分析数据维度之间的相关性。例如在我们之前绘制的月收入和网购支出的散点图中，我们已经发现了二者的正相关关系，如果我们引入第三个变量网购次数，那么我们就需要使用气泡图来进行展示。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">income = np.array([<span class="number">5550</span>, <span class="number">7500</span>, <span class="number">10500</span>, <span class="number">15000</span>, <span class="number">20000</span>, <span class="number">25000</span>, <span class="number">30000</span>, <span class="number">40000</span>])</span><br><span class="line">outcome = np.array([<span class="number">800</span>, <span class="number">1800</span>, <span class="number">1250</span>, <span class="number">2000</span>, <span class="number">1800</span>, <span class="number">2100</span>, <span class="number">2500</span>, <span class="number">3500</span>])</span><br><span class="line">nums = np.array([<span class="number">5</span>, <span class="number">3</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">12</span>, <span class="number">20</span>, <span class="number">8</span>, <span class="number">10</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 通过scatter函数的s参数和c参数分别控制面积和颜色</span></span><br><span class="line">plt.scatter(income, outcome, s=nums * <span class="number">30</span>, c=nums, cmap=<span class="string">&#x27;Reds&#x27;</span>)</span><br><span class="line"><span class="comment"># 显示颜色条</span></span><br><span class="line">plt.colorbar()</span><br><span class="line"><span class="comment"># 显示图表</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/bubble_chart.png" style="zoom:50%;">
+
+<h3 id="面积图"><a href="#面积图" class="headerlink" title="面积图"></a>面积图</h3><p>面积图又叫堆叠折线图，是在折线图的基础上，对折线以下的区域进行颜色填充（展示面积），用于在连续间隔或时间跨度上展示数值，一般用来显示趋势和对比数值，不同颜色的填充可以让多个面积块之间的对比和趋势更好的突显。下面的例子中，我们用面积图来展示从周一到周日花在睡觉、吃饭、工作和玩耍上的时间。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(<span class="number">8</span>, <span class="number">4</span>))</span><br><span class="line">days = np.arange(<span class="number">7</span>)</span><br><span class="line">sleeping = [<span class="number">7</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">10</span>]</span><br><span class="line">eating = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">2</span>]</span><br><span class="line">working = [<span class="number">7</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">6</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">playing = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">9</span>, <span class="number">11</span>, <span class="number">9</span>]</span><br><span class="line"><span class="comment"># 绘制堆叠折线图</span></span><br><span class="line">plt.stackplot(days, sleeping, eating, working, playing)</span><br><span class="line"><span class="comment"># 定制横轴刻度</span></span><br><span class="line">plt.xticks(days, labels=[<span class="string">f&#x27;星期<span class="subst">&#123;x&#125;</span>&#x27;</span> <span class="keyword">for</span> x <span class="keyword">in</span> <span class="string">&#x27;一二三四五六日&#x27;</span>])</span><br><span class="line"><span class="comment"># 定制图例</span></span><br><span class="line">plt.legend([<span class="string">&#x27;睡觉&#x27;</span>, <span class="string">&#x27;吃饭&#x27;</span>, <span class="string">&#x27;工作&#x27;</span>, <span class="string">&#x27;玩耍&#x27;</span>], fontsize=<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 显示图表</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/stacked_line_chart.png" style="zoom:50%;">
+
+<h3 id="雷达图"><a href="#雷达图" class="headerlink" title="雷达图"></a>雷达图</h3><p>雷达图通常用来比较多个定量数据，用于查看哪些变量具有相似的值。 雷达图也可用于查看数据集中哪些变量的值比较低，哪些变量的值比较高，是显示性能或表现的理想选择。经常观看篮球、足球比赛的读者应该对雷达图非常熟悉，例如在 NBA 的转播中就经常使用雷达图来展示球员的各项数据。雷达图的本质折线图，只不过将折线图映射到了极坐标系。在绘制雷达图时，需要让折线闭合，简单的说就是首尾相连，下面是绘制雷达图的代码。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">labels = np.array([<span class="string">&#x27;速度&#x27;</span>, <span class="string">&#x27;力量&#x27;</span>, <span class="string">&#x27;经验&#x27;</span>, <span class="string">&#x27;防守&#x27;</span>, <span class="string">&#x27;发球&#x27;</span>, <span class="string">&#x27;技术&#x27;</span>])</span><br><span class="line"><span class="comment"># 马龙和水谷隼的数据</span></span><br><span class="line">malong_values = np.array([<span class="number">93</span>, <span class="number">95</span>, <span class="number">98</span>, <span class="number">92</span>, <span class="number">96</span>, <span class="number">97</span>])</span><br><span class="line">shuigu_values = np.array([<span class="number">30</span>, <span class="number">40</span>, <span class="number">65</span>, <span class="number">80</span>, <span class="number">45</span>, <span class="number">60</span>])</span><br><span class="line">angles = np.linspace(<span class="number">0</span>, <span class="number">2</span> * np.pi, labels.size, endpoint=<span class="literal">False</span>)</span><br><span class="line"><span class="comment"># 多加一条数据让图形闭合</span></span><br><span class="line">malong_values = np.append(malong_values, malong_values[<span class="number">0</span>])</span><br><span class="line">shuigu_values = np.append(shuigu_values, shuigu_values[<span class="number">0</span>])</span><br><span class="line">angles = np.append(angles, angles[<span class="number">0</span>])</span><br><span class="line"><span class="comment"># 创建画布</span></span><br><span class="line">plt.figure(figsize=(<span class="number">4</span>, <span class="number">4</span>), dpi=<span class="number">120</span>)</span><br><span class="line"><span class="comment"># 创建坐标系</span></span><br><span class="line">ax = plt.subplot(projection=<span class="string">&#x27;polar&#x27;</span>)</span><br><span class="line"><span class="comment"># 绘图和填充</span></span><br><span class="line">plt.plot(angles, malong_values, color=<span class="string">&#x27;r&#x27;</span>, linewidth=<span class="number">2</span>, label=<span class="string">&#x27;马龙&#x27;</span>)</span><br><span class="line">plt.fill(angles, malong_values, color=<span class="string">&#x27;r&#x27;</span>, alpha=<span class="number">0.3</span>)</span><br><span class="line">plt.plot(angles, shuigu_values, color=<span class="string">&#x27;g&#x27;</span>, linewidth=<span class="number">2</span>, label=<span class="string">&#x27;水谷隼&#x27;</span>)</span><br><span class="line">plt.fill(angles, shuigu_values, color=<span class="string">&#x27;g&#x27;</span>, alpha=<span class="number">0.2</span>)</span><br><span class="line"><span class="comment"># 显示图例</span></span><br><span class="line">ax.legend()</span><br><span class="line"><span class="comment"># 显示图表</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/radar_chart.png" style="zoom:50%;">
+
+<h3 id="玫瑰图"><a href="#玫瑰图" class="headerlink" title="玫瑰图"></a>玫瑰图</h3><p>玫瑰图是映射在极坐标下的柱状图，由弗罗伦斯·南丁格尔（Florence Nightingale）所发明，当年是南丁格尔用来呈现战地医院季节性死亡率的一种图表。由于半径和面积的关系是平方的关系，南丁格尔玫瑰图会将数据的比例大小夸大，尤其适合对比大小相近的数值，同时由于圆形有周期的特性，所以南丁格尔玫瑰图也适用于表示一个周期内的时间概念，比如星期、月份。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">group1 = np.random.randint(<span class="number">20</span>, <span class="number">50</span>, <span class="number">4</span>)</span><br><span class="line">group2 = np.random.randint(<span class="number">10</span>, <span class="number">60</span>, <span class="number">4</span>)</span><br><span class="line">x = np.array([<span class="string">f&#x27;A组-Q<span class="subst">&#123;i&#125;</span>&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">5</span>)] + [<span class="string">f&#x27;B组-Q<span class="subst">&#123;i&#125;</span>&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">5</span>)])</span><br><span class="line">y = np.array(group1.tolist() + group2.tolist())</span><br><span class="line"><span class="comment"># 玫瑰花瓣的角度和宽度</span></span><br><span class="line">theta = np.linspace(<span class="number">0</span>, <span class="number">2</span> * np.pi, x.size, endpoint=<span class="literal">False</span>)</span><br><span class="line">width = <span class="number">2</span> * np.pi / x.size</span><br><span class="line"><span class="comment"># 生成8种随机颜色</span></span><br><span class="line">colors = np.random.rand(<span class="number">8</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment"># 将柱状图投影到极坐标</span></span><br><span class="line">ax = plt.subplot(projection=<span class="string">&#x27;polar&#x27;</span>)</span><br><span class="line"><span class="comment"># 绘制柱状图</span></span><br><span class="line">plt.bar(theta, y, width=width, color=colors, bottom=<span class="number">0</span>)</span><br><span class="line"><span class="comment"># 设置网格</span></span><br><span class="line">ax.set_thetagrids(theta * <span class="number">180</span> / np.pi, x, fontsize=<span class="number">10</span>)</span><br><span class="line"><span class="comment"># 显示图表</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/rose_chart.png" style="zoom:50%;">
+
+<h3 id="3D图表"><a href="#3D图表" class="headerlink" title="3D图表"></a>3D图表</h3><p>matplotlib 还可以用于绘制3D图，具体的内容大家可以参考官方文档，下面我们用一段简单的代码为大家展示如何绘制3D图表。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> mpl_toolkits.mplot3d <span class="keyword">import</span> Axes3D</span><br><span class="line"></span><br><span class="line">fig = plt.figure(figsize=(<span class="number">8</span>, <span class="number">4</span>), dpi=<span class="number">120</span>)</span><br><span class="line"><span class="comment"># 创建3D坐标系并添加到画布上</span></span><br><span class="line">ax = Axes3D(fig, auto_add_to_figure=<span class="literal">False</span>)</span><br><span class="line">fig.add_axes(ax)</span><br><span class="line">x = np.arange(-<span class="number">2</span>, <span class="number">2</span>, <span class="number">0.1</span>)</span><br><span class="line">y = np.arange(-<span class="number">2</span>, <span class="number">2</span>, <span class="number">0.1</span>)</span><br><span class="line">x, y = np.meshgrid(x, y)</span><br><span class="line">z = (<span class="number">1</span> - y ** <span class="number">5</span> + x ** <span class="number">5</span>) * np.exp(-x ** <span class="number">2</span> - y ** <span class="number">2</span>)</span><br><span class="line"><span class="comment"># 绘制3D曲面</span></span><br><span class="line">ax.plot_surface(x, y, z)</span><br><span class="line"><span class="comment"># 显示图表</span></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>输出：</p>
+<img src="res/3d_surface_chart.png" style="zoom:60%;">
+
+<p>需要指出的是， JupyterLab 中渲染的3D图并不是真正的3D图，因为你没有办法调整观察者的视角，也没有办法旋转或者缩放。如果想要看到真正的3D效果，需要在将图表渲染到 Qt 窗口中，为此我们可以先安装名为 PyQt6 的三方库，如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%pip install PyQt6</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们使用魔法指令让 JupyterLab 将图表渲染到 Qt 窗口中。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib qt</span><br></pre></td></tr></table></figure>
+
+<p>在完成上面的操作后，我们可以重新运行刚才绘制3D图的代码，看到如下所示的窗口。在这个窗口中，我们可以通过鼠标对3D进行旋转、缩放，我们有可以选中图表的一部分数据进行观测，是不是非常的酷。</p>
+<img src="res/3d_surface_chart_qt.png" style="zoom:50%;">
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/03.%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/62.%E7%94%A8Python%E8%A7%A3%E6%9E%90HTML%E9%A1%B5%E9%9D%A2-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/98.%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF%E5%92%8C%E6%80%A7%E8%83%BD%E8%B0%83%E4%BC%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_5/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example01/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example07/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/js/mylib/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:02 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:02 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

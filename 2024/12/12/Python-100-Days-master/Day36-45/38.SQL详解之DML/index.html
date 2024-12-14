@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/categories">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                </li>
+                
+                
+                
+                
+                
+                <li class="">
+                    <a href="/tags">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-12
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="SQL详解之DML"><a href="#SQL详解之DML" class="headerlink" title="SQL详解之DML"></a>SQL详解之DML</h2><p>我们接着上一课中创建的学校选课系统数据库，为大家讲解 DML 的使用。DML 可以帮助将数据插入到二维表（<code>insert</code>操作）、从二维表删除数据（<code>delete</code>操作）以及更新二维表的数据（<code>update</code>操作）。在执行 DML 之前，我们先通过下面的<code>use</code>命令切换到<code>school</code>数据库。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use `school`;</span><br></pre></td></tr></table></figure>
+
+<h3 id="insert操作"><a href="#insert操作" class="headerlink" title="insert操作"></a>insert操作</h3><p>顾名思义，<code>insert</code>是用来插入行到二维表中的，插入的方式包括：插入完整的行、插入行的一部分、插入多行、插入查询的结果。我们通过如下所示的 SQL 向学院表中添加一个学院。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_college` <span class="keyword">values</span> (<span class="keyword">default</span>, <span class="string">&#x27;计算机学院&#x27;</span>, <span class="string">&#x27;学习计算机科学与技术的地方&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>其中，由于学院表的主键是一个自增字段，因此上面的 SQL 中用<code>default</code>表示该列使用默认值，我们也可以使用下面的方式完成同样的操作。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_college` (`col_name`, `col_intro`) <span class="keyword">values</span> (<span class="string">&#x27;计算机学院&#x27;</span>, <span class="string">&#x27;学习计算机科学与技术的地方&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>我们推荐大家使用下面这种做法，指定为哪些字段赋值，这样做可以不按照建表时设定的字段顺序赋值，可以按照<code>values</code>前面的元组中给定的字段顺序为字段赋值，但是需要注意，除了允许为<code>null</code>和有默认值的字段外，其他的字段都必须要一一列出并在<code>values</code>后面的元组中为其赋值。如果希望一次性插入多条记录，我们可以在<code>values</code>后面跟上多个元组来实现批量插入，代码如下所示。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_college` </span><br><span class="line">    (`col_name`, `col_intro`) </span><br><span class="line"><span class="keyword">values</span> </span><br><span class="line">    (<span class="string">&#x27;外国语学院&#x27;</span>, <span class="string">&#x27;学习歪果仁的语言的学院&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;经济管理学院&#x27;</span>, <span class="string">&#x27;经世济民，治理国家；管理科学，兴国之道&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;体育学院&#x27;</span>, <span class="string">&#x27;发展体育运动，增强人民体质&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在插入数据时，要注意主键是不能重复的，如果插入的数据与表中已有记录主键相同，那么<code>insert</code>操作将会产生 Duplicated Entry 的报错信息。再次提醒大家，如果<code>insert</code>操作省略了某些列，那么这些列要么有默认值，要么允许为<code>null</code>，否则也将产生错误。在业务系统中，为了让<code>insert</code>操作不影响其他操作（主要是后面要讲的<code>select</code>操作）的性能，可以在<code>insert</code>和<code>into</code>之间加一个<code>low_priority</code>来降低<code>insert</code>操作的优先级，这个做法也适用于下面要讲的<code>delete</code>和<code>update</code>操作。</p>
+<p>假如有一张名为<code>tb_temp</code>的表中有<code>a</code>和<code>b</code>两个列，分别保存了学院的名称和学院的介绍，我们也可以通过查询操作获得<code>tb_temp</code>表的数据并插入到学院表中，如下所示，其中的<code>select</code>就是我们之前提到的 DQL，在下一课中会详细讲解。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_college`</span><br><span class="line">    (`col_name`, `col_intro`)</span><br><span class="line"><span class="keyword">select</span> `a`, `b` <span class="keyword">from</span> `tb_temp`;</span><br></pre></td></tr></table></figure>
+
+<h3 id="delete-操作"><a href="#delete-操作" class="headerlink" title="delete 操作"></a>delete 操作</h3><p>如果需要从表中删除数据，可以使用<code>delete</code>操作，它可以帮助我们删除指定行或所有行，例如我们要删除编号为<code>1</code>的学院，就可以使用如下所示的 SQL。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> `tb_college` <span class="keyword">where</span> col_id<span class="operator">=</span><span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<p>注意，上面的<code>delete</code>操作中的<code>where</code>子句是用来指定条件的，只有满足条件的行会被删除。如果我们不小心写出了下面的 SQL，就会删除学院表中所有的记录，这是相当危险的，在实际工作中通常也不会这么做。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> `tb_college`;</span><br></pre></td></tr></table></figure>
+
+<p>需要说明的是，即便删除了所有的数据，<code>delete</code>操作不会删除表本身，也不会让 AUTO_INCREMENT 字段的值回到初始值。如果需要删除所有的数据而且让 AUTO_INCREMENT 字段回到初始值，可以使用<code>truncate table</code>执行截断表操作，<code>truncate</code>的本质是删除原来的表并重新创建一个表，它的速度其实更快，因为不需要逐行删除数据。但是请大家记住一点，用<code>truncate table</code>删除数据是非常危险的，因为它会删除所有的数据，而且由于原来的表已经被删除了，要想恢复误删除的数据也会变得极为困难。</p>
+<h3 id="update-操作"><a href="#update-操作" class="headerlink" title="update 操作"></a>update 操作</h3><p>如果要修改表中的数据，可以使用<code>update</code>操作，它可以用来删除指定的行或所有的行。例如，我们将学生表中的“杨过”修改为“杨逍”，这里我们假设“杨过”的学号为<code>1001</code>，代码如下所示。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> `tb_student` <span class="keyword">set</span> `stu_name`<span class="operator">=</span><span class="string">&#x27;杨逍&#x27;</span> <span class="keyword">where</span> `stu_id`<span class="operator">=</span><span class="number">1001</span>;</span><br></pre></td></tr></table></figure>
+
+<p>注意上面 SQL 中的<code>where</code>子句，我们使用学号作为条件筛选出对应的学生，然后通过前面的赋值操作将其姓名修改为“杨逍”。这里为什么不直接使用姓名作为筛选条件，那是因为学生表中可能有多个名为“杨过”的学生，如果使用 stu_name 作为筛选条件，那么我们的<code>update</code>操作有可能会一次更新多条数据，这显然不是我们想要看到的。还有一个需要注意的地方是<code>update</code>操作中的<code>set</code>关键字，因为 SQL 中的<code>=</code>并不表示赋值，而是判断相等的运算符，只有出现在<code>set</code> 关键字后面的<code>=</code>，才具备赋值的能力。</p>
+<p>如果要同时修改学生的姓名和生日，我们可以对上面的<code>update</code>语句稍作修改，如下所示。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> `tb_student` <span class="keyword">set</span> `stu_name`<span class="operator">=</span><span class="string">&#x27;杨逍&#x27;</span>, `stu_birth`<span class="operator">=</span><span class="string">&#x27;1975-12-29&#x27;</span> <span class="keyword">where</span> `stu_id`<span class="operator">=</span><span class="number">1001</span>;</span><br></pre></td></tr></table></figure>
+
+<p><code>update</code>语句中也可以使用查询的方式获得数据并以此来更新指定的表数据，有兴趣的读者可以自行研究。在书写<code>update</code>语句时，通常都会有<code>where</code>子句，因为实际工作中几乎不太会用到更新全表的操作，这一点大家一定要注意。</p>
+<h3 id="完整的数据"><a href="#完整的数据" class="headerlink" title="完整的数据"></a>完整的数据</h3><p>下面我们给出完整的向 school 数据库的五张表中插入数据的 SQL。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">use `school`;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入学院数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_college` </span><br><span class="line">    (`col_name`, `col_intro`) </span><br><span class="line"><span class="keyword">values</span> </span><br><span class="line">    (<span class="string">&#x27;计算机学院&#x27;</span>, <span class="string">&#x27;计算机学院1958年设立计算机专业，1981年建立计算机科学系，1998年设立计算机学院，2005年5月，为了进一步整合教学和科研资源，学校决定，计算机学院和软件学院行政班子合并统一运作、实行教学和学生管理独立运行的模式。 学院下设三个系：计算机科学与技术系、物联网工程系、计算金融系；两个研究所：图象图形研究所、网络空间安全研究院（2015年成立）；三个教学实验中心：计算机基础教学实验中心、IBM技术中心和计算机专业实验中心。&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;外国语学院&#x27;</span>, <span class="string">&#x27;外国语学院设有7个教学单位，6个文理兼收的本科专业；拥有1个一级学科博士授予点，3个二级学科博士授予点，5个一级学科硕士学位授权点，5个二级学科硕士学位授权点，5个硕士专业授权领域，同时还有2个硕士专业学位（MTI）专业；有教职员工210余人，其中教授、副教授80余人，教师中获得中国国内外名校博士学位和正在职攻读博士学位的教师比例占专任教师的60%以上。&#x27;</span>),</span><br><span class="line">    (<span class="string">&#x27;经济管理学院&#x27;</span>, <span class="string">&#x27;经济学院前身是创办于1905年的经济科；已故经济学家彭迪先、张与九、蒋学模、胡寄窗、陶大镛、胡代光，以及当代学者刘诗白等曾先后在此任教或学习。&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入学生数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_student` </span><br><span class="line">    (`stu_id`, `stu_name`, `stu_sex`, `stu_birth`, `stu_addr`, `col_id`) </span><br><span class="line"><span class="keyword">values</span></span><br><span class="line">    (<span class="number">1001</span>, <span class="string">&#x27;杨过&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1990-3-4&#x27;</span>, <span class="string">&#x27;湖南长沙&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1002</span>, <span class="string">&#x27;任我行&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1992-2-2&#x27;</span>, <span class="string">&#x27;湖南长沙&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1033</span>, <span class="string">&#x27;王语嫣&#x27;</span>, <span class="number">0</span>, <span class="string">&#x27;1989-12-3&#x27;</span>, <span class="string">&#x27;四川成都&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1572</span>, <span class="string">&#x27;岳不群&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1993-7-19&#x27;</span>, <span class="string">&#x27;陕西咸阳&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1378</span>, <span class="string">&#x27;纪嫣然&#x27;</span>, <span class="number">0</span>, <span class="string">&#x27;1995-8-12&#x27;</span>, <span class="string">&#x27;四川绵阳&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1954</span>, <span class="string">&#x27;林平之&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1994-9-20&#x27;</span>, <span class="string">&#x27;福建莆田&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">2035</span>, <span class="string">&#x27;东方不败&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1988-6-30&#x27;</span>, <span class="keyword">null</span>, <span class="number">2</span>),</span><br><span class="line">    (<span class="number">3011</span>, <span class="string">&#x27;林震南&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1985-12-12&#x27;</span>, <span class="string">&#x27;福建莆田&#x27;</span>, <span class="number">3</span>),</span><br><span class="line">    (<span class="number">3755</span>, <span class="string">&#x27;项少龙&#x27;</span>, <span class="number">1</span>, <span class="string">&#x27;1993-1-25&#x27;</span>, <span class="string">&#x27;四川成都&#x27;</span>, <span class="number">3</span>),</span><br><span class="line">    (<span class="number">3923</span>, <span class="string">&#x27;杨不悔&#x27;</span>, <span class="number">0</span>, <span class="string">&#x27;1985-4-17&#x27;</span>, <span class="string">&#x27;四川成都&#x27;</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入老师数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_teacher` </span><br><span class="line">    (`tea_id`, `tea_name`, `tea_title`, `col_id`) </span><br><span class="line"><span class="keyword">values</span> </span><br><span class="line">    (<span class="number">1122</span>, <span class="string">&#x27;张三丰&#x27;</span>, <span class="string">&#x27;教授&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1133</span>, <span class="string">&#x27;宋远桥&#x27;</span>, <span class="string">&#x27;副教授&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">1144</span>, <span class="string">&#x27;杨逍&#x27;</span>, <span class="string">&#x27;副教授&#x27;</span>, <span class="number">1</span>),</span><br><span class="line">    (<span class="number">2255</span>, <span class="string">&#x27;范遥&#x27;</span>, <span class="string">&#x27;副教授&#x27;</span>, <span class="number">2</span>),</span><br><span class="line">    (<span class="number">3366</span>, <span class="string">&#x27;韦一笑&#x27;</span>, <span class="keyword">default</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入课程数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_course` </span><br><span class="line">    (`cou_id`, `cou_name`, `cou_credit`, `tea_id`) </span><br><span class="line"><span class="keyword">values</span> </span><br><span class="line">    (<span class="number">1111</span>, <span class="string">&#x27;Python程序设计&#x27;</span>, <span class="number">3</span>, <span class="number">1122</span>),</span><br><span class="line">    (<span class="number">2222</span>, <span class="string">&#x27;Web前端开发&#x27;</span>, <span class="number">2</span>, <span class="number">1122</span>),</span><br><span class="line">    (<span class="number">3333</span>, <span class="string">&#x27;操作系统&#x27;</span>, <span class="number">4</span>, <span class="number">1122</span>),</span><br><span class="line">    (<span class="number">4444</span>, <span class="string">&#x27;计算机网络&#x27;</span>, <span class="number">2</span>, <span class="number">1133</span>),</span><br><span class="line">    (<span class="number">5555</span>, <span class="string">&#x27;编译原理&#x27;</span>, <span class="number">4</span>, <span class="number">1144</span>),</span><br><span class="line">    (<span class="number">6666</span>, <span class="string">&#x27;算法和数据结构&#x27;</span>, <span class="number">3</span>, <span class="number">1144</span>),</span><br><span class="line">    (<span class="number">7777</span>, <span class="string">&#x27;经贸法语&#x27;</span>, <span class="number">3</span>, <span class="number">2255</span>),</span><br><span class="line">    (<span class="number">8888</span>, <span class="string">&#x27;成本会计&#x27;</span>, <span class="number">2</span>, <span class="number">3366</span>),</span><br><span class="line">    (<span class="number">9999</span>, <span class="string">&#x27;审计学&#x27;</span>, <span class="number">3</span>, <span class="number">3366</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 插入选课数据</span></span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> `tb_record` </span><br><span class="line">    (`stu_id`, `cou_id`, `sel_date`, `score`) </span><br><span class="line"><span class="keyword">values</span> </span><br><span class="line">    (<span class="number">1001</span>, <span class="number">1111</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">95</span>),</span><br><span class="line">    (<span class="number">1001</span>, <span class="number">2222</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">87.5</span>),</span><br><span class="line">    (<span class="number">1001</span>, <span class="number">3333</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">100</span>),</span><br><span class="line">    (<span class="number">1001</span>, <span class="number">4444</span>, <span class="string">&#x27;2018-09-03&#x27;</span>, <span class="keyword">null</span>),</span><br><span class="line">    (<span class="number">1001</span>, <span class="number">6666</span>, <span class="string">&#x27;2017-09-02&#x27;</span>, <span class="number">100</span>),</span><br><span class="line">    (<span class="number">1002</span>, <span class="number">1111</span>, <span class="string">&#x27;2017-09-03&#x27;</span>, <span class="number">65</span>),</span><br><span class="line">    (<span class="number">1002</span>, <span class="number">5555</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">42</span>),</span><br><span class="line">    (<span class="number">1033</span>, <span class="number">1111</span>, <span class="string">&#x27;2017-09-03&#x27;</span>, <span class="number">92.5</span>),</span><br><span class="line">    (<span class="number">1033</span>, <span class="number">4444</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">78</span>),</span><br><span class="line">    (<span class="number">1033</span>, <span class="number">5555</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">82.5</span>),</span><br><span class="line">    (<span class="number">1572</span>, <span class="number">1111</span>, <span class="string">&#x27;2017-09-02&#x27;</span>, <span class="number">78</span>),</span><br><span class="line">    (<span class="number">1378</span>, <span class="number">1111</span>, <span class="string">&#x27;2017-09-05&#x27;</span>, <span class="number">82</span>),</span><br><span class="line">    (<span class="number">1378</span>, <span class="number">7777</span>, <span class="string">&#x27;2017-09-02&#x27;</span>, <span class="number">65.5</span>),</span><br><span class="line">    (<span class="number">2035</span>, <span class="number">7777</span>, <span class="string">&#x27;2018-09-03&#x27;</span>, <span class="number">88</span>),</span><br><span class="line">    (<span class="number">2035</span>, <span class="number">9999</span>, <span class="string">&#x27;2019-09-02&#x27;</span>, <span class="keyword">null</span>),</span><br><span class="line">    (<span class="number">3755</span>, <span class="number">1111</span>, <span class="string">&#x27;2019-09-02&#x27;</span>, <span class="keyword">null</span>),</span><br><span class="line">    (<span class="number">3755</span>, <span class="number">8888</span>, <span class="string">&#x27;2019-09-02&#x27;</span>, <span class="keyword">null</span>),</span><br><span class="line">    (<span class="number">3755</span>, <span class="number">9999</span>, <span class="string">&#x27;2017-09-01&#x27;</span>, <span class="number">92</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意</strong>：上面的<code>insert</code>语句使用了批处理的方式来插入数据，这种做法插入数据的效率比较高。</p>
+</blockquote>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/13/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/54.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/96.%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/list_by_vue/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/vue/vue.demo/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_iframe/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_1/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/38.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDML/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://signup.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Thu Dec 12 2024 16:38:01 GMT+0800'
+      window.commentConfig.owner = 'Lzq2024'
+      window.commentConfig.repo = 'bingfly.github.io'
+      window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+      window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Thu Dec 12 2024 16:38:01 GMT+0800',
+        owner: 'Lzq2024',
+        repo: 'bingfly.github.io',
+        client_id: 'Ov23lijIsO699goQayhr',
+        client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>
