@@ -2,8 +2,8 @@ if ($('#comments-template')) {
 	var gitalk = new Gitalk({
   		clientID: window.commentConfig.client_id,
  	        clientSecret: window.commentConfig.client_secret,
-  		repo: window.commentConfig.owner,
-  		owner: window.commentConfig.id,
+  		repo: window.commentConfig.repo,
+  		owner: window.commentConfig.owner,
   		admin: ['Lzq2024'],
 		id: window.commentConfig.id,
 //		labels: 'gitalk',
