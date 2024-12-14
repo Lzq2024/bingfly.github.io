@@ -384,61 +384,61 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/README/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/06.%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/47.%E6%B7%B1%E5%85%A5%E6%A8%A1%E5%9E%8B/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/59.%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/49.Cookie%E5%92%8CSession/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/60.%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/61.%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E6%A6%82%E8%BF%B0/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/65.%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6Scrapy%E7%AE%80%E4%BB%8B/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2/index-2/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/83.%E5%86%B3%E7%AD%96%E6%A0%91/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_7/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_5/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_2/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example12/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_6/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/js/jquery.min/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/html+css/qq_link/"></a>
                 </span>
             </li>
             
@@ -600,6 +600,33 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+if ($('#comments-template')) {
+	var gitalk = new Gitalk({
+  		clientID: window.commentConfig.client_id,
+ 	        clientSecret: window.commentConfig.client_secret,
+  		repo: window.commentConfig.owner,
+  		owner: window.commentConfig.id,
+  		admin: ['Lzq2024'],
+		id: window.commentConfig.id,
+//		labels: 'gitalk',
+//  		perPage: 15,
+//		pagerDirection: 'last',
+//		createIssueManually: true,
+  		distractionFreeMode: true
+	//	id: window.commentConfig.id,
+	//	owner: window.commentConfig.owner,
+	//	repo: window.commentConfig.repo,
+	//	oauth: {
+	//		client_id: window.commentConfig.client_id,
+	//		client_secret: window.commentConfig.client_secret
+	//	},
+	//	perPage: 10,
+	//	title: window.commentConfig.title,
+	//	theme: galTheme
+	})
+
+	gitalk.render('comments-template')
+}
 
 <script src="/js/comment/gitment.js"></script>
 

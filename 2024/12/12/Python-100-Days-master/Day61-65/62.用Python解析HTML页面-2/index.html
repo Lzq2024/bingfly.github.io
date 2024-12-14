@@ -508,13 +508,7 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/hello-world/">Hello World</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/06.%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/01.%E5%88%9D%E8%AF%86Python/"></a>
                 </span>
             </li>
             
@@ -526,43 +520,49 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/67.%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/78.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-1/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2/index/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/45.%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E5%92%8CHiveSQL/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_bom_1/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/71.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-4/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_1/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_1/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_5/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/index/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_7/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example05/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework06/"></a>
                 </span>
             </li>
             
@@ -724,6 +724,33 @@
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
 <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+if ($('#comments-template')) {
+	var gitalk = new Gitalk({
+  		clientID: window.commentConfig.client_id,
+ 	        clientSecret: window.commentConfig.client_secret,
+  		repo: window.commentConfig.owner,
+  		owner: window.commentConfig.id,
+  		admin: ['Lzq2024'],
+		id: window.commentConfig.id,
+//		labels: 'gitalk',
+//  		perPage: 15,
+//		pagerDirection: 'last',
+//		createIssueManually: true,
+  		distractionFreeMode: true
+	//	id: window.commentConfig.id,
+	//	owner: window.commentConfig.owner,
+	//	repo: window.commentConfig.repo,
+	//	oauth: {
+	//		client_id: window.commentConfig.client_id,
+	//		client_secret: window.commentConfig.client_secret
+	//	},
+	//	perPage: 10,
+	//	title: window.commentConfig.title,
+	//	theme: galTheme
+	})
+
+	gitalk.render('comments-template')
+}
 
 <script src="/js/comment/gitment.js"></script>
 
