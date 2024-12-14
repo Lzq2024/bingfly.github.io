@@ -307,7 +307,10 @@ if ($('#comments-template')) {
   		repo: 'window.commentConfig.owner',
   		owner: window.commentConfig.id,
   		admin: ['Lzq2024'],
-  		id: location.href,      // Ensure uniqueness and length less than 50
+  		id: location.pathname,      // Ensure uniqueness and length less than 50
+		labels: gitalk,
+   		perPage: 15,
+		pagerDirection: 'last',
 		createIssueManually: true,
   		distractionFreeMode: true  // Facebook-like distraction free mode	
 	//	id: window.commentConfig.id,
