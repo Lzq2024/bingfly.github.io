@@ -149,11 +149,11 @@
                         </li>
                         
                         <li>
-                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                            <a href="/categories/Python%E5%9F%BA%E7%A1%80/">Python基础</a>
                         </li>
                         
                         <li>
-                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
                         </li>
                         
                         
@@ -183,11 +183,11 @@
                         </li>
                         
                         <li>
-                            <a href="/tags/K8s/">K8s</a>
+                            <a href="/tags/Shell/">Shell</a>
                         </li>
                         
                         <li>
-                            <a href="/tags/ELK/">ELK</a>
+                            <a href="/tags/Linux/">Linux</a>
                         </li>
                         
                         
@@ -511,9 +511,9 @@
 <p>exec 1&gt;”$LOGFILE”</p>
 <p>exec 2&gt;&amp;1</p>
 <p>SMTP_server&#x3D;’smtp.qq.com’                                     # SMTP服务器，变量值需要自行修改</p>
-<p>username&#x3D;‘<a href="mailto:&#x31;&#53;&#x38;&#x31;&#50;&#55;&#51;&#49;&#x35;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#53;&#x38;&#x31;&#50;&#55;&#51;&#49;&#x35;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a>‘                         	# 用户名，变量值需要自行修改</p>
+<p>username&#x3D;‘<a href="mailto:&#x31;&#53;&#56;&#49;&#50;&#55;&#x33;&#x31;&#x35;&#52;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#53;&#56;&#49;&#50;&#55;&#x33;&#x31;&#x35;&#52;&#64;&#113;&#x71;&#46;&#x63;&#x6f;&#x6d;</a>‘                         	# 用户名，变量值需要自行修改</p>
 <p>password&#x3D;’cgdxhxqddtrafijh’                                                  # 密码(QQ邮箱用的是授权码)，变量值需要自行修改</p>
-<p>from_email_address&#x3D;‘<a href="mailto:&#49;&#53;&#x38;&#x31;&#x32;&#55;&#51;&#49;&#53;&#x34;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;">&#49;&#53;&#x38;&#x31;&#x32;&#55;&#51;&#49;&#53;&#x34;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;</a>‘         	#### 发件人Email地址，变量值需要自行修改</p>
+<p>from_email_address&#x3D;‘<a href="mailto:&#x31;&#53;&#x38;&#49;&#x32;&#55;&#51;&#49;&#x35;&#x34;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#109;">&#x31;&#53;&#x38;&#49;&#x32;&#55;&#51;&#49;&#x35;&#x34;&#x40;&#x71;&#113;&#46;&#99;&#x6f;&#109;</a>‘         	#### 发件人Email地址，变量值需要自行修改</p>
 <p>to_email_address&#x3D;”$1”                                               	# 收件人Email地址，tang传入的第一个参数</p>
 <p>message_subject_utf8&#x3D;”$2”                                        # 邮件标题，tang传入的第二个参数</p>
 <p>message_body_utf8&#x3D;”$3”                                          	# 邮件内容，tang传入的第三个参数</p>
@@ -532,7 +532,7 @@
 <p>set -x</p>
 <p>$sendEmail -s “$SMTP_server” -xu “$username” -xp “$password” -f “$from_email_address” -t “$to_email_address” -u “$message_subject” -m “$message_body” -o message-content-type&#x3D;text -o message-charset&#x3D;gb2312</p>
 <p>[root@tang ~]# chmod +x &#x2F;opt&#x2F;sendEmail.sh</p>
-<p>[root@tang ~]#  &#x2F;opt&#x2F;sendEmail.sh    <a href="mailto:&#49;&#x35;&#x38;&#x31;&#x32;&#x37;&#x33;&#x31;&#53;&#x34;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#49;&#x35;&#x38;&#x31;&#x32;&#x37;&#x33;&#x31;&#53;&#x34;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a>  测试   测试</p>
+<p>[root@tang ~]#  &#x2F;opt&#x2F;sendEmail.sh    <a href="mailto:&#49;&#x35;&#56;&#x31;&#50;&#55;&#x33;&#49;&#53;&#52;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;">&#49;&#x35;&#56;&#x31;&#50;&#55;&#x33;&#49;&#53;&#52;&#x40;&#113;&#113;&#x2e;&#99;&#111;&#x6d;</a>  测试   测试</p>
 <p>监控磁盘情况，异常发邮件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">disk_sda1=df -h |sed -n &#x27;3p&#x27;|awk &#x27;&#123;print $4&#125;&#x27;|cut -f 1 -d &#x27;%&#x27;</span><br><span class="line"></span><br><span class="line">if</span><br><span class="line"></span><br><span class="line">    ((disk_sda1 &gt; 80));</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">    echo “this is error”</span><br><span class="line"></span><br><span class="line">    echo date “192.168.56.128 this is over 70%” |mail -s “disk over 70%” 12345300@qq.com,5645645@qq.com</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">    echo “this is ok”</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
 
@@ -719,61 +719,61 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/20%E3%80%81%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/">灰度发布</a>
+                    <a href="/2024/06/05/hello-world/">Hello World</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/03.%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/51.%E6%97%A5%E5%BF%97%E5%92%8C%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E6%A0%8F/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/53.%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/54.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/"></a>
+                    <a href="/2024/12/10/Python-100-Days-master/Day61-65/63.%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B%E5%9C%A8%E7%88%AC%E8%99%AB%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8/">并发编程在爬虫中的应用</a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-2/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/93.MySQL%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/11/Python-100-Days-master/Day61-65/65.%E7%88%AC%E8%99%AB%E6%A1%86%E6%9E%B6Scrapy%E7%AE%80%E4%BB%8B/">爬虫框架Scrapy简介</a>
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E7%AC%AC05%E6%AC%A1%E5%85%AC%E5%BC%80%E8%AF%BE-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%91%A8%E8%80%8C%E5%A4%8D%E5%A7%8B/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%91%A8%E8%80%8C%E5%A4%8D%E5%A7%8B/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_2/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/vue/vue.demo/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_7/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_1/"></a>
                 </span>
             </li>
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_7/"></a>
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_4/"></a>
                 </span>
             </li>
             
@@ -806,57 +806,57 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/Python/" style="font-size: 14.490219688063036px;" class="tag-cloud-link">Python</a>
+    <a href="/tags/Python/" style="font-size: 19.57908668953146px;" class="tag-cloud-link">Python</a>
     
-    <a href="/tags/K8s/" style="font-size: 11.47822257820269px;" class="tag-cloud-link">K8s</a>
+    <a href="/tags/Shell/" style="font-size: 13.741934191371225px;" class="tag-cloud-link">Shell</a>
     
-    <a href="/tags/ELK/" style="font-size: 9.370588586570776px;" class="tag-cloud-link">ELK</a>
+    <a href="/tags/Linux/" style="font-size: 9.91680905385454px;" class="tag-cloud-link">Linux</a>
     
-    <a href="/tags/Prometheus/" style="font-size: 10.63411870178346px;" class="tag-cloud-link">Prometheus</a>
+    <a href="/tags/Apache/" style="font-size: 19.061933122939646px;" class="tag-cloud-link">Apache</a>
     
-    <a href="/tags/Apache/" style="font-size: 11.824185546118741px;" class="tag-cloud-link">Apache</a>
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 14.810634119406288px;" class="tag-cloud-link">网络</a>
     
-    <a href="/tags/Shell/" style="font-size: 12.885049351889132px;" class="tag-cloud-link">Shell</a>
+    <a href="/tags/Ceph/" style="font-size: 15.255830111858764px;" class="tag-cloud-link">Ceph</a>
     
-    <a href="/tags/Linux/" style="font-size: 17.58368724853271px;" class="tag-cloud-link">Linux</a>
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 10.253084515602803px;" class="tag-cloud-link">阿里云</a>
     
-    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 16.68338506007823px;" class="tag-cloud-link">网络</a>
+    <a href="/tags/K8s/" style="font-size: 11.919857464388638px;" class="tag-cloud-link">K8s</a>
     
-    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 9.911834762529384px;" class="tag-cloud-link">阿里云</a>
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 9.616086374765088px;" class="tag-cloud-link">灰度发布</a>
     
-    <a href="/tags/Ceph/" style="font-size: 8.779690988367642px;" class="tag-cloud-link">Ceph</a>
+    <a href="/tags/MySQL/" style="font-size: 18.36082078263685px;" class="tag-cloud-link">MySQL</a>
     
-    <a href="/tags/MySQL/" style="font-size: 17.196580866465048px;" class="tag-cloud-link">MySQL</a>
+    <a href="/tags/KVM/" style="font-size: 17.532558255642147px;" class="tag-cloud-link">KVM</a>
     
-    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 10.461595356820219px;" class="tag-cloud-link">灰度发布</a>
+    <a href="/tags/OpenStack/" style="font-size: 8.01689732464422px;" class="tag-cloud-link">OpenStack</a>
     
-    <a href="/tags/OpenStack/" style="font-size: 16.38638676528287px;" class="tag-cloud-link">OpenStack</a>
+    <a href="/tags/Docker/" style="font-size: 10.68719856251779px;" class="tag-cloud-link">Docker</a>
     
-    <a href="/tags/KVM/" style="font-size: 11.313623435371017px;" class="tag-cloud-link">KVM</a>
+    <a href="/tags/ELK/" style="font-size: 12.06786742684212px;" class="tag-cloud-link">ELK</a>
     
-    <a href="/tags/Docker/" style="font-size: 18.939083370015563px;" class="tag-cloud-link">Docker</a>
+    <a href="/tags/Ansible/" style="font-size: 19.717626458566865px;" class="tag-cloud-link">Ansible</a>
     
-    <a href="/tags/Ansible/" style="font-size: 17.66967732631474px;" class="tag-cloud-link">Ansible</a>
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 10.91497120858879px;" class="tag-cloud-link">负载均衡</a>
     
-    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 9.7139344412037px;" class="tag-cloud-link">负载均衡</a>
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 10.41172784182254px;" class="tag-cloud-link">Radis、Mongodb</a>
     
-    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 13.43535651924042px;" class="tag-cloud-link">Radis、Mongodb</a>
+    <a href="/tags/Nginx/" style="font-size: 11.075362634533315px;" class="tag-cloud-link">Nginx</a>
     
-    <a href="/tags/Nginx/" style="font-size: 16.127920117261404px;" class="tag-cloud-link">Nginx</a>
+    <a href="/tags/Tomcat/" style="font-size: 18.02310846316192px;" class="tag-cloud-link">Tomcat</a>
     
-    <a href="/tags/Tomcat/" style="font-size: 10.769275517258542px;" class="tag-cloud-link">Tomcat</a>
+    <a href="/tags/DevOps/" style="font-size: 18.61352605079462px;" class="tag-cloud-link">DevOps</a>
     
-    <a href="/tags/DevOps/" style="font-size: 10.686232592282037px;" class="tag-cloud-link">DevOps</a>
+    <a href="/tags/Jenkins/" style="font-size: 14.674388493570165px;" class="tag-cloud-link">Jenkins</a>
     
-    <a href="/tags/Jenkins/" style="font-size: 19.10834636533182px;" class="tag-cloud-link">Jenkins</a>
+    <a href="/tags/Prometheus/" style="font-size: 10.549237756575597px;" class="tag-cloud-link">Prometheus</a>
     
-    <a href="/tags/Django/" style="font-size: 15.564838585468625px;" class="tag-cloud-link">Django</a>
+    <a href="/tags/Django/" style="font-size: 17.145845624340144px;" class="tag-cloud-link">Django</a>
     
-    <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 12.897238943052706px;" class="tag-cloud-link">爬虫</a>
+    <a href="/tags/Selenium/" style="font-size: 8.633144339525689px;" class="tag-cloud-link">Selenium</a>
     
-    <a href="/tags/Scrapy/" style="font-size: 15.571085560816545px;" class="tag-cloud-link">Scrapy</a>
+    <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 11.887586037329365px;" class="tag-cloud-link">爬虫</a>
     
-    <a href="/tags/Selenium/" style="font-size: 12.313947085177862px;" class="tag-cloud-link">Selenium</a>
+    <a href="/tags/Scrapy/" style="font-size: 18.63970337945876px;" class="tag-cloud-link">Scrapy</a>
     
 </div>
                 
