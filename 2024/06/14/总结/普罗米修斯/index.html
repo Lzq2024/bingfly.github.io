@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>普罗米修斯 | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>普罗米修斯</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/14/%E6%80%BB%E7%BB%93/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/">普罗米修斯</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Prometheus/">Prometheus</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-14
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/">普罗米修斯</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-14
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Prometheus/">Prometheus</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Prometheus"><a href="#Prometheus" class="headerlink" title="Prometheus"></a>Prometheus</h1><h2 id="1、特点"><a href="#1、特点" class="headerlink" title="1、特点"></a>1、特点</h2><p>Prometheus 相比于其他传统监控工具主要有以下几个特点：</p>
+<ul>
+<li>具有由 metric 名称和键值对标识的时间序列数据的多维数据模型</li>
+<li>有一个灵活的查询语言</li>
+<li>不依赖分布式存储，只和本地磁盘有关</li>
+<li>通过 HTTP 的服务拉取时间序列数据</li>
+<li>也支持推送的方式来添加时间序列数据</li>
+<li>还支持通过服务发现或静态配置发现目标</li>
+<li>多种图形和仪表板支持</li>
+</ul>
+<h2 id="2、组件"><a href="#2、组件" class="headerlink" title="2、组件"></a>2、组件</h2><ul>
+<li><code>Prometheus Server</code>：用于抓取指标、存储时间序列数据</li>
+<li><code>exporter</code>：暴露指标让任务来抓</li>
+<li><code>pushgateway</code>：push 的方式将指标数据推送到该网关</li>
+<li><code>alertmanager</code>：处理报警的报警组件 <code>adhoc</code>：用于数据查询</li>
+</ul>
+<h2 id="3、监控应用的两种方式"><a href="#3、监控应用的两种方式" class="headerlink" title="3、监控应用的两种方式"></a>3、监控应用的两种方式</h2><p>1、暴露metrics接口给promethus</p>
+<p>2、通过exporter</p>
+<h2 id="4、对集群节点的监控"><a href="#4、对集群节点的监控" class="headerlink" title="4、对集群节点的监控"></a>4、对集群节点的监控</h2><p>1、对于集群的监控一般我们需要考虑以下几个方面：</p>
+<ul>
+<li>Kubernetes 节点的监控：比如节点的 cpu、load、disk、memory 等指标</li>
+<li>内部系统组件的状态：比如 kube-scheduler、kube-controller-manager、kubedns&#x2F;coredns 等组件的详细运行状态</li>
+<li>编排级的 metrics：比如 Deployment 的状态、资源请求、调度和 API 延迟等数据指标</li>
+</ul>
+<p>2、由于我们要获取到的数据是主机的监控指标数据，而我们的 <code>node-exporter</code> 是运行在容器中的，所以我们在 Pod 中需要配置一些 Pod 的安全策略，这里我们就添加了 <code>hostPID: true</code>、<code>hostIPC: true</code>、<code>hostNetwork: true</code> 3个策略，用来使用主机的 <code>PID namespace</code>、<code>IPC namespace</code> 以及主机网络，这些 namespace 就是用于容器隔离的关键技术，要注意这里的 namespace 和集群中的 namespace 是两个完全不相同的概念。</p>
+<p>另外我们还将主机的 <code>/dev</code>、<code>/proc</code>、<code>/sys</code>这些目录挂载到容器中，这些因为我们采集的很多节点数据都是通过这些文件夹下面的文件来获取到的，比如我们在使用 <code>top</code> 命令可以查看当前 cpu 使用情况，数据就来源于文件 <code>/proc/stat</code>，使用 <code>free</code> 命令可以查看当前内存使用情况，其数据来源是来自 <code>/proc/meminfo</code> 文件。</p>
+<p>另外由于我们集群使用的是 <code>kubeadm</code> 搭建的，所以如果希望 master 节点也一起被监控，则需要添加相应的容忍</p>
+<p>3、让 Prometheus 去自动发现我们节点的 <code>node-exporter</code> 程序，并且按节点进行分组呢？这就是 Prometheus 里面非常重要的<strong>服务发现</strong>功能了。</p>
+<p>在 Kubernetes 下，Promethues 通过与 Kubernetes API 集成，主要支持5中服务发现模式，分别是：<code>Node</code>、<code>Service</code>、<code>Pod</code>、<code>Endpoints</code>、<code>Ingress</code>。</p>
+<p>要让 Prometheus 也能够获取到当前集群中的所有节点信息的话，我们就需要利用 Node 的服务发现模式，同样的，在 <code>prometheus.yml</code> 文件中配置如下的 job 任务即可：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">job_name:</span> <span class="string">&#x27;kubernetes-nodes&#x27;</span></span><br><span class="line">  <span class="attr">kubernetes_sd_configs:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">role:</span> <span class="string">node</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>通过指定 <code>kubernetes_sd_configs</code> 的模式为<code>node</code>，Prometheus 就会自动从 Kubernetes 中发现所有的 node 节点并作为当前 job 监控的目标实例，发现的节点 <code>/metrics</code> 接口是默认的 kubelet 的 HTTP 接口。</p>
+<h1 id="Prometheus-Operator"><a href="#Prometheus-Operator" class="headerlink" title="Prometheus Operator"></a>Prometheus Operator</h1><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118143755.png" alt="1607494843407"></p>
+<p>上图是 Prometheus-Operator 官方提供的架构图，各组件以不同的方式运行在 Kubernetes 集群中，其中 Operator 是最核心的部分，作为一个控制器，他会去创建Prometheus、ServiceMonitor、AlertManager 以及 PrometheusRule 4个 CRD 资源对象，然后会一直监控并维持这4个资源对象的状态。</p>
+<ul>
+<li><code>Operator</code>：根据自定义资源来部署和管理 Prometheus Server，同时监控这些自定义资源事件的变化来做相应的处理，是整个系统的控制中心。</li>
+<li><code>Prometheus</code>：声明 Prometheus 资源对象期望的状态，Operator 确保这个资源对象运行时一直与定义保持一致。</li>
+<li><code>Prometheus Server</code>：Operator 根据自定义资源 Prometheus 类型中定义的内容而部署的 Prometheus Server 集群，这些自定义资源可以看作是用来管理 Prometheus Server 集群的 StatefulSets 资源。</li>
+<li><code>ServiceMonitor</code>：声明指定监控的服务，描述了一组被 Prometheus 监控的目标列表，就是 exporter 的抽象，用来提供 metrics 数据接口的工具。该资源通过 Labels 来选取对应的 Service Endpoint，让 Prometheus Server 通过选取的 Service 来获取 Metrics 信息。</li>
+<li><code>Service</code>：简单的说就是 Prometheus 监控的对象。</li>
+<li><code>Alertmanager</code>：定义 AlertManager 资源对象期望的状态，Operator 确保这个资源对象运行时一直与定义保持一致。</li>
+</ul>
+<h1 id="Promethus-普罗米修斯）监控Mysql数据库"><a href="#Promethus-普罗米修斯）监控Mysql数据库" class="headerlink" title="Promethus(普罗米修斯）监控Mysql数据库"></a>Promethus(普罗米修斯）监控Mysql数据库</h1><p>prometheus 监控mysql监控什么<br>Mysql所在的节点服务器的Ⅰ&#x2F;O读写压力磁盘使用量、内存使用量（阈值-比如该节点的磁盘使用量是否超过总量的80%)<br>监控mysql的健康状态（是否宕机)Mysql所在的节点,其他的服务组件<br>mysql所在的服务器的网络状态（传输的速率波动)</p>
+<p>被监控的mysql服务器安装mysql_exporter，安装MariaDB 数据库，授权为localhost（因为不是prometheus服务器来直接找mariadb 获取数据，而是prometheus服务器找mysql_exporter,mysql_exporter 再找mariadb。所以这个localhost是指的mysql_exporter的IP），创建一个mariadb配置文件，启动mysqld_exporter，确认端口(9104)，在prometheus服务器的配置文件里添加被监控的mariadb的配置段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/prometheus/prometheus.yml   </span><br><span class="line">  - job_name: &#x27;mariadb&#x27;</span><br><span class="line">    static_configs:</span><br><span class="line">    - targets: [&#x27;192.168.116.130:9104&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p>重启服务<br>回到web管理界面 –》点Status –》点Targets –》可以看到监控 mariadb了</p>
+<p><a target="_blank" rel="noopener" href="https://my.oschina.net/u/4314581/blog/3316484">https://my.oschina.net/u/4314581/blog/3316484</a></p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = '普罗米修斯'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/18%E3%80%81Ceph%E5%AD%98%E5%82%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/03.%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/64.%E4%BD%BF%E7%94%A8Selenium%E6%8A%93%E5%8F%96%E7%BD%91%E9%A1%B5%E5%8A%A8%E6%80%81%E5%86%85%E5%AE%B9/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/67.%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/69.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/89.PyTorch%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/vue/vue.demo/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_vue_element/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_5/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/%E6%99%AE%E7%BD%97%E7%B1%B3%E4%BF%AE%E6%96%AF/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 14.613514150288667px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 17.984565613655356px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 12.095408525067171px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 16.002763499889827px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Fri Jun 14 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Fri Jun 14 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

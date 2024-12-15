@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/15/%E6%80%BB%E7%BB%93/16%E3%80%81Linux%E4%B8%ADtop%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/16%E3%80%81Linux%E4%B8%ADtop%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Linux中top命令参数详解"><a href="#Linux中top命令参数详解" class="headerlink" title="Linux中top命令参数详解"></a>Linux中top命令参数详解</h1><p>因为面试经常会问top命令用法，以及各个参数的含义。因此转载补充了了一下，以便自己学习。</p>
+<p>top命令经常用来监控linux的系统状况，是常用的性能分析工具，能够实时显示系统中各个进程的资源占用情况。</p>
+<h2 id="一、命令格式"><a href="#一、命令格式" class="headerlink" title="一、命令格式"></a>一、命令格式</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top [-d number] | top [-bnp]</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、参数解释"><a href="#二、参数解释" class="headerlink" title="二、参数解释"></a>二、参数解释</h2><p>-d：number代表秒数，表示top命令显示的页面更新一次的间隔。默认是5秒。 -b：以批次的方式执行top。 -n：与-b配合使用，表示需要进行几次top命令的输出结果。 -p：指定特定的pid进程号进行观察。</p>
+<p>在top命令显示的页面还可以输入以下按键执行相应的功能（注意大小写区分的）：</p>
+<p>?：显示在top当中可以输入的命令 P：以CPU的使用资源排序显示 M：以内存的使用资源排序显示 N：以pid排序显示 T：由进程使用的时间累计排序显示 k：给某一个pid一个信号。可以用来杀死进程 r：给某个pid重新定制一个nice值（即优先级） q：退出top（用ctrl+c也可以退出top）。</p>
+<h2 id="三、top各输出参数含义"><a href="#三、top各输出参数含义" class="headerlink" title="三、top各输出参数含义"></a>三、top各输出参数含义</h2><p>下面是使用top命令来进行性能检测的截图：</p>
+<p>(centos)：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118152050.png" alt="image-20201225094828990"></p>
+<h3 id="1、第1行任务队列信息"><a href="#1、第1行任务队列信息" class="headerlink" title="1、第1行任务队列信息"></a>1、第1行任务队列信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top - 17:29:09 up 53days, 1 users, load average: 0.00, 0.01, 0.05</span><br></pre></td></tr></table></figure>
+
+
+<p>第1行是任务队列信息，其参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>17:29:09</td>
+<td>表示当前时间</td>
+</tr>
+<tr>
+<td>up 53days</td>
+<td>系统运行时间 格式为时：分</td>
+</tr>
+<tr>
+<td>1 users</td>
+<td>当前登录用户数</td>
+</tr>
+<tr>
+<td>load average: 0.00, 0.01, 0.05</td>
+<td>系统负载，即任务队列的平均长度。 三个数值分别为 1分钟、5分钟、15分钟前到现在的平均值。</td>
+</tr>
+</tbody></table>
+<p>load average: 如果这个数除以逻辑CPU的数量，结果高于5的时候就表明系统在超负荷运转了。</p>
+<h3 id="2、第2行（进程信息）"><a href="#2、第2行（进程信息）" class="headerlink" title="2、第2行（进程信息）"></a>2、第2行（进程信息）</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Tasks: 69 total, 2 running, 67 sleeping, 0 stopped, 0 zombie </span><br><span class="line"></span><br><span class="line">69 total   进程总数</span><br><span class="line">2 running   正在运行的进程数</span><br><span class="line">158 sleeping   睡眠的进程数</span><br><span class="line">0 stopped   停止的进程数</span><br><span class="line">0 zombie   僵尸进程数</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、第3行（CPU信息）"><a href="#3、第3行（CPU信息）" class="headerlink" title="3、第3行（CPU信息）"></a>3、第3行（CPU信息）</h3><p>有多个CPU时会超过两行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">%Cpu(s): 0.0 us, 0.0 sy, 0.0 ni, 100.0 id, 0.0 wa, 0.0 hi, 0.0 si, 0.0 st</span><br><span class="line"></span><br><span class="line">0.0 us   用户空间占用CPU百分比</span><br><span class="line">0.0 sy   内核空间占用CPU百分比</span><br><span class="line">0.0 ni   用户进程空间内改变过优先级的进程占用CPU百分比</span><br><span class="line">100.0 id   空闲CPU百分比</span><br><span class="line">0.0 wa   等待输入输出的CPU时间百分比</span><br><span class="line">0.0 hi   硬中断（Hardware IRQ）占用CPU的百分比</span><br><span class="line">0.0 si   软中断（Software Interrupts）占用CPU的百分比</span><br><span class="line">0.0 st   用于有虚拟cpu的情况，用来指示被虚拟机偷掉的cpu时间。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、第4、5行"><a href="#4、第4、5行" class="headerlink" title="4、第4、5行"></a>4、第4、5行</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">KiB Mem: 1016168 total, 68820used, 567720 free, 379628 buffers </span><br><span class="line">KiB Swap: 0 total, 0 free ,0 used,.293196 avail Mem</span><br></pre></td></tr></table></figure>
+
+
+<p>第4、5行为内存信息 </p>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>KiB Mem: 1016168 total</td>
+<td>物理内存总量</td>
+</tr>
+<tr>
+<td>567720 used</td>
+<td>使用的物理内存总量</td>
+</tr>
+<tr>
+<td>68820 free</td>
+<td>空闲内存总量</td>
+</tr>
+<tr>
+<td>379628 buffers（buff&#x2F;cache）</td>
+<td>用作内核缓存的内存量</td>
+</tr>
+<tr>
+<td>KiB Swap: 0 total</td>
+<td>交换区总量</td>
+</tr>
+<tr>
+<td>0 used</td>
+<td>使用的交换区总量</td>
+</tr>
+<tr>
+<td>0 free</td>
+<td>空闲交换区总量</td>
+</tr>
+<tr>
+<td>0 cached Mem</td>
+<td>缓冲的交换区总量。</td>
+</tr>
+<tr>
+<td>293196 avail Mem</td>
+<td>代表可用于进程下一次分配的物理内存数量</td>
+</tr>
+</tbody></table>
+<p>上述最后提到的缓冲的交换区总量，这里解释一下，所谓缓冲的交换区总量，即内存中的内容被换出到交换区，而后又被换入到内存，但使用过的交换区尚未被覆盖，该数值即为这些内容已存在于内存中的交换区的大小。相应的内存再次被换出时可不必再对交换区写入。</p>
+<p>计算可用内存数有一个近似的公式：<br>第四行的free + 第四行的buffers + 第五行的cached</p>
+<h2 id="四、进程信息"><a href="#四、进程信息" class="headerlink" title="四、进程信息"></a>四、进程信息</h2><table>
+<thead>
+<tr>
+<th>列名</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PID</td>
+<td>进程id</td>
+</tr>
+<tr>
+<td>PPID</td>
+<td>父进程id</td>
+</tr>
+<tr>
+<td>RUSER</td>
+<td>Real user name</td>
+</tr>
+<tr>
+<td>UID</td>
+<td>进程所有者的用户id</td>
+</tr>
+<tr>
+<td>USER</td>
+<td>进程所有者的用户名</td>
+</tr>
+<tr>
+<td>GROUP</td>
+<td>进程所有者的组名</td>
+</tr>
+<tr>
+<td>TTY</td>
+<td>启动进程的终端名。不是从终端启动的进程则显示为</td>
+</tr>
+<tr>
+<td>PR</td>
+<td>优先级</td>
+</tr>
+<tr>
+<td>NI</td>
+<td>nice值。负值表示高优先级，正值表示低优先级</td>
+</tr>
+<tr>
+<td>P</td>
+<td>最后使用的CPU，仅在多CPU环境下有意义</td>
+</tr>
+<tr>
+<td>%CPU</td>
+<td>上次更新到现在的CPU时间占用百分比</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>进程使用的CPU时间总计，单位秒</td>
+</tr>
+<tr>
+<td>TIME+</td>
+<td>进程使用的CPU时间总计，单位1&#x2F;100秒</td>
+</tr>
+<tr>
+<td>%MEM</td>
+<td>进程使用的物理内存百分比</td>
+</tr>
+<tr>
+<td>VIRT</td>
+<td>进程使用的虚拟内存总量，单位kb。VIRT&#x3D;SWAP+RES</td>
+</tr>
+<tr>
+<td>SWAP</td>
+<td>进程使用的虚拟内存中，被换出的大小，单位kb</td>
+</tr>
+<tr>
+<td>RES</td>
+<td>进程使用的、未被换出的物理内存大小，单位kb。RES&#x3D;CODE+DATA</td>
+</tr>
+<tr>
+<td>CODE</td>
+<td>可执行代码占用的物理内存大小，单位kb</td>
+</tr>
+<tr>
+<td>DATA</td>
+<td>可执行代码以外的部分(数据段+栈)占用的物理内存大小，单位kb</td>
+</tr>
+<tr>
+<td>SHR</td>
+<td>共享内存大小，单位kb</td>
+</tr>
+<tr>
+<td>nFLT</td>
+<td>页面错误次数</td>
+</tr>
+<tr>
+<td>nDRT</td>
+<td>最后一次写入到现在，被修改过的页面数。</td>
+</tr>
+<tr>
+<td>S</td>
+<td>进程状态。D&#x3D;不可中断的睡眠状态 R&#x3D;运行 S&#x3D;睡眠 T&#x3D;跟踪&#x2F;停止 Z&#x3D;僵尸进程</td>
+</tr>
+<tr>
+<td>COMMAND</td>
+<td>命令名&#x2F;命令行</td>
+</tr>
+<tr>
+<td>WCHAN</td>
+<td>若该进程在睡眠，则显示睡眠中的系统函数名</td>
+</tr>
+<tr>
+<td>Flags</td>
+<td>任务标志</td>
+</tr>
+</tbody></table>
+<p>其他<br>默认进入top时，各进程是按照CPU的占用量来排序的。</p>
+<h2 id="五、键盘数字“1”监控每个逻辑CPU的状况"><a href="#五、键盘数字“1”监控每个逻辑CPU的状况" class="headerlink" title="五、键盘数字“1”监控每个逻辑CPU的状况"></a>五、键盘数字“1”监控每个逻辑CPU的状况</h2><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118152057.png" alt="img"></p>
+<h2 id="六、敲击键盘‘b’（打开关闭加亮效果）top视图变换如下："><a href="#六、敲击键盘‘b’（打开关闭加亮效果）top视图变换如下：" class="headerlink" title="六、敲击键盘‘b’（打开关闭加亮效果）top视图变换如下："></a>六、敲击键盘‘b’（打开关闭加亮效果）top视图变换如下：</h2><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118152101.png" alt="img"></p>
+<p>PID为9为当前top视图中唯一的运行态进程。也可以敲击键盘‘y’来打开或者关闭运行态进程的加亮效果。</p>
+<h2 id="七、敲击键盘‘x’（打开-关闭排序列的加亮效果）"><a href="#七、敲击键盘‘x’（打开-关闭排序列的加亮效果）" class="headerlink" title="七、敲击键盘‘x’（打开&#x2F;关闭排序列的加亮效果）"></a>七、敲击键盘‘x’（打开&#x2F;关闭排序列的加亮效果）</h2><p>top视图变换如下：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118152104.png" alt="img"> </p>
+<p>可以看到现在是按”%CPU”进行排序的，可以按”shift+&gt;”或者”shift+&lt;”左右改变排序序列。</p>
+<h2 id="八、敲击”f”，改变进程显示字段"><a href="#八、敲击”f”，改变进程显示字段" class="headerlink" title="八、敲击”f”，改变进程显示字段"></a>八、敲击”f”，改变进程显示字段</h2><p>在top基本视图中，敲击”f”进入另一个视图，在这里可以编辑基本视图中的显示字段：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118152107.png" alt="img"></p>
+<p>用上下键选择选项，按下空格键可以决定是否在基本视图中显示这个选项。</p>
+<p>top命令是一个非常强大的功能，但是它监控的最小单位是进程，如果想监控更小单位时，就需要用到ps或者netstate命令来满足我们的要求。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/05.%E6%9E%84%E9%80%A0%E7%A8%8B%E5%BA%8F%E9%80%BB%E8%BE%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/56.%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/91.%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/94.%E7%BD%91%E7%BB%9CAPI%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/99.%E9%9D%A2%E8%AF%95%E4%B8%AD%E7%9A%84%E5%85%AC%E5%85%B1%E9%97%AE%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example02/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework03/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_2/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/16%E3%80%81Linux%E4%B8%ADtop%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/16%E3%80%81Linux%E4%B8%ADtop%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/16%E3%80%81Linux%E4%B8%ADtop%E5%91%BD%E4%BB%A4%E5%8F%82%E6%95%B0%E8%AF%A6%E8%A7%A3/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 17.178463013786494px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 10.617932077386047px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 11.287519497102407px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 18.71106422031496px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sun Dec 15 2024 06:02:47 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sun Dec 15 2024 06:02:47 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

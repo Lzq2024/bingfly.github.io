@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Jenkins详细教程"><a href="#Jenkins详细教程" class="headerlink" title="Jenkins详细教程"></a>Jenkins详细教程</h1><h1 id="一、jenkins是什么？"><a href="#一、jenkins是什么？" class="headerlink" title="一、jenkins是什么？"></a>一、jenkins是什么？</h1><p>​    Jenkins是一个开源的、提供友好操作界面的持续集成(CI)工具，起源于Hudson（Hudson是商用的），主要用于持续、自动的构建&#x2F;测试软件项目、监控外部任务的运行（这个比较抽象，暂且写上，不做解释）。Jenkins用Java语言编写，可在Tomcat等流行的servlet容器中运行，也可独立运行。通常与版本管理工具(SCM)、构建工具结合使用。常用的版本控制工具有SVN、GIT，构建工具有Maven、Ant、Gradle。</p>
+<h1 id="二、CI-CD是什么？"><a href="#二、CI-CD是什么？" class="headerlink" title="二、CI&#x2F;CD是什么？"></a>二、CI&#x2F;CD是什么？</h1><p>​     CI(Continuous integration，中文意思是持续集成)是一种软件开发时间。持续集成强调开发人员提交了新代码之后，立刻进行构建、（单元）测试。根据测试结果，我们可以确定新代码和原有代码能否正确地集成在一起。借用网络图片对CI加以理解。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101222.jpg" alt="img"></p>
+<p>CI</p>
+<p>​    CD(Continuous Delivery， 中文意思持续交付)是在持续集成的基础上，将集成后的代码部署到更贴近真实运行环境(类生产环境)中。比如，我们完成单元测试后，可以把代码部署到连接数据库的Staging环境中更多的测试。如果代码没有问题，可以继续手动部署到生产环境。下图反应的是CI&#x2F;CD 的大概工作模式。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101231.jpg" alt="img"></p>
+<p>CI&#x2F;CD</p>
+<h1 id="三、使用Jenkins进行PHP代码-单元-测试、打包。"><a href="#三、使用Jenkins进行PHP代码-单元-测试、打包。" class="headerlink" title="三、使用Jenkins进行PHP代码(单元)测试、打包。"></a>三、使用Jenkins进行PHP代码(单元)测试、打包。</h1><p>​    Jenkins是一个强大的CI工具，虽然本身使用Java开发，但也能用来做其他语言开发的项目CI。下面讲解如何使用Jenkins创建一个构建任务。</p>
+<p> 登录Jenkins， 点击左侧的新建，创建新的构建任务。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101234.png" alt="img"></p>
+<p>跳转到如下界面。任务名称可以自行设定，但需要全局唯一。输入名称后选择构建一个自由风格的软件项目(其他选项不作介绍)。并点击下方的确定按钮即创建了一个构建任务。之后会自动跳转到该job的配置页面。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101237.png" alt="img"></p>
+<p>新建自由风格的软件项目</p>
+<p>下图是构建任务设置界面，可以看到上方的几个选项**”General”, “源码管理”， “构建触发器”，”构建环境”， “构建”， “构建后操作”**。下面逐一介绍。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101239.png" alt="img"></p>
+<h2 id="1-General"><a href="#1-General" class="headerlink" title="1.General"></a>1.General</h2><p>General是构建任务的一些基本配置。名称，描述之类的。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101241.png" alt="img"></p>
+<p>General</p>
+<p><strong>项目名称:</strong> 是刚才创建构建任务步骤设置的，当然在这里也可以更改。</p>
+<p><strong>描述:</strong> 对构建任务的描述。 </p>
+<p><strong>丢弃旧的构建：</strong> 服务器资源是有限的，有时候保存了太多的历史构建，会导致Jenkins速度变慢，并且服务器硬盘资源也会被占满。当然下方的”保持构建天数” 和 保持构建的最大个数是可以自定义的，需要根据实际情况确定一个合理的值。</p>
+<p>其他几个选项在这里不做介绍，有兴趣的可以查看Jenkins”帮助信息”， 会有一个大概的介绍。不过这些”帮助信息”都是英文的。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101243.png" alt="img"></p>
+<p>点击右方的这些”问号”查看”帮助信息”</p>
+<h2 id="2-源码管理"><a href="#2-源码管理" class="headerlink" title="2.源码管理"></a>2.源码管理</h2><p>源码管理就是配置你代码的存放位置。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101244.png" alt="img"></p>
+<p>源码管理</p>
+<p> <strong>Git:</strong> 支持主流的github 和gitlab代码仓库。因我们的研发团队使用的是gitlab，所以下面我只会对该项进行介绍。</p>
+<p><strong>Repository URL</strong>：仓库地址</p>
+<p><strong>Credentials</strong>：凭证。可以使用HTTP方式的用户名密码，也可以是RSA文件。 但要通过后面的”ADD”按钮添加凭证。</p>
+<p><strong>Branches to build</strong>：构建的分支。*&#x2F;master表示master分支，也可以设置为其他分支。</p>
+<p><strong>源码浏览器</strong>：你所使用的代码仓库管理工具，如github, gitlab. </p>
+<p><strong>URL</strong>：填入上方的仓库地址即可。</p>
+<p><strong>Version: 8.7</strong>  这个是我们gitlab服务器的版本。</p>
+<p><strong>Subversion：</strong>就是SVN，这里不作介绍。</p>
+<p>**<br>**</p>
+<h2 id="3-构建触发器"><a href="#3-构建触发器" class="headerlink" title="3.构建触发器"></a><strong>3.构建触发器</strong></h2><p>构建触发器，顾名思义，就是构建任务的触发器。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101247.png" alt="img"></p>
+<p><strong>触发远程构建(例如，使用脚本):</strong> 该选项会提供一个接口，可以用来在代码层面触发构建。这里不做介绍，后期可能会用到。</p>
+<p><strong>Build after other projects are built：</strong> 该选项意思是”在其他projects构建后构建”。这里不作介绍，后期可能会用到该选项。</p>
+<p><strong>Build periodically：</strong> 周期性的构建。很好理解，就是每隔一段时间进行构建。日程表类似    linux crontab书写格式。如下图的设置，表示每隔30分钟进行一次构建。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101250.png" alt="img"></p>
+<p>周期构建</p>
+<p><strong>Build when a change is pushed to GitLab：</strong>当有更改push到gitlab代码仓库，即触发构建。后面会有一个触发构建的地址，一般被称为webhooks。需要将这个地址配置到gitlab中，webhooks如何配置后面介绍。这个是常用的构建触发器。</p>
+<p><strong>Poll SCM：</strong>该选项是配合上面这个选项使用的。当代码仓库发生改动，jenkins并不知道。需要配置这个选项，周期性的去检查代码仓库是否发生改动。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101252.png" alt="img"></p>
+<p>十分钟检查一次</p>
+<h1 id="4-构建环境"><a href="#4-构建环境" class="headerlink" title="4.构建环境"></a>4.构建环境</h1><p>构建环境就是构建之前的一些准备工作，如指定构建工具(在这里我使用ant)。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101254.png" alt="img"></p>
+<p>构建环境中的构建工具</p>
+<p><strong>With Ant：</strong>选择这个工具，并指定ant版本和jdk版本。这两个工具的版本我都事先在服务器上安装，并且在jenkins全局工具中配置好了。</p>
+<p>其他选项不作介绍，同样可以查看”帮助信息” 获得使用帮助。</p>
+<h1 id="5-构建"><a href="#5-构建" class="headerlink" title="5.构建"></a>5.构建</h1><p>​    选择下方的增加构建步骤。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101256.png" alt="img"></p>
+<p>增加构建步骤</p>
+<p>可以选择的项很多。这里就介绍”Invoke Ant” 和”Execute shell”.</p>
+<p><strong>Eexcute shell</strong>： 执行shell命令，该工具是针对linux环境的，windows环境也有对应的工      具”Execute Windows batch command”。 在构建之前，可能我们需要执行一些命令，比如压缩包的解压之类的。为了演示，我就简单的执行 “echo $RANDOM” 这样的linux shell下生产随机数命令。</p>
+<p><strong>Invoke Ant</strong>：Ant是一款java项目构建工具，当然也能用来构建php。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101258.png" alt="img"></p>
+<p><strong>Ant Version</strong>： 选择Ant版本。这个ant版本是安装在jenkins服务器上的版本，并且需要在jenkins”系统工具”中设置好。</p>
+<p><strong>Targets</strong>：要执行的操作，一行一个操作任务。以上图为例，build是构建，tar是打包。</p>
+<p><strong>Build File:</strong> 是Ant构建的配置文件，如果不指定，则是在项目路径下的workspace目录中的build.xml。build.xml文件具体怎么配置，后面再细讲。</p>
+<p><strong>properties:</strong> 设定一些变量，这些变量可以在build.xml 中被引用。</p>
+<p><strong>Send files or execute commands over SSH：</strong>发送文件到远程主机或执行命令(脚本)</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101301.png" alt="img"></p>
+<p><strong>Name</strong>: SSH Server的名称。SSH Server可以在jenkins-系统设置中配置。</p>
+<p><strong>source files</strong>: 需要发送给远程主机的源文件。</p>
+<p><strong>Remove prefix:</strong> 移除前面的路径。如果不设置这个参数，则远程主机会自动创建构建源 source files 包含的那个路径。</p>
+<p><strong>Remote directory</strong>: 远程主机目录。</p>
+<p><strong>Exec command</strong>：在远程主机上执行的命令，或者执行的脚本。</p>
+<h1 id="6-构建后操作"><a href="#6-构建后操作" class="headerlink" title="6.构建后操作"></a><strong>6.构建后操作</strong></h1><p>​    构建后操作，就是对project构建完成后的一些后续操作，比如生成相应的代码测试报告。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101303.png" alt="img"></p>
+<p>**<br>**</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101306.png" alt="img"></p>
+<p>邮件通知</p>
+<p><strong>Publish Clover PHP Coverage Report：</strong>发布代码覆盖率xml格式的文件报告。路径会在”build.xml”文件中定义</p>
+<p><strong>Publish HTML reports</strong>：发布代码覆盖率的HTML报告。 </p>
+<p><strong>Report Crap:</strong> 发布crap报告<strong>。</strong></p>
+<p><strong>E-mail Notification:</strong> 邮件通知，构建完成后发邮件到指定的邮箱。</p>
+<p><strong>以上配置完成后，点击保存。</strong></p>
+<h1 id="7-其他相关配置"><a href="#7-其他相关配置" class="headerlink" title="7.其他相关配置"></a><strong>7.其他相关配置</strong></h1><p> <strong>SSH Server配置</strong></p>
+<p>登录jenkins – 系统管理 – 系统设置</p>
+<p>配置请看下图</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101308.png" alt="img"></p>
+<p>SSH SERVER</p>
+<p><strong>SSH Servers:</strong> 由于jenkins服务器公钥文件我已经配置好，所以之后新增SSH Servers 只需要配置这一项即可。 </p>
+<p><strong>Name：</strong> 自定义，需要全局唯一。</p>
+<p><strong>HostName:</strong> 主机名，直接用ip地址即可。</p>
+<p><strong>Username:</strong> 新增Server的用户名，这里配置的是root。</p>
+<p><strong>Remote Directory:</strong> 远程目录。jenkins服务器发送文件给新增的server默认是在这个目录。</p>
+<h3 id="Ant-配置文件-“build-xml”"><a href="#Ant-配置文件-“build-xml”" class="headerlink" title="Ant 配置文件 “build.xml”"></a>Ant 配置文件 “build.xml”</h3><p>接下来讲解Ant 构建配置文件”build.xml”。 之所以是build.xml 这是因为官方惯例。就好比任何编程语言的入门都会是打印”Hello world”. 你也可以用其他名称代替”build.xml” .</p>
+<p>下面针对配置文件”build.xml” 关键配置进行说明。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101311.png" alt="img"></p>
+<p>project name就是项目名称，和jenkins所创建的对应。</p>
+<p>target name&#x3D;”build” 就是构建的名称，和jenkins构建步骤 那里的targets对应。depends指明构建需要进行的一些操作。</p>
+<p>property 用来设置变量。</p>
+<p>fileset 这一行指明了一个文件夹，用include来指明需要包含的文件，exclude指明不包含的文件，”tar”即是打包这个文件夹中匹配到的文件。</p>
+<p>下面的这些target都是一些实际的操作步骤，比如make_runtime这个”target” 就是创建了一些目录。phpcs就是利用PHP_CodeSniffer这个工具 对PHP代码规范与质量检查工具。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101314.png" alt="img"></p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101316.png" alt="img"></p>
+<p>最后这个target “tar” 就是打包文件。因为上面的build 并没有包含这个target，所以默认情况下，执行build是不会打包文件的，所以在jenkins project配置界面，Ant构建那一步的targets，我们才会有”build” 和 “tar” 这两个targets。如果build.xml 中 “build”这个target depends中已经包含”tar” , 就不需要在jenkins中增加”tar”了。</p>
+<p>其他一些target 都是利用一些工具对php代码的操作，比如phpunit是进行php单元测试。这一些方面我没有深入的研究，只是进行了一些简单的配置，毕竟不是这方面的专业人士。</p>
+<h3 id="配置-Gitlab-webhooks"><a href="#配置-Gitlab-webhooks" class="headerlink" title="配置 Gitlab webhooks"></a>配置 Gitlab webhooks</h3><p>在gitlab的project页面 打开<strong>settings</strong>，再打开 <strong>web hooks</strong> 。点击**”ADD WEB HOOK”** 添加webhook。把之前jenkins配置中的那个url 添加到这里，添加完成后，点击**”TEST HOOK”**进行测试，如果显示SUCCESS 则表示添加成功。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101318.png" alt="img"></p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101320.png" alt="img"></p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101322.png" alt="img"></p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101324.png" alt="img"></p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101326.png" alt="img"></p>
+<p>配置phpunit.xml</p>
+<p>phpunit.xml是phpunit这个工具用来单元测试所需要的配置文件。这个文件的名称同样也是可以自定义的，但是要在”build.xml”中配置好名字就行。默认情况下，用”phpunit.xml”, 则不需要在”build.xml”中配置文件名。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101328.png" alt="img"></p>
+<p>build.xml中phpunit配置</p>
+<p>fileset dir 指定单元测试文件所在路径，include指定包含哪些文件，支持通配符匹配。当然也可以用exclude关键字指定不包含的文件。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101330.png" alt="img"></p>
+<h1 id="四、进行jenkins-project-构建"><a href="#四、进行jenkins-project-构建" class="headerlink" title="四、进行jenkins project 构建"></a>四、进行jenkins project 构建</h1><p>第一次配置好jenkins project之后，会自动触发一次构建。此后，每当有commit 提交到master分支（前面设置的是master分支，也可以设置为其他分支），就会触发一次构建。当然也可以在project页面手动触发构建。点击左边的”立即构建” 手动触发构建。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101332.png" alt="img"></p>
+<p>手动触发构建</p>
+<h1 id="五、构建结果说明"><a href="#五、构建结果说明" class="headerlink" title="五、构建结果说明"></a>五、构建结果说明</h1><h4 id="构建状态"><a href="#构建状态" class="headerlink" title="构建状态"></a><strong>构建状态</strong></h4><p><strong>Successful蓝色</strong>：构建完成，并且被认为是稳定的。</p>
+<p><strong>Unstable黄色</strong>：构建完成，但被认为是不稳定的。</p>
+<p><strong>Failed红色</strong>：构建失败。</p>
+<p><strong>Disable灰色</strong>：构建已禁用</p>
+<h4 id="构建稳定性"><a href="#构建稳定性" class="headerlink" title="构建稳定性"></a>构建稳定性</h4><p>构建稳定性用天气表示：<strong>晴、晴转多云、多云、小雨、雷阵雨</strong>。天气越好表示构建越稳定，反之亦然。</p>
+<h4 id="构建历史界面"><a href="#构建历史界面" class="headerlink" title="构建历史界面"></a><strong>构建历史界面</strong></h4><p> <strong>console output：</strong> 输出构建的日志信息</p>
+<h1 id="六、jenkins权限管理"><a href="#六、jenkins权限管理" class="headerlink" title="六、jenkins权限管理"></a><strong>六、jenkins权限管理</strong></h1><p>由于jenkins默认的权限管理体系不支持用户组或角色的配置，因此需要安装第三发插件来支持角色的配置，本文将使用Role Strategy Plugin。基于这个插件的权限管理设置请参考这篇文章:<a target="_blank" rel="noopener" href="https://blog.csdn.net/russ44/article/details/52276222%EF%BC%8C%E8%BF%99%E9%87%8C%E4%B8%8D%E4%BD%9C%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D%E3%80%82">https://blog.csdn.net/russ44/article/details/52276222，这里不作详细介绍。</a></p>
+<p>至此，就可以用jenkins周而复始的进行CI了，当然jenkins是一个强大的工具，功能绝不仅仅是以上这些，其他方面要是以后用到，我会更新到这篇文章中。有疑问欢迎在下方留言。</p>
+<p>最后，放上一张Jenkins的思维导图</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125101335.png" alt="img"></p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/15%E3%80%81Linux%20%E6%9F%A5%E8%AF%A2%20OS%E3%80%81CPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/">ELK：收集Docker容器日志</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/04.%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/56.%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/87.%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/list_by_javascript/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_1/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 10.272219443349092px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 9.735548788528249px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 8.973517427589627px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 16.815248804933297px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sun Dec 15 2024 06:02:47 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sun Dec 15 2024 06:02:47 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

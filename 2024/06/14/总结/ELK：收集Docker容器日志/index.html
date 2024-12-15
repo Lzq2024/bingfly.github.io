@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>ELK：收集Docker容器日志 | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>ELK：收集Docker容器日志</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/">ELK：收集Docker容器日志</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/ELK/">ELK</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-14
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/">ELK：收集Docker容器日志</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-14
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/ELK/">ELK</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="ELK：收集Docker容器日志"><a href="#ELK：收集Docker容器日志" class="headerlink" title="ELK：收集Docker容器日志"></a>ELK：收集Docker容器日志</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><hr>
+<hr>
+<ul>
+<li>随着容器化时代的到来，容器化部署成为一种很方便的部署方式，收集容器日志也成为刚需。本篇文档从 <strong>容器化部署ELK系统，收集容器日志，自动建立项目索引，ElastAlert日志监控报警，定时删除过期日志索引文件</strong> 这几个方面来介绍ELK。</li>
+<li>大部分配置方法多是看官方文档，理解很辛苦，查了很多文章，走了很多弯路，分享出来，希望让有此需求的朋友少走弯路，如有错误或理解不当的地方，请批评指正。</li>
+<li>逻辑结构如下图</li>
+</ul>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210223221514.png" alt="img-w500"></p>
+<h2 id="ELK之容器日志收集及索引建立"><a href="#ELK之容器日志收集及索引建立" class="headerlink" title="ELK之容器日志收集及索引建立"></a>ELK之容器日志收集及索引建立</h2><hr>
+<hr>
+<ul>
+<li>Docker环境下，拉取官方镜像，官方镜像地址 <a target="_blank" rel="noopener" href="https://www.docker.elastic.co/">Docker @ Elastic</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker pull docker.elastic.co/elasticsearch/elasticsearch:6.6.2</span><br><span class="line">docker pull docker.elastic.co/kibana/kibana:6.6.2</span><br><span class="line">docker pull docker.elastic.co/beats/filebeat:6.6.2</span><br><span class="line">docker pull docker.elastic.co/logstash/logstash:6.6.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="Elasticsearch-容器部署"><a href="#Elasticsearch-容器部署" class="headerlink" title="Elasticsearch 容器部署"></a>Elasticsearch 容器部署</h3><h4 id="Elasticsearch-启动命令说明"><a href="#Elasticsearch-启动命令说明" class="headerlink" title="Elasticsearch 启动命令说明"></a>Elasticsearch 启动命令说明</h4><ul>
+<li>启动两个端口，9200为数据查询和写入端口，也即是业务端口，9300为集群端口，同步集群数据，此处我单节点部署</li>
+<li>指定日志输出格式为json格式，默认情况下也为json格式，默认输出路径 <code>/var/lib/docker/containers/*/*.log</code></li>
+<li>日志文件最多保留三个，每个最多10M</li>
+<li>容器开机自启</li>
+<li>传递参数为单节点部署</li>
+<li>数据存储映射至宿主机</li>
+<li>需要给 <code>/data/elasticsearch</code> 赋予权限，否则报权限不足的错误</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">    --user root \</span><br><span class="line">    -p 127.0.0.1:9200:9200 \</span><br><span class="line">    -p 9300:9300 \</span><br><span class="line">    --log-driver json-file \</span><br><span class="line">    --log-opt max-size=10m \</span><br><span class="line">    --log-opt max-file=3 \</span><br><span class="line">    --name elasticsearch \</span><br><span class="line">    --restart=always \</span><br><span class="line">    -e <span class="string">&quot;discovery.type=single-node&quot;</span> \</span><br><span class="line">    -v /data/elasticsearch:/usr/share/elasticsearch/data \</span><br><span class="line">    docker.elastic.co/elasticsearch/elasticsearch:6.6.2</span><br><span class="line">    </span><br><span class="line"><span class="built_in">chmod</span> 777 -R /data/elasticsearch</span><br></pre></td></tr></table></figure>
+
+<h3 id="Logstash-容器部署"><a href="#Logstash-容器部署" class="headerlink" title="Logstash 容器部署"></a>Logstash 容器部署</h3><h4 id="Logstash-配置文件说明"><a href="#Logstash-配置文件说明" class="headerlink" title="Logstash 配置文件说明"></a>Logstash 配置文件说明</h4><ul>
+<li>配置文件映射至至宿主机</li>
+<li><code>match =&gt; &#123; &quot;message&quot; =&gt; &quot;%&#123;TIMESTAMP_ISO8601:log-timestamp&#125; %&#123;LOGLEVEL:log-level&#125; %&#123;JAVALOGMESSAGE:log-msg&#125;&quot; &#125;</code> 将日志做简单拆分, 时间戳重命名为 <code>log-timestamp</code>，日志级别重命名为 <code>log-msg</code>，如果拆分成功输出日志中就会产生这两个字段</li>
+<li>通过 <code>remove_field =&gt; [&quot;beat&quot;]</code> 移除无用字段</li>
+<li>输出到elasticsearch</li>
+<li>索引通过 容器名称-时间 建立</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mkdir</span> <span class="string">-pv</span> <span class="string">/data/conf</span></span><br><span class="line"><span class="string">cat</span> <span class="string">&gt;</span> <span class="string">/data/conf/logstash.conf</span> <span class="string">&lt;&lt;</span> <span class="string">&quot;EOF&quot;</span></span><br><span class="line"><span class="string">input</span> &#123;</span><br><span class="line">  <span class="string">beats</span> &#123;</span><br><span class="line">    <span class="string">host</span> <span class="string">=&gt;</span> <span class="string">&quot;0.0.0.0&quot;</span></span><br><span class="line">    <span class="string">port</span> <span class="string">=&gt;</span> <span class="string">&quot;5043&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">filter</span> &#123;</span><br><span class="line">  <span class="string">grok</span> &#123;</span><br><span class="line">    <span class="string">match</span> <span class="string">=&gt;</span> &#123; <span class="string">&quot;message&quot;</span> <span class="string">=&gt;</span> <span class="string">&quot;<span class="template-variable">%&#123;TIMESTAMP_ISO8601:log-timestamp&#125;</span> <span class="template-variable">%&#123;LOGLEVEL:log-level&#125;</span> <span class="template-variable">%&#123;JAVALOGMESSAGE:log-msg&#125;</span>&quot;</span> &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="string">mutate</span> &#123;</span><br><span class="line"><span class="comment">#    remove_field =&gt; [&quot;message&quot;]</span></span><br><span class="line">    <span class="string">remove_field</span> <span class="string">=&gt;</span> [<span class="string">&quot;beat&quot;</span>]</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">output</span> &#123;</span><br><span class="line">  <span class="string">stdout</span> &#123; <span class="string">codec</span> <span class="string">=&gt;</span> <span class="string">rubydebug</span> &#125;</span><br><span class="line">  <span class="string">elasticsearch</span> &#123;</span><br><span class="line">        <span class="string">hosts</span> <span class="string">=&gt;</span> [ <span class="string">&quot;elasticsearch:9200&quot;</span> ]</span><br><span class="line">        <span class="string">index</span> <span class="string">=&gt;</span> <span class="string">&quot;<span class="template-variable">%&#123;containername&#125;</span>-<span class="template-variable">%&#123;+YYYY.MM.dd&#125;</span>&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Logstash-启动命令说明"><a href="#Logstash-启动命令说明" class="headerlink" title="Logstash 启动命令说明"></a>Logstash 启动命令说明</h4><ul>
+<li>通过 <code>--link elasticsearch</code> 连接 <code>elasticsearch</code> 容器，并生成环境变量在容器中使用</li>
+<li>配置文件映射如容器</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 5043:5043 -d \</span><br><span class="line">    --user root \</span><br><span class="line">    --log-driver json-file \</span><br><span class="line">    --log-opt max-size=10m \</span><br><span class="line">    --log-opt max-file=3 \</span><br><span class="line">    --name logstash \</span><br><span class="line">    --<span class="built_in">link</span> elasticsearch \</span><br><span class="line">    --restart=always \</span><br><span class="line">    -v /data/conf/logstash.conf:/usr/share/logstash/pipeline/logstash.conf \</span><br><span class="line">    docker.elastic.co/logstash/logstash:6.6.2</span><br></pre></td></tr></table></figure>
+
+<h3 id="Kibana容器部署"><a href="#Kibana容器部署" class="headerlink" title="Kibana容器部署"></a>Kibana容器部署</h3><ul>
+<li>启动参数参考上述组件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 5601:5601 -d \</span><br><span class="line">    --user root \</span><br><span class="line">    --log-driver json-file \</span><br><span class="line">    --log-opt max-size=10m \</span><br><span class="line">    --log-opt max-file=3 \</span><br><span class="line">    --name kibana \</span><br><span class="line">    --<span class="built_in">link</span> elasticsearch \</span><br><span class="line">    --restart=always \</span><br><span class="line">    -e ELASTICSEARCH_URL=http://elasticsearch:9200 \</span><br><span class="line">    -v /data/conf/kibana.yml:/usr/share/kibana/config/kibana.yml \</span><br><span class="line">    -v /data/elastalert-kibana-plugin:/usr/share/kibana/plugins/elastalert-kibana-plugin \</span><br><span class="line">    docker.elastic.co/kibana/kibana:6.6.2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过服务器IP地址即可访问Kibana web <code>http://IP:5601</code></li>
+</ul>
+<h3 id="Filebeat-容器部署"><a href="#Filebeat-容器部署" class="headerlink" title="Filebeat 容器部署"></a>Filebeat 容器部署</h3><h4 id="Filebeat-配置文件说明"><a href="#Filebeat-配置文件说明" class="headerlink" title="Filebeat 配置文件说明"></a>Filebeat 配置文件说明</h4><ul>
+<li>Filebeat是一个轻量级的日志收集工具，是Elastic的Beat组成员，默认情况下，docker输出的日志格式为json格式，需要解码才方便查看日志的路径为 <code>/var/lib/docker/containers/*/*.log</code></li>
+<li><code>- type: log</code> 选择filebeat输入类型选择log，之后通过解码json的配置将docker输出的日志解码，输入类型也可选择docker，但是我试过目前版本该数据类型有些功能受限，比如后面rename时，只能rename一个</li>
+<li>json解码： 必须至少指定设置其中之一来启用JSON解析模式，建议三行都加上，不然，有些功能会有问题</li>
+<li>json.overwrite_keys #如果启用了keys_under_root和此设置，那么来自解码的JSON对象的值将覆盖Filebeat通常添加的字段（type, source, offset,等）以防冲突。</li>
+<li>json.add_error_key #如果启用此设置，则在出现JSON解组错误或配置中定义了message_key但无法使用的情况下，Filebeat将添加“error.message”和“error.type：json”键。</li>
+<li>json.message_key #一个可选的配置设置，用于指定应用行筛选和多行设置的JSON密钥。 如果指定，键必须位于JSON对象的顶层，且与键关联的值必须是字符串，否则不会发生过滤或多行聚合。</li>
+<li>多行合并： 将多行日志合并成一条，比如java的报错日志，规则为，如果不是以四个数字，即年份开头的日志合并到上一条日志当中</li>
+<li>排除或删除通配符行： 即排除含有相关关键字的行，或只收集含有相关关键字的行</li>
+<li>排除通配文件： 即不读取该含该字符的文件的日志</li>
+<li>添加docker元数据： 将docker容器的相关数据收集起来，方便作为索引的字段， <code>match_source_index: 4</code> 为获取docker数据的索引，其数据为json格式，索引太低可能无法获取关键docker数据</li>
+<li>处理器重命名和删除无用字段： <code>- rename:</code> 将上面收集的元数据重命名来提升其索引等级，以便交给logstash来处理，其中 <code>docker.container.name</code> 为docker容器的名字，重命名为 <code>containername</code>字段， <code>- drop_fields:</code> 清除掉无用索引数据，不输出到 output</li>
+<li>日志输出：日志输出的几种方式 <code>output.file</code> 输出到文件，<code>output.console</code> 输出到标准输出，通过 <code>docker logs containName</code> 查看，该两种输出方便调试</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">&gt;</span> <span class="string">/data/conf/filebeat.yml</span> <span class="string">&lt;&lt;</span> <span class="string">&quot;EOF&quot;</span></span><br><span class="line"><span class="attr">filebeat.inputs:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">type:</span> <span class="string">log</span></span><br><span class="line">  <span class="attr">paths:</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">&#x27;/var/lib/docker/containers/*/*.log&#x27;</span></span><br><span class="line"><span class="comment"># json解码</span></span><br><span class="line">  <span class="attr">json.add_error_key:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">json.overwrite_keys:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">json.message_key:</span> <span class="string">log</span></span><br><span class="line"><span class="comment"># 多行合并</span></span><br><span class="line"><span class="comment">#  multiline:</span></span><br><span class="line"><span class="comment">#    pattern: ^\d&#123;4&#125;</span></span><br><span class="line"><span class="comment">#    negate: true</span></span><br><span class="line"><span class="comment">#    match: after</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 排除或删除通配符行</span></span><br><span class="line"><span class="comment">#  exclude_lines: [&#x27;^DBG&#x27;]</span></span><br><span class="line"><span class="comment">#  include_lines: [&#x27;ERROR&#x27;, &#x27;WARN&#x27;, &#x27;INFO&#x27;]</span></span><br><span class="line"><span class="comment"># 排除通配文件</span></span><br><span class="line"><span class="comment">#  exclude_files: [&#x27;\.gz$&#x27;]</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 添加docker元数据</span></span><br><span class="line">  <span class="attr">processors:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">add_docker_metadata:</span></span><br><span class="line">        <span class="attr">match_source:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment"># 选取添加docker元数据的层级</span></span><br><span class="line">        <span class="attr">match_source_index:</span> <span class="number">4</span></span><br><span class="line"><span class="comment"># 处理器重命名和删除无用字段</span></span><br><span class="line"><span class="attr">processors:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">rename:</span></span><br><span class="line">    <span class="attr">fields:</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">from:</span> <span class="string">&quot;json.log&quot;</span></span><br><span class="line">       <span class="attr">to:</span> <span class="string">&quot;message&quot;</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">from:</span> <span class="string">&quot;docker.container.name&quot;</span></span><br><span class="line">       <span class="attr">to:</span> <span class="string">&quot;containername&quot;</span></span><br><span class="line">     <span class="bullet">-</span> <span class="attr">from:</span> <span class="string">&quot;log.file.path&quot;</span></span><br><span class="line">       <span class="attr">to:</span> <span class="string">&quot;filepath&quot;</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">drop_fields:</span></span><br><span class="line">    <span class="attr">fields:</span> [<span class="string">&quot;docker&quot;</span>,<span class="string">&quot;metadata&quot;</span>,<span class="string">&quot;beat&quot;</span>,<span class="string">&quot;input&quot;</span>,<span class="string">&quot;prospector&quot;</span>,<span class="string">&quot;host&quot;</span>,<span class="string">&quot;source&quot;</span>,<span class="string">&quot;offset&quot;</span>]</span><br><span class="line"><span class="comment"># 日志输出</span></span><br><span class="line"><span class="attr">output.logstash:</span> <span class="comment"># 输出地址</span></span><br><span class="line">  <span class="attr">hosts:</span> [<span class="string">&quot;192.168.30.42:5043&quot;</span>]</span><br><span class="line"><span class="comment">#output.elasticsearch:</span></span><br><span class="line"><span class="comment">#  hosts: [&quot;192.168.30.42:9200&quot;]</span></span><br><span class="line"><span class="comment">#  protocol: &quot;http&quot;</span></span><br><span class="line"><span class="comment">#output.file:</span></span><br><span class="line"><span class="comment">#  path: &quot;/tmp&quot;</span></span><br><span class="line"><span class="comment">#  filename: filebeat.out</span></span><br><span class="line"><span class="comment">#output.console:</span></span><br><span class="line"><span class="comment">#  pretty: true</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Filebeat-启动命令"><a href="#Filebeat-启动命令" class="headerlink" title="Filebeat 启动命令"></a>Filebeat 启动命令</h4><ul>
+<li><code>-v /var/lib/docker/containers/:/var/lib/docker/containers/</code> 映射日志目录</li>
+<li><code>-v /var/run/docker.sock:/var/run/docker.sock:ro</code> 映射docker套接字文件，来收集docker信息，添加docker元数据</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">    --name filebeat \</span><br><span class="line">    --user root \</span><br><span class="line">    --log-driver json-file \</span><br><span class="line">    --log-opt max-size=10m \</span><br><span class="line">    --log-opt max-file=3 \</span><br><span class="line">    --restart=always \</span><br><span class="line">    -v /data/conf/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro \</span><br><span class="line">    -v /var/lib/docker/containers/:/var/lib/docker/containers/ \</span><br><span class="line">    -v /var/run/docker.sock:/var/run/docker.sock:ro \</span><br><span class="line">    docker.elastic.co/beats/filebeat:6.6.2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Filebeat是日志收集客户端，正常情况下其部署在需要收集日志的主机上</li>
+</ul>
+<h3 id="添加kibana索引"><a href="#添加kibana索引" class="headerlink" title="添加kibana索引"></a>添加kibana索引</h3><ul>
+<li>通过服务器IP地址访问Kibana web <code>http://IP:5601</code> 同时添加索引<br><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210223221515.png" alt="img-w500"></li>
+<li>如此便可查看相关日志<br><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210223221516.png" alt="img-w500"></li>
+</ul>
+<h2 id="ELK之ElastAlert日志告警"><a href="#ELK之ElastAlert日志告警" class="headerlink" title="ELK之ElastAlert日志告警"></a>ELK之ElastAlert日志告警</h2><hr>
+<hr>
+<ul>
+<li>ElastAlert分为两部分，后端程序，项目地址 <a target="_blank" rel="noopener" href="https://github.com/bitsensor/elastalert%EF%BC%8CKibana%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2%E6%8F%92%E4%BB%B6%E5%9C%B0%E5%9D%80">https://github.com/bitsensor/elastalert，Kibana前端页面插件地址</a> <a target="_blank" rel="noopener" href="https://github.com/bitsensor/elastalert-kibana-plugin">https://github.com/bitsensor/elastalert-kibana-plugin</a></li>
+<li>ElastAlert目前支持的报警类型：</li>
+</ul>
+<ol>
+<li>any：只要有匹配就报警；</li>
+<li>blacklist：compare_key字段的内容匹配上 blacklist数组里任意内容；</li>
+<li>whitelist：compare_key字段的内容一个都没能匹配上whitelist数组里内容；</li>
+<li>change：在相同query_key条件下，compare_key字段的内容，在 timeframe范围内发送变化；</li>
+<li>frequency：在相同 query_key条件下，timeframe 范围内有num_events个被过滤出来的异常；</li>
+<li>spike：在相同query_key条件下，前后两个timeframe范围内数据量相差比例超过spike_height。其中可以通过spike_type设置具体涨跌方向是up,down,both 。还可以通过threshold_ref设置要求上一个周期数据量的下限，threshold_cur设置要求当前周期数据量的下限，如果数据量不到下限，也不触发；</li>
+<li>flatline：timeframe 范围内，数据量小于threshold阈值；</li>
+<li>new_term：fields字段新出现之前terms_window_size(默认30天)范围内最多的terms_size (默认50)个结果以外的数据；</li>
+<li>cardinality：在相同 query_key条件下，timeframe范围内cardinality_field的值超过 max_cardinality 或者低于min_cardinality</li>
+<li>Percentage Match: 在buffer_time 中匹配所设置的字段的百分比高于或低于阈值时，此规则将匹配。默认情况下为全局的buffer_time</li>
+</ol>
+<h3 id="ElastAlert容器启动"><a href="#ElastAlert容器启动" class="headerlink" title="ElastAlert容器启动"></a>ElastAlert容器启动</h3><ul>
+<li><code>-p 3030:3030</code> 指定映射端口，该端口需要kibana调用</li>
+<li><code>-v config/elastalert.yaml:/opt/elastalert/config.yaml</code> 映射ElastAlert的配置文件</li>
+<li><code>-v rules:/opt/elastalert/rules</code> 映射报警规则文件目录</li>
+<li><code>--link elasticsearch</code> ElastAlert需要连接ElasticSearch 进行数据的查询</li>
+<li><code>rule_templates:/opt/elastalert/rule_templates</code> 该目录下为报警规则的模版，可使用其配置并放入 <code>rules</code> 使其生效，具体配置规则参考 <code>https://elastalert.readthedocs.io/en/latest/ruletypes.html</code></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/bitsensor/elastalert.git; <span class="built_in">cd</span> elastalert</span><br><span class="line">sed -i -e <span class="string">&#x27;s/localhost/elasticsearch/g&#x27;</span> `<span class="built_in">pwd</span>`/config/elastalert.yaml</span><br><span class="line">docker run -d \</span><br><span class="line">    -p 3030:3030 \</span><br><span class="line">    -v `<span class="built_in">pwd</span>`/config/elastalert.yaml:/opt/elastalert/config.yaml \</span><br><span class="line">    -v `<span class="built_in">pwd</span>`/config/config.json:/opt/elastalert-server/config/config.json \</span><br><span class="line">    -v `<span class="built_in">pwd</span>`/rules:/opt/elastalert/rules \</span><br><span class="line">    -v `<span class="built_in">pwd</span>`/rule_templates:/opt/elastalert/rule_templates \</span><br><span class="line">    --<span class="built_in">link</span> elasticsearch \</span><br><span class="line">    --name elastalert \</span><br><span class="line">    bitsensor/elastalert:latest</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>可通过 <code>elastalert-test-rule rules/rule1.yaml</code> 在 <code>elastalert</code> 容器内测试报警规则</li>
+</ul>
+<h3 id="Kibana-需要更改配置"><a href="#Kibana-需要更改配置" class="headerlink" title="Kibana 需要更改配置"></a>Kibana 需要更改配置</h3><ul>
+<li>添加 <code>elastalert</code> 相关的配置，包括主机名和端口</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">cat</span> <span class="string">&gt;</span> <span class="string">/data/conf/kibana.yml</span> <span class="string">&lt;&lt;</span> <span class="string">&quot;EOF&quot;</span></span><br><span class="line"><span class="comment"># Default Kibana configuration from kibana-docker.</span></span><br><span class="line"></span><br><span class="line"><span class="attr">server.name:</span> <span class="string">kibana</span></span><br><span class="line"><span class="attr">server.host:</span> <span class="string">&quot;0&quot;</span></span><br><span class="line"><span class="attr">elasticsearch.hosts:</span> <span class="string">http://elasticsearch:9200</span></span><br><span class="line"><span class="attr">xpack.monitoring.ui.container.elasticsearch.enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">elastalert-kibana-plugin.serverHost:</span> <span class="string">elastalert</span></span><br><span class="line"><span class="attr">elastalert-kibana-plugin.serverPort:</span> <span class="number">3030</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Kibana-启动参数更改"><a href="#Kibana-启动参数更改" class="headerlink" title="Kibana 启动参数更改"></a>Kibana 启动参数更改</h3><ul>
+<li>配置 Kibana的插件 <code>elastalert-kibana-plugin</code> 需要注意的是，插件的下载地址 <a target="_blank" rel="noopener" href="https://github.com/bitsensor/elastalert-kibana-plugin/releases">https://github.com/bitsensor/elastalert-kibana-plugin/releases</a> 需要找到对应自己 kibana 版本，否则插件无法安装成功</li>
+<li>从目前版本来看，插件的使用不是很方便，其相当于在 ElasticAlert 启动时 <code>-v rules:/opt/elastalert/rules</code> 目录下写文件</li>
+<li><code>-v /data/kibana/elastalert-kibana-plugin:/usr/share/kibana/plugins/elastalert-kibana-plugin</code> 映射插件目录</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /data</span><br><span class="line">wget https://github.com/bitsensor/elastalert-kibana-plugin/releases/download/1.0.2/elastalert-kibana-plugin-1.0.2-6.6.2.zip</span><br><span class="line">unzip elastalert-kibana-plugin-1.0.2-6.6.2.zip</span><br><span class="line">docker run -p 5601:5601 -d \</span><br><span class="line">    --user root \</span><br><span class="line">    --log-driver json-file \</span><br><span class="line">    --log-opt max-size=10m \</span><br><span class="line">    --log-opt max-file=3 \</span><br><span class="line">    --name kibana \</span><br><span class="line">    --<span class="built_in">link</span> elasticsearch \</span><br><span class="line">    --<span class="built_in">link</span> elastalert \</span><br><span class="line">    --restart=always \</span><br><span class="line">    -e ELASTICSEARCH_URL=http://elasticsearch:9200 \</span><br><span class="line">    -v /data/conf/kibana.yml:/usr/share/kibana/config/kibana.yml \</span><br><span class="line">    -v /data/kibana/elastalert-kibana-plugin:/usr/share/kibana/plugins/elastalert-kibana-plugin \</span><br><span class="line">    docker.elastic.co/kibana/kibana:6.6.2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>启动后，可查看 <code>http://IP:5601</code>，可通过此来创建报警规则</li>
+</ul>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210223221517.png" alt="img-w500"></p>
+<h3 id="报警规则配置"><a href="#报警规则配置" class="headerlink" title="报警规则配置"></a>报警规则配置</h3><ul>
+<li>这里给出一个报警规则的示例，更多请查看文档 <a target="_blank" rel="noopener" href="https://elastalert.readthedocs.io/en/latest/ruletypes.html">https://elastalert.readthedocs.io/en/latest/ruletypes.html</a></li>
+<li><code>es_host: elasticsearch</code> 该配置会使用docker容器中的变量</li>
+<li><code>name: filebeat info frequency rule</code> 报警规则的名称，需要唯一</li>
+<li><code>timeframe:</code> 设定查询的时间尺度，这里指定为5分钟</li>
+<li><code>filter</code> 指定报警条件，示例为日志中message字段还有INFO信息就示作匹配</li>
+<li><code>alert</code> 指定报警方式，报警方式有很多，这里使用slack，可查看文档配置</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Alert when the rate of events exceeds a threshold</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Optional)</span></span><br><span class="line"><span class="comment"># Elasticsearch host</span></span><br><span class="line"><span class="comment"># es_host: elasticsearch.example.com</span></span><br><span class="line"><span class="attr">es_host:</span> <span class="string">elasticsearch</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Optional)</span></span><br><span class="line"><span class="comment"># Elasticsearch port</span></span><br><span class="line"><span class="comment"># es_port: 14900</span></span><br><span class="line"><span class="attr">es_port:</span> <span class="number">9200</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (OptionaL) Connect with SSL to Elasticsearch</span></span><br><span class="line"><span class="comment">#use_ssl: True</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Optional) basic-auth username and password for Elasticsearch</span></span><br><span class="line"><span class="comment">#es_username: someusername</span></span><br><span class="line"><span class="comment">#es_password: somepassword</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Required)</span></span><br><span class="line"><span class="comment"># Rule name, must be unique</span></span><br><span class="line"><span class="attr">name:</span> <span class="string">filebeat</span> <span class="string">info</span> <span class="string">frequency</span> <span class="string">rule</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Required)</span></span><br><span class="line"><span class="comment"># Type of alert.</span></span><br><span class="line"><span class="comment"># the frequency rule type alerts when num_events events occur with timeframe time</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">frequency</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Required)</span></span><br><span class="line"><span class="comment"># Index to search, wildcard supported</span></span><br><span class="line"><span class="attr">index:</span> <span class="string">filebeat-*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Required, frequency specific)</span></span><br><span class="line"><span class="comment"># Alert when this many documents matching the query occur within a timeframe</span></span><br><span class="line"><span class="attr">num_events:</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># (Required, frequency specific)</span></span><br><span class="line"><span class="comment"># num_events must occur within this amount of time to trigger an alert</span></span><br><span class="line"><span class="attr">timeframe:</span></span><br><span class="line"><span class="comment">#  hours: 1</span></span><br><span class="line">  <span class="attr">minutes:</span> <span class="number">5</span></span><br><span class="line"><span class="comment"># (Required)</span></span><br><span class="line"><span class="comment"># A list of Elasticsearch filters used for find events</span></span><br><span class="line"><span class="comment"># These filters are joined with AND and nested in a filtered query</span></span><br><span class="line"><span class="comment"># For more info: http://www.elasticsearch.org/guide/en/elasticsearch/reference/current/query-dsl.html</span></span><br><span class="line"></span><br><span class="line"><span class="attr">filter:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">query:</span></span><br><span class="line">    <span class="attr">query_string:</span></span><br><span class="line">      <span class="attr">query:</span> <span class="string">&quot;message:INFO&quot;</span></span><br><span class="line"><span class="comment"># (Required)</span></span><br><span class="line"><span class="comment"># The alert is use when a match is found</span></span><br><span class="line"></span><br><span class="line"><span class="attr">alert:</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">&quot;slack&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">alert_subject:</span> <span class="string">&quot;&#123;&#125; @&#123;&#125;&quot;</span></span><br><span class="line"><span class="attr">alert_subject_args:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">containername</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">log-timestamp</span></span><br><span class="line"><span class="attr">alert_text_type:</span> <span class="string">alert_text_only</span></span><br><span class="line"><span class="attr">alert_text:</span> <span class="string">|</span></span><br><span class="line"><span class="string">  &gt; 【Name】: &#123;&#125;</span></span><br><span class="line"><span class="string">  &gt; 【Log-Msg】: &#123;&#125;</span></span><br><span class="line"><span class="string"></span><span class="attr">alert_text_args:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">containername</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">message</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">slack_webhook_url:</span> <span class="string">&quot;https://hooks.slack.com/services/xxxx/xxxx/xxxxxx&quot;</span></span><br><span class="line"><span class="attr">slack_title_link:</span> <span class="string">&quot;https://elk.glinux.top&quot;</span></span><br><span class="line"><span class="attr">slack_title:</span> <span class="string">&quot;ELK URL&quot;</span></span><br><span class="line"><span class="attr">slack_username_override:</span> <span class="string">&quot;ELK Alert&quot;</span></span><br><span class="line"><span class="attr">slack_channel_override:</span> <span class="string">&quot;#filebeat-test&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>报警的效果如图</li>
+</ul>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210223221518.png" alt="img-w500"></p>
+<h2 id="定时删除过期日志索引文件"><a href="#定时删除过期日志索引文件" class="headerlink" title="定时删除过期日志索引文件"></a>定时删除过期日志索引文件</h2><hr>
+<hr>
+<ul>
+<li>该脚本用于删除7天以前的索引文件（过月日志清除），脚本为参考他人作品，做了少许更改，可查看参考文档</li>
+<li><code>curl -s &quot;http://127.0.0.1:9200/_cat/indices?v&quot;</code> 该命令可以查看es中的索引</li>
+<li><code>curl -XDELETE -s &quot;http://127.0.0.1:9200/filebeat-2019.04.27&quot;</code> 该命令用于删除es中的 <code>filebeat-2019.04.27</code> 索引</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> &gt; /data/delete_index.sh &lt;&lt; <span class="string">&quot;EOF&quot;</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line">elastic_url=127.0.0.1</span><br><span class="line">elastic_port=9200</span><br><span class="line">user=<span class="string">&quot;username&quot;</span></span><br><span class="line">pass=<span class="string">&quot;password&quot;</span></span><br><span class="line"><span class="built_in">log</span>=<span class="string">&quot;/data/log/delete_index.log&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当前日期时间戳减去索引名时间转化时间戳是否大于1</span></span><br><span class="line"><span class="function"><span class="title">dateDiff</span></span> ()&#123;</span><br><span class="line">    dte1=<span class="variable">$1</span></span><br><span class="line">    dte2=<span class="variable">$2</span></span><br><span class="line">    diffSec=$((dte1-dte2))</span><br><span class="line">    <span class="keyword">if</span> ((diffSec &gt; <span class="number">6</span>)); <span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">&quot;1&quot;</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">&quot;0&quot;</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 循环获取索引文件，通过正则匹配过滤</span></span><br><span class="line"><span class="keyword">for</span> index <span class="keyword">in</span> $(curl -s <span class="string">&quot;<span class="variable">$&#123;elastic_url&#125;</span>:<span class="variable">$&#123;elastic_port&#125;</span>/_cat/indices?v&quot;</span> | awk -F<span class="string">&#x27; &#x27;</span> <span class="string">&#x27;&#123;print $3&#125;&#x27;</span> | grep -E <span class="string">&quot;[0-9]&#123;4&#125;.[0-9]&#123;2&#125;.[0-9]&#123;2&#125;$&quot;</span>); <span class="keyword">do</span></span><br><span class="line"><span class="comment"># 获取索引文件日期，并转化格式</span></span><br><span class="line">  <span class="built_in">date</span>=$(<span class="built_in">echo</span> <span class="variable">$index</span> | awk -F<span class="string">&#x27;-&#x27;</span> <span class="string">&#x27;&#123;print $NF&#125;&#x27;</span> | sed -n <span class="string">&#x27;s/\.//p&#x27;</span> | sed -n <span class="string">&#x27;s/\.//p&#x27;</span>)</span><br><span class="line"><span class="comment"># 获取当前日期</span></span><br><span class="line">  cond=$(<span class="built_in">date</span> <span class="string">&#x27;+%Y%m%d&#x27;</span>)</span><br><span class="line"><span class="comment"># 根据不同服务器，计算不同数值</span></span><br><span class="line">  diff=$(dateDiff <span class="string">&quot;<span class="variable">$&#123;cond&#125;</span>&quot;</span> <span class="string">&quot;<span class="variable">$&#123;date&#125;</span>&quot;</span>)</span><br><span class="line"><span class="comment"># 打印索引名和结果数值</span></span><br><span class="line">  <span class="comment">#echo -n &quot;$&#123;index&#125; ($&#123;diff&#125;)&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断结果值是否大于等于1</span></span><br><span class="line">  <span class="keyword">if</span> [ <span class="variable">$diff</span> -eq 1 ]; <span class="keyword">then</span></span><br><span class="line">    curl -XDELETE -s <span class="string">&quot;<span class="variable">$&#123;elastic_url&#125;</span>:<span class="variable">$&#123;elastic_port&#125;</span>/<span class="variable">$&#123;index&#125;</span>&quot;</span> &amp;&amp; <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;index&#125;</span> 删除成功&quot;</span> &gt;&gt; <span class="variable">$log</span> || <span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;index&#125;</span> 删除失败&quot;</span> &gt;&gt; <span class="variable">$log</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>该脚本可以做成定时任务，每天都执行一次，来删除过期数据</li>
+</ul>
+<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><hr>
+<hr>
+<h3 id="ELK"><a href="#ELK" class="headerlink" title="ELK"></a>ELK</h3><ol>
+<li>使用Docker搭建ELK日志系统 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/32559371">https://zhuanlan.zhihu.com/p/32559371</a></li>
+<li>Beats详解（四) <a target="_blank" rel="noopener" href="http://www.51niux.com/?id=204">http://www.51niux.com/?id=204</a></li>
+<li>Offical document: <a target="_blank" rel="noopener" href="https://www.elastic.co/guide/index.html">https://www.elastic.co/guide/index.html</a></li>
+<li>将日志输出到Docker容器外: <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/bf2eb121ac62">https://www.jianshu.com/p/bf2eb121ac62</a></li>
+<li>elk日志大盘显示和日志监控报警配置实践: <a target="_blank" rel="noopener" href="https://blog.csdn.net/yujiak/article/details/79897408">https://blog.csdn.net/yujiak/article/details/79897408</a></li>
+</ol>
+<h3 id="Elastalert"><a href="#Elastalert" class="headerlink" title="Elastalert"></a>Elastalert</h3><ol>
+<li>elastalert github地址： <a target="_blank" rel="noopener" href="https://github.com/bitsensor/elastalert">https://github.com/bitsensor/elastalert</a></li>
+<li>elastalert-kibana-plugin github地址: <a target="_blank" rel="noopener" href="https://github.com/bitsensor/elastalert-kibana-plugin/tree/1.0.2">https://github.com/bitsensor/elastalert-kibana-plugin/tree/1.0.2</a></li>
+<li>ElastAlert 官方操作文档：<a target="_blank" rel="noopener" href="https://elastalert.readthedocs.io/en/latest/ruletypes.html">https://elastalert.readthedocs.io/en/latest/ruletypes.html</a></li>
+</ol>
+<h3 id="索引定期清除"><a href="#索引定期清除" class="headerlink" title="索引定期清除"></a>索引定期清除</h3><ol>
+<li>历史索引删除 <a target="_blank" rel="noopener" href="http://www.cenhq.com/2017/11/07/elasticsearch-deletes-index-by-date/">http://www.cenhq.com/2017/11/07/elasticsearch-deletes-index-by-date/</a></li>
+</ol>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
+<li>Centos 7 Docker命令自动补全 <a target="_blank" rel="noopener" href="https://medium.com/@ismailyenigul/enable-docker-command-line-auto-completion-in-bash-on-centos-ubuntu-5f1ac999a8a6">https://medium.com/@ismailyenigul/enable-docker-command-line-auto-completion-in-bash-on-centos-ubuntu-5f1ac999a8a6</a></li>
+<li>Searchguard 插件支持OpenLdap：<a target="_blank" rel="noopener" href="https://github.com/floragunncom/search-guard-kibana-plugin">https://github.com/floragunncom/search-guard-kibana-plugin</a></li>
+<li>设置登录认证: <a target="_blank" rel="noopener" href="https://birdben.github.io/2017/02/08/Kibana/Kibana%E5%AD%A6%E4%B9%A0%EF%BC%88%E5%85%AD%EF%BC%89Kibana%E8%AE%BE%E7%BD%AE%E7%99%BB%E5%BD%95%E8%AE%A4%E8%AF%81">https://birdben.github.io/2017/02/08/Kibana/Kibana学习（六）Kibana设置登录认证</a></li>
+<li>SSL免费证书 <a target="_blank" rel="noopener" href="https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx">https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx</a></li>
+</ol>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'ELK：收集Docker容器日志'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/">ELK：收集Docker容器日志</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/79.%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/92.Docker%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF%E8%AF%A6%E8%A7%A3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E7%AC%AC05%E6%AC%A1%E5%85%AC%E5%BC%80%E8%AF%BE-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%91%A8%E8%80%8C%E5%A4%8D%E5%A7%8B/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%971-%E5%91%A8%E8%80%8C%E5%A4%8D%E5%A7%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_3.result/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_5/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js/jquery.min/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/ELK%EF%BC%9A%E6%94%B6%E9%9B%86Docker%E5%AE%B9%E5%99%A8%E6%97%A5%E5%BF%97/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 18.50267480779926px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 13.495117305141154px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 12.992503641415343px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 17.776276792616734px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Fri Jun 14 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Fri Jun 14 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

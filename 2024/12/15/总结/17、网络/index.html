@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/15/%E6%80%BB%E7%BB%93/17%E3%80%81%E7%BD%91%E7%BB%9C/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/17%E3%80%81%E7%BD%91%E7%BB%9C/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>[TOC]</p>
+<h1 id="一、交换机工作原理"><a href="#一、交换机工作原理" class="headerlink" title="一、交换机工作原理"></a>一、交换机工作原理</h1><p>根据源MAC地址学习，根据目标MAC地址转发<br>除源端口外的端口广播未知数据帧</p>
+<p>接收方回应<br>交换机实现单播通信</p>
+<p>更新：老化时间300秒<br>           交换机对应端口的MAC 地址发生变化时</p>
+<h1 id="二、路由"><a href="#二、路由" class="headerlink" title="二、路由"></a>二、路由</h1><p>路由:跨越从源主机到目标主机的一个互联网络来转发数据包的过程。</p>
+<p>路由表：路由器根据路由表做路径选择</p>
+<p>路由器的工作原理:根据路由表选择最佳路径,每个路由器都维护着一张路由表,这是路由器转发数据包的关键,每条路由表记录指明了到达某个子网或主机应从路由器的哪个物理端口发送,通过此端口可到达该路径的下一个路由器的地址。</p>
+<h1 id="三、DHCP"><a href="#三、DHCP" class="headerlink" title="三、DHCP"></a>三、DHCP</h1><p>基本原理:</p>
+<p>第一步:客户端通过广播发送DHCP Discover报文寻找服务器端</p>
+<p>第二步:服务器端通过单播发送DHCP Offer报文向客户端提供IP地址等网络信息</p>
+<p>第三步:客户端通过广播发送DHCP Request报文告知服务器端本地选择使用哪个IP地址第四步:服务器通过单播发送DHCP Ack报文告知客户端lP地址是合法可用的</p>
+<h1 id="四、TCP和UDP的区别："><a href="#四、TCP和UDP的区别：" class="headerlink" title="四、TCP和UDP的区别："></a>四、TCP和UDP的区别：</h1><table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">UDP</th>
+<th align="center">TCP</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">是否连接</td>
+<td align="center">无连接</td>
+<td align="center">面向连接</td>
+</tr>
+<tr>
+<td align="center">是否可靠</td>
+<td align="center">不可靠传输，不使用流量控制和拥塞控制</td>
+<td align="center">可靠传输，使用流量控制和拥塞控制</td>
+</tr>
+<tr>
+<td align="center">连接对象个数</td>
+<td align="center">支持一对一，一对多，多对一和多对多交互通信</td>
+<td align="center">只能是一对一通信</td>
+</tr>
+<tr>
+<td align="center">传输方式</td>
+<td align="center">面向报文</td>
+<td align="center">面向字节流</td>
+</tr>
+<tr>
+<td align="center">首部开销</td>
+<td align="center">首部开销小，仅8字节</td>
+<td align="center">首部最小20字节，最大60字节</td>
+</tr>
+<tr>
+<td align="center">场景</td>
+<td align="center">适用于实时应用（IP电话、视频会议、直播等）</td>
+<td align="center">适用于要求可靠传输的应用，例如文件传输</td>
+</tr>
+</tbody></table>
+<p>TCP:可靠的、面向连接的传输层协议。主要它有三次握手、四次断开、窗口滑动、数据分段、数据重组、数据重传机制保证数据的可靠性。。</p>
+<p>UDP:不可靠的、面向无连接的传输层协议。它没有什么机制保证数据可靠性,当数据量非常庞大时可以通过此协议来保证数据的高效低延时。。</p>
+<p>以tcp&#x2F;ip协议为核心,分五层。tcp工作在第4层，主要有tcp和udp协议。其中tcp是可靠协议，udp是不可靠协议。 tcp传输之前，需要建立连接，通过三次握手实现。</p>
+<p>每一个应用层（TCP&#x2F;IP参考模型的最高层）协议一般都会使用到两个传输层协议之一：</p>
+<p>运行在<code>TCP协议</code>上的协议：</p>
+<ul>
+<li><code>HTTP（Hypertext Transfer Protocol，超文本传输协议）</code>，主要用于普通浏览。</li>
+<li><code>HTTPS（HTTP over SSL，安全超文本传输协议）</code>,<code>HTTP</code>协议的安全版本。</li>
+<li><code>FTP（File Transfer Protocol，文件传输协议）</code>，用于文件传输。</li>
+<li><code>POP3（Post Office Protocol, version 3，邮局协议）</code>，收邮件用。</li>
+<li><code>SMTP（Simple Mail Transfer Protocol，简单邮件传输协议）</code>，用来发送电子邮件。</li>
+<li><code>TELNET（Teletype over the Network，网络电传）</code>，通过一个<code>终端（terminal）</code>登陆到网络。</li>
+<li><code>SSH（Secure Shell，用于替代安全性差的TELNET）</code>，用于加密安全登陆用。</li>
+</ul>
+<p>运行在<code>UDP协议</code>上的协议：</p>
+<ul>
+<li><code>BOOTP（Boot Protocol，启动协议）</code>，应用于无盘设备。</li>
+<li><code>NTP（Network Time Protocol，网络时间协议）</code>，用于网络同步。</li>
+<li><code>DHCP（Dynamic Host Configuration Protocol，动态主机配置协议）</code>，动态配置IP地址。</li>
+</ul>
+<p>运行在<code>TCP</code>和<code>UDP</code>协议上：</p>
+<ul>
+<li><code>DNS（Domain Name Service，域名服务）</code>，用于完成地址查找，邮件转发等工作。</li>
+</ul>
+<h1 id="五、DNS"><a href="#五、DNS" class="headerlink" title="五、DNS"></a>五、DNS</h1><p>默认端口为53。</p>
+<p>DNS端口分为TCP和UDP。DNS协议运行在UDP协议之上</p>
+<p>一、TCP是用来做区域传送</p>
+<p>二、UDP是用来做DNS解析的。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104825.png" alt="1608021254256"></p>
+<h1 id="六、ARP工作原理"><a href="#六、ARP工作原理" class="headerlink" title="六、ARP工作原理"></a>六、ARP工作原理</h1><p>每台主机都会在自己的ARP缓冲区中建立一个 ARP列表，以表示IP地址和MAC地址的对应关系。</p>
+<p>当源主机需要将一个数据包要发送到目的主机时，会首先检查自己 ARP列表中是否存在该 IP地址对应的MAC地址。</p>
+<p>如果有，就直接将数据包发送到这个MAC地址；如果没有，就向本地网段发起一个ARP请求的广播包，查询此目的主机对应的MAC地址。</p>
+<p>此ARP请求数据包里包括源主机的IP地址、硬件地址、以及目的主机的IP地址。网络中所有的主机收到这个ARP请求后，会检查数据包中的目的IP是否和自己的IP地址一致。</p>
+<p>如果不相同就忽略此数据包；如果相同，该主机首先将发送端的MAC地址和IP地址添加到自己的ARP列表中。</p>
+<p>如果ARP表中已经存在该IP的信息，则将其覆盖，然后给源主机发送一个 ARP响应数据包，告诉对方自己是它需要查找的MAC地址。</p>
+<p>源主机收到这个ARP响应数据包后，将得到的目的主机的IP地址和MAC地址添加到自己的ARP列表中，并利用此信息开始数据的传输。</p>
+<p>如果源主机一直没有收到ARP响应数据包，表示ARP查询失败。</p>
+<h1 id="七、Ping和Traceroute"><a href="#七、Ping和Traceroute" class="headerlink" title="七、Ping和Traceroute"></a>七、Ping和Traceroute</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/tomatolee221/article/details/89531048">https://blog.csdn.net/tomatolee221/article/details/89531048</a></p>
+<h1 id="七、三次握手和四次挥手"><a href="#七、三次握手和四次挥手" class="headerlink" title="七、三次握手和四次挥手"></a>七、三次握手和四次挥手</h1><h3 id="三次握手的本质是确认通信双方收发数据的能力"><a href="#三次握手的本质是确认通信双方收发数据的能力" class="headerlink" title="三次握手的本质是确认通信双方收发数据的能力"></a>三次握手的本质是确认通信双方收发数据的能力</h3><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104828.png" alt="1608021314847"></p>
+<p>1.发送方向接收方发送SYN请求</p>
+<p>⒉接收方接收到此请求后会主动回复一个ACK，并且同时也发送一个SYN请求</p>
+<p>3.发送方接收到接收方发来的SYN请求后，给出一个ACK确认。。</p>
+<h3 id="四次挥手的目的是关闭一个连接"><a href="#四次挥手的目的是关闭一个连接" class="headerlink" title="四次挥手的目的是关闭一个连接"></a>四次挥手的目的是关闭一个连接</h3><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104831.png" alt="1608021359186"></p>
+<p>1.发送方向接收方发送一个FIN请求</p>
+<p>⒉接收方收到此请求后给出一个ACK确认（半关闭状态）</p>
+<p>3.接收方发送一个FIN请求给发送方</p>
+<p>4.发送方收到接收方的FIN请求后，回复一个ACK。</p>
+<h1 id="八、常见面试题"><a href="#八、常见面试题" class="headerlink" title="八、常见面试题"></a>八、常见面试题</h1><h3 id="1、为什么TCP连接的时候是3次？2次不可以吗？"><a href="#1、为什么TCP连接的时候是3次？2次不可以吗？" class="headerlink" title="1、为什么TCP连接的时候是3次？2次不可以吗？"></a>1、为什么TCP连接的时候是3次？2次不可以吗？</h3><p>因为需要考虑连接时丢包的问题，如果只握手2次，第二次握手时如果服务端发给客户端的确认报文段丢失，此时服务端已经准备好了收发数(可以理解服务端已经连接成功)据，而客户端一直没收到服务端的确认报文，所以客户端就不知道服务端是否已经准备好了(可以理解为客户端未连接成功)，这种情况下客户端不会给服务端发数据，也会忽略服务端发过来的数据。</p>
+<p>如果是三次握手，即便发生丢包也不会有问题，比如如果第三次握手客户端发的确认ack报文丢失，服务端在一段时间内没有收到确认ack报文的话就会重新进行第二次握手，也就是服务端会重发SYN报文段，客户端收到重发的报文段后会再次给服务端发送确认ack报文。</p>
+<h3 id="2、为什么TCP连接的时候是3次，关闭的时候却是4次？"><a href="#2、为什么TCP连接的时候是3次，关闭的时候却是4次？" class="headerlink" title="2、为什么TCP连接的时候是3次，关闭的时候却是4次？"></a>2、为什么TCP连接的时候是3次，关闭的时候却是4次？</h3><p>因为只有在客户端和服务端都没有数据要发送的时候才能断开TCP。而客户端发出FIN报文时只能保证客户端没有数据发了，服务端还有没有数据发客户端是不知道的。而服务端收到客户端的FIN报文后只能先回复客户端一个确认报文来告诉客户端我服务端已经收到你的FIN报文了，但我服务端还有一些数据没发完，等这些数据发完了服务端才能给客户端发FIN报文(所以不能一次性将确认报文和FIN报文发给客户端，就是这里多出来了一次)。</p>
+<h3 id="3、为什么客户端发出第四次挥手的确认报文后要等2MSL的时间才能释放TCP连接？"><a href="#3、为什么客户端发出第四次挥手的确认报文后要等2MSL的时间才能释放TCP连接？" class="headerlink" title="3、为什么客户端发出第四次挥手的确认报文后要等2MSL的时间才能释放TCP连接？"></a>3、为什么客户端发出第四次挥手的确认报文后要等2MSL的时间才能释放TCP连接？</h3><p>这里同样是要考虑丢包的问题，如果第四次挥手的报文丢失，服务端没收到确认ack报文就会重发第三次挥手的报文，这样报文一去一回最长时间就是2MSL，所以需要等这么长时间来确认服务端确实已经收到了。</p>
+<h3 id="4、如果已经建立了连接，但是客户端突然出现故障了怎么办？"><a href="#4、如果已经建立了连接，但是客户端突然出现故障了怎么办？" class="headerlink" title="4、如果已经建立了连接，但是客户端突然出现故障了怎么办？"></a>4、如果已经建立了连接，但是客户端突然出现故障了怎么办？</h3><p>TCP设有一个保活计时器，客户端如果出现故障，服务器不能一直等下去，白白浪费资源。服务器每收到一次客户端的请求后都会重新复位这个计时器，时间通常是设置为2小时，若两小时还没有收到客户端的任何数据，服务器就会发送一个探测报文段，以后每隔75秒钟发送一次。若一连发送10个探测报文仍然没反应，服务器就认为客户端出了故障，接着就关闭连接。</p>
+<h3 id="5、什么是HTTP，HTTP-与-HTTPS-的区别"><a href="#5、什么是HTTP，HTTP-与-HTTPS-的区别" class="headerlink" title="5、什么是HTTP，HTTP 与 HTTPS 的区别"></a>5、什么是HTTP，HTTP 与 HTTPS 的区别</h3><p>HTTP 是一个在计算机世界里专门在两点之间传输文字、图片、音频、视频等超文本数据的约定和规范</p>
+<table>
+<thead>
+<tr>
+<th>区别</th>
+<th align="center">HTTP</th>
+<th align="center">HTTPS</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>协议</td>
+<td align="center">运行在 TCP 之上，明文传输，<strong>客户端与服务器端都无法验证对方的身份</strong></td>
+<td align="center">身披 SSL( Secure Socket Layer )外壳的 HTTP，运行于 SSL 上，SSL 运行于 TCP 之上， <strong>是添加了加密和认证机制的 HTTP</strong>。</td>
+</tr>
+<tr>
+<td>端口</td>
+<td align="center">80</td>
+<td align="center">443</td>
+</tr>
+<tr>
+<td>资源消耗</td>
+<td align="center">较少</td>
+<td align="center">由于加解密处理，会消耗更多的 CPU 和内存资源</td>
+</tr>
+<tr>
+<td>开销</td>
+<td align="center">无需证书</td>
+<td align="center">需要证书，而证书一般需要向认证机构购买</td>
+</tr>
+<tr>
+<td>加密机制</td>
+<td align="center">无</td>
+<td align="center">共享密钥加密和公开密钥加密并用的混合加密机制</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td align="center">弱</td>
+<td align="center">由于加密机制，安全性强</td>
+</tr>
+</tbody></table>
+<h3 id="6、常用HTTP状态码"><a href="#6、常用HTTP状态码" class="headerlink" title="6、常用HTTP状态码"></a>6、常用HTTP状态码</h3><p>HTTP状态码表示客户端HTTP请求的返回结果、标识服务器处理是否正常、表明请求出现的错误等。</p>
+<p>状态码的类别：</p>
+<table>
+<thead>
+<tr>
+<th>类别</th>
+<th>原因短语</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1XX</td>
+<td>Informational（信息性状态码） 接受的请求正在处理</td>
+</tr>
+<tr>
+<td>2XX</td>
+<td>Success（成功状态码） 请求正常处理完毕</td>
+</tr>
+<tr>
+<td>3XX</td>
+<td>Redirection（重定向状态码） 需要进行附加操作以完成请求</td>
+</tr>
+<tr>
+<td>4XX</td>
+<td>Client Error（客户端错误状态码） 服务器无法处理请求</td>
+</tr>
+<tr>
+<td>5XX</td>
+<td>Server Error（服务器错误状态码） 服务器处理请求出错</td>
+</tr>
+</tbody></table>
+<p>常用HTTP状态码：</p>
+<table>
+<thead>
+<tr>
+<th>2XX</th>
+<th>成功（这系列表明请求被正常处理了）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>OK，表示从客户端发来的请求在服务器端被正确处理</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No content，表示请求成功，但响应报文不含实体的主体部分</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content，进行范围请求成功</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>3XX</th>
+<th>重定向（表明浏览器要执行特殊处理）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>301</td>
+<td>moved permanently，永久性重定向，表示资源已被分配了新的 URL</td>
+</tr>
+<tr>
+<td>302</td>
+<td>found，临时性重定向，表示资源临时被分配了新的 URL</td>
+</tr>
+<tr>
+<td>303</td>
+<td>see other，表示资源存在着另一个 URL，应使用 GET 方法获取资源（对于301&#x2F;302&#x2F;303响应，几乎所有浏览器都会删除报文主体并自动用GET重新请求）</td>
+</tr>
+<tr>
+<td>304</td>
+<td>not modified，表示服务器允许访问资源，但请求未满足条件的情况（与重定向无关）</td>
+</tr>
+<tr>
+<td>307</td>
+<td>temporary redirect，临时重定向，和302含义类似，但是期望客户端保持请求方法不变向新的地址发出请求</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>4XX</th>
+<th>客户端错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>400</td>
+<td>bad request，请求报文存在语法错误</td>
+</tr>
+<tr>
+<td>401</td>
+<td>unauthorized，表示发送的请求需要有通过 HTTP 认证的认证信息</td>
+</tr>
+<tr>
+<td>403</td>
+<td>forbidden，表示对请求资源的访问被服务器拒绝，可在实体主体部分返回原因描述</td>
+</tr>
+<tr>
+<td>404</td>
+<td>not found，表示在服务器上没有找到请求的资源</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>5XX</th>
+<th>服务器错误</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>500</td>
+<td>internal sever error，表示服务器端在执行请求时发生了错误</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented，表示服务器不支持当前请求所需要的某个功能</td>
+</tr>
+<tr>
+<td>503</td>
+<td>service unavailable，表明服务器暂时处于超负载或正在停机维护，无法处理请求</td>
+</tr>
+</tbody></table>
+<h3 id="6、GET和POST区别"><a href="#6、GET和POST区别" class="headerlink" title="6、GET和POST区别"></a>6、GET和POST区别</h3><p>说道GET和POST，就不得不提HTTP协议，因为浏览器和服务器的交互是通过HTTP协议执行的，而GET和POST也是HTTP协议中的两种方法。</p>
+<p>HTTP全称为Hyper Text Transfer Protocol，中文翻译为超文本传输协议，目的是保证浏览器与服务器之间的通信。HTTP的工作方式是客户端与服务器之间的请求-应答协议。</p>
+<p>HTTP协议中定义了浏览器和服务器进行交互的不同方法，基本方法有4种，分别是GET，POST，PUT，DELETE。这四种方法可以理解为，对服务器资源的查，改，增，删。</p>
+<ul>
+<li>GET：从服务器上获取数据，也就是所谓的查，仅仅是获取服务器资源，不进行修改。</li>
+<li>POST：向服务器提交数据，这就涉及到了数据的更新，也就是更改服务器的数据。</li>
+<li>PUT：英文含义是放置，也就是向服务器新添加数据，就是所谓的增。</li>
+<li>DELETE：从字面意思也能看出，这种方式就是删除服务器数据的过程。</li>
+</ul>
+<p><strong>GET和POST区别</strong></p>
+<ol>
+<li><p>Get是不安全的，因为在传输过程，数据被放在请求的URL中；Post的所有操作对用户来说都是不可见的。 但是这种做法也不时绝对的，大部分人的做法也是按照上面的说法来的，但是也可以在get请求加上 request body，给 post请求带上 URL 参数。</p>
+</li>
+<li><p>Get请求提交的url中的数据最多只能是2048字节，这个限制是浏览器或者服务器给添加的，http协议并没有对url长度进行限制，目的是为了保证服务器和浏览器能够正常运行，防止有人恶意发送请求。Post请求则没有大小限制。</p>
+</li>
+<li><p>Get限制Form表单的数据集的值必须为ASCII字符；而Post支持整个ISO10646字符集。</p>
+</li>
+<li><p>Get执行效率却比Post方法好。Get是form提交的默认方法。</p>
+</li>
+<li><p>GET产生一个TCP数据包；POST产生两个TCP数据包。</p>
+<p>对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应200（返回数据）；</p>
+<p>而对于POST，浏览器先发送header，服务器响应100 continue，浏览器再发送data，服务器响应200 ok（返回数据）。</p>
+</li>
+</ol>
+<h3 id="7、什么是对称加密与非对称加密"><a href="#7、什么是对称加密与非对称加密" class="headerlink" title="7、什么是对称加密与非对称加密"></a>7、什么是对称加密与非对称加密</h3><p>对称密钥加密是指加密和解密使用同一个密钥的方式，<strong>这种方式存在的最大问题就是密钥发送问题，即如何安全地将密钥发给对方；</strong></p>
+<p>而非对称加密是指使用一对非对称密钥，即公钥和私钥，公钥可以随意发布，但私钥只有自己知道。发送密文的一方使用对方的公钥进行加密处理，对方接收到加密信息后，使用自己的私钥进行解密。<br>由于非对称加密的方式不需要发送用来解密的私钥，所以可以保证安全性；但是和对称加密比起来，非常的慢</p>
+<h3 id="8、什么是HTTP2"><a href="#8、什么是HTTP2" class="headerlink" title="8、什么是HTTP2"></a>8、什么是HTTP2</h3><p>HTTP2 可以提高了网页的性能。</p>
+<p>在 HTTP1 中浏览器限制了同一个域名下的请求数量（Chrome 下一般是六个），当在请求很多资源的时候，由于队头阻塞当浏览器达到最大请求数量时，剩余的资源需等待当前的六个请求完成后才能发起请求。</p>
+<p>HTTP2 中引入了多路复用的技术，这个技术可以只通过一个 TCP 连接就可以传输所有的请求数据。多路复用可以绕过浏览器限制同一个域名下的请求数量的问题，进而提高了网页的性能。</p>
+<h3 id="9、Session、Cookie和Token的主要区别"><a href="#9、Session、Cookie和Token的主要区别" class="headerlink" title="9、Session、Cookie和Token的主要区别"></a>9、Session、Cookie和Token的主要区别</h3><p>HTTP协议本身是无状态的。什么是无状态呢，即服务器无法判断用户身份。</p>
+<p><strong>什么是cookie</strong></p>
+<p>cookie是由Web服务器保存在用户浏览器上的小文件（key-value格式），包含用户相关的信息。客户端向服务器发起请求，如果服务器需要记录该用户状态，就使用response向客户端浏览器颁发一个Cookie。客户端浏览器会把Cookie保存起来。当浏览器再请求该网站时，浏览器把请求的网址连同该Cookie一同提交给服务器。服务器检查该Cookie，以此来辨认用户身份。</p>
+<p><strong>什么是session</strong></p>
+<p>session是依赖Cookie实现的。session是服务器端对象</p>
+<p>session 是浏览器和服务器会话过程中，服务器分配的一块储存空间。服务器默认为浏览器在cookie中设置 sessionid，浏览器在向服务器请求过程中传输 cookie 包含 sessionid ，服务器根据 sessionid 获取出会话中存储的信息，然后确定会话的身份信息。</p>
+<p><strong>cookie与session区别</strong></p>
+<ul>
+<li>存储位置与安全性：cookie数据存放在客户端上，安全性较差，session数据放在服务器上，安全性相对更高；</li>
+<li>存储空间：单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie，session无此限制</li>
+<li>占用服务器资源：session一定时间内保存在服务器上，当访问增多，占用服务器性能，考虑到服务器性能方面，应当使用cookie。</li>
+</ul>
+<p><strong>什么是Token</strong></p>
+<p>Token的引入：Token是在客户端频繁向服务端请求数据，服务端频繁的去数据库查询用户名和密码并进行对比，判断用户名和密码正确与否，并作出相应提示，在这样的背景下，Token便应运而生。</p>
+<p>Token的定义：Token是服务端生成的一串字符串，以作客户端进行请求的一个令牌，当第一次登录后，服务器生成一个Token便将此Token返回给客户端，以后客户端只需带上这个Token前来请求数据即可，无需再次带上用户名和密码。</p>
+<p>使用Token的目的：Token的目的是为了减轻服务器的压力，减少频繁的查询数据库，使服务器更加健壮。</p>
+<p>Token 是在服务端产生的。如果前端使用用户名&#x2F;密码向服务端请求认证，服务端认证成功，那么在服务端会返回 Token 给前端。前端可以在每次请求的时候带上 Token 证明自己的合法地位</p>
+<p><strong>session与token区别</strong></p>
+<ul>
+<li>session机制存在服务器压力增大，CSRF跨站伪造请求攻击，扩展性不强等问题；</li>
+<li>session存储在服务器端，token存储在客户端</li>
+<li>token提供认证和授权功能，作为身份认证，token安全性比session好；</li>
+<li>session这种会话存储方式方式只适用于客户端代码和服务端代码运行在同一台服务器上，token适用于项目级的前后端分离（前后端代码运行在不同的服务器下）</li>
+</ul>
+<h3 id="10、Servlet是线程安全的吗"><a href="#10、Servlet是线程安全的吗" class="headerlink" title="10、Servlet是线程安全的吗"></a>10、Servlet是线程安全的吗</h3><p><strong>Servlet不是线程安全的，多线程并发的读写会导致数据不同步的问题。</strong></p>
+<p>解决的办法是尽量不要定义name属性，而是要把name变量分别定义在doGet()和doPost()方法内。虽然使用synchronized(name){}语句块可以解决问题，但是会造成线程的等待，不是很科学的办法。</p>
+<p>注意：多线程的并发的读写Servlet类属性会导致数据不同步。但是如果只是并发地读取属性而不写入，则不存在数据不同步的问题。因此Servlet里的只读属性最好定义为final类型的。</p>
+<h3 id="11、如果客户端禁止-cookie-能实现-session-还能用吗？"><a href="#11、如果客户端禁止-cookie-能实现-session-还能用吗？" class="headerlink" title="11、如果客户端禁止 cookie 能实现 session 还能用吗？"></a>11、如果客户端禁止 cookie 能实现 session 还能用吗？</h3><p>Cookie 与 Session，一般认为是两个独立的东西，Session采用的是在服务器端保持状态的方案，而Cookie采用的是在客户端保持状态的方案。</p>
+<p>但为什么禁用Cookie就不能得到Session呢？因为Session是用Session ID来确定当前对话所对应的服务器Session，而Session ID是通过Cookie来传递的，禁用Cookie相当于失去了Session ID，也就得不到Session了。</p>
+<p>假定用户关闭Cookie的情况下使用Session，其实现途径有以下几种：</p>
+<ol>
+<li>手动通过URL传值、隐藏表单传递Session ID。</li>
+<li>用文件、数据库等形式保存Session ID，在跨页过程中手动调用。</li>
+</ol>
+<h1 id="九、TCP11种状态"><a href="#九、TCP11种状态" class="headerlink" title="九、TCP11种状态"></a>九、TCP11种状态</h1><p>1、CLOSED状态</p>
+<p>初始状态，表示TCP连接是“关闭的”或者“未打开的”。</p>
+<p>2、LISTEN状态</p>
+<p>表示服务端的某个端口正处于监听状态，正在等待客户端连接的到来。</p>
+<p>3、SYN_SENT状态</p>
+<p>当客户端发送SYN请求建立连接之后，客户端处于SYN_SENT状态，等待服务器发送SYN+ACK。</p>
+<p>4、SYN_RCVD状态</p>
+<p>当服务器收到来自客户端的连接请求SYN之后，服务器处于SYN_RCVD状态，在接收到SYN请求之后会向客户端回复一个SYN+ACK的确认报文。</p>
+<p>5、ESTABLISED状态</p>
+<p>当客户端回复服务器一个ACK和服务器收到该ACK（TCP最后一次握手）之后，服务器和客户端都处于该状态，表示TCP连接已经成功建立。</p>
+<p>6、FIN_WAIT_1状态</p>
+<p>当数据传输期间当客户端想断开连接，向服务器发送了一个FIN之后，客户端处于该状态。</p>
+<p>7、FIN_WAIT_2状态</p>
+<p>当客户端收到服务器发送的连接断开确认ACK之后，客户端处于该状态。</p>
+<p>8、CLOSE_WAIT状态</p>
+<p>当服务器发送连接断开确认ACK之后但是还没有发送自己的FIN之前的这段时间，服务器处于该状态。</p>
+<p>9、TIME_WAIT状态</p>
+<p>当客户端收到了服务器发送的FIN并且发送了自己的ACK之后，客户端处于该状态。</p>
+<p>10、LAST_ACK状态</p>
+<p>表示被动关闭的一方（比如服务器）在发送FIN之后，等待对方的ACK报文时，就处于该状态。</p>
+<p>11、CLOSING状态</p>
+<p>连接断开期间，一般是客户端发送一个FIN，然后服务器回复一个ACK，然后服务器发送完数据后再回复一个FIN，当客户端和服务器同时接受到FIN时，客户端和服务器处于CLOSING状态，也就是此时双方都正在关闭同一个连接。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/42.%E8%A7%86%E5%9B%BE%E3%80%81%E5%87%BD%E6%95%B0%E5%92%8C%E8%BF%87%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/66.%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/87.%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/PEP8%E9%A3%8E%E6%A0%BC%E6%8C%87%E5%8D%97/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework08/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_table/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_3/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/17%E3%80%81%E7%BD%91%E7%BB%9C/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/17%E3%80%81%E7%BD%91%E7%BB%9C/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/17%E3%80%81%E7%BD%91%E7%BB%9C/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 12.9445180689053px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 10.49814590077542px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 9.274176994994047px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 13.280540519001654px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sun Dec 15 2024 06:02:47 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sun Dec 15 2024 06:02:47 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

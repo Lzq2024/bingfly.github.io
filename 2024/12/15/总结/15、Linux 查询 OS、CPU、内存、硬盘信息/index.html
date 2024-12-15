@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/15/%E6%80%BB%E7%BB%93/15%E3%80%81Linux%20%E6%9F%A5%E8%AF%A2%20OS%E3%80%81CPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/15%E3%80%81Linux%20%E6%9F%A5%E8%AF%A2%20OS%E3%80%81CPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h2 id="Linux-查询-OS、CPU、内存、硬盘信息"><a href="#Linux-查询-OS、CPU、内存、硬盘信息" class="headerlink" title="Linux 查询 OS、CPU、内存、硬盘信息"></a>Linux 查询 OS、CPU、内存、硬盘信息</h2><h1 id="一-前言"><a href="#一-前言" class="headerlink" title="一.前言"></a>一.前言</h1><p>当我们接手了一台或者几台服务器的时候，首先我们有必要对服务器的基本配置有所认识，这样才可以对症下药，对以后的软件部署，系统运维会有事半功倍的效果。</p>
+<h1 id="二-关于服务器基本配置"><a href="#二-关于服务器基本配置" class="headerlink" title="二.关于服务器基本配置"></a>二.关于服务器基本配置</h1><p>查询服务器的基本配置一般查询操作系统，CPU，内存，硬盘，下面进行逐一讲解。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="2-1-操作系统基本配置查询"><a href="#2-1-操作系统基本配置查询" class="headerlink" title="2.1 操作系统基本配置查询"></a>2.1 操作系统基本配置查询</h2><p>查看操作系统版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#cat /etc/redhat-release这个命令主要是查看红帽发行的操作系统的版本号[root@node5 ~]# cat /etc/redhat-release</span><br><span class="line">CentOS Linux release 7.4.1708 (Core) #cat /etc/issue这个命令适用于大多数linux发行版</span><br><span class="line">[root@node5 ~]# cat /etc/issue</span><br><span class="line">\S</span><br><span class="line">Kernel \r on an \m</span><br></pre></td></tr></table></figure>
+
+<p>查看操作系统内核版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# uname -r</span><br><span class="line">3.10.0-693.el7.x86_64</span><br></pre></td></tr></table></figure>
+
+<p>查看操作系统详细信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# uname -a</span><br><span class="line">Linux node5 3.10.0-693.el7.x86_64 #1 SMP Tue Aug 22 21:09:27 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux#从上面这段输出可以看出，该服务器主机名是node5，linux内核版本是3.10.0-693.el7.x86_64，CPU是x86架构</span><br><span class="line"></span><br><span class="line">#该命令可以查看更多信息</span><br><span class="line">[root@node5 ~]# more /etc/*release</span><br><span class="line">::::::::::::::/etc/centos-release::::::::::::::CentOS Linux release 7.4.1708 (Core) ::::::::::::::/etc/os-release::::::::::::::NAME=&quot;CentOS Linux&quot;VERSION=&quot;7 (Core)&quot;ID=&quot;centos&quot;ID_LIKE=&quot;rhel fedora&quot;VERSION_ID=&quot;7&quot;PRETTY_NAME=&quot;CentOS Linux 7 (Core)&quot;ANSI_COLOR=&quot;0;31&quot;CPE_NAME=&quot;cpe:/o:centos:centos:7&quot;HOME_URL=&quot;https://www.centos.org/&quot;BUG_REPORT_URL=&quot;https://bugs.centos.org/&quot;</span><br><span class="line">CENTOS_MANTISBT_PROJECT=&quot;CentOS-7&quot;CENTOS_MANTISBT_PROJECT_VERSION=&quot;7&quot;REDHAT_SUPPORT_PRODUCT=&quot;centos&quot;REDHAT_SUPPORT_PRODUCT_VERSION=&quot;7&quot;</span><br><span class="line">::::::::::::::/etc/redhat-release::::::::::::::CentOS Linux release 7.4.1708 (Core) ::::::::::::::/etc/system-release::::::::::::::CentOS Linux release 7.4.1708 (Core)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2-CPU基本配置查询"><a href="#2-2-CPU基本配置查询" class="headerlink" title="2.2 CPU基本配置查询"></a>2.2 CPU基本配置查询</h2><p>名词解释</p>
+<table>
+<thead>
+<tr>
+<th>名词</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU物理个数</td>
+<td>主板上实际插入的cpu数量</td>
+</tr>
+<tr>
+<td>CPU核心数</td>
+<td>单块CPU上面能处理数据的芯片组的数量，如双核、四核等 （cpu cores）</td>
+</tr>
+<tr>
+<td>逻辑CPU数&#x2F;线程数</td>
+<td>一般情况下，逻辑cpu&#x3D;物理CPU个数×每颗核数，如果不相等的话，则表示服务器的CPU支持超线程技术</td>
+</tr>
+</tbody></table>
+<p>查看 CPU 物理个数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# grep &#x27;physical id&#x27; /proc/cpuinfo | sort -u | wc -l</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<p>查看 CPU 核心数量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# grep &#x27;core id&#x27; /proc/cpuinfo | sort -u | wc -l</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<p>查看 CPU 线程数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#逻辑cpu数：一般情况下，逻辑cpu=物理CPU个数×每颗核数，如果不相等的话，则表示服务器的CPU支持超线程技术（HT：简单来说，它可使处理#器中的1 颗内核如2 颗内核那样在操作系统中发挥作用。这样一来，操作系统可使用的执行资源扩大了一倍，大幅提高了系统的整体性能，此时逻#辑cpu=物理CPU个数×每颗核数x2）[root@node5 ~]# cat /proc/cpuinfo| grep &quot;processor&quot;|wc -l</span><br><span class="line">4</span><br><span class="line">[root@node5 ~]# grep &#x27;processor&#x27; /proc/cpuinfo | sort -u | wc -l</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+
+<p>查看 CPU 型号</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# cat /proc/cpuinfo | grep name | sort | uniq</span><br><span class="line">model name  : Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz</span><br><span class="line">[root@node5 ~]# dmidecode -s processor-version | uniq   #使用uniq进行去重</span><br><span class="line">Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz</span><br></pre></td></tr></table></figure>
+
+<p>查看 CPU 的详细信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#CPU有几个核，就会输出几个重复的信息</span><br><span class="line">[root@node5 ~]# cat /proc/cpuinfo</span><br><span class="line">processor  : 0</span><br><span class="line">vendor_id  : GenuineIntel</span><br><span class="line">cpu family  : 6</span><br><span class="line">model    : 142</span><br><span class="line">model name  : Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz</span><br><span class="line">stepping  : 10</span><br><span class="line">microcode  : 0x96</span><br><span class="line">cpu MHz    : 2000.921</span><br><span class="line">cache size  : 8192 KB</span><br><span class="line">physical id  : 0</span><br><span class="line">siblings  : 4</span><br><span class="line">core id    : 0</span><br><span class="line">cpu cores  : 4</span><br><span class="line">apicid    : 0</span><br><span class="line">initial apicid  : 0</span><br><span class="line">fpu    : yes</span><br><span class="line">fpu_exception  : yes</span><br><span class="line">cpuid level  : 22</span><br><span class="line">wp    : yes</span><br><span class="line">flags    : fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch tpr_shadow vnmi ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid mpx rdseed adx smap clflushopt xsaveopt xsavec arat</span><br><span class="line">bogomips  : 4002.00</span><br><span class="line">clflush size  : 64</span><br><span class="line">cache_alignment  : 64</span><br><span class="line">address sizes  : 43 bits physical, 48 bits virtual</span><br><span class="line">power management:</span><br></pre></td></tr></table></figure>
+
+<p>查看CPU的详细信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# lscpu</span><br><span class="line">Architecture:          x86_64</span><br><span class="line">CPU op-mode(s):        32-bit, 64-bit</span><br><span class="line">Byte Order:            Little Endian</span><br><span class="line">CPU(s):                4</span><br><span class="line">On-line CPU(s) list:   0-3</span><br><span class="line">Thread(s) per core:    1</span><br><span class="line">Core(s) per socket:    4</span><br><span class="line">Socket(s):             1</span><br><span class="line">NUMA node(s):          1</span><br><span class="line">Vendor ID:             GenuineIntel</span><br><span class="line">CPU family:            6</span><br><span class="line">Model:                 142</span><br><span class="line">Model name:            Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz</span><br><span class="line">Stepping:              10</span><br><span class="line">CPU MHz:               2000.921</span><br><span class="line">BogoMIPS:              4002.00</span><br><span class="line">Virtualization:        VT-x</span><br><span class="line">Hypervisor vendor:     VMware</span><br><span class="line">Virtualization type:   full</span><br><span class="line">L1d cache:             32K</span><br><span class="line">L1i cache:             32K</span><br><span class="line">L2 cache:              256K</span><br><span class="line">L3 cache:              8192K</span><br><span class="line">NUMA node0 CPU(s):     0-3</span><br><span class="line">Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch tpr_shadow vnmi ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 invpcid mpx rdseed adx smap clflushopt xsaveopt xsavec arat</span><br></pre></td></tr></table></figure>
+
+<p><strong>CPU配置总结</strong></p>
+<p>通过以上的查询，我们可以知道该服务器是1路4核的CPU ，CPU型号是Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz，该CPU没有超线程。</p>
+<h2 id="2-3-内存基本配置查询"><a href="#2-3-内存基本配置查询" class="headerlink" title="2.3 内存基本配置查询"></a>2.3 内存基本配置查询</h2><p>名词解释</p>
+<table>
+<thead>
+<tr>
+<th>名词</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mem</td>
+<td>内存的使用情况总览表</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td>虚拟内存。即可以把数据存放在硬盘上的数据，当物理内存不足时，拿出部分硬盘空间当SWAP分区（虚拟成内存）使用，从而解决内存容量不足的情况。SWAP意思是交换，顾名思义，当某进程向OS请求内存发现不足时，OS会把内存中暂时不用的数据交换出去，放在SWAP分区中，这个过程称为SWAP OUT。当某进程又需要这些数据且OS发现还有空闲物理内存时，又会把SWAP分区中的数据交换回物理内存中，这个过程称为SWAP IN。当然，swap大小是有上限的，一旦swap使用完，操作系统会触发OOM-Killer机制，把消耗内存最多的进程kill掉以释放内存。</td>
+</tr>
+<tr>
+<td>shared</td>
+<td>共享内存，即和普通用户共享的物理内存值， 主要用于进程间通信</td>
+</tr>
+<tr>
+<td>buffers</td>
+<td>用于存放要输出到disk（块设备）的数据的</td>
+</tr>
+<tr>
+<td>cached</td>
+<td>存放从disk上读出的数据</td>
+</tr>
+<tr>
+<td>total</td>
+<td>总的物理内存，total&#x3D;used+free</td>
+</tr>
+<tr>
+<td>used</td>
+<td>使用掉的内存</td>
+</tr>
+<tr>
+<td>free</td>
+<td>空闲的内存</td>
+</tr>
+</tbody></table>
+<p>查询服务器内存</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# free -m</span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:           3941         286        3446          19         208        3407</span><br><span class="line">Swap:          2047           0        2047</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">#注释</span><br><span class="line">#linux的内存管理机制的思想包括（不敢说就是）内存利用率最大化。内核会把剩余的内存申请为cached，而cached不属于free范畴。当系统运#行时间较久，会发现cached很大，对于有频繁文件读写操作的系统，这种现象会更加明显。直观的看，此时free的内存会非常小，但并不代表可##用的内存小，当一个程序需要申请较大的内存时，如果free的内存不够，内核会把部分cached的内存回收，回收的内存再分配给应用程序。所以#对于linux系统，可用于分配的内存不只是free的内存，还包括cached的内存（其实还包括buffers）。</span><br><span class="line">#对于操作系统：</span><br><span class="line">#MemFree=total-used</span><br><span class="line">#MemUsed  = MemTotal - MemFree</span><br><span class="line">#对于应用程序：</span><br><span class="line">#MemFree=buffers+cached+free</span><br></pre></td></tr></table></figure>
+
+<p>每隔3秒查询一下内存</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# free -s 3</span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:        4036316      361144     3458272       19536      216900     3419776</span><br><span class="line">Swap:       2097148           0     2097148</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:        4036316      361144     3458272       19536      216900     3419776</span><br><span class="line">Swap:       2097148           0     2097148</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">              total        used        free      shared  buff/cache   available</span><br><span class="line">Mem:        4036316      361144     3458272       19536      216900     3419776</span><br><span class="line">Swap:       2097148           0     2097148</span><br><span class="line"> </span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-硬盘基本配置查询"><a href="#2-4-硬盘基本配置查询" class="headerlink" title="2.4 硬盘基本配置查询"></a>2.4 硬盘基本配置查询</h2><p>查询磁盘整体使用情况</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# df -h</span><br><span class="line">Filesystem               Size  Used Avail Use% Mounted on</span><br><span class="line">/dev/mapper/centos-root   17G  4.1G   13G  24% /</span><br><span class="line">devtmpfs                 2.0G     0  2.0G   0% /dev</span><br><span class="line">tmpfs                    2.0G  8.0K  2.0G   1% /dev/shm</span><br><span class="line">tmpfs                    2.0G  8.7M  2.0G   1% /run</span><br><span class="line">tmpfs                    2.0G     0  2.0G   0% /sys/fs/cgroup</span><br><span class="line">/dev/sda1               1014M  125M  890M  13% /boot</span><br><span class="line">tmpfs                    395M     0  395M   0% /run/user/0</span><br><span class="line">#命令拓展</span><br><span class="line">#df -a 显示全部的文件系统的使用情况</span><br><span class="line">#df -i显示inode信息</span><br><span class="line">#df -k 已字节数显示区块占用情况</span><br><span class="line">#df -T 显示文件系统的类型</span><br></pre></td></tr></table></figure>
+
+<p>查询某个目录磁盘占用情况</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#命令拓展</span><br><span class="line">#du -s 指定目录大小汇总</span><br><span class="line">#du -h带计量单位</span><br><span class="line">#du -a 含文件</span><br><span class="line">#du --max-depth=1 子目录深度</span><br><span class="line">#du -c 列出明细的同时，增加汇总值</span><br><span class="line">[root@node5 ~]# du -sh /home/</span><br><span class="line">1.7G  /home/</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">[root@node5 ~]# du -ach --max-depth=2 /home/</span><br><span class="line">4.0K  /home/www/.bash_logout</span><br><span class="line">4.0K  /home/www/.bash_profile</span><br><span class="line">4.0K  /home/www/.bashrc</span><br><span class="line">4.0K  /home/www/web</span><br><span class="line">16K  /home/www</span><br><span class="line">4.0K  /home/nginx/.bash_logout</span><br><span class="line">4.0K  /home/nginx/.bash_profile</span><br><span class="line">4.0K  /home/nginx/.bashrc</span><br><span class="line">12K  /home/nginx</span><br><span class="line">4.0K  /home/esnode/.bash_logout</span><br><span class="line">4.0K  /home/esnode/.bash_profile</span><br><span class="line">4.0K  /home/esnode/.bashrc</span><br><span class="line">4.0K  /home/esnode/.oracle_jre_usage</span><br><span class="line">4.3M  /home/esnode/elasticsearch-analysis-ik-6.2.2.zip</span><br><span class="line">80M  /home/esnode/kibana-6.2.2-linux-x86_64.tar.gz</span><br><span class="line">300M  /home/esnode/x-pack-6.2.2.zip</span><br><span class="line">28M  /home/esnode/elasticsearch-6.2.2.tar.gz</span><br><span class="line">4.0K  /home/esnode/.bash_history</span><br><span class="line">294M  /home/esnode/elasticsearch-6.2.2</span><br><span class="line">4.0K  /home/esnode/.ssh</span><br><span class="line">4.0K  /home/esnode/x-pack生成的秘钥.txt</span><br><span class="line">1014M  /home/esnode/kibana-6.2.2-linux-x86_64</span><br><span class="line">8.0K  /home/esnode/.viminfo</span><br><span class="line">1.7G  /home/esnode</span><br><span class="line">1.7G  /home/</span><br><span class="line">1.7G  total</span><br></pre></td></tr></table></figure>
+
+<p>查看目录结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#tree命令默认没有安装，需要手动安装一下</span><br><span class="line">[root@node5 ~]# yum -y install tree</span><br><span class="line">#-L指定目录深度</span><br><span class="line">[root@node5 ~]# tree -L 2 /home/</span><br><span class="line">/home/</span><br><span class="line">├── esnode</span><br><span class="line">│   ├── elasticsearch-6.2.2</span><br><span class="line">│   ├── elasticsearch-6.2.2.tar.gz</span><br><span class="line">│   ├── elasticsearch-analysis-ik-6.2.2.zip</span><br><span class="line">│   ├── kibana-6.2.2-linux-x86_64</span><br><span class="line">│   ├── kibana-6.2.2-linux-x86_64.tar.gz</span><br><span class="line">│   ├── x-pack-6.2.2.zip</span><br><span class="line">│   └── x-pack\347\224\237\346\210\220\347\232\204\347\247\230\351\222\245.txt</span><br><span class="line">├── nginx</span><br><span class="line">└── www</span><br><span class="line">    └── web</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">6 directories, 5 files</span><br></pre></td></tr></table></figure>
+
+<p>以树状的格式显示所有可用的块设备信息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# lsblk</span><br><span class="line">NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT</span><br><span class="line">sda               8:0    0   20G  0 disk </span><br><span class="line">├─sda1            8:1    0    1G  0 part /boot</span><br><span class="line">└─sda2            8:2    0   19G  0 part </span><br><span class="line">  ├─centos-root 253:0    0   17G  0 lvm  /</span><br><span class="line">  └─centos-swap 253:1    0    2G  0 lvm  [SWAP]</span><br><span class="line">sdb               8:16   0    1G  0 disk </span><br><span class="line">└─sdb1            8:17   0  200M  0 part </span><br><span class="line">sr0              11:0    1 1024M  0 rom</span><br><span class="line"> </span><br><span class="line">#注释</span><br><span class="line">#NAME —— 设备的名称</span><br><span class="line">#MAJ:MIN —— Linux 操作系统中的每个设备都以一个文件表示，对块（磁盘）设备来说，这里用主次设备编号来描述设备。</span><br><span class="line">#RM —— 可移动设备。如果这是一个可移动设备将显示 1，否则显示 0。</span><br><span class="line">#TYPE —— 设备的类型</span><br><span class="line">#MOUNTPOINT —— 设备挂载的位置</span><br><span class="line">#RO —— 对于只读文件系统，这里会显示 1，否则显示 0。</span><br><span class="line">#SIZE —— 设备的容量</span><br></pre></td></tr></table></figure>
+
+<p>列出所有可用的设备、通用唯一识别码（UUID）、文件系统类型以及卷标</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@node5 ~]# blkid</span><br><span class="line">/dev/sda1: UUID=&quot;6503b4ad-2975-4152-a824-feb7bea1b622&quot; TYPE=&quot;xfs&quot; </span><br><span class="line">/dev/sda2: UUID=&quot;nqZ4uJ-ksnN-KzYS-N42b-00m3-Ohc2-BJXunP&quot; TYPE=&quot;LVM2_member&quot; </span><br><span class="line">/dev/sdb1: UUID=&quot;94396e17-4821-4957-aa76-d41f33958ff5&quot; TYPE=&quot;xfs&quot; </span><br><span class="line">/dev/mapper/centos-root: UUID=&quot;c1d38b37-821d-48e7-8727-3937ccc657a4&quot; TYPE=&quot;xfs&quot; </span><br><span class="line">/dev/mapper/centos-swap: UUID=&quot;c2fcaf11-42d8-4e4c-bf9e-6464f0777198&quot; TYPE=&quot;swap&quot;</span><br></pre></td></tr></table></figure>
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/53.%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/62.%E7%94%A8Python%E8%A7%A3%E6%9E%90HTML%E9%A1%B5%E9%9D%A2-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/72.%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BApandas-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/Python%E5%8F%82%E8%80%83%E4%B9%A6%E7%B1%8D/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E7%AC%AC06%E6%AC%A1%E5%85%AC%E5%BC%80%E8%AF%BE-%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972-%E5%9C%A8%E6%B0%B4%E4%B8%80%E6%96%B9/%E7%AE%97%E6%B3%95%E5%85%A5%E9%97%A8%E7%B3%BB%E5%88%972%20-%20%E5%9C%A8%E6%B0%B4%E4%B8%80%E6%96%B9/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/html+css/example/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example11/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/15%E3%80%81Linux%20%E6%9F%A5%E8%AF%A2%20OS%E3%80%81CPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/15%E3%80%81Linux%20%E6%9F%A5%E8%AF%A2%20OS%E3%80%81CPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/15%E3%80%81Linux%20%E6%9F%A5%E8%AF%A2%20OS%E3%80%81CPU%E3%80%81%E5%86%85%E5%AD%98%E3%80%81%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 13.245373207286312px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 10.510137090028095px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 12.978157313626419px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 15.248158125892203px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sun Dec 15 2024 06:02:47 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sun Dec 15 2024 06:02:47 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

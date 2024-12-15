@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>[TOC]</p>
+<p><a target="_blank" rel="noopener" href="https://thinkwon.blog.csdn.net/article/details/103522351">https://thinkwon.blog.csdn.net/article/details/103522351</a></p>
+<h1 id="一、Redis的作用（为什么要用Redis）"><a href="#一、Redis的作用（为什么要用Redis）" class="headerlink" title="一、Redis的作用（为什么要用Redis）"></a>一、Redis的作用（为什么要用Redis）</h1><p>防止数据库被击穿；可以减轻数据库压力，查询内存比查询数据库效率高。</p>
+<p>主要从“高性能”和“高并发”这两点来看待这个问题。</p>
+<p><strong>高性能：</strong></p>
+<p>假如用户第一次访问数据库中的某些数据。这个过程会比较慢，因为是从硬盘上读取的。将该用户访问的数据存在数缓存中，这样下一次再访问这些数据的时候就可以直接从缓存中获取了。操作缓存就是直接操作内存，所以速度相当快。如果数据库中的对应数据改变的之后，同步改变缓存中相应的数据即可！</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104506" alt="img"></p>
+<p><strong>高并发：</strong></p>
+<p>直接操作缓存能够承受的请求是远远大于直接访问数据库的，所以我们可以考虑把数据库中的部分数据转移到缓存中去，这样用户的一部分请求会直接到缓存这里而不用经过数据库。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104511" alt="img"></p>
+<h1 id="二、Redis的优势"><a href="#二、Redis的优势" class="headerlink" title="二、Redis的优势"></a>二、Redis的优势</h1><p>优点：</p>
+<p>●Redis基于内存运行并支持持久化（内存运行：处理高热数据优秀，不占用多的进程）</p>
+<p>●采用key-value（键值对）的存储形式</p>
+<p>●优点</p>
+<p>具有极高的数据读写速度（键值对–提取数据时可以直接提取，无需进行数据类型转换（转换需要消耗资源））</p>
+<p>支持丰富的数据类型</p>
+<p>支持数据的持久化（可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用）</p>
+<p>原子性</p>
+<p>支持数据备份，即master-slave模式的数据备份</p>
+<p>缺点</p>
+<ul>
+<li>数据库容量受到物理内存的限制，不能用作海量数据的高性能读写，因此Redis适合的场景主要局限在较小数据量的高性能操作和运算上。</li>
+<li>Redis 不具备自动容错和恢复功能，主机从机的宕机都会导致前端部分读写请求失败，需要等待机器重启或者手动切换前端的IP才能恢复。</li>
+<li>主机宕机，宕机前有部分数据未能及时同步到从机，切换IP后还会引入数据不一致的问题，降低了系统的可用性。</li>
+<li>Redis 较难支持在线扩容，在集群容量达到上限时在线扩容会变得很复杂。为避免这一问题，运维人员在系统上线时必须确保有足够的空间，这对资源造成了很大的浪费。</li>
+</ul>
+<h1 id="三、持久化"><a href="#三、持久化" class="headerlink" title="三、持久化"></a>三、持久化</h1><p><strong>为什么需要持久化？</strong></p>
+<p>因为Redis是内存数据库，它将自己的数据存储在内存里面，一旦Redis服务器进程退出或者运行Redis服务器的计算机停机，Redis服务器中的数据就会丢失。</p>
+<p><strong>为了避免数据丢失</strong>，所以Redis提供了持久化机制，将存储在内存中的数据保存到磁盘中，用于在Redis服务器进程退出或者运行Redis服务器的计算机停机导致数据丢失时，快速的恢复之前Redis存储在内存中的数据。</p>
+<p><strong>redis 的持久化机制是什么？各自的优缺点？</strong></p>
+<p>Redis 提供两种持久化机制 RDB（默认） 和 AOF 机制</p>
+<p>RDB持久化方式能够在指定的时间间隔能对你的数据进行快照存储。</p>
+<h3 id="1）RDB-优点"><a href="#1）RDB-优点" class="headerlink" title="1）RDB 优点"></a>1）RDB 优点</h3><ul>
+<li>RDB 的内容为二进制的数据，占用内存更小，更紧凑，更适合做为备份文件；</li>
+<li>RDB 对灾难恢复非常有用，它是一个紧凑的文件，可以更快的传输到远程服务器进行 Redis 服务恢复；</li>
+<li>RDB 可以更大程度的提高 Redis 的运行速度，因为每次持久化时 Redis 主进程都会 fork() 一个子进程，进行数据持久化到磁盘，Redis 主进程并不会执行磁盘 I&#x2F;O 等操作；</li>
+<li>与 AOF 格式的文件相比，RDB 文件可以更快的重启。</li>
+</ul>
+<h3 id="2）RDB-缺点"><a href="#2）RDB-缺点" class="headerlink" title="2）RDB 缺点"></a>2）RDB 缺点</h3><ul>
+<li>因为 RDB 只能保存某个时间间隔的数据，如果中途 Redis 服务被意外终止了，则会丢失一段时间内的 Redis 数据；</li>
+<li>RDB 需要经常 fork() 才能使用子进程将其持久化在磁盘上。如果数据集很大，fork() 可能很耗时，并且如果数据集很大且 CPU 性能不佳，则可能导致 Redis 停止为客户端服务几毫秒甚至一秒钟。</li>
+</ul>
+<p>AOF持久化是通过保存Redis服务器所执行的写命令来记录数据库数据的。</p>
+<h3 id="1）AOF优点"><a href="#1）AOF优点" class="headerlink" title="1）AOF优点"></a>1）AOF优点</h3><ul>
+<li>数据的完整性和一致性更高</li>
+</ul>
+<h3 id="2）AOF缺点"><a href="#2）AOF缺点" class="headerlink" title="2）AOF缺点"></a>2）AOF缺点</h3><ul>
+<li>因为AOF记录的内容多，文件会越来越大，数据恢复也会越来越慢。</li>
+</ul>
+<h2 id="RDB持久化、AOF持久化的区别"><a href="#RDB持久化、AOF持久化的区别" class="headerlink" title="RDB持久化、AOF持久化的区别"></a>RDB持久化、AOF持久化的区别</h2><ul>
+<li><strong>实现方式</strong></li>
+</ul>
+<p>RDB持久化是通过将某个时间点Redis服务器存储的数据保存到RDB文件中来实现持久化的。</p>
+<p>AOF持久化是通过将Redis服务器执行的所有写命令保存到AOF文件中来实现持久化的。</p>
+<ul>
+<li><strong>文件体积</strong></li>
+</ul>
+<p>由上述实现方式可知，RDB持久化记录的是结果，AOF持久化记录的是过程，所以AOF持久化生成的AOF文件会有体积越来越大的问题，Redis提供了AOF重写功能来减小AOF文件体积。</p>
+<ul>
+<li><strong>安全性</strong></li>
+</ul>
+<p>AOF持久化的安全性要比RDB持久化的安全性高，即如果发生机器故障，AOF持久化要比RDB持久化丢失的数据要少。</p>
+<p>因为RDB持久化会丢失上次RDB持久化后写入的数据，而AOF持久化最多丢失1s之内写入的数据（使用默认everysec配置的话）。</p>
+<ul>
+<li><strong>优先级</strong></li>
+</ul>
+<p>由于上述的安全性问题，如果Redis服务器开启了AOF持久化功能，Redis服务器在启动时会使用AOF文件来还原数据，如果Redis服务器没有开启AOF持久化功能，Redis服务器在启动时会使用RDB文件来还原数据，所以AOF文件的优先级比RDB文件的优先级高。</p>
+<p>RDB占用的内存大，因为是快照形式，在快照之后的无法备份</p>
+<h1 id="四、内存相关"><a href="#四、内存相关" class="headerlink" title="四、内存相关"></a>四、内存相关</h1><h3 id="MySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据"><a href="#MySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据" class="headerlink" title="MySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据"></a>MySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据</h3><p>redis内存数据集大小上升到一定大小的时候，就会施行数据淘汰策略。</p>
+<h3 id="Redis的内存淘汰策略有哪些"><a href="#Redis的内存淘汰策略有哪些" class="headerlink" title="Redis的内存淘汰策略有哪些"></a>Redis的内存淘汰策略有哪些</h3><p>Redis的内存淘汰策略是指在Redis的用于缓存的内存不足时，怎么处理需要新写入且需要申请额外空间的数据。</p>
+<p><strong>全局的键空间选择性移除</strong></p>
+<ul>
+<li>noeviction：当内存不足以容纳新写入数据时，新写入操作会报错。</li>
+<li>allkeys-lru：当内存不足以容纳新写入数据时，在键空间中，移除最近最少使用的key。（这个是<strong>最常用</strong>的）</li>
+<li>allkeys-random：当内存不足以容纳新写入数据时，在键空间中，随机移除某个key。</li>
+</ul>
+<p><strong>设置过期时间的键空间选择性移除</strong></p>
+<ul>
+<li>volatile-lru：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，移除最近最少使用的key。</li>
+<li>volatile-random：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，随机移除某个key。</li>
+<li>volatile-ttl：当内存不足以容纳新写入数据时，在设置了过期时间的键空间中，有更早过期时间的key优先移除。</li>
+</ul>
+<p><strong>总结</strong></p>
+<p>Redis的内存淘汰策略的选取并不会影响过期的key的处理。内存淘汰策略用于处理内存不足时的需要申请额外空间的数据；过期策略用于处理过期的缓存数据。</p>
+<h3 id="Redis主要消耗什么物理资源？"><a href="#Redis主要消耗什么物理资源？" class="headerlink" title="Redis主要消耗什么物理资源？"></a>Redis主要消耗什么物理资源？</h3><p>内存。</p>
+<h3 id="Redis的内存用完了会发生什么？"><a href="#Redis的内存用完了会发生什么？" class="headerlink" title="Redis的内存用完了会发生什么？"></a>Redis的内存用完了会发生什么？</h3><p>如果达到设置的上限，Redis的写命令会返回错误信息（但是读命令还可以正常返回。）或者你可以配置内存淘汰机制，当Redis达到内存上限时会冲刷掉旧的内容。</p>
+<h3 id="Redis如何做内存优化？"><a href="#Redis如何做内存优化？" class="headerlink" title="Redis如何做内存优化？"></a>Redis如何做内存优化？</h3><p>可以好好利用Hash,list,sorted set,set等集合类型数据，因为通常情况下很多小的Key-Value可以用更紧凑的方式存放到一起。尽可能使用散列表（hashes），散列表（是说散列表里面存储的数少）使用的内存非常小，所以你应该尽可能的将你的数据模型抽象到一个散列表里面。比如你的web系统中有一个用户对象，不要为这个用户的名称，姓氏，邮箱，密码设置单独的key，而是应该把这个用户的所有信息存储到一张散列表里面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# redis-cli</span><br><span class="line"></span><br><span class="line">127.0.0.1:6379&gt; info memory #查看内存使用总量和内存碎片率</span><br><span class="line"></span><br><span class="line"># Memory</span><br><span class="line"></span><br><span class="line">used_memory:11315280 #内存使用总量</span><br><span class="line"></span><br><span class="line">used_memory_human:10.79M</span><br><span class="line"></span><br><span class="line">...省略内容</span><br><span class="line"></span><br><span class="line">mem_fragmentation_ratio:1.76 #内存碎片率</span><br><span class="line"></span><br><span class="line">mem_fragmentation_bytes:8566768</span><br></pre></td></tr></table></figure>
+
+<p>●跟踪内存碎片率对理解redis实例的资源性能是非常重要的</p>
+<p>内存碎片率稍大于1是合理的，这个值表示内存碎片率比较低</p>
+<p>内存碎片率超过1.5,说明redis消耗了实际需要物理内存的150%，其中50%是内存碎片率</p>
+<p>内存碎片率低于1的，说明Redis内存分配超出了物理内存,操作系统正在进行内存交换</p>
+<p>（内存碎片率稍大于1是最佳，低于1访问速度会慢，高于1.5说明碎片太多）</p>
+<h3 id="内存使用率超过可用最大内存，redis响应速度会变慢，该怎么办？"><a href="#内存使用率超过可用最大内存，redis响应速度会变慢，该怎么办？" class="headerlink" title="内存使用率超过可用最大内存，redis响应速度会变慢，该怎么办？"></a>内存使用率超过可用最大内存，redis响应速度会变慢，该怎么办？</h3><p>原因：操作系统将开始进行内存与swap空间交换</p>
+<p>解决方案：设置内存淘汰策略</p>
+<h1 id="五、Redis优化"><a href="#五、Redis优化" class="headerlink" title="五、Redis优化"></a>五、Redis优化</h1><p>键值对存储</p>
+<h3 id="1、避免使用keys"><a href="#1、避免使用keys" class="headerlink" title="1、避免使用keys"></a>1、避免使用keys</h3><p>keys *, 这个命令是阻塞的，即操作执行期间，其它任何命令在你的实例中都无法执行。可以去使用<a target="_blank" rel="noopener" href="http://www.redis.cn/commands/scan.html">SCAN</a>,来代替。</p>
+<p> keys指令会导致线程阻塞一段时间，线上服务会停顿，直到指令执行完毕，服务才能恢复。这个时候可以使用scan指令，scan指令可以无阻塞的提取出指定模式的key列表，但是会有一定的重复概率，在客户端做一次去重就可以了，但是整体所花费的时间会比直接用keys指令长 </p>
+<h3 id="2、设置-key-有效期"><a href="#2、设置-key-有效期" class="headerlink" title="2、设置 key 有效期"></a>2、设置 key 有效期</h3><p>我们应该尽可能的利用key有效期。比如一些临时数据（短信校验码），过了有效期Redis就会自动为你清除！</p>
+<h3 id="3、选择回收策略-maxmemory-policy"><a href="#3、选择回收策略-maxmemory-policy" class="headerlink" title="3、选择回收策略(maxmemory-policy)"></a>3、选择回收策略(maxmemory-policy)</h3><p>当 Redis 的实例空间被填满了之后，将会尝试回收一部分key。根据你的使用方式，强烈建议使用 volatile-lru（默认）策略——前提是你对key已经设置了超时。</p>
+<p>​      </p>
+<h3 id="4、尽可能地使用slot哈希存储，哈希槽（以集群方式部署）。"><a href="#4、尽可能地使用slot哈希存储，哈希槽（以集群方式部署）。" class="headerlink" title="4、尽可能地使用slot哈希存储，哈希槽（以集群方式部署）。"></a>4、尽可能地使用slot哈希存储，哈希槽（以集群方式部署）。</h3><h3 id="5、当业务场景不需要数据持久化时，关闭所有的持久化方式可以获得最佳的性能。"><a href="#5、当业务场景不需要数据持久化时，关闭所有的持久化方式可以获得最佳的性能。" class="headerlink" title="5、当业务场景不需要数据持久化时，关闭所有的持久化方式可以获得最佳的性能。"></a>5、当业务场景不需要数据持久化时，关闭所有的持久化方式可以获得最佳的性能。</h3><h3 id="6、限制redis的内存大小"><a href="#6、限制redis的内存大小" class="headerlink" title="6、限制redis的内存大小"></a>6、限制redis的内存大小</h3><p>数据量不可预估，并且内存也有限的话，尽量限制下redis使用的内存大小，这样可以避免redis使用swap分区或者出现OOM错误。（使用swap分区，性能较低，如果限制了内存，当到达指定内存之后就不能添加数据了，否则会报OOM错误。可以设置maxmemory-policy，内存不足时删除数据。）</p>
+<h3 id="7、Redis常见性能问题和解决方案？"><a href="#7、Redis常见性能问题和解决方案？" class="headerlink" title="7、Redis常见性能问题和解决方案？"></a>7、Redis常见性能问题和解决方案？</h3><ol>
+<li>Master最好不要做任何持久化工作，包括内存快照和AOF日志文件，特别是不要启用内存快照做持久化。</li>
+<li>如果数据比较关键，某个Slave开启AOF备份数据，策略为每秒同步一次。</li>
+<li>为了主从复制的速度和连接的稳定性，Slave和Master最好在同一个局域网内。</li>
+<li>尽量避免在压力较大的主库上增加从库</li>
+<li>Master调用BGREWRITEAOF重写AOF文件，AOF在重写的时候会占大量的CPU和内存资源，导致服务load过高，出现短暂服务暂停现象。</li>
+<li>为了Master的稳定性，主从复制不要用图状结构，用单向链表结构更稳定，即主从关系为：Master&lt;–Slave1&lt;–Slave2&lt;–Slave3…，这样的结构也方便解决单点故障问题，实现Slave对Master的替换，也即，如果Master挂了，可以立马启用Slave1做Master，其他不变。</li>
+</ol>
+<h1 id="六、如何回收key？"><a href="#六、如何回收key？" class="headerlink" title="六、如何回收key？"></a>六、如何回收key？</h1><p>当达到设置的最大阈值时，需选择一种key的回收策略</p>
+<p>默认情况下回收策略是noeviction（禁止收回）</p>
+<p>&#x2F;etc&#x2F;redis&#x2F;6379.conf配置文件中修改maxmemory-policy属性值</p>
+<p>volatile-lru:使用LRU算法从已设置过期时间的数据集合中淘汰数据（建议使用）</p>
+<p>volatile-ttl:从已设置过期时间的数据集合中挑选即将过期的数据淘汰（建议使用）</p>
+<p>去掉#注释后，配置文件一定要顶格写</p>
+<h1 id="七、主从、哨兵、集群模式之间的区别："><a href="#七、主从、哨兵、集群模式之间的区别：" class="headerlink" title="七、主从、哨兵、集群模式之间的区别："></a>七、主从、哨兵、集群模式之间的区别：</h1><h2 id="主从："><a href="#主从：" class="headerlink" title="主从："></a>主从：</h2><p><strong>Redis主从复制前言</strong></p>
+<p>通过持久化功能，Redis保证了即使在服务器重启的情况下也不会丢失（或少量丢失）数据，但是由于数据是存储在一台服务器上的，如果这台服务器出现故障，比如硬盘坏了，也会导致数据丢失。</p>
+<p>为了避免单点故障，我们需要将数据复制多份部署在多台不同的服务器上，即使有一台服务器出现故障其他服务器依然可以继续提供服务。</p>
+<p>这就要求当一台服务器上的数据更新后，自动将更新的数据同步到其他服务器上，这时候就用到了Redis的主从复制。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104520.png" alt="img"></p>
+<p>Redis提供了复制（replication）功能来自动实现多台redis服务器的数据同步（每天19点 新闻联播，基本从cctv1-8,各大卫视都会播放）</p>
+<p>我们可以通过部署多台redis，并在配置文件中指定这几台redis之间的主从关系，主负责写入数据，同时把写入的数据实时同步到从机器，这种模式叫做主从复制，即master&#x2F;slave，并且redis默认master用于写，slave用于读，向slave写数据会导致错误。</p>
+<h2 id="哨兵："><a href="#哨兵：" class="headerlink" title="哨兵："></a>哨兵：</h2><p>当主数据库遇到异常中断服务后，开发者可以通过手动的方式选择一个从数据库来升格为主数据库，以使得系统能够继续提供服务。然而整个过程相对麻烦且需要人工介入，难以实现自动化。 为此，Redis 2.8中提供了哨兵工具来实现自动化的系统监控和故障恢复功能。</p>
+<p>哨兵的作用就是监控redis主、从数据库是否正常运行，主出现故障自动将从数据库转换为主数据库。</p>
+<p>顾名思义，哨兵的作用就是监控Redis系统的运行状况。它的功能包括以下两个。</p>
+<p>  （1）监控主数据库和从数据库是否正常运行。 </p>
+<p>  （2）主数据库出现故障时自动将从数据库转换为主数据库。</p>
+<h2 id="集群："><a href="#集群：" class="headerlink" title="集群："></a>集群：</h2><p>即使使用哨兵，redis每个实例也是全量存储，每个redis存储的内容都是完整的数据，浪费内存且有木桶效应。为了最大化利用内存，可以采用集群，就是分布式存储。即每台redis存储不同的内容，共有16384个slot。每个redis分得一些slot，hash_slot &#x3D; crc16(key) mod 16384 找到对应slot，键是可用键，如果有{}则取{}内的作为可用键，否则整个键是可用键</p>
+<p>集群至少需要3主3从，且每个实例使用不同的配置文件，主从不用配置，集群会自己选。</p>
+<h1 id="八、为了达到redis的高可用，有两种部署方式："><a href="#八、为了达到redis的高可用，有两种部署方式：" class="headerlink" title="八、为了达到redis的高可用，有两种部署方式："></a>八、为了达到redis的高可用，有两种部署方式：</h1><p>哨兵模式；集群模式</p>
+<p>哨兵机制是redis2.8开始支持。集群模式是redis3.0开始支持。</p>
+<h1 id="九、哨兵机制存在的意义："><a href="#九、哨兵机制存在的意义：" class="headerlink" title="九、哨兵机制存在的意义："></a>九、哨兵机制存在的意义：</h1><p> 为了实现redis故障转移的自动化。自动发现，自动转移。不需要人工参与</p>
+<h3 id="1、Sentinel的作用："><a href="#1、Sentinel的作用：" class="headerlink" title="1、Sentinel的作用："></a>1、Sentinel的作用：</h3><p>　　　1)、Master 状态监测</p>
+<p>　　　2)、如果Master 异常，则会进行Master-slave 转换，将其中一个Slave作为Master，将之前的Master作为Slave</p>
+<p>　　　3)、Master-Slave切换后，master_redis.conf、slave_redis.conf和sentinel.conf的内容都会发生改变，即master_redis.conf中会多一行slaveof的配置，sentinel.conf的监控目标会随之调换</p>
+<h3 id="2、Sentinel的工作方式"><a href="#2、Sentinel的工作方式" class="headerlink" title="2、Sentinel的工作方式:"></a>2、Sentinel的工作方式:</h3><p>　　1)：每个Sentinel以每秒钟一次的频率向它所知的Master，Slave以及其他 Sentinel 实例发送一个 PING 命令 </p>
+<p>　　2)：如果一个实例（instance）距离最后一次有效回复 PING 命令的时间超过 down-after-milliseconds 选项所指定的值， 则这个实例会被 Sentinel 标记为主观下线</p>
+<p>　　3)：如果一个Master被标记为主观下线，则正在监视这个Master的所有 Sentinel 要以每秒一次的频率确认Master的确进入了主观下线状态。 </p>
+<p>　　4)：当有足够数量的 Sentinel（大于等于配置文件指定的值）在指定的时间范围内确认Master的确进入了主观下线状态， 则Master会被标记为客观下线 </p>
+<p>5)：若没有足够数量的 Sentinel 同意 Master 已经下线， Master 的客观下线状态就会被移除。 </p>
+<p>　　　　若 Master 重新向 Sentinel 的 PING 命令返回有效回复， Master 的主观下线状态就会被移除。</p>
+<h3 id="3、故障转移哨兵leader选举："><a href="#3、故障转移哨兵leader选举：" class="headerlink" title="3、故障转移哨兵leader选举："></a>3、故障转移哨兵leader选举：</h3><p>如果主节点被判定为客观下线之后，就要选取一个哨兵节点来完成后面的故障转移工作，选举出一个leader的流程如下:</p>
+<p>主节点客观下线 –》选一个哨兵节点完成故障转移 –》票数大于等于哨兵数&#x2F;2 +1，则是master</p>
+<h3 id="4、生产环境中部署技巧"><a href="#4、生产环境中部署技巧" class="headerlink" title="4、生产环境中部署技巧"></a>4、生产环境中部署技巧</h3><h4 id="1）Sentinel-节点不应该部署在一台物理“机器”上。"><a href="#1）Sentinel-节点不应该部署在一台物理“机器”上。" class="headerlink" title="1）Sentinel 节点不应该部署在一台物理“机器”上。"></a>1）Sentinel 节点不应该部署在一台物理“机器”上。</h4><p>这里特意强调物理机是因为一台物理机做成了若干虚拟机或者现今比较流行的容器，它们虽然有不同的 IP 地址，但实际上它们都是同一台物理机，同一台物理机意味着如果这台机器有什么硬件故障，所有的虚拟机都会受到影响，为了实现 Sentinel 节点集合真正的高可用，请勿将 Sentinel 节点部署在同一台物理机器上。</p>
+<h4 id="2）部署至少三个且奇数个的-Sentinel节点。"><a href="#2）部署至少三个且奇数个的-Sentinel节点。" class="headerlink" title="2）部署至少三个且奇数个的 Sentinel节点。"></a>2）部署至少三个且奇数个的 Sentinel节点。</h4><p>3个以上是通过增加 Sentinel 节点的个数提高对于故障判定的准确性，因为领导者选举需要至少一半加1个节点，奇数个节点可以在满足该条件的基础上节省一个节点。</p>
+<h3 id="5、哨兵重要配置项："><a href="#5、哨兵重要配置项：" class="headerlink" title="5、哨兵重要配置项："></a>5、哨兵重要配置项：</h3><p>#此项只有两个slave节点需要</p>
+<p>slaveof 14.0.0.10 6379</p>
+<p>#这里配置写上主服务器IP、端口、2个sentinel选举成功后才有效</p>
+<p>sentinel monitor mymaster 14.0.0.10 6379 2</p>
+<p>#主服务器 redis密码</p>
+<p>sentinel auth-pass mymaster 123456</p>
+<h1 id="十、Redis5-0-7版本集群模式（redis-cli可以直接使用）"><a href="#十、Redis5-0-7版本集群模式（redis-cli可以直接使用）" class="headerlink" title="十、Redis5.0.7版本集群模式（redis-cli可以直接使用）"></a>十、Redis5.0.7版本集群模式（redis-cli可以直接使用）</h1><h3 id="1、redis群集-–去中心化模式"><a href="#1、redis群集-–去中心化模式" class="headerlink" title="1、redis群集  –去中心化模式"></a>1、redis群集  –去中心化模式</h3><p>Redis-Cluster数据分片</p>
+<p>●Redis集群没有使用一致性hash，而是引入了哈希槽概念</p>
+<p>●Redis集群有16384个哈希槽</p>
+<p>●每个key通过CRC16校验后对16384取余来决定放置槽</p>
+<p>●集群的每个节点负责一部分哈希槽</p>
+<h3 id="2、redis集群模式怎么搭建？"><a href="#2、redis集群模式怎么搭建？" class="headerlink" title="2、redis集群模式怎么搭建？"></a>2、redis集群模式怎么搭建？</h3><p>1、6个节点安装redis</p>
+<p>2、配置redis集群 &#x2F;etc&#x2F;redis&#x2F;6379.conf</p>
+<p>cluster-enabled yes #开启群集功能</p>
+<p>appendonly yes #开启aof持久化</p>
+<p>redis5 和redis3和4的版本区别：</p>
+<p>如果您使用的是Redis 5，这很容易完成，这是因为嵌入程序中的Redis Cluster命令行实用程序为我们提供了帮助，该实用程序redis-cli可用于创建新集群，检查或重新分片现有集群等。</p>
+<p>对于Redis版本3或4，有一个称为的旧工具redis-trib.rb，它非常相似。您可以src在Redis源代码分发的目录中找到它。您需要安装redis gem才能运行redis-trib。</p>
+<p>[root@localhost ~]# gem install redis #Redis版本3或4需要安装</p>
+<p>3.创建集群</p>
+<p>六个实例分为三组，每组一主一从，–replicas 1表示每组一个从，下面交互的时候需要输入yes才可以创建。</p>
+<p>[root@localhost profile.d]# redis-cli –cluster create 14.0.0.30:6379 14.0.0.10:6379 14.0.0.20:6379 14.0.0.40:6379 14.0.0.50:6379 14.0.0.60:6379 –cluster-replicas 1</p>
+<p>命令是<strong>create</strong>，创建一个新集群。选项–cluster-replicas 1意味着我们希望为每个创建的主机都提供一个从机。</p>
+<p>4、群集down掉的两种情况</p>
+<p>（1）三个master服务器全部宕机</p>
+<p>（2）master1宕机，对应的slave1也发生了宕机</p>
+<h1 id="十一、Redis和MongoDB比较："><a href="#十一、Redis和MongoDB比较：" class="headerlink" title="十一、Redis和MongoDB比较："></a>十一、Redis和MongoDB比较：</h1><p>项目中用的是MongoDB，但是为什么用其实当时选型的时候也没有太多考虑，只是认为数据量比较大，所以采用MongoDB。</p>
+<p>之前也用过redis，当时是用来存储一些热数据，量也不大，但是操作很频繁。现在项目中用的是MongoDB，目前是百万级的数据，将来会有千万级、亿级。</p>
+<p>就Redis和MongoDB来说，大家一般称之为<strong>Redis缓存、MongoDB数据库</strong>。</p>
+<p>性能：Redis优于MongoDB</p>
+<p>一致性：MongoDB不支持事务,靠客户端保证；Redis支持事务,比较脆,仅能保证事务中的操作按顺序执行</p>
+<p>应用场景：MongoDB海量数据的访问效率提升；优于Redis较小数据量的性能和运算</p>
+<h1 id="十二、Redis五种数据类型"><a href="#十二、Redis五种数据类型" class="headerlink" title="十二、Redis五种数据类型"></a>十二、Redis五种数据类型</h1><h2 id="1、string"><a href="#1、string" class="headerlink" title="1、string"></a>1、string</h2><p>string是redis最基本的类型，与Memcached一模一样的类型，一个key对应一个value。</p>
+<p>string类型是二进制安全的。redis的string 可以包含任何数据。比如jpg图片或者序列化的对象。<br>string 类型是Redis最基本的数据类型，string 类型的值最大能存储512MB。</p>
+<h2 id="2、hash"><a href="#2、hash" class="headerlink" title="2、hash"></a>2、hash</h2><p>Redis hash是一个键值(key&#x3D;&gt;value)对集合。</p>
+<p>Redis hash是一个string类型的field和value的映射表，hash特别适合用于存储对象。<br>每个hash可以存储2的32次方-1键值对。<br>作用场景:<br>健值对集合,即编程语言中的Map类型<br>适合存储对象,并且可以像数据库中update一个属性一样只修改某一项属性值</p>
+<h2 id="3、list"><a href="#3、list" class="headerlink" title="3、list"></a>3、list</h2><p>Redis列表是简单的字符串列表，按照插入顺序排序，可以重复。可以添加一个元素到 表的头部（左边）或者尾部（右边）</p>
+<p>列表最多可存储2^32 -1 个元素。<br>作用场景:<br>1、增删快,提供了操作某一段元素的API<br>2、最新消息排行等功能(比如朋友圈的时间线)<br>3、消息队列<br>一个key写入多个value时，遵循着先入后出，后入先出的堆栈规则</p>
+<p>存入的value可以重</p>
+<h2 id="4、set"><a href="#4、set" class="headerlink" title="4、set"></a>4、set</h2><p>Redis的 Set 是 string 类型的无序集合。</p>
+<p>集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是0(1)<br>作用场景:<br>1、比如QQ的共同好友<br>2、利用唯一性,统计访问网站的所有独立ip<br>3、好友推荐时,根据tag求交集,大于某个阈值就可以推荐<br>集合存储，不论有序还是无序都不能存储重复的值</p>
+<h2 id="5、zset"><a href="#5、zset" class="headerlink" title="5、zset"></a>5、zset</h2><p>Redis zset和set一样也是string类型元素的集合,且不允许重复的成员。</p>
+<p>不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。<br>zset的成员是唯一的,但分数(score)却可以重复。<br>作用场景:<br>将Set中的元素增加一个权重参数score,元素按score有序排列<br>数据插入集合时,已经进行天然排序 1、排行榜 2、带权重的消息队列</p>
+<h1 id="十三、缓存异常"><a href="#十三、缓存异常" class="headerlink" title="十三、缓存异常"></a>十三、缓存异常</h1><h3 id="缓存雪崩"><a href="#缓存雪崩" class="headerlink" title="缓存雪崩"></a>缓存雪崩</h3><p><strong>缓存雪崩</strong>是指缓存同一时间大面积的失效，所以，后面的请求都会落到数据库上，造成数据库短时间内承受大量请求而崩掉。</p>
+<p><strong>解决方案</strong></p>
+<ol>
+<li>缓存数据的过期时间设置随机，防止同一时间大量数据过期现象发生。</li>
+<li>一般并发量不是特别多的时候，使用最多的解决方案是加锁排队。</li>
+<li>给每一个缓存数据增加相应的缓存标记，记录缓存的是否失效，如果缓存标记失效，则更新数据缓存。</li>
+</ol>
+<h3 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h3><p><strong>缓存穿透</strong>是指缓存和数据库中都没有的数据，导致所有的请求都落到数据库上，造成数据库短时间内承受大量请求而崩掉。</p>
+<p><strong>解决方案</strong></p>
+<ol>
+<li>接口层增加校验，如用户鉴权校验，id做基础校验，id&lt;&#x3D;0的直接拦截；</li>
+<li>从缓存取不到的数据，在数据库中也没有取到，这时也可以将key-value对写为key-null，缓存有效时间可以设置短点，如30秒（设置太长会导致正常情况也没法使用）。这样可以防止攻击用户反复用同一个id暴力攻击</li>
+<li>采用布隆过滤器，将所有可能存在的数据哈希到一个足够大的 bitmap 中，一个一定不存在的数据会被这个 bitmap 拦截掉，从而避免了对底层存储系统的查询压力</li>
+</ol>
+<p><strong>附加</strong></p>
+<p>对于空间的利用到达了一种极致，那就是Bitmap和布隆过滤器(Bloom Filter)。<br>Bitmap： 典型的就是哈希表<br>缺点是，Bitmap对于每个元素只能记录1bit信息，如果还想完成额外的功能，恐怕只能靠牺牲更多的空间、时间来完成了。</p>
+<p>布隆过滤器（推荐）</p>
+<p>就是引入了k(k&gt;1)k(k&gt;1)个相互独立的哈希函数，保证在给定的空间、误判率下，完成元素判重的过程。<br>它的优点是空间效率和查询时间都远远超过一般的算法，缺点是有一定的误识别率和删除困难。<br>Bloom-Filter算法的核心思想就是利用多个不同的Hash函数来解决“冲突”。<br>Hash存在一个冲突（碰撞）的问题，用同一个Hash得到的两个URL的值有可能相同。为了减少冲突，我们可以多引入几个Hash，如果通过其中的一个Hash值我们得出某元素不在集合中，那么该元素肯定不在集合中。只有在所有的Hash函数告诉我们该元素在集合中时，才能确定该元素存在于集合中。这便是Bloom-Filter的基本思想。<br>Bloom-Filter一般用于在大数据量的集合中判定某元素是否存在。</p>
+<h3 id="缓存击穿"><a href="#缓存击穿" class="headerlink" title="缓存击穿"></a>缓存击穿</h3><p><strong>缓存击穿</strong>是指缓存中没有但数据库中有的数据（一般是缓存时间到期），这时由于并发用户特别多，同时读缓存没读到数据，又同时去数据库去取数据，引起数据库压力瞬间增大，造成过大压力。和缓存雪崩不同的是，缓存击穿指并发查同一条数据，缓存雪崩是不同数据都过期了，很多数据都查不到从而查数据库。</p>
+<p><strong>解决方案</strong></p>
+<ol>
+<li>设置热点数据永远不过期。</li>
+<li>加互斥锁，互斥锁</li>
+</ol>
+<h3 id="缓存预热"><a href="#缓存预热" class="headerlink" title="缓存预热"></a>缓存预热</h3><p><strong>缓存预热</strong>就是系统上线后，将相关的缓存数据直接加载到缓存系统。这样就可以避免在用户请求的时候，先查询数据库，然后再将数据缓存的问题！用户直接查询事先被预热的缓存数据！</p>
+<p><strong>解决方案</strong></p>
+<ol>
+<li>直接写个缓存刷新页面，上线时手工操作一下；</li>
+<li>数据量不大，可以在项目启动的时候自动进行加载；</li>
+<li>定时刷新缓存；</li>
+</ol>
+<h3 id="缓存降级"><a href="#缓存降级" class="headerlink" title="缓存降级"></a>缓存降级</h3><p>当访问量剧增、服务出现问题（如响应时间慢或不响应）或非核心服务影响到核心流程的性能时，仍然需要保证服务还是可用的，即使是有损服务。系统可以根据一些关键数据进行自动降级，也可以配置开关实现人工降级。</p>
+<p><strong>缓存降级</strong>的最终目的是保证核心服务可用，即使是有损的。而且有些服务是无法降级的（如加入购物车、结算）。</p>
+<p>在进行降级之前要对系统进行梳理，看看系统是不是可以丢卒保帅；从而梳理出哪些必须誓死保护，哪些可降级；比如可以参考日志级别设置预案：</p>
+<ol>
+<li>一般：比如有些服务偶尔因为网络抖动或者服务正在上线而超时，可以自动降级；</li>
+<li>警告：有些服务在一段时间内成功率有波动（如在95~100%之间），可以自动降级或人工降级，并发送告警；</li>
+<li>错误：比如可用率低于90%，或者数据库连接池被打爆了，或者访问量突然猛增到系统能承受的最大阀值，此时可以根据情况自动降级或者人工降级；</li>
+<li>严重错误：比如因为特殊原因数据错误了，此时需要紧急人工降级。</li>
+</ol>
+<p>服务降级的目的，是为了防止Redis服务故障，导致数据库跟着一起发生雪崩问题。因此，对于不重要的缓存数据，可以采取服务降级策略，例如一个比较常见的做法就是，Redis出现问题，不去数据库查询，而是直接返回默认值给用户。</p>
+<h3 id="热点数据和冷数据"><a href="#热点数据和冷数据" class="headerlink" title="热点数据和冷数据"></a>热点数据和冷数据</h3><p>热点数据，缓存才有价值</p>
+<p>对于冷数据而言，大部分数据可能还没有再次访问到就已经被挤出内存，不仅占用内存，而且价值不大。频繁修改的数据，看情况考虑使用缓存</p>
+<p>对于热点数据，比如我们的某IM产品，生日祝福模块，当天的寿星列表，缓存以后可能读取数十万次。再举个例子，某导航产品，我们将导航信息，缓存以后可能读取数百万次。</p>
+<p>数据更新前至少读取两次，缓存才有意义。这个是最基本的策略，如果缓存还没有起作用就失效了，那就没有太大价值了。</p>
+<p>那存不存在，修改频率很高，但是又不得不考虑缓存的场景呢？有！比如，这个读取接口对数据库的压力很大，但是又是热点数据，这个时候就需要考虑通过缓存手段，减少数据库的压力，比如我们的某助手产品的，点赞数，收藏数，分享数等是非常典型的热点数据，但是又不断变化，此时就需要将数据同步保存到Redis缓存，减少数据库压力。</p>
+<h3 id="缓存热点key"><a href="#缓存热点key" class="headerlink" title="缓存热点key"></a>缓存热点key</h3><p>缓存中的一个Key(比如一个促销商品)，在某个时间点过期的时候，恰好在这个时间点对这个Key有大量的并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存，这个时候大并发的请求可能会瞬间把后端DB压垮。</p>
+<p><strong>解决方案</strong></p>
+<p>对缓存查询加锁，如果KEY不存在，就加锁，然后查DB入缓存，然后解锁；其他进程如果发现有锁就等待，然后等解锁后返回数据或者进入DB查询</p>
+<h1 id="十四、事务"><a href="#十四、事务" class="headerlink" title="十四、事务"></a>十四、事务</h1><h3 id="什么是事务？"><a href="#什么是事务？" class="headerlink" title="什么是事务？"></a>什么是事务？</h3><p>事务是一个单独的隔离操作：事务中的所有命令都会序列化、按顺序地执行。事务在执行的过程中，不会被其他客户端发送来的命令请求所打断。</p>
+<p>事务是一个原子操作：事务中的命令要么全部被执行，要么全部都不执行。</p>
+<h3 id="Redis事务的概念"><a href="#Redis事务的概念" class="headerlink" title="Redis事务的概念"></a>Redis事务的概念</h3><p>Redis 事务的本质是通过MULTI、EXEC、WATCH等一组命令的集合。事务支持一次执行多个命令，一个事务中所有命令都会被序列化。在事务执行过程，会按照顺序串行化执行队列中的命令，其他客户端提交的命令请求不会插入到事务执行命令序列中。</p>
+<p>总结说：redis事务就是一次性、顺序性、排他性的执行一个队列中的一系列命令。</p>
+<h3 id="Redis事务的三个阶段"><a href="#Redis事务的三个阶段" class="headerlink" title="Redis事务的三个阶段"></a>Redis事务的三个阶段</h3><ol>
+<li>事务开始 MULTI</li>
+<li>命令入队</li>
+<li>事务执行 EXEC</li>
+</ol>
+<p>事务执行过程中，如果服务端收到有EXEC、DISCARD、WATCH、MULTI之外的请求，将会把请求放入队列中排队</p>
+<h3 id="Redis事务相关命令"><a href="#Redis事务相关命令" class="headerlink" title="Redis事务相关命令"></a>Redis事务相关命令</h3><p>Redis事务功能是通过MULTI、EXEC、DISCARD和WATCH 四个原语实现的</p>
+<p>Redis会将一个事务中的所有命令序列化，然后按顺序执行。</p>
+<ol>
+<li><strong>redis 不支持回滚</strong>，“Redis 在事务失败时不进行回滚，而是继续执行余下的命令”， 所以 Redis 的内部可以保持简单且快速。</li>
+<li><strong>如果在一个事务中的命令出现错误，那么所有的命令都不会执行</strong>；</li>
+<li><strong>如果在一个事务中出现运行错误，那么正确的命令会被执行</strong>。</li>
+</ol>
+<ul>
+<li>WATCH 命令是一个乐观锁，可以为 Redis 事务提供 check-and-set （CAS）行为。 可以监控一个或多个键，一旦其中有一个键被修改（或删除），之后的事务就不会执行，监控一直持续到EXEC命令。</li>
+<li>MULTI命令用于开启一个事务，它总是返回OK。 MULTI执行之后，客户端可以继续向服务器发送任意多条命令，这些命令不会立即被执行，而是被放到一个队列中，当EXEC命令被调用时，所有队列中的命令才会被执行。</li>
+<li>EXEC：执行所有事务块内的命令。返回事务块内所有命令的返回值，按命令执行的先后顺序排列。 当操作被打断时，返回空值 nil 。</li>
+<li>通过调用DISCARD，客户端可以清空事务队列，并放弃执行事务， 并且客户端会从事务状态中退出。</li>
+<li>UNWATCH命令可以取消watch对所有key的监控。</li>
+</ul>
+<h3 id="事务管理（ACID）概述"><a href="#事务管理（ACID）概述" class="headerlink" title="事务管理（ACID）概述"></a>事务管理（ACID）概述</h3><p>原子性（Atomicity）<br>原子性是指事务是一个不可分割的工作单位，事务中的操作要么都发生，要么都不发生。</p>
+<p>一致性（Consistency）<br>事务前后数据的完整性必须保持一致。</p>
+<p>隔离性（Isolation）<br>多个事务并发执行时，一个事务的执行不应影响其他事务的执行</p>
+<p>持久性（Durability）<br>持久性是指一个事务一旦被提交，它对数据库中数据的改变就是永久性的，接下来即使数据库发生故障也不应该对其有任何影响</p>
+<p><strong>Redis的事务总是具有ACID中的一致性和隔离性</strong>，其他特性是不支持的。当服务器运行在<em>AOF</em>持久化模式下，并且appendfsync选项的值为always时，事务也具有耐久性。</p>
+<h3 id="Redis事务支持隔离性吗"><a href="#Redis事务支持隔离性吗" class="headerlink" title="Redis事务支持隔离性吗"></a>Redis事务支持隔离性吗</h3><p>Redis 是单进程程序，并且它保证在执行事务时，不会对事务进行中断，事务可以运行直到执行完所有事务队列中的命令为止。因此，<strong>Redis 的事务是总是带有隔离性的</strong>。</p>
+<h3 id="Redis事务保证原子性吗，支持回滚吗"><a href="#Redis事务保证原子性吗，支持回滚吗" class="headerlink" title="Redis事务保证原子性吗，支持回滚吗"></a>Redis事务保证原子性吗，支持回滚吗</h3><p>Redis中，单条命令是原子性执行的，但<strong>事务不保证原子性，且没有回滚</strong>。事务中任意命令执行失败，其余的命令仍会被执行。</p>
+<h3 id="Redis事务其他实现"><a href="#Redis事务其他实现" class="headerlink" title="Redis事务其他实现"></a>Redis事务其他实现</h3><ul>
+<li>基于Lua脚本，Redis可以保证脚本内的命令一次性、按顺序地执行，<br>其同时也不提供事务运行错误的回滚，执行过程中如果部分命令运行错误，剩下的命令还是会继续运行完</li>
+<li>基于中间标记变量，通过另外的标记变量来标识事务是否执行完成，读取数据时先读取该标记变量判断是否事务执行完成。但这样会需要额外写代码实现，比较繁琐</li>
+</ul>
+<h1 id="十五、Redis与Memcached的区别"><a href="#十五、Redis与Memcached的区别" class="headerlink" title="十五、Redis与Memcached的区别"></a>十五、Redis与Memcached的区别</h1><p>两者都是非关系型内存键值数据库，现在公司一般都是用 Redis 来实现缓存，而且 Redis 自身也越来越强大了！Redis 与 Memcached 主要有以下不同：</p>
+<table>
+<thead>
+<tr>
+<th>对比参数</th>
+<th>Redis</th>
+<th>Memcached</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类型</td>
+<td>1. 支持内存 2. 非关系型数据库</td>
+<td>1. 支持内存 2. 键值对形式 3. 缓存形式</td>
+</tr>
+<tr>
+<td><strong>数据存储类型</strong></td>
+<td>1. String 2. List 3. Set 4. Hash 5. Sort Set 【俗称ZSet】</td>
+<td>1. 文本型 2. 二进制类型</td>
+</tr>
+<tr>
+<td>查询【操作】类型</td>
+<td>1. 批量操作 2. 事务支持 3. 每个类型不同的CRUD</td>
+<td>1.常用的CRUD 2. 少量的其他命令</td>
+</tr>
+<tr>
+<td>附加功能</td>
+<td>1. 发布&#x2F;订阅模式 2. 主从分区 3. 序列化支持 4. 脚本支持【Lua脚本】</td>
+<td>1. 多线程服务支持</td>
+</tr>
+<tr>
+<td><strong>网络IO模型</strong></td>
+<td>1. 单线程的多路 IO 复用模型</td>
+<td>1. 多线程，非阻塞IO模式</td>
+</tr>
+<tr>
+<td>事件库</td>
+<td>自封转简易事件库AeEvent</td>
+<td>贵族血统的LibEvent事件库</td>
+</tr>
+<tr>
+<td><strong>持久化支持</strong></td>
+<td>1. RDB 2. AOF</td>
+<td>不支持</td>
+</tr>
+<tr>
+<td><strong>集群模式</strong></td>
+<td>原生支持 cluster 模式，可以实现主从复制，读写分离</td>
+<td>没有原生的集群模式，需要依靠客户端来实现往集群中分片写入数据</td>
+</tr>
+<tr>
+<td>内存管理机制</td>
+<td>在 Redis 中，并不是所有数据都一直存储在内存中，可以将一些很久没用的 value 交换到磁盘</td>
+<td>Memcached 的数据则会一直在内存中，Memcached 将内存分割成特定长度的块来存储数据，以完全解决内存碎片的问题。但是这种方式会使得内存的利用率不高，例如块的大小为 128 bytes，只存储 100 bytes 的数据，那么剩下的 28 bytes 就浪费掉了。</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>复杂数据结构，有持久化，高可用需求，value存储内容较大</td>
+<td>纯key-value，数据量非常大，并发量非常大的业务</td>
+</tr>
+</tbody></table>
+<p>(1) memcached所有的值均是简单的字符串，redis作为其替代者，支持更为丰富的数据类型</p>
+<p>(2) redis的速度比memcached快很多</p>
+<p>(3) redis可以持久化其数据</p>
+<h1 id="十六、Redis的应用场景"><a href="#十六、Redis的应用场景" class="headerlink" title="十六、Redis的应用场景"></a>十六、Redis的应用场景</h1><h3 id="计数器"><a href="#计数器" class="headerlink" title="计数器"></a>计数器</h3><p>可以对 String 进行自增自减运算，从而实现计数器功能。Redis 这种内存型数据库的读写性能非常高，很适合存储频繁读写的计数量。</p>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>将热点数据放到内存中，设置内存的最大使用量以及淘汰策略来保证缓存的命中率。</p>
+<h3 id="会话缓存"><a href="#会话缓存" class="headerlink" title="会话缓存"></a>会话缓存</h3><p>可以使用 Redis 来统一存储多台应用服务器的会话信息。当应用服务器不再存储用户的会话信息，也就不再具有状态，一个用户可以请求任意一个应用服务器，从而更容易实现高可用性以及可伸缩性。</p>
+<h3 id="全页缓存（FPC）"><a href="#全页缓存（FPC）" class="headerlink" title="全页缓存（FPC）"></a>全页缓存（FPC）</h3><p>除基本的会话token之外，Redis还提供很简便的FPC平台。以Magento为例，Magento提供一个插件来使用Redis作为全页缓存后端。此外，对WordPress的用户来说，Pantheon有一个非常好的插件 wp-redis，这个插件能帮助你以最快速度加载你曾浏览过的页面。</p>
+<h3 id="查找表"><a href="#查找表" class="headerlink" title="查找表"></a>查找表</h3><p>例如 DNS 记录就很适合使用 Redis 进行存储。查找表和缓存类似，也是利用了 Redis 快速的查找特性。但是查找表的内容不能失效，而缓存的内容可以失效，因为缓存不作为可靠的数据来源。</p>
+<h3 id="消息队列-发布-订阅功能"><a href="#消息队列-发布-订阅功能" class="headerlink" title="消息队列(发布&#x2F;订阅功能)"></a>消息队列(发布&#x2F;订阅功能)</h3><p>List 是一个双向链表，可以通过 lpush 和 rpop 写入和读取消息。不过最好使用 Kafka、RabbitMQ 等消息中间件。</p>
+<h3 id="分布式锁实现"><a href="#分布式锁实现" class="headerlink" title="分布式锁实现"></a>分布式锁实现</h3><p>在分布式场景下，无法使用单机环境下的锁来对多个节点上的进程进行同步。可以使用 Redis 自带的 SETNX 命令实现分布式锁，除此之外，还可以使用官方提供的 RedLock 分布式锁实现。</p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>Set 可以实现交集、并集等操作，从而实现共同好友等功能。ZSet 可以实现有序性操作，从而实现排行榜等功能。</p>
+<h1 id="Mongodb"><a href="#Mongodb" class="headerlink" title="Mongodb"></a>Mongodb</h1><p>Mongodb熟悉吗，一般部署几台？</p>
+<p>部署过，没有深入研究过，一般mongodb部署主从、或者mongodb分片集群；建议3台或5台服务器来部署。MongoDB分片的基本思想就是将集合切分成小块。这些块分散到若干片里面，每个片只负责总数据的一部分。  对于客户端来说，无需知道数据被拆分了，也无需知道服务端哪个分片对应哪些数据。数据在分片之前需要运行一个路由进程，进程名为mongos。这个路由器知道所有数据的存放位置，知道数据和片的对应关系。对客户端来说，它仅知道连接了一个普通的mongod，在请求数据的过程中，通过路由器上的数据和片的对应关系，路由到目标数据所在的片上，如果请求有了回应，路由器将其收集起来回送给客户端。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/17%E3%80%81%E7%BD%91%E7%BB%9C/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/45.%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%B9%B3%E5%8F%B0%E5%92%8CHiveSQL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/63.Python%E4%B8%AD%E7%9A%84%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example10/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_2.result/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_bom_1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js_practice_5/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/js/jquery.min/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 8.962521004016205px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 14.868440977517562px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 17.80286503871026px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 9.172434836507946px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sun Dec 15 2024 06:02:47 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sun Dec 15 2024 06:02:47 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

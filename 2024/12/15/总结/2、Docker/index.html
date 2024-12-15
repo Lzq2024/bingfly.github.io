@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span></span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-15
+            </p>
+            <p>
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>[TOC]</p>
+<h1 id="一、Docker是"><a href="#一、Docker是" class="headerlink" title="一、Docker是"></a>一、Docker是</h1><h3 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h3><p>Docker 是一个开源的<strong>应用容器引擎</strong>，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的Linux机器或Windows机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p>
+<p>物理机必须要内核3.8以上才能支持docker</p>
+<h3 id="2、特点"><a href="#2、特点" class="headerlink" title="2、特点"></a>2、特点</h3><ul>
+<li>服务彼此之间相互独立（服务之间的解耦）</li>
+<li>服务可以灵活迁移（Docker引擎 docker-ce）</li>
+</ul>
+<p><strong>耦合</strong>是指两个或两个以上的体系或两种运动形式间通过相互作用而彼此影响以至联合起来的现象。</p>
+<p><strong>解耦</strong>就是用<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E5%AD%A6%E6%96%B9%E6%B3%95/1747958">数学方法</a>将两种运动分离开来处理问题，常用解耦方法就是忽略或简化对所研究问题影响较小的一种运动，只分析主要的运动。（便于管理，防止数据过多的积累在一个文件中）</p>
+<h3 id="3、与虚拟机的区别"><a href="#3、与虚拟机的区别" class="headerlink" title="3、与虚拟机的区别"></a>3、与虚拟机的区别</h3><p>虚拟机容量占用大，容器不需要装系统，占用容量小</p>
+<p>虚拟机安全，容器不安全（共享内核资源），攻击一个内核，其他全部瘫痪，可隔开，做资源控制</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>虚拟机</th>
+<th>容器</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>隔离级别</td>
+<td>操作系统级</td>
+<td>进程级</td>
+</tr>
+<tr>
+<td>系统策略</td>
+<td>Hypervisor</td>
+<td>CGroups</td>
+</tr>
+<tr>
+<td>系统资源</td>
+<td>5~15%</td>
+<td>0~5%</td>
+</tr>
+<tr>
+<td>启动时间</td>
+<td>分钟级</td>
+<td>秒级</td>
+</tr>
+<tr>
+<td>镜像存储</td>
+<td>GB-TB</td>
+<td>KB-MB</td>
+</tr>
+<tr>
+<td>群集规模</td>
+<td>上百</td>
+<td>上万</td>
+</tr>
+<tr>
+<td>高可用策略</td>
+<td>备份、容灾、迁移</td>
+<td>弹性、负载、动态</td>
+</tr>
+</tbody></table>
+<h1 id="二、Docker三要素"><a href="#二、Docker三要素" class="headerlink" title="二、Docker三要素"></a>二、Docker三要素</h1><p>●镜像：一个面向Docker容器引擎的只读模板</p>
+<p>●容器：从镜像创建的运行实例</p>
+<p>●仓库：集中保存镜像的地方；分公有和私有仓库</p>
+<h1 id="三、Docker基础命令"><a href="#三、Docker基础命令" class="headerlink" title="三、Docker基础命令"></a>三、Docker基础命令</h1><h3 id="1、docker容器和本地互传文件："><a href="#1、docker容器和本地互传文件：" class="headerlink" title="1、docker容器和本地互传文件："></a>1、docker容器和本地互传文件：</h3><p><strong>本地向docker容器传送文件</strong></p>
+<p>docker cp 本机保存文件的全路径 container_id:docker容器内的文件全路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp index.jsp 容器id:/usr/local/tomcat/webapps/ROOT</span><br></pre></td></tr></table></figure>
+
+<p><strong>docker容器向本机传送文件</strong></p>
+<p>docker cp container_id:docker容器内的文件全路径 本机保存文件的全路径</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp 4a2f08d2c1f8:/data1/configure.txt E:\PHP\configure.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、镜像操作"><a href="#2、镜像操作" class="headerlink" title="2、镜像操作"></a>2、镜像操作</h3><p>●查看docker版本：docker version</p>
+<p>●搜索nginx镜像（公有仓库)：docker search nginx</p>
+<p>●下载nginx镜像：docker pull nginx；下载后存放在&#x2F;var&#x2F;lib&#x2F;docker</p>
+<p>●查看镜像列表</p>
+<p>docker images       #查看下载镜像信息列表</p>
+<p>docker inspect nginx:latest       #获取镜像详细信息</p>
+<p>●为镜像添加新标签</p>
+<p>docker tag nginx:latest nginx:web</p>
+<p>●两种方式删除镜像</p>
+<p>注意：删除某一个镜像时，只要有容器在使用某一个镜像，必须先删除容器，才能删除镜像。</p>
+<p>（1）删除镜像+标签名</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118142745.png" alt="在这里插入图片描述"></p>
+<p>（2）删除镜像id</p>
+<p>注意：只有当镜像id对应标签仅剩一个时，才能使用镜像id的方式进行删除；否则出现如下报错</p>
+<p>或者也可以在最后加上-f选项，一次性删除</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118142741.png" alt="在这里插入图片描述"></p>
+<p>●存出镜像并命名为nginx，存到&#x2F;opt目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker save -o /opt/nginx.tar nginx:latest</span><br></pre></td></tr></table></figure>
+
+<p>●载入镜像</p>
+<p>docker load &lt; &#x2F;opt&#x2F;nginx</p>
+<h3 id="3、容器操作"><a href="#3、容器操作" class="headerlink" title="3、容器操作"></a>3、容器操作</h3><p>●创建容器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker create -it nginx:latest /bin/bash</span><br><span class="line"></span><br><span class="line">-i：让容器的标准输入保持打开</span><br><span class="line"></span><br><span class="line">-t：让Docker分配一个伪终端</span><br></pre></td></tr></table></figure>
+
+<p>●查看容器运行状态</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a          -a：列出所有的容器，包括未运行的容器</span><br><span class="line"></span><br><span class="line">Created：已创建；      Up：运行中</span><br></pre></td></tr></table></figure>
+
+<p>●启动执行命令查看系统根目录</p>
+<p>一般启动容器流程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">（1）docker pull centos     --下载镜像</span><br><span class="line"></span><br><span class="line">（2）docker create -it centos:latest /bin/bash</span><br><span class="line"></span><br><span class="line">（3）docker start d4a99affa677</span><br></pre></td></tr></table></figure>
+
+<p>通过run命令启动：（先去查找现有的镜像中有没有，没有先下载，再启动）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run centos:latest /usr/bin/bash -c ls /</span><br></pre></td></tr></table></figure>
+
+<p>执行完成会关闭，状态是Exited（容器可以做一次性的处理，处理完就释放资源，做到了最小成本控制）</p>
+<p>容器持续在后台执行（通过执行死循环）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d centos:latest /bin/bash -c &quot;while true;do echo hello;done&quot;</span><br></pre></td></tr></table></figure>
+
+<p>使用 <strong>docker logs 容器id</strong> 命令，可以查看容器内的标准输出</p>
+<p>●终止容器运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop 0401f589d5ed（CONTAINER ID）</span><br></pre></td></tr></table></figure>
+
+<p>●进入容器（该容器一定要在Up状态）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -it 0f0ba9207b21 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>●导出容器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker export cc4a8b1d428c &gt; /opt/nginx_bak</span><br></pre></td></tr></table></figure>
+
+<p>●导入容器（会生成镜像，而不会创建容器）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /opt/nginx_bak | docker import - nginx:bak</span><br></pre></td></tr></table></figure>
+
+<p>●删除容器（容器必须为停止状态）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker stop e885c37fb2eb</span><br><span class="line"></span><br><span class="line">docker rm e885c37fb2eb</span><br></pre></td></tr></table></figure>
+
+<p>●批量删除容器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a | awk &#x27;&#123;print &quot;docker rm &quot;$1&#125;&#x27; | bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118142733.png" alt="在这里插入图片描述"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a | sed -n &#x27;2,$p&#x27; | awk &#x27;&#123;print &quot;docker rm &quot;$1&#125;&#x27; | bash</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="四、Docker镜像的构建"><a href="#四、Docker镜像的构建" class="headerlink" title="四、Docker镜像的构建"></a>四、Docker镜像的构建</h1><h3 id="1、Docker镜像的分层"><a href="#1、Docker镜像的分层" class="headerlink" title="1、Docker镜像的分层"></a>1、Docker镜像的分层</h3><p>自下而上制作镜像</p>
+<p>1.from 后面跟基础镜像</p>
+<p>2.add脚本</p>
+<p>3.挂载共享空间 数据卷</p>
+<p>4.CMD命令执行脚本</p>
+<h3 id="2、基于已有镜像容器创建"><a href="#2、基于已有镜像容器创建" class="headerlink" title="2、基于已有镜像容器创建"></a>2、基于已有镜像容器创建</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1、docker create -it 原镜像名 /bin/bash</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">2、docker commit -m &quot;new&quot; -a &quot;chen&quot; 已有容器id 新镜像名:标签</span><br><span class="line"></span><br><span class="line">-m：说明信息</span><br><span class="line"></span><br><span class="line">-a：作者信息</span><br><span class="line"></span><br><span class="line">-p：生成过程中停止容器的运行</span><br><span class="line"></span><br><span class="line">docker images | grep 标签</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、基于本地模板创建"><a href="#3、基于本地模板创建" class="headerlink" title="3、基于本地模板创建"></a>3、基于本地模板创建</h3><p>1.导入本地镜像debian-7.0-x86-minimal.tar.gz</p>
+<p>2.cat debian-7.0-x86-minimal.tar.gz | docker import - 镜像名:标签</p>
+<p>3.docker images | grep 标签</p>
+<h3 id="4、基于Dockerfile创建"><a href="#4、基于Dockerfile创建" class="headerlink" title="4、基于Dockerfile创建"></a>4、基于Dockerfile创建</h3><p>●Dockerfile是由一组指令组成的文件</p>
+<p>●Dockerfile结构四部分</p>
+<p>  基础镜像信息</p>
+<p>  维护者信息</p>
+<p>  镜像操作指令</p>
+<p>  容器启动时执行指令</p>
+<p>●Dockerfile每行支持一条指令，每条指令可携带多个参数，支持使用以“#”号开头的注释</p>
+<p>●Dockerfile操作指令</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FROM 镜像</td>
+<td>指定新镜像所基于的镜像，第一条指令必须为FROM指令，每创建一个镜像就需要一条FROM指令。</td>
+</tr>
+<tr>
+<td>MAINTAINER 名字</td>
+<td>说明新镜像的维护人信息</td>
+</tr>
+<tr>
+<td>RUN命令</td>
+<td>在所基于的镜像上执行命令，并提交到新的镜像中</td>
+</tr>
+<tr>
+<td>CMD [“要运行的程序”,”参数1”,”参数2”]</td>
+<td>指令启动容器时要运行的命令或者脚本，Dockerfile只能有一条CMD命令，如果指定多条则只能最后一条被执行</td>
+</tr>
+<tr>
+<td>EXPOSE 端口号</td>
+<td>指定新镜像加载到Docker时要开启的端口（EXPOSE暴露的是容器内部端口，需要再映射到一个外部端口上）</td>
+</tr>
+<tr>
+<td>ENV 环境变量 变量值</td>
+<td>设置一个环境变量的值，会被后面的RUN使用</td>
+</tr>
+<tr>
+<td>ADD 源文件&#x2F;目录 目标文件&#x2F;目录</td>
+<td>将源文件复制到目标文件（与COPY的区别是将本地tar文件解压到镜像中）</td>
+</tr>
+<tr>
+<td>COPY 源文件&#x2F;目录 目标文件&#x2F;目录</td>
+<td>将本地主机上的文件&#x2F;目录复制到目标地点，源文件&#x2F;目录要与Dockerfile在相同的目录中</td>
+</tr>
+<tr>
+<td>VOLUME [“目录”]</td>
+<td>在容器中创建一个挂载点（VOLUME是宿主机中的某一个目录挂载到容器中）</td>
+</tr>
+<tr>
+<td>USER 用户名&#x2F;UID</td>
+<td>指定运行容器时的用户</td>
+</tr>
+<tr>
+<td>WORKDIR 路径</td>
+<td>为后续的RUN、CMD、ENTRYPOINT指定工作目录（WORKDIR类似于cd，但是只切换目录一次，后续的RUN命令就可以写相对路径了）</td>
+</tr>
+<tr>
+<td>ONBUILD 命令</td>
+<td>指定所生成的镜像作为一个基础镜像时所要运行的命令</td>
+</tr>
+<tr>
+<td>HEALTHCHECK</td>
+<td>健康检查</td>
+</tr>
+</tbody></table>
+<p>CMD指令可以指定容器启动时默认执行的命令，但它可以被docker run命令的参数覆盖掉。</p>
+<p>ENTRYPOINT 指令和CMD类似，它也是用户指定容器启动时要执行的命令，但如果dockerfile中也有CMD指令，CMD中的参数会被附加到ENTRYPOINT指令的后面。 如果这时docker run命令带了参数，这个参数会覆盖掉CMD指令的参数，并也会附加到ENTRYPOINT 指令的后面。</p>
+<p>这样当容器启动后，会执行ENTRYPOINT 指令的参数部分。</p>
+<p>可以看出，相对来说ENTRYPOINT指令优先级更高。</p>
+<p>对于目录而言，COPY 和 ADD 命令具有相同的特点：<strong>只复制目录中的内容而不包含目录自身</strong></p>
+<h5 id="CMD和ENTRYPOINT的区别"><a href="#CMD和ENTRYPOINT的区别" class="headerlink" title="CMD和ENTRYPOINT的区别"></a>CMD和ENTRYPOINT的区别</h5><p>CMD指令可以指定容器启动时默认执行的命令，但它可以被docker run命令的参数覆盖掉。</p>
+<p>ENTRYPOINT 指令和CMD类似，它也是用户指定容器启动时要执行的命令，但如果dockerfile中也有CMD指令，CMD中的参数会被附加到ENTRYPOINT指令的后面。 如果这时docker run命令带了参数，这个参数会覆盖掉CMD指令的参数，并也会附加到ENTRYPOINT 指令的后面。</p>
+<p>这样当容器启动后，会执行ENTRYPOINT 指令的参数部分。</p>
+<p>可以看出，相对来说ENTRYPOINT指令优先级更高。</p>
+<p>优先级：ENTRYPOINT&gt;CMD&gt;docker run</p>
+<h5 id="Dockerfile文件生成apache镜像实例："><a href="#Dockerfile文件生成apache镜像实例：" class="headerlink" title="Dockerfile文件生成apache镜像实例："></a>Dockerfile文件生成apache镜像实例：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">1.vim Dockerfile  （Dockerfile名字不可更改）</span><br><span class="line">#新镜像基于的基础镜像（基础镜像未下载会先下载）</span><br><span class="line">FROM centos:7</span><br><span class="line">#维护镜像的用户信息</span><br><span class="line">MAINTAINER This is chen</span><br><span class="line">#镜像操作指令安装apache软件</span><br><span class="line">RUN yum -y update</span><br><span class="line">RUN yum -y install httpd</span><br><span class="line">#开启80端口</span><br><span class="line">EXPOSE 80</span><br><span class="line">#复制网址首页文件</span><br><span class="line">ADD index.html /var/www/html/index.html</span><br><span class="line">#将执行脚本复制到镜像中</span><br><span class="line">ADD run.sh /run.sh</span><br><span class="line">RUN chmod 755 /run.sh</span><br><span class="line">#启动容器时执行脚本</span><br><span class="line">CMD [&quot;/run.sh&quot;]</span><br></pre></td></tr></table></figure>
+
+<p>此处注意一个细节：每加载一步会生成一个临时的容器，加载完后会删除</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118142934.png" alt="在这里插入图片描述"></p>
+<p>2.vim run.sh    #和Dockerfile文件位于相同目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">rm -rf /run/httpd/*     #删除进程文件</span><br><span class="line"></span><br><span class="line">exec /usr/sbin/apachectl -D FOREGROUND  #启动apache</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.vim index.html      #编辑首页文件</p>
+<h1>this is web</h1>
+4.生成镜像
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t httpd:test .  （注意别忘了末尾有&quot;.&quot;）</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5.新镜像运行容器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 1216:80 httpd:test</span><br></pre></td></tr></table></figure>
+
+<p>-p：映射到宿主机指定端口</p>
+<p>-P：映射到宿主机随机端口</p>
+<p>6.测试容器是否成功运行</p>
+<p><a target="_blank" rel="noopener" href="http://14.0.0.10:1123/">http://14.0.0.10:1126/</a></p>
+<h1 id="五、Docker的四种网络模式"><a href="#五、Docker的四种网络模式" class="headerlink" title="五、Docker的四种网络模式"></a>五、Docker的四种网络模式</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lilygg/article/details/88616218">https://blog.csdn.net/lilygg/article/details/88616218</a></p>
+<h3 id="1、实现原理"><a href="#1、实现原理" class="headerlink" title="1、实现原理"></a>1、实现原理</h3><p>Docker使用Linux桥接，在宿主机虚拟一个Docker容器网桥(docker0)，Docker启动一个容器时会根据Docker网桥的网段分配给容器一个IP地址，称为Container-IP，同时Docker网桥是每个容器的默认网关。因为在同一宿主机内的容器都接入同一个网桥，这样容器之间就能够通过容器的Container-IP直接通信。</p>
+<p>Docker网桥是宿主机虚拟出来的，并不是真实存在的网络设备，外部网络是无法寻址到的，这也意味着外部网络无法通过直接Container-IP访问到容器。如果容器希望外部访问能够访问到，可以通过映射容器端口到宿主主机（端口映射），即docker run创建容器时候通过 -p 或 -P 参数来启用，访问容器的时候就通过[宿主机IP]:[容器端口]访问容器。</p>
+<h3 id="2、网络详解"><a href="#2、网络详解" class="headerlink" title="2、网络详解"></a>2、网络详解</h3><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210128140853.png" alt="image-20210128140850997"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker network ls</span><br><span class="line"></span><br><span class="line">NETWORK ID          NAME                DRIVER              SCOPE</span><br><span class="line"></span><br><span class="line">f9ad4320a5f2        bridge              bridge              local</span><br><span class="line"></span><br><span class="line">894917639bf3        host                host                local</span><br><span class="line"></span><br><span class="line">39da54945dad        none                null                local</span><br></pre></td></tr></table></figure>
+
+<p>#安装docker时，它会自动创建三个网络，bridge（创建容器默认连接到该网络）、none和host</p>
+<table>
+<thead>
+<tr>
+<th>Docker网络模式</th>
+<th>配置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>host模式</td>
+<td>–net&#x3D;host</td>
+<td>容器和宿主机共享Network namespace。</td>
+</tr>
+<tr>
+<td>container模式</td>
+<td>–net&#x3D;container:NAME_or_ID</td>
+<td>容器和另外一个容器共享Network namespace。 kubernetes中的pod就是多个容器共享一个Network namespace。</td>
+</tr>
+<tr>
+<td>none模式</td>
+<td>–net&#x3D;none</td>
+<td>容器有独立的Network namespace，但并没有对其进行任何网络设置，如分配veth pair 和网桥连接，配置IP等。</td>
+</tr>
+<tr>
+<td>bridge模式</td>
+<td>–net&#x3D;bridge</td>
+<td>（默认为该模式）</td>
+</tr>
+</tbody></table>
+<h4 id="1）、host模式"><a href="#1）、host模式" class="headerlink" title="1）、host模式"></a>1）、host模式</h4><p>容器将不会获得一个独立的Network Namespace（网络命令空间），而是和宿主机共用一个Network Namespace。容器将不会虚拟出自己的网卡，配置自己的IP等，而是使用宿主机的IP和端口，（也就是说如果容器是个web，那直接访问宿主机:端口，不需要做NAT转换，跟在宿主机跑web一样。容器中除了网络，其他都还是隔离的。）</p>
+<p>使用host模式的容器可以直接使用宿主机的IP地址与外界通信，容器内部的服务端口也可以使用宿主机的端口，不需要进行NAT，host最大的优势就是网络性能比较好，但是docker host上已经使用的端口就不能再用了，网络的隔离性不好。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118151034.png" alt="img"></p>
+<h4 id="2）、Container模式"><a href="#2）、Container模式" class="headerlink" title="2）、Container模式"></a>2）、Container模式</h4><p>这个模式指定新创建的容器和已经存在的一个容器共享一个 Network Namespace，而不是和宿主机共享。新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。两个容器的进程可以通过 lo 网卡设备通信</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118151112.png" alt="img"></p>
+<h4 id="3）、none模式"><a href="#3）、none模式" class="headerlink" title="3）、none模式"></a>3）、none模式</h4><p>使用none模式，Docker容器拥有自己的Network Namespace，但是，并不为Docker容器进行任何网络配置。也就是说，这个Docker容器没有网卡、IP、路由等信息。需要我们自己为Docker容器添加网卡、配置IP等。该模式关闭了容器的网络功能</p>
+<p>这种网络模式下容器只有lo回环网络，没有其他网卡。none模式可以在容器创建时通过–network&#x3D;none来指定。这种类型的网络没有办法联网，封闭的网络能很好的保证容器的安全性。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118151144.png" alt="img"></p>
+<h4 id="4）、bridge模式"><a href="#4）、bridge模式" class="headerlink" title="4）、bridge模式"></a>4）、bridge模式</h4><p>此模式会为每一个容器分配、设置IP等，并将容器连接到一个docker0虚拟网桥，通过docker0网桥以及iptables nat表配置与宿主机通信</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210118151200.png" alt="img"></p>
+<p>##当Docker进程启动时，会在主机上创建一个名为docker0的虚拟网桥，此主机上启动的Docker容器会连接到这个虚拟网桥上。虚拟网桥的工作方式和物理交换机类似，这样主机上的所有容器就通过交换机连在了一个二层网络中。</p>
+<p>从docker0子网中分配一个IP给容器使用，并设置docker0的IP地址为容器的默认网关。在主机上创建一对虚拟网卡veth pair设备，Docker将veth pair设备的一端放在新创建的容器中，并命名为eth0（容器的网卡），另一端放在主机中，以vethxxx这样类似的名字命名，并将这个网络设备加入到docker0网桥中。可以通过brctl show命令查看。</p>
+<p>bridge模式是docker的默认网络模式，不写–net参数，就是bridge模式。使用docker run -p时，docker实际是在iptables做了DNAT规则，实现端口转发功能。可以使用iptables -t nat -vnL查看。</p>
+<h3 id="3、自定义网络如何配置"><a href="#3、自定义网络如何配置" class="headerlink" title="3、自定义网络如何配置"></a>3、自定义网络如何配置</h3><p>#创建容器时默认使用的是桥接模式，但是使用bridge不支持为容器指定IP</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --name test1 --network bridge --ip 172.17.0.10 centos:7 /bin/bash</span><br><span class="line"></span><br><span class="line">20dc45293929f81013a60391bef2626f581a8d3d4f29b8a87ac8b1f9b585ab2a</span><br><span class="line"></span><br><span class="line">docker: Error response from daemon: user specified IP address is supported on user defined networks only.    #提示想要为容器指定IP只能在用户自定义的网络中才行</span><br></pre></td></tr></table></figure>
+
+
+
+<p>#配置自定义固定IP</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker network create --subnet=172.31.0.0/24 test   </span><br><span class="line"></span><br><span class="line">#创建自定义网络test</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# docker run -itd --name web1 --net test --ip 172.31.0.10 centos:7 /bin/bash      </span><br></pre></td></tr></table></figure>
+
+<p>​                     #创建一个容器，指定网络为test，指定IP地址172.31.0.10                 </p>
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/8600e70f42c64ccca0ab409472bb0ee4/clipboard.png" alt="img"></p>
+<h1 id="六、Docker数据管理"><a href="#六、Docker数据管理" class="headerlink" title="六、Docker数据管理"></a>六、Docker数据管理</h1><h3 id="1、为什么要进行数据管理操作"><a href="#1、为什么要进行数据管理操作" class="headerlink" title="1、为什么要进行数据管理操作"></a>1、为什么要进行数据管理操作</h3><p>●方便查看容器内产生的数据</p>
+<p>●多容器间实现数据共享</p>
+<p>例如：需要给多个容器中的网站站点上传网页内容时，可以高效的部署网页。</p>
+<h3 id="2、两种管理方式"><a href="#2、两种管理方式" class="headerlink" title="2、两种管理方式"></a>2、两种管理方式</h3><p>●数据卷</p>
+<p>数据卷是容器和宿主之间的数据共享</p>
+<p>●数据卷容器</p>
+<p>数据卷容器是容器和容器之间的数据共享</p>
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/47a64e939777442c9c47cc76c0169255/clipboard.png" alt="img"></p>
+<h3 id="3、数据卷操作实例"><a href="#3、数据卷操作实例" class="headerlink" title="3、数据卷操作实例"></a>3、数据卷操作实例</h3><p>1.将宿主机目录中的&#x2F;var&#x2F;www挂载到容器中的&#x2F;data1中（如果目录不存在都会自动创建）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -v /var/www:/data1 --name web1 -it centos:7 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>2.在容器中&#x2F;data1目录下创建文件进行测试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@bb58030283e7 /]# cd /data1/</span><br><span class="line"></span><br><span class="line">[root@bb58030283e7 data1]# touch 123.txt</span><br></pre></td></tr></table></figure>
+
+<p>3.回到宿主机&#x2F;var&#x2F;www查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@node1 ~]# cd /var/www/</span><br><span class="line"></span><br><span class="line">[root@node1 www]# ls</span><br><span class="line"></span><br><span class="line">123.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4、数据卷容器操作实例"><a href="#4、数据卷容器操作实例" class="headerlink" title="4、数据卷容器操作实例"></a>4、数据卷容器操作实例</h3><p>1.创建数据卷容器web10</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --name web10 -v /data1 -v /data2 -it centos:7 /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>2.新容器web100挂载数据卷容器web10</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --volumes-from web10 --name web100 centos:7 /bin/bash</span><br><span class="line"></span><br><span class="line">（web100容器会自动关联web10容器中的数据卷）</span><br></pre></td></tr></table></figure>
+
+<p>3.在新容器web100的&#x2F;data1中创建文件进行测试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@2ad42960c2aa data1]# cd /data1/</span><br><span class="line"></span><br><span class="line">[root@2ad42960c2aa data1]# ls</span><br><span class="line"></span><br><span class="line">[root@2ad42960c2aa data1]# touch 1.txt</span><br></pre></td></tr></table></figure>
+
+<p>4.回到数据卷容器web10的&#x2F;data1中查看</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@b10f5d5ae9d5 /]# cd data1/</span><br><span class="line"></span><br><span class="line">[root@b10f5d5ae9d5 data1]# ls</span><br><span class="line"></span><br><span class="line">1.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、私有仓库建立步骤"><a href="#5、私有仓库建立步骤" class="headerlink" title="5、私有仓库建立步骤"></a>5、私有仓库建立步骤</h3><p>1、下载registry镜像</p>
+<p>2、客户端设置daemon.json文件，指定私有仓库位置；</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;insecure-registries&quot;: [&quot;14.0.0.10:5000&quot;],</span><br></pre></td></tr></table></figure>
+
+<p>3、生成registry容器，开放5000端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -p 5000:5000 -v /registry:/data/registry registry</span><br></pre></td></tr></table></figure>
+
+<p>4、给要上传的镜像打上标签</p>
+<p>5、上传镜像</p>
+<p>6、获取私有仓库列表查看是否上传成功</p>
+<p>7、测试私有仓库下载镜像</p>
+<p>#–privileged 让容器内的root拥有真正的root权限。否则，container内的root只是外部的一个普通用户权限。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost systemctl]# docker run --privileged -it -v /sys/fs/cgroup:/sys/fs/cgroup:ro </span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="七、Docker-Compose容器编排"><a href="#七、Docker-Compose容器编排" class="headerlink" title="七、Docker Compose容器编排"></a>七、Docker Compose容器编排</h1><h3 id="1、Docker-Compose简介"><a href="#1、Docker-Compose简介" class="headerlink" title="1、Docker Compose简介"></a>1、Docker Compose简介</h3><p>●一个定义及运行多个Docker容器的工具</p>
+<p>●Docker Compose非常适合组合使用多个容器进行开发的场景</p>
+<p>3.2Docker Compose文件格式及编写注意事项</p>
+<p>●YAML是一种标记语言很直观的数据序列化格式</p>
+<p>●文件格式及编写注意事项</p>
+<p>  不支持制表符tab键缩进，需要使用空格缩进</p>
+<p>  通常开头缩进2个空格</p>
+<p>  字符后缩进1个空格，如冒号、逗号、横杆</p>
+<p>  用#号注释</p>
+<p>  如果包含特殊字符用单引号引起来</p>
+<p>  布尔值必须用引号括起来</p>
+<h3 id="2、Compose命令说明"><a href="#2、Compose命令说明" class="headerlink" title="2、Compose命令说明"></a>2、Compose命令说明</h3><p>●基本的使用格式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose [options] [COMMAND] [ARGS]</span><br></pre></td></tr></table></figure>
+
+<p>●docker-compose选项</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">--verbose 输出更多调试信息</span><br><span class="line"></span><br><span class="line">--version 打印版本并退出</span><br><span class="line"></span><br><span class="line">-f，--file FILE 使用特定的compose模板文件，默认为docker-compose.yml</span><br><span class="line"></span><br><span class="line">-p，--project-name NAME 指定项目名称，默认使用目录名称</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="3、compose部署"><a href="#3、compose部署" class="headerlink" title="3、compose部署"></a>3、compose部署</h3><p>#以docker-ce为基础</p>
+<p>上传docker-compose命令包到&#x2F;usr&#x2F;local&#x2F;bin目录下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<p>#在&#x2F;root目录下创建compose_tomcat目录</p>
+<p>[root@localhost ~]# mkdir compose_tomcat&#x2F;</p>
+<p>目录结构如下：</p>
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/d513953ded104c95aaff0decac7e7feb/clipboard.png" alt="img"></p>
+<h4 id="docker-compose-yml配置文件详解："><a href="#docker-compose-yml配置文件详解：" class="headerlink" title="docker-compose.yml配置文件详解："></a>docker-compose.yml配置文件详解：</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/2217cfed29d7">https://www.jianshu.com/p/2217cfed29d7</a></p>
+<p>一份标准配置文件应该包含 version、services、networks 三大部分，其中最关键的就是 services 和 networks 两个部分</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost compose_tomcat]# vim docker-compose.yml</span><br><span class="line"></span><br><span class="line">version: &#x27;3&#x27;</span><br><span class="line"></span><br><span class="line">services:</span><br><span class="line"></span><br><span class="line">  tomcat:</span><br><span class="line"></span><br><span class="line">​    hostname: tomcat</span><br><span class="line"></span><br><span class="line">​    build:     #基于一份 Dockerfile创建容器</span><br><span class="line"></span><br><span class="line">​      context: ./tomcat</span><br><span class="line"></span><br><span class="line">​      dockerfile: Dockerfile</span><br><span class="line"></span><br><span class="line">​    ports:</span><br><span class="line"></span><br><span class="line">​      - 8080:8080</span><br><span class="line"></span><br><span class="line">​    networks:</span><br><span class="line"></span><br><span class="line">​      - tomcat</span><br><span class="line"></span><br><span class="line">​    volumes:</span><br><span class="line"></span><br><span class="line">​      - ./wwwroot:/usr/local/tomcat/webapps/ROOT   #注意tomcat站点位置</span><br><span class="line"></span><br><span class="line">  nginx:</span><br><span class="line"></span><br><span class="line">​    hostname: nginx</span><br><span class="line"></span><br><span class="line">​    build:</span><br><span class="line"></span><br><span class="line">​      context: ./nginx</span><br><span class="line"></span><br><span class="line">​      dockerfile: Dockerfile</span><br><span class="line"></span><br><span class="line">​    ports:</span><br><span class="line"></span><br><span class="line">​      - 1216:80</span><br><span class="line"></span><br><span class="line">​      - 1226:443</span><br><span class="line"></span><br><span class="line">​    networks:</span><br><span class="line"></span><br><span class="line">​      - nginx</span><br><span class="line"></span><br><span class="line">​    volumes:</span><br><span class="line"></span><br><span class="line">​      - ./nginxroot:/usr/local/nginx/html</span><br><span class="line"></span><br><span class="line">networks:</span><br><span class="line"></span><br><span class="line">  tomcat:</span><br><span class="line"></span><br><span class="line">  nginx:</span><br><span class="line"></span><br><span class="line">[root@localhost compose_tomcat]# docker-compose -f docker-compose.yml up -d</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h1 id="八、Harbor私有仓库"><a href="#八、Harbor私有仓库" class="headerlink" title="八、Harbor私有仓库"></a>八、Harbor私有仓库</h1><p>Harbor私有仓库部署与管理</p>
+<p>Harbor的每个组件都是以Docker容器的形式构建的，使用docker-compose来对它进行部署</p>
+<p>Docker harbor有可视化的web管理界面，可以方便管理Docker镜像，又提供了多个项目的镜像权限管理及控制功能</p>
+<p>使用 Docker 命令在本地通过 127.0.0.1 来登录和推送镜像</p>
+<p>默认情况下，Register 服务器在端口 80 上侦听。</p>
+<p>&#x2F;&#x2F;登录 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login -u admin -p Harbor12345 http://127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F;下载镜像进行测试 下载镜像进行测试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull nginx</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F;镜像打标签 （网页上也会有提示、模板）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker tag nginx 127.0.0.1/myimages/nginx:v1</span><br></pre></td></tr></table></figure>
+
+<p>&#x2F;&#x2F;上传镜像到 上传镜像到 Harbor</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push 127.0.0.1/myimages/nginx:v1</span><br></pre></td></tr></table></figure>
+
+
+
+<p>使用Harbor仓库时遇到的故障：</p>
+<p>以上操作都是在 Harbor 服务器本地操作。如果其他客户端上传镜像到 Harbor，就会报</p>
+<p>如下错误。</p>
+<p>出现这问题的原因 Docker Registry 交互默认使用的是 HTTPS，但是搭建私有镜像默认使用的是 HTTP 服务，所以与私有镜像交互时出现以下错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker login -u admin -p Harbor12345 http://14.0.0.20</span><br><span class="line"></span><br><span class="line">WARNING! Using --password via the CLI is insecure. Use --password-stdin.</span><br><span class="line"></span><br><span class="line">Error response from daemon: Get https://14.0.0.20/v2/: dial tcp 14.0.0.20:443: connect: connection refused</span><br></pre></td></tr></table></figure>
+
+
+
+<p>如何解决： </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@client ~]# vim /usr/lib/systemd/system/docker.service</span><br><span class="line"></span><br><span class="line">ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry 14.0.0.20 -- containerd=/run/containerd/containerd.sock</span><br><span class="line"></span><br><span class="line">[root@client ~]# systemctl daemon-reload </span><br><span class="line"></span><br><span class="line">[root@client ~]# systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<p>要更改 Harbor 的配置文件时，请先停止现有的 Harbor 实例并更新 Harbor.cfg；然后运行 prepare 脚本来填充配置；最后重新创建并启动 Harbor 的实例。</p>
+<p>1.停止现有的 Harbor 实例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down -v</span><br><span class="line"></span><br><span class="line">[root@localhost harbor]# pwd</span><br><span class="line"></span><br><span class="line">/usr/local/harbor</span><br><span class="line"></span><br><span class="line">[root@localhost harbor]# ls</span><br><span class="line"></span><br><span class="line">common                     docker-compose.yml     harbor.v1.2.2.tar.gz  NOTICE</span><br><span class="line"></span><br><span class="line">docker-compose.clair.yml   harbor_1_1_0_template  install.sh            prepare</span><br><span class="line"></span><br><span class="line">docker-compose.notary.yml  harbor.cfg             LICENSE               upgrade</span><br></pre></td></tr></table></figure>
+
+<p>2.更新 Harbor.cfg</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost harbor]# vim Harbor.cfg</span><br></pre></td></tr></table></figure>
+
+<p>3.运行 prepare 脚本来填充配置</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost harbor]# ./prepare</span><br></pre></td></tr></table></figure>
+
+<p>4.重新创建并启动 Harbor 的实例</p>
+<p>如果出现如下报错： docker-compose up -d</p>
+<h1 id="九、Docker-consul容器服务更新与发现"><a href="#九、Docker-consul容器服务更新与发现" class="headerlink" title="九、Docker consul容器服务更新与发现"></a>九、Docker consul容器服务更新与发现</h1><h2 id="1、consul的介绍"><a href="#1、consul的介绍" class="headerlink" title="1、consul的介绍"></a>1、consul的介绍</h2><p>由HashiCorp公司使用go语言开发的一个支持多数据中心分布式高可用的服务发现和配置共享的服务软件（开源）。</p>
+<p>主要特点：</p>
+<p> 服务发现及配置；</p>
+<p> 支持健康检查，并且运行HTTP、GTPC和DNS协议调用API存储键值对；</p>
+<p> 采用Raft算法，保证服务的高可用</p>
+<p> 支持安全服务通信；</p>
+<p> 支持多数据中心；</p>
+<h2 id="2、consul-agent"><a href="#2、consul-agent" class="headerlink" title="2、consul agent"></a>2、consul agent</h2><p>consul通过agent来运行的，agent分为server 和client两种类型，这两种类型基本上没有什么区别，server agent是将服务的消息存储，一般来说为了防止单点故障推荐使用3到5个来构建集群架构。</p>
+<p>而client agent主要用于注销服务、健康检查及转发server agent的查询等，相当于一个代理，因此它必须要在集群的每台主机上运行。</p>
+<p>一种服务或软件工具的产生必然有其使用场景和其优势，否则哪有其立足之地？</p>
+<h2 id="3、consul使用的场景"><a href="#3、consul使用的场景" class="headerlink" title="3、consul使用的场景"></a>3、consul使用的场景</h2><ul>
+<li>Docker 容器的注册与配置共享</li>
+<li>Coreos 实例的注册与配置共享</li>
+<li>SaaS 应用的配置共享、服务发现和健康检查。</li>
+<li>vitess 集群</li>
+<li>与 confd 服务集成，动态生成 nginx 和 haproxy 配置文件</li>
+</ul>
+<h2 id="4、Docker-Consul容器服务更新与发现原理"><a href="#4、Docker-Consul容器服务更新与发现原理" class="headerlink" title="4、Docker Consul容器服务更新与发现原理"></a>4、Docker Consul容器服务更新与发现原理</h2><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210225153857.png" alt="基于consul的docker容器服务发现及自动更新（原理+部署)"></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. Consul Cluster由部署和运行了Consul Agent的节点组成。 在Cluster中有两种角色:Server和 Client。</span><br><span class="line">2. Server和Client的角色和Consul Cluster上运行的应用服务无关, 是基于Consul层面的一种角色划分.</span><br><span class="line">3. Consul Server: 用于维护Consul Cluster的状态信息， 实现数据一致性， 响应RPC请求。官方建议是: 至少要运行3个或者3个以上的Consul Server。 多个server之中需要选举一个leader, 这个选举过程Consul基于Raft协议实现. 多个Server节点上的Consul数据信息保持强一致性。 在局域网内与本地客户端通讯，通过广域网与其他数据中心通讯。Consul Client: 只维护自身的状态, 并将HTTP和DNS接口请求转发给服务端。</span><br><span class="line">4. Consul 支持多数据中心， 多个数据中心要求每个数据中心都要安装一组Consul cluster，多个数据中心间基于gossip protocol协议来通讯， 使用Raft算法实现一致性</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、工作流程："><a href="#5、工作流程：" class="headerlink" title="5、工作流程："></a>5、工作流程：</h2><p>当后面容器增加时，registrator注册容器中的服务—》通知consul server更新—》consul template模板进行更新，自动修改nginx.conf中的upstream参数</p>
+<p>Registrator监控新建的Docker容器，并且检查判定这些容器提供的服务。从我们的目的出发，任何监听在某个端口的程序都是服务。Registrator在容器内发现的任务服务，都将被添加到一个服务注册端，比如Consul或etcd</p>
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/fed68f21bcf047b3804e5aa3faae7a0f/clipboard.png" alt="img"></p>
+<p>准备template nginx模板文件，参数以变量形式写入</p>
+<p>在consul服务器节点上操作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost consul]# vim /root/consul/nginx.ctmpl</span><br><span class="line"></span><br><span class="line">upstream http-server &#123;</span><br><span class="line"></span><br><span class="line">  &#123;&#123;range service &quot;nginx&quot;&#125;&#125;</span><br><span class="line"></span><br><span class="line">  server &#123;&#123;.Address&#125;&#125;:&#123;&#123;.Port&#125;&#125;;</span><br><span class="line"></span><br><span class="line">  &#123;&#123;end&#125;&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>consul-template是一个守护进程，用于实时查询consul集群信息，并更新文件系统上任意数量的指定模板，生成配置文件。更新完成后，可以选择运行shell命令执行更新操作，重新加载nginx。这种强大的抽象功能和查询语言模板可以使consul-template特别适合动态的创建配置文件。例如：创建nginx反向代理。</p>
+<h1 id="十、资源分配"><a href="#十、资源分配" class="headerlink" title="十、资源分配"></a>十、资源分配</h1><h3 id="1、为什么要做资源分配？"><a href="#1、为什么要做资源分配？" class="headerlink" title="1、为什么要做资源分配？"></a>1、为什么要做资源分配？</h3><p>容器和虚拟机的区别：</p>
+<p>虚拟机不需要做，因为虚拟机在创建的时候已经做了资源分配（配额），（虚拟CPU,虚拟内存,虚拟磁盘等）</p>
+<p>而容器共享内核资源，所以需要做Cgroup，可以按照往年监控的数据，查看cpu等资源的耗用情况来进行分配</p>
+<h3 id="2、Cgroup资源配置方法"><a href="#2、Cgroup资源配置方法" class="headerlink" title="2、Cgroup资源配置方法"></a>2、Cgroup资源配置方法</h3><p>Docker是通过Cgroup来控制容器使用的资源配额，包括CPU、内存、磁盘i&#x2F;o三大方面，基本覆盖了常见的资源配额和使用量控制。</p>
+<p>Cgroup是Control Groups的缩写，是Linux内核提供的一种可以限制、记录、隔离进程组所使用的物理资源（如CPU、内存、磁盘IO等）的机制，被docker等很多项目用于实现进程资源控制。Cgroup本身是提供将进程进行分组化管理的功能和接口的基础结构，I&#x2F;O或内存的分配控制等具体的资源管理功能。这些具体的资源管理功能称为Cgroup子系统，有以下几大子系统实现：</p>
+<p>blkio：设置限制每个块设备的输入输出控制。例如：磁盘，usb等</p>
+<p>CPU：使用调度程序为cgroup任务提供CPU的访问。</p>
+<p>cpuacct：产生cgroup任务的CPU资源报告。</p>
+<p>cpuset：如果是多核心的cpu，这个子系统会为cgroup任务分配单独的CPU和内存。</p>
+<p>devices：允许或拒绝cgroup任务对设备的访问。</p>
+<p>freezer：暂停和恢复cgroup任务。</p>
+<p>memory：设置每个cgroup的内存限制以及产生内存资源报告。</p>
+<p>net_cls：标记每个网络包以供cgroup方便使用。</p>
+<p>ns：命名空间子系统。</p>
+<p>perf_event：增加了对每个group的监测跟踪的能力，可以监测属于某个特定的group的所有线程以及运行在特定CPU上的线程。</p>
+<h3 id="3、使用stress工具测试CPU和内存"><a href="#3、使用stress工具测试CPU和内存" class="headerlink" title="3、使用stress工具测试CPU和内存"></a>3、使用stress工具测试CPU和内存</h3><p>#使用Dockerfile来创建一个基于Centos的stress工具镜像</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mkdir stress</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# vim stress/Dockerfile</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# cd stress/</span><br><span class="line"></span><br><span class="line">[root@localhost stress]# vim Dockerfile</span><br><span class="line"></span><br><span class="line">FROM centos:7</span><br><span class="line"></span><br><span class="line">MAINTAINER chen</span><br><span class="line"></span><br><span class="line">RUN yum -y install wget</span><br><span class="line"></span><br><span class="line">RUN wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo</span><br><span class="line"></span><br><span class="line">RUN yum -y install stress</span><br><span class="line"></span><br><span class="line">[root@localhost stress]# docker build -t centos:stress .</span><br></pre></td></tr></table></figure>
+
+<p>#使用如下命令创建容器，命令中的–cpu-shares参数值不能保证可以获得1个vcpu或者多少GHz的CPU资源，它仅是一个弹性的加权值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --cpu-shares 100 centos:stress</span><br></pre></td></tr></table></figure>
+
+<p>说明：默认情况下，每个Docker容器的CPU份额都是1024。单独一个容器的份额是没有意义的。只有在同时运行容器时，容器的cpu加权的效果才能显现。</p>
+<p>例如：两个容器A、B的cpu份额分别为1000和500，在cpu进行实际片分配的时候，容器A比容器B多一倍的机会获得cpu的时间片。但分配的结果取决于当时主机和其他容器的运行状态，实际上也无法保证容器A一定能获得cpu时间片。比如容器A的进程一直是空闲的，那么容器B是可以获取比容器A更多的cpu时间片的。极端情况下，例如主机上只运行了一个容器，即使它的cpu份额只有50，它也可以独占整个主机的cpu。</p>
+<p>例如：cpu时间片：1秒 </p>
+<p>​           容器A：50% 0.5秒</p>
+<p>​           容器B：25% 0.25秒</p>
+<p>​           容器C：25% 0.25秒</p>
+<p>平均值层面：CPU给A容器充0.5秒，给B容器充0.25秒</p>
+<p>#可以通过cpu share可以设置容器使用cpu的优先级，比如启动了两个容器及运行查看cpu使用百分比。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost stress]# docker run -itd --name cpu1024 --cpu-shares 1024 centos:stress stress -c 10</span><br></pre></td></tr></table></figure>
+
+<p>​               #stress -c 10：容器产生10个子函数进程</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost stress]# docker exec -it dd0e42e372ff /bin/bash</span><br><span class="line"></span><br><span class="line">[root@dd0e42e372ff /]# top</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/d698aaa35b874ef8b86d2aefae36f2db/clipboard.png" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --name cpu512 --cpu-shares 512 centos:stress stress -c 10</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# docker exec -it ddfccf1cac40 /bin/bash</span><br><span class="line"></span><br><span class="line">[root@ddfccf1cac40 /]# top</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/b8ed9a1ab4d441e38927c15b9219bbf2/clipboard.png" alt="img"></p>
+<p>#可以发现两个容器cpu使用率是2:1</p>
+<h3 id="4、CPU周期限制"><a href="#4、CPU周期限制" class="headerlink" title="4、CPU周期限制"></a>4、CPU周期限制</h3><p>Docker提供了–cpu-period、–cpu-quota两个参数控制容器可以分配到的CPU时钟周期。</p>
+<p>–cpu-period是用来指定容器对CPU的使用要在多长时间内做一次重新分配。</p>
+<p>–cpu-quota是用来指定在这个周期内，最多可以有多少时间来跑这个容器。</p>
+<p>与–cpu-shares不同的是，这种配置是指定一个绝对值，容器对CPU资源的使用绝对不会超过配置的值。</p>
+<p>cpu-period和cpu-quota的单位为微秒（μs）。cpu-period的最小值为1000微秒，最大值为1秒，默认值为0.1秒（100000μs）</p>
+<p>cpu-quota的值默认为-1，表示不做控制。cpu-period和cpu-quota参数一般联合使用。</p>
+<p>例如：容器进程需要每1秒使用单个cpu的0.2秒时间，可以将cpu-period设置为1000000即1秒，cpu-quota设置为200000（0.2秒）。</p>
+<p>在多核情况下，如果允许容器进程完全占用两个cpu，则可以将cpu-period设置为100000即0.1秒，cpu-quota设置为200000即0.2秒</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --cpu-period 100000 --cpu-quota 200000 centos:stress</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# docker exec -it 16b6689aabc6 /bin/bash</span><br><span class="line"></span><br><span class="line">[root@16b6689aabc6 /]# cd /sys/fs/cgroup/</span><br><span class="line"></span><br><span class="line">[root@16b6689aabc6 cgroup]# ls</span><br><span class="line"></span><br><span class="line">blkio        cpuacct  freezer  net_cls           perf_event</span><br><span class="line"></span><br><span class="line">cpu          cpuset   hugetlb  net_cls,net_prio  pids</span><br><span class="line"></span><br><span class="line">cpu,cpuacct  devices  memory   net_prio          systemd</span><br><span class="line"></span><br><span class="line">[root@16b6689aabc6 cgroup]# cd cpu</span><br><span class="line"></span><br><span class="line">[root@16b6689aabc6 cpu]# ls</span><br><span class="line"></span><br><span class="line">cgroup.clone_children  cpu.rt_period_us   cpuacct.usage</span><br><span class="line"></span><br><span class="line">cgroup.event_control   cpu.rt_runtime_us  cpuacct.usage_percpu</span><br><span class="line"></span><br><span class="line">cgroup.procs           cpu.shares         notify_on_release</span><br><span class="line"></span><br><span class="line">cpu.cfs_period_us      cpu.stat           tasks</span><br><span class="line"></span><br><span class="line">cpu.cfs_quota_us       cpuacct.stat</span><br><span class="line"></span><br><span class="line">[root@16b6689aabc6 cpu]# cat cpu.cfs_period_us</span><br><span class="line"></span><br><span class="line">100000</span><br><span class="line"></span><br><span class="line">[root@16b6689aabc6 cpu]# cat cpu.cfs_quota_us</span><br><span class="line"></span><br><span class="line">200000</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5、CPU-Core控制"><a href="#5、CPU-Core控制" class="headerlink" title="5、CPU Core控制"></a>5、CPU Core控制</h3><p>对多核CPU的服务器，Docker还可以控制容器运行使用哪些CPU内核，即使用–cpuset-cpus参数。这对具有多CPU的服务器尤其有用，可以对需要高性能计算的容器进行性能最优的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --name cpu1 --cpuset-cpus 1-2 centos:stress</span><br></pre></td></tr></table></figure>
+
+<p>#执行以上命令表示创建的容器只能用1、2两个cpu。最终生成的cgroup的cpu内核配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker exec -it 75be98d74dcc /bin/bash</span><br><span class="line"></span><br><span class="line">top - 07:34:23 up 45 min,  0 users,  load average: 0.00, 0.01, 0.04</span><br><span class="line"></span><br><span class="line">[root@75be98d74dcc /]# cat /sys/fs/cgroup/cpuset/cpuset.cpus  #cpuset：cpu集合</span><br><span class="line"></span><br><span class="line">1-2</span><br><span class="line"></span><br><span class="line">[root@75be98d74dcc /]# stress -c 5 &amp;   #让容器产生5个子函数进程，并在后台运行</span><br><span class="line"></span><br><span class="line">[root@75be98d74dcc /]# top    #使用top命令查看cpu工作情况（top进去后按1，显示每个cpu的工作情况）</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/00522c0fbd0244268fb09886cc94401e/clipboard.png" alt="img"></p>
+<p>#通过下面指令可以看到容器中进程与cpu内核的绑定关系</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker exec 75be98d74dcc taskset -c -p 1  #-p 1 表示容器中第一个进程pid为1被绑定到cpu1和2上</span><br><span class="line"></span><br><span class="line">pid 1&#x27;s current affinity list: 1,2</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6、CPU配额控制参数的混合使用"><a href="#6、CPU配额控制参数的混合使用" class="headerlink" title="6、CPU配额控制参数的混合使用"></a>6、CPU配额控制参数的混合使用</h3><p>通过cpuset-cpus参数指定容器A使用cpu内核0，容器B只是用CPU内核1.</p>
+<p>在主机上只有这两个容器使用对应cpu内核的情况，它们各自占用全部的内核资源，cpu-shares没有明显效果。</p>
+<p>cpuset-cpus、cpuset-mems参数只在多核、多内存节点上的服务器上有效，并且必须与实际的物理配置匹配，否则也无法达到资源控制的目的。</p>
+<p>在系统具有多个cpu内核的情况下，需要通过cpuset-cpus参数为容器设置cpu内核才能方便的进行测试。</p>
+<p>#创建容器cpu3，仅使用cpu0核心，加权值为512</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --name cpu3 --cpuset-cpus 0 --cpu-shares 512 centos:stress stress -c 1</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# docker exec -it 4eb80db7a397 bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/a750924664f44e499dcfa424cf00374a/clipboard.png" alt="img"></p>
+<p>#创建容器cpu4，仅使用cpu0核心，加权值为1024</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -itd --name cpu4 --cpuset-cpus 0 --cpu-shares 1024 centos:stress  stress -c 1</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# docker exec  -it 327038e98aa4 bash</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/04fa2f4a5b684628bcc0ac61a1858b49/clipboard.png" alt="img"></p>
+<h3 id="7、内存限额"><a href="#7、内存限额" class="headerlink" title="7、内存限额"></a>7、内存限额</h3><p>与操作系统类似，容器可使用的内存包括两部分：物理内存和Swap</p>
+<p>Docker通过下面两组参数来控制容器内存的使用量。</p>
+<p>-m或–memory：设置内存的使用限额，例如100M、1024M</p>
+<p>–memory-swap：设置内存+swap的使用限额</p>
+<p>执行如下命令允许该容器最多使用200M的内存和300M的swap</p>
+<p>[root@localhost ~]# docker run -it -m 200M –memory-swap&#x3D;300M progrium&#x2F;stress –vm 1 –vm-bytes 280M</p>
+<p>–vm 1：启动1个内存工作线程</p>
+<p>–vm-bytes 280M：每个线程分配280M内存</p>
+<p>默认情况下，容器可以使用主机上的所有空闲内存。</p>
+<p>与cpu的cgroups配置类似，Docker会自动为容器在目录&#x2F;sys&#x2F;fs&#x2F;cgroup&#x2F;memory&#x2F;docker&#x2F;&lt;容器的完整长id&gt;中创建相应cgroup配置文件</p>
+<p>注意：如果让工作线程分配的内存超过300M，分配的内存超过限额，stress线程报错，容器退出。</p>
+<p>[root@localhost ~]# docker run -it -m 200M –memory-swap&#x3D;300M progrium&#x2F;stress –vm 1 –vm-bytes 310M</p>
+<h3 id="8、bps和iops的限制"><a href="#8、bps和iops的限制" class="headerlink" title="8、bps和iops的限制"></a>8、bps和iops的限制</h3><p>bps是byte per second，每秒读写的数据量。</p>
+<p>iops是io per second，每秒io的次数。</p>
+<p>可通过以下参数控制容器的bps和iops：</p>
+<p>–device-read-bps，限制读某个设备的bps。</p>
+<p>–device-write-bps，限制写某个设备的bps。</p>
+<p>–device-read-iops，限制读某个设备的iops。</p>
+<p>–device-write-iops，限制写某个设备的iops。</p>
+<p>示例：限制容器写&#x2F;dev&#x2F;sda的速率为5MB&#x2F;s。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# docker run -it --device-write-bps /dev/sda:5MB centos:stress</span><br><span class="line"></span><br><span class="line">[root@7675c030fd53 /]# dd if=/dev/zero of=test bs=1M count=1024 oflag=direct</span><br><span class="line"></span><br><span class="line">^C22+0 records in</span><br><span class="line"></span><br><span class="line">22+0 records out</span><br><span class="line"></span><br><span class="line">23068672 bytes (23 MB) copied, 4.40131 s, 5.2 MB/s</span><br></pre></td></tr></table></figure>
+
+<p>#通过dd命令测试在容器中写磁盘的速度是否为5MB&#x2F;s。因为容器的文件系统是在主机&#x2F;dev&#x2F;sda上的，在容器中写文件相当于对主机&#x2F;dev&#x2F;sda进行写操作。另外，oflag&#x3D;direct指定用direct IO方式写文件，这样 –device-write-bps才能生效。</p>
+<p>结果表明限速5MB&#x2F;s左右。作为对比测试，如果不限速，结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# docker run -it centos:stress</span><br><span class="line"></span><br><span class="line">[root@07b87cdda205 /]# dd if=/dev/zero of=test bs=1M count=1024 oflag=direct</span><br><span class="line"></span><br><span class="line">1024+0 records in</span><br><span class="line"></span><br><span class="line">1024+0 records out</span><br><span class="line"></span><br><span class="line">1073741824 bytes (1.1 GB) copied, 1.01479 s, 1.1 GB/s</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="十一、Docker-TLS加密通讯"><a href="#十一、Docker-TLS加密通讯" class="headerlink" title="十一、Docker-TLS加密通讯"></a>十一、Docker-TLS加密通讯</h1><h3 id="1、使用TLS加密通讯原因"><a href="#1、使用TLS加密通讯原因" class="headerlink" title="1、使用TLS加密通讯原因"></a>1、使用TLS加密通讯原因</h3><p>为了防止链路劫持、会话劫持等问题导致Docker通信时被中间人攻击，c&#x2F;s两端应该通过加密方式通讯。</p>
+<h3 id="2、基础知识"><a href="#2、基础知识" class="headerlink" title="2、基础知识"></a>2、基础知识</h3><p>1.对称密钥，例如DES、3DES、AES，长度不同，长度越长安全越高，解密速度越慢。</p>
+<p>2.非对称密钥，分为公钥和私钥，例如RSA  公钥：所有人可知（锁），私钥（钥匙）个人身份信息，不可抵赖。</p>
+<p>3.封装在证书中：个人信息，密钥，有效期</p>
+<p>4.ca：证书颁发机构  ca证书</p>
+<p>密钥key–》身份签名（csr）–》服务器&#x2F;客户端（结合）制作证书pem</p>
+<p>证书pem发送给客户端，客户端通过证书验证才能访问容器</p>
+<h3 id="3、TLS加密通讯部署过程："><a href="#3、TLS加密通讯部署过程：" class="headerlink" title="3、TLS加密通讯部署过程："></a>3、TLS加密通讯部署过程：</h3><p>1.修改服务器主机名为server，并添加到本地解析文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# hostnamectl set-hostname server</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# su</span><br><span class="line"></span><br><span class="line">[root@server ~]# vim /etc/hosts</span><br><span class="line"></span><br><span class="line">127.0.0.1 server</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.创建ca密钥（ca-key.pem）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl genrsa -aes256 -out ca-key.pem 4096  #256为密钥长度；4096为字节数</span><br><span class="line"></span><br><span class="line">Generating RSA private key, 4096 bit long modulus</span><br><span class="line"></span><br><span class="line">.......++</span><br><span class="line"></span><br><span class="line">...............++</span><br><span class="line"></span><br><span class="line">e is 65537 (0x10001)</span><br><span class="line"></span><br><span class="line">Enter pass phrase for ca-key.pem:        #输入密码123123（自定义）</span><br><span class="line"></span><br><span class="line">Verifying - Enter pass phrase for ca-key.pem:     #确认密码123123</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.创建ca根证书文件（ca.pem）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl req -new -x509 -days 1000 -key ca-key.pem -sha256 -subj &quot;/CN=*&quot; -out ca.pem    #req：签名；x509：国际标准；sha256：指定哈希256位加密算法；subj：项目名称</span><br><span class="line"></span><br><span class="line">Enter pass phrase for ca-key.pem:      #输入123123</span><br></pre></td></tr></table></figure>
+
+<p>-——————————————————————————————————————————-</p>
+<p>4.创建服务器私钥</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl genrsa -out server-key.pem 4096   #genrsa：非对称密钥</span><br><span class="line"></span><br><span class="line">Generating RSA private key, 4096 bit long modulus</span><br><span class="line"></span><br><span class="line">.....................................................................................++</span><br><span class="line"></span><br><span class="line">..............................................................++</span><br><span class="line"></span><br><span class="line">e is 65537 (0x10001)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[root@server ~]# ls</span><br><span class="line"></span><br><span class="line">anaconda-ks.cfg  ca.pem                server-key.pem  公共  视频  文档  音乐</span><br><span class="line"></span><br><span class="line">ca-key.pem       initial-setup-ks.cfg  stress          模板  图片  下载  桌面</span><br></pre></td></tr></table></figure>
+
+
+
+<p>5.签名私钥</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl req -subj &quot;/CN=*&quot; -sha256 -new -key server-key.pem -out server.csr</span><br></pre></td></tr></table></figure>
+
+
+
+<p>6.使用ca证书与私钥证书签名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl x509 -req -days 1000 -sha256 -in server.csr -CA ca.pem  -CAkey ca-key.pem -CAcreateserial -out server-cert.pem</span><br><span class="line"></span><br><span class="line">Signature ok</span><br><span class="line"></span><br><span class="line">subject=/CN=*</span><br><span class="line"></span><br><span class="line">Getting CA Private Key</span><br><span class="line"></span><br><span class="line">Enter pass phrase for ca-key.pem:     #输入123123</span><br><span class="line"></span><br><span class="line">[root@server ~]# ls</span><br><span class="line"></span><br><span class="line">anaconda-ks.cfg  ca.srl                server.csr      公共  图片  音乐</span><br><span class="line"></span><br><span class="line">ca-key.pem       initial-setup-ks.cfg  server-key.pem  模板  文档  桌面</span><br><span class="line"></span><br><span class="line">ca.pem           server-cert.pem       stress          视频  下载</span><br></pre></td></tr></table></figure>
+
+<p>-—————————————————————————————————————————</p>
+<p>7.生成客户端密钥</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl genrsa -out key.pem 4096</span><br><span class="line"></span><br><span class="line">Generating RSA private key, 4096 bit long modulus</span><br><span class="line"></span><br><span class="line">....................................++</span><br><span class="line"></span><br><span class="line">.......................................................................++</span><br><span class="line"></span><br><span class="line">e is 65537 (0x10001)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>8.签名客户端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl req -subj &quot;/CN=client&quot; -new -key key.pem -out client.csr</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>9.创建配置文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# echo extendedKeyUsage=clientAuth &gt; extfile.cnf</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>10.签名证书，输入123123，需要（签名客户端，ca证书，ca密钥）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# openssl x509 -req -days 1000 -sha256 -in client.csr -CA ca.pem -CAkey ca-key.pem -CAcreateserial -out cert.pem -extfile extfile.cnf</span><br><span class="line"></span><br><span class="line">Signature ok</span><br><span class="line"></span><br><span class="line">subject=/CN=client</span><br><span class="line"></span><br><span class="line">Getting CA Private Key</span><br><span class="line"></span><br><span class="line">Enter pass phrase for ca-key.pem:</span><br><span class="line"></span><br><span class="line">\---------------------------------------------------------------------------------------------------------------------------------</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>11.删除多余文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# rm -rf ca.srl client.csr extfile.cnf server.csr</span><br></pre></td></tr></table></figure>
+
+
+
+<p>12.修改docker服务文件文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# vim /lib/systemd/system/docker.service</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:/%E6%9C%89%E9%81%93/%E7%AC%94%E8%AE%B0/weixinobU7Vjr77MsBJ6yQf29GVWik52DI/5427f18f061b4fc78428b5dd67262373/clipboard.png" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# mkdir /tls</span><br><span class="line"></span><br><span class="line">[root@server ~]# mv ca.pem /tls</span><br><span class="line"></span><br><span class="line">[root@server ~]# mv server-cert.pem /tls</span><br><span class="line"></span><br><span class="line">[root@server ~]# mv server-key.pem /tls/</span><br><span class="line"></span><br><span class="line">[root@server ~]# mv cert.pem /tls/</span><br><span class="line"></span><br><span class="line">[root@server ~]# mv key.pem /tls/</span><br><span class="line"></span><br><span class="line">[root@server ~]# ls /tls/</span><br><span class="line"></span><br><span class="line">ca.pem  cert.pem  key.pem  server-cert.pem  server-key.pem</span><br></pre></td></tr></table></figure>
+
+
+
+<p>13.重载进程，重启docker服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@server ~]# systemctl daemon-reload</span><br><span class="line"></span><br><span class="line">[root@server ~]# systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+
+
+<p>14.将&#x2F;tls目录下的ca.pem、cert.pem、key.pem三个文件复制给客户端</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@server tls]# scp ca.pem root@14.0.0.30:/etc/docker/</span><br><span class="line"></span><br><span class="line">[root@server tls]# scp cert.pem root@14.0.0.30:/etc/docker/</span><br><span class="line"></span><br><span class="line">[root@server tls]# scp key.pem root@14.0.0.30:/etc/docker/</span><br></pre></td></tr></table></figure>
+
+<p>-———————————————————————————————————————————-</p>
+<p>15.到客户端14.0.0.30进行测试</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost docker]# vim /etc/hosts</span><br><span class="line"></span><br><span class="line">加入：14.0.0.20 server</span><br><span class="line"></span><br><span class="line">[root@localhost ~]# cd /etc/docker/   #注意要切换到服务端传证书文件的目录下</span><br><span class="line"></span><br><span class="line">[root@localhost docker]# docker --tlsverify --tlscacert=ca.pem --tlscert=cert.pem --tlskey=key.pem -H tcp://server:2376 ps -a        #测试成功，成功访问服务端容器</span><br><span class="line"></span><br><span class="line">CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                           PORTS               NAMES</span><br><span class="line"></span><br><span class="line">327038e98aa4        centos:stress       &quot;stress -c 1&quot;       About an hour ago   Exited (137) About an hour ago                       cpu4</span><br><span class="line"></span><br><span class="line">4eb80db7a397        centos:stress       &quot;stress -c 1&quot;       About an hour ago   Exited (137) About an hour ago                       cpu3</span><br></pre></td></tr></table></figure>
+
+<h1 id="十二、故障集"><a href="#十二、故障集" class="headerlink" title="十二、故障集"></a>十二、故障集</h1><h3 id="1、centos下执行命令service-network-restart时，抛出主进程被占据的错"><a href="#1、centos下执行命令service-network-restart时，抛出主进程被占据的错" class="headerlink" title="1、centos下执行命令service network restart时，抛出主进程被占据的错"></a>1、centos下执行命令service network restart时，抛出主进程被占据的错</h3><p>原因：从镜像创建容器时，通过以下命令创建</p>
+<p>　　　docker run -itd –name centos-test centos &#x2F;bin&#x2F;bash</p>
+<p>　　　这时，进程（PID：1）会被&#x2F;bin&#x2F;bash占据。</p>
+<p>对策：通过以下命令创建容器</p>
+<p>　　　docker run -itd –name centos-test –privileged&#x3D;true centos &#x2F;usr&#x2F;sbin&#x2F;init</p>
+<h3 id="2、Goland使用Docker插件，连接Docker失败"><a href="#2、Goland使用Docker插件，连接Docker失败" class="headerlink" title="2、Goland使用Docker插件，连接Docker失败"></a>2、Goland使用Docker插件，连接Docker失败</h3><p>原因：没有开启Docker的远程访问</p>
+<p>对策：如下图，Expose daemon on tcp:&#x2F;&#x2F;localhost:2375 without TLS处打勾</p>
+<p> <img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210125102235.png" alt="img"></p>
+<h3 id="3、将要部署的项目创建容器时无法访问数据库"><a href="#3、将要部署的项目创建容器时无法访问数据库" class="headerlink" title="3、将要部署的项目创建容器时无法访问数据库"></a>3、将要部署的项目创建容器时无法访问数据库</h3><p>原因：docker是一个虚拟容器，其localhost与主机的localhost是不同的，不能互相访问。</p>
+<p>对策：工程总配置文件的数据源要填写真实的IP地址。如果是开发环境的话，推荐使用【host.docker.internal】。这个DNS名称将被解析到主机的IP地址，省去了不断更换IP的麻烦。</p>
+<h1 id="十三、面试题"><a href="#十三、面试题" class="headerlink" title="十三、面试题"></a>十三、面试题</h1><h3 id="1、什么Docker？"><a href="#1、什么Docker？" class="headerlink" title="1、什么Docker？"></a>1、什么Docker？</h3><p>答：Docker是一个容器化平台，它以容器的形式将您的应用程序及其所有依赖项打包在一起，以确保您的应用程序在任何环境中无缝运行。</p>
+<h3 id="2、Docker与虚拟机的不同点在哪里？"><a href="#2、Docker与虚拟机的不同点在哪里？" class="headerlink" title="2、Docker与虚拟机的不同点在哪里？"></a>2、Docker与虚拟机的不同点在哪里？</h3><p>答：Docker不是虚拟化方法。它依赖于实际实现基于容器的虚拟化或操作系统级虚拟化的其他工具。为此，Docker最初使用LXC驱动程序，然后移动到libcontainer现在重命名为runc。Docker主要专注于在应用程序容器内自动部署应用程序。应用程序容器旨在打包和运行单个服务，而系统容器则设计为运行多个进程，如虚拟机。因此，Docker被视为容器化系统上的容器管理或应用程序部署工具。</p>
+<h3 id="3、Docker容器有几种状态？"><a href="#3、Docker容器有几种状态？" class="headerlink" title="3、Docker容器有几种状态？"></a>3、Docker容器有几种状态？</h3><p>答：有四种状态：运行、已暂停、重新启动、已退出。</p>
+<h3 id="4、Dockerfile中最常见的指令是什么？"><a href="#4、Dockerfile中最常见的指令是什么？" class="headerlink" title="4、Dockerfile中最常见的指令是什么？"></a>4、Dockerfile中最常见的指令是什么？</h3><p>答：FROM：指定基础镜像；LABEL：功能是为镜像指定标签；RUN：运行指定的命令；CMD：容器启动时要运行的命令。</p>
+<h3 id="5、Dockerfile中的命令COPY和ADD命令有什么区别？"><a href="#5、Dockerfile中的命令COPY和ADD命令有什么区别？" class="headerlink" title="5、Dockerfile中的命令COPY和ADD命令有什么区别？"></a>5、Dockerfile中的命令COPY和ADD命令有什么区别？</h3><p>答：一般而言，虽然ADD并且COPY在功能上类似，但是首选COPY。</p>
+<p>那是因为它比ADD更易懂。COPY仅支持将本地文件复制到容器中，而ADD具有一些功能（如仅限本地的tar提取和远程URL支持），这些功能并不是很明显。因此，ADD的最佳用途是将本地tar文件自动提取到镜像中，如ADD rootfs.tar.xz &#x2F;。</p>
+<h3 id="6、什么是Docker镜像？"><a href="#6、什么是Docker镜像？" class="headerlink" title="6、什么是Docker镜像？"></a>6、什么是Docker镜像？</h3><p>答：Docker镜像是Docker容器的源代码。换句话说，Docker镜像用于创建容器。使用build命令创建镜像，并且在使用run启动时它们将生成容器。镜像存储在Docker注册表中，registry.hub.docker.com因为它们可能变得非常大，镜像被设计为由其他镜像层组成，允许在通过网络传输镜像时发送最少量的数据。</p>
+<h3 id="7、解释基本的Docker使用工作流程是怎样的？"><a href="#7、解释基本的Docker使用工作流程是怎样的？" class="headerlink" title="7、解释基本的Docker使用工作流程是怎样的？"></a>7、解释基本的Docker使用工作流程是怎样的？</h3><p>答：（1）从Dockerfile开始，Dockerfile是镜像的源代码；（2）创建Dockerfile后，可以构建它以创建容器的镜像。图像只是“源代码”的“编译版本”，即Dockerfile；（3）获得容器的镜像后，应使用注册表重新分发容器。注册表就像一个git存储库，可以推送和拉取镜像；接下来，可以使用该图像来运行容器。在许多方面，正在运行的容器与虚拟机（但没有虚拟机管理程序）非常相似。</p>
+<h3 id="8、如何在生产中监控Docker？"><a href="#8、如何在生产中监控Docker？" class="headerlink" title="8、如何在生产中监控Docker？"></a>8、如何在生产中监控Docker？</h3><p>答：Docker提供docker stats和docker事件等工具来监控生产中的Docker。我们可以使用这些命令获取重要统计数据的报告。</p>
+<p>Docker统计数据：当我们使用容器ID调用docker stats时，我们获得容器的CPU，内存使用情况等。它类似于Linux中的top命令。</p>
+<p>Docker事件：Docker事件是一个命令，用于查看Docker守护程序中正在进行的活动流。一些常见的Docker事件是：attach，commit，die，detach，rename，destroy等。</p>
+<h3 id="9、Docker如何在非Linux系统中运行容器？"><a href="#9、Docker如何在非Linux系统中运行容器？" class="headerlink" title="9、Docker如何在非Linux系统中运行容器？"></a>9、Docker如何在非Linux系统中运行容器？</h3><p>答：通过添加到Linux内核版本2.6.24的名称空间功能，可以实现容器的概念。容器将其ID添加到每个进程，并向每个系统调用添加新的访问控制检查。它由clone（）系统调用访问，该调用允许创建先前全局命名空间的单独实例。</p>
+<h3 id="10、什么类型的应用程序无状态或有状态更适合Docker容器？"><a href="#10、什么类型的应用程序无状态或有状态更适合Docker容器？" class="headerlink" title="10、什么类型的应用程序无状态或有状态更适合Docker容器？"></a>10、什么类型的应用程序无状态或有状态更适合Docker容器？</h3><p>答：最好为Docker Container创建无状态应用程序。我们可以从应用程序中创建一个容器，并从应用程序中取出可配置的状态参数。现在我们可以在生产环境和具有不同参数的QA环境中运行相同的容器。这有助于在不同场景中重用相同的镜像。另外，无状态应用程序比有状态应用程序更容易使用Docker容器进行扩展。</p>
+<h3 id="11、你常用的docker命令有哪些？"><a href="#11、你常用的docker命令有哪些？" class="headerlink" title="11、你常用的docker命令有哪些？"></a>11、你常用的docker命令有哪些？</h3><p>拉取镜像：docker pull IMAGE（镜像名）</p>
+<p>例如：docker pull nginx</p>
+<p>部署启动容器：docker run –name NAME(容器名) -p PORTS(要使用的端口)  IMAGE(镜像名)</p>
+<p>查看容器的运行状态：docker ps -a (该命令可以查看容器是否运行，及已创建的容器名称）</p>
+<p>进入运行中的容器： docker exec -it CONTAINER_ID&#x2F;NAME(容器id或者是容器名)  bash</p>
+<p>eg:docker exec -it sc_nginx2 &#x2F;bin&#x2F;bash</p>
+<p>-i  ：交互式进入容器</p>
+<p>-t   : 开启一个终端</p>
+<p>sc_nginx : 是容器名</p>
+<p>&#x2F;bin&#x2F;bash : 进入容器的程序</p>
+<p>查看docker里有哪些镜像：docker images</p>
+<p>删除&#x2F;启动&#x2F;停止 容器 ：docker rm&#x2F;start&#x2F;stop CONTAINER_ID&#x2F;NAME</p>
+<p>启动docker服务：systemctl start docker  </p>
+<p>设置开机启动：systemctl enable docker  </p>
+<h3 id="12、Dockerfile是什么？Dockerfile里有哪些内容？"><a href="#12、Dockerfile是什么？Dockerfile里有哪些内容？" class="headerlink" title="12、Dockerfile是什么？Dockerfile里有哪些内容？"></a>12、Dockerfile是什么？Dockerfile里有哪些内容？</h3><p>Dockerfile 是用来构建自定义镜像的文本文档</p>
+<p>Dockerfile 里包含的信息主要有：</p>
+<p>基础镜像</p>
+<p>镜像元信息</p>
+<p>镜像操作指令</p>
+<p>容器启动时执行的命令</p>
+<p>-———————————————————-</p>
+<p>具体指令：</p>
+<p>1 FROM IMAGE(镜像名):version   （版本）  基础镜像</p>
+<p>eg: FROM mysql:5.6 </p>
+<p>eg: FORM python （不指定版本，默认最新版本）</p>
+<p>2 ENV 用来设置环境变量</p>
+<p>eg：ENV NAME World</p>
+<p>3 WORKDIR:用来指定工作目录</p>
+<p>eg: WORKDIR &#x2F;app</p>
+<p>4 ADD 用于将本地文件添加到镜像中  </p>
+<p>eg: ADD .&#x2F;app</p>
+<p>5 CMD  构建容器后执行的命令，即在容器启动时执行的命令</p>
+<p>eg: CMD [“python”,”app.py”]</p>
+<p>6 EXPOSE 指定与外界进行交互的端口</p>
+<p>eg: EXPOSE 80</p>
+<p>7 VOLUME 定义匿名卷 用于创建挂载点</p>
+<p>我们可以利用VOLUME 将源代码、数据或其他内容添加到镜像中，而又不需要提交到镜像中，并且可以使多个容器共享这些内容</p>
+<p>eg: VOLUME [“&#x2F;data_flask”]</p>
+<p>8 RUN  构建镜像时执行的命令</p>
+<p>eg:RUN pip install  -i <a target="_blank" rel="noopener" href="https://pypi.douban.com/simple/">https://pypi.douban.com/simple/</a> -r requirements.txt</p>
+<h3 id="13、退出容器后，通过docker-ps-命令查看不到，数据会丢失吗？"><a href="#13、退出容器后，通过docker-ps-命令查看不到，数据会丢失吗？" class="headerlink" title="13、退出容器后，通过docker ps 命令查看不到，数据会丢失吗？"></a>13、退出容器后，通过docker ps 命令查看不到，数据会丢失吗？</h3><p>​	可以用 docker ps -a 来查看</p>
+<p>​	如果仅仅是退出容器的话，数据是不会丢失的，重启容器后，数据依然在</p>
+<p>​	如果删除容器的话，但数据做了持久化存储，也不会丢。</p>
+<p>​	容器删除，那数据也会一起被删除</p>
+<h3 id="14、docker-的优点"><a href="#14、docker-的优点" class="headerlink" title="14、docker 的优点"></a>14、docker 的优点</h3><p>资源隔离：比如限制应用最大内存使用量，或者资源加载隔离等。 </p>
+<p>低消耗：虚拟化本身带来的损耗需要尽量的低。</p>
+<p>Docker 很好的权衡了两者，即拥有不错的资源隔离能力，又有很低的虚拟化开销。</p>
+<h3 id="15、docker的应用场景"><a href="#15、docker的应用场景" class="headerlink" title="15、docker的应用场景"></a>15、docker的应用场景</h3><p>1、可以简化配置</p>
+<p>不同的软件可能需要不同的运行环境，docker可以将运行环境和配置放在代码中，然后部署，同一个docker可以在不同的环境中使用 </p>
+<p>2、简化代码流水线（Code Pipeline）</p>
+<p>代码从开发者的机器到最终在生产环境上的部署，需要经过很多的中间环境。而每一个中间环境都有自己微小的差别，Docker给应用提供了一个从开发到上线均一致的环境，让代码的流水线变得简单不少。</p>
+<p>3、提高开发效率</p>
+<p>这就带来了一些额外的好处：Docker能提升开发者的开发效率，不同的开发环境中，我们都想把两件事做好。一是我们想让开发环境尽量贴近生产环境，二是我们想快速搭建开发环境。理想状态中，要达到第一个目标，我们需要将每一个服务都跑在独立的虚拟机中以便监控生产环境中服务的运行状态。然而，我们却不想每次都需要网络连接，每次重新编译的时候远程连接上去特别麻烦。这就是Docker做的特别好的地方，开发环境的机器通常内存比较小，使用虚拟机的时候，我们经常需要为开发环境的机器加内存，而Docker可以轻易的让几十个服务在Docker中跑起来。</p>
+<p>4、隔离应用</p>
+<p>有很多种原因会让你选择在一个机器上运行不同的应用，比如之前提到的提高开发效率的场景等。</p>
+<p>5、整合服务器</p>
+<p>正如通过虚拟机来整合多个应用，Docker隔离应用的能力使得Docker可以整合多个服务器以降低成本。由于没有多个操作系统的内存占用，以及能在多个实例之间共享没有使用的内存，Docker可以比虚拟机提供更好的服务器整合解决方案。</p>
+<p>6、调试能力</p>
+<p>Docker提供了很多的工具，这些工具不一定只是针对容器，但是却适用于容器。它们提供了很多的功能，包括可以为容器设置检查点、设置版本和查看两个容器之间的差别，这些特性可以帮助调试Bug。</p>
+<p>7、 快速部署</p>
+<p>在虚拟机之前，引入新的硬件资源需要消耗几天的时间。Docker的虚拟化技术将这个时间降到了几分钟，Docker只是创建一个容器进程而无需启动操作系统，这个过程只需要秒级的时间。这正是Google和Facebook都看重的特性。你可以在数据中心创建销毁资源而无需担心重新启动带来的开销。通常数据中心的资源利用率只有30%，通过使用Docker并进行有效的资源分配可以提高资源的利用率。</p>
+<h3 id="16、容器的网络类型有哪些？"><a href="#16、容器的网络类型有哪些？" class="headerlink" title="16、容器的网络类型有哪些？"></a>16、容器的网络类型有哪些？</h3><p>bridge ：默认</p>
+<p>host：容器和宿主机共享ip地址，端口号要区别开</p>
+<p>none：只有lo接口，没有其他的接口</p>
+<p>container：很多容器共享一个ip地址</p>
+<h3 id="17、compose-是什么？"><a href="#17、compose-是什么？" class="headerlink" title="17、compose 是什么？"></a>17、compose 是什么？</h3><p>容器编排工具</p>
+<p>例如：我们现在需要启动10个容器，其中3个nginx，2个redis，3个mysql，1个zabbix，1个ansible,有些容器需求先启动，有容器需要后启动，在启动的时候是有先后顺序的。</p>
+<p>这时候需要批量启动容器，而且启动的时候容器之间是有依赖关系，需要考虑启动顺序的</p>
+<p>我们可以将编排的内容全部写到一个yaml文件里，docker 的compose根据这个yaml文件里的安排去启动容器。</p>
+<h3 id="18、解释基本的Docker使用工作流程"><a href="#18、解释基本的Docker使用工作流程" class="headerlink" title="18、解释基本的Docker使用工作流程"></a>18、解释基本的Docker使用工作流程</h3><p>一切都从Dockerfile开始。Dockerfile是镜像的源代码。</p>
+<p>创建Dockerfile后，您可以构建它以创建容器的镜像。图像只是“源代码”的“编译版本”，即Dockerfile。</p>
+<p>获得容器的镜像后，应使用注册表重新分发容器。注册表就像一个git存储库 - 你可以推送和拉取图像。</p>
+<p>接下来，您可以使用该图像来运行容器。在许多方面，正在运行的容器与虚拟机（但没有虚拟机管理程序）非常相似。</p>
+<h3 id="19、Docker-Image和Layer有什么区别？"><a href="#19、Docker-Image和Layer有什么区别？" class="headerlink" title="19、Docker Image和Layer有什么区别？"></a>19、Docker Image和Layer有什么区别？</h3><p>Image：Docker镜像是由一系列只读层构建的</p>
+<p>Layer：每个层代表Dockerfile中的指令。</p>
+<p>下面的Dockerfile包含四个命令，每个命令都创建一个层。</p>
+<p>FROM ubuntu:15.04	</p>
+<p>COPY . &#x2F;app	</p>
+<p>RUN make &#x2F;app	</p>
+<p>CMD python &#x2F;app&#x2F;app.py</p>
+<p>每个层只是与之前层的一组差异。</p>
+<h3 id="20、您将如何监控生产中的Docker？"><a href="#20、您将如何监控生产中的Docker？" class="headerlink" title="20、您将如何监控生产中的Docker？"></a>20、您将如何监控生产中的Docker？</h3><p>Docker提供docker stats和docker events等工具来监控生产中的Docker。我们可以使用这些命令获取重要统计数据的报告。</p>
+<p>Docker stats：当我们使用容器ID调用docker stats时，我们获得容器的CPU，内存使用情况等。它类似于Linux中的top命令。</p>
+<p>Docker events：Docker events是一个命令，用于查看Docker守护程序中正在进行的任务。</p>
+<p>一些常见的Docker事件是：attach，commit，die，detach，rename，destroy等。我们还可以使用各种选项来限制或过滤我们感兴趣的事件。</p>
+<h3 id="21、什么是Docker-Swarm？"><a href="#21、什么是Docker-Swarm？" class="headerlink" title="21、什么是Docker Swarm？"></a>21、什么是Docker Swarm？</h3><p>Docker Swarm是Docker的群集管理工具。它将Docker主机池转变为一个虚拟Docker主机。Docker Swarm提供标准的Docker API，任何已经与Docker守护进程通信的工具都可以使用Swarm扩展到多个主机。</p>
+<h3 id="22、docker的核心是什么"><a href="#22、docker的核心是什么" class="headerlink" title="22、docker的核心是什么"></a>22、docker的核心是什么</h3><p>镜像（Image）</p>
+<p>容器（Container）</p>
+<p>仓库（Repository）</p>
+<p>镜像：类似虚拟机镜像</p>
+<p>容器：类似linux系统环境，运行和隔离应用。容器从镜像启动的时候，docker会在镜像的最上一层创建一个可写层，镜像本身是只读的，保持不变。</p>
+<p>仓库：每个仓库存放某一类镜像。 |</p>
+<h3 id="23、docker的持久化，网络，发布"><a href="#23、docker的持久化，网络，发布" class="headerlink" title="23、docker的持久化，网络，发布"></a>23、docker的持久化，网络，发布</h3><p>docker的持久化：在生成容器的同时，加上-v选项，指定把当前服务器的目录映射到容器中</p>
+<p>docker的网络：</p>
+<p>创建网络：docker network create –subnet&#x3D;10.10.10.0&#x2F;24 docker1，其实就是创建一个虚拟交换机、一个虚拟局域网，只有属于同一个虚拟局域网的容器之间才能够相互通讯</p>
+<p>发布docker：我们可以使用-p参数把容器端口和宿主机端口绑定</p>
+<p>​	-p 宿主机端口:容器端口	#宿主端口可以是任意的端口，只要访问的时候加上端口号，即可访问到相应的容易的端口的服务</p>
+<h3 id="24、怎么做一个拥有指定功能的镜像"><a href="#24、怎么做一个拥有指定功能的镜像" class="headerlink" title="24、怎么做一个拥有指定功能的镜像"></a>24、怎么做一个拥有指定功能的镜像</h3><p>方法一：生产一个新的容器&#x3D;&#x3D;&gt;进入模板镜像容器&#x3D;&gt;操作(制作成自己想要的环境)&#x3D;&gt;退出容器&#x3D;&gt;利用容器产生新的镜像</p>
+<p>方法二：写Dockerfile文件，把需要对容器的操作写到文件中，通过执行脚本文件来产生新的镜像</p>
+<h3 id="25、说下对docker-run和docker-start的理解？"><a href="#25、说下对docker-run和docker-start的理解？" class="headerlink" title="25、说下对docker run和docker start的理解？"></a>25、说下对docker run和docker start的理解？</h3><p>docker run 只在第一次运行时使用，将镜像放到容器中，以后再次启动这个容器时，只需要使用命令docker start 即可。</p>
+<p>docker run相当于执行了两步操作：将镜像放入容器中（docker create）,然后将容器启动，使之变成运行时容器（docker start）。</p>
+<p>docker start的作用是，重新启动已存在的镜像。也就是说，如果使用这个命令，我们必须事先知道这个容器的ID，或者这个容器的名字，我们可以使用docker ps找到这个容器的信息。</p>
+<h3 id="26、docker-stop和docker-kill的的理解？"><a href="#26、docker-stop和docker-kill的的理解？" class="headerlink" title="26、docker stop和docker kill的的理解？"></a>26、docker stop和docker kill的的理解？</h3><p>kill是不管容器同不同意，我直接执行kill -9，强行终止；stop的话，首先给容器发送一个TERM信号，让容器做一些退出前必须的保护性、安全性操作，然后让容器自动停止运行，如果在一段时间内，容器还是没有停止，再进行kill -9，强行终止。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = ''
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/README/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/Python%E4%B9%8B%E7%A6%85%E7%9A%84%E6%9C%80%E4%BD%B3%E7%BF%BB%E8%AF%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example11/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_3.result/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_bootstrap/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/problem_of_float/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 17.08098898548451px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 13.96710997895321px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 13.957203041068077px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 14.411721992713705px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sun Dec 15 2024 06:02:47 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sun Dec 15 2024 06:02:47 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

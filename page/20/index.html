@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a href="/page/21/" class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a href="/page/19" class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Kubernetes/">Kubernetes</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<div class="alert well fade in" id="gal - issue" role="alert" style="font - size: 21px;">
+    <!-- TODO 添加关闭公告框功能 -->
+    <button type="button" class="close" data - dismiss="alert">×</button>
+    <!-- 这里自行配置公告内容 -->
+    代码不只是指令，它是解决问题的艺术!
+    <!-- 自行配置公告内容结束 -->
+</div>
+
+<div id="article-list">
+     
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview9.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">
+                    
+                    <img src="/imgs/preview/preview15.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day16-20/16-20.Python%E8%AF%AD%E8%A8%80%E8%BF%9B%E9%98%B6/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">
+                    
+                    <img src="/imgs/preview/preview11.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/15.%E5%9B%BE%E5%83%8F%E5%92%8C%E5%8A%9E%E5%85%AC%E6%96%87%E6%A1%A3%E5%A4%84%E7%90%86/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview12.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+                    
+                    <img src="/imgs/preview/preview3.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/14.%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8%E5%92%8C%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview11.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">
+                    
+                    <img src="/imgs/preview/preview3.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/13.%E8%BF%9B%E7%A8%8B%E5%92%8C%E7%BA%BF%E7%A8%8B/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview12.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                    
+                    <img src="/imgs/preview/preview14.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview4.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">
+                    
+                    <img src="/imgs/preview/preview11.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/11.%E6%96%87%E4%BB%B6%E5%92%8C%E5%BC%82%E5%B8%B8/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+                    
+                    <img src="/imgs/preview/preview1.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview11.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">
+                    
+                    <img src="/imgs/preview/preview8.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview10.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
+                    
+                    <img src="/imgs/preview/preview13.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+     <div class="article well clearfix article-body article-excerpt" data-aos="flip-up">
+    
+    <div class="data-article hidden-xs">
+        <span class="month">12月</span>
+        <span class="day">12</span>
+    </div>
+    <!-- 大型设备文章 -->
+    <section class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                    <span></span>
+                </a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            
+            <!-- TODO 添加评论统计 -->
+            <!--<span class="label label-gal">
+                <i class="fa fa-comments"></i>
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/#comments">739</a>
+            </span>-->
+        </div>
+        <div class="alert alert-gal article-body content-article">
+            <div class="item">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                    <div class="img">
+                        
+                        <img src="/imgs/preview/preview1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="visible-xs">
+        <div class="title-article">
+            <center>
+                <h4>
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span></span>
+                    </a>
+                </h4>
+            </center>
+        </div>
+        <p></p>
+        <center>
+            <i class="fa fa-calendar"></i> 2024-12-12
+        </center>
+        <p></p>
+        <p></p>
+        <center>
+            
+            
+        </center>
+        <p></p>
+        <div class="alert alert-gal article-body content-article">
+            <p style="text-align: center;">
+                <a href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                    
+                    <img src="/imgs/preview/preview15.jpg" alt="">
+                </a>
+            </p>
+        </div>
+        
+        <a class="btn btn-danger pull-right read-more btn-block" href="/2024/12/12/Python-100-Days-master/Day01-15/07.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+            阅读全文
+            <!--<span class="badge">739</span>-->
+        </a>
+    </section>
+</div>
+     
+</div>
+<!-- 前方最多7个 < 1 2 3 4 5 6 -->
+<!-- 前方超过第7页则分为 < 1 ... (n - 3) (n - 2) (n - 1) n, 此时前面为固定的6个 -->
+
+<!-- 后方最多8个 (n + 1) 到 (n + 7) > -->
+<!-- 如果末页和当前页相差超过7, 此时后面为固定的6个, (n + 1) (n + 2) (n + 3) ... total > -->
+
+
+
+<div id="gal-pagination" class="clearfix">
+    <ul class="pagination pagination-gal pull-right">
+        
+        <li class="prev">
+            <a href="/page/19/">«</a>
+        </li>
+        
+        
+        <li>
+            <a href="/">1</a>
+        </li>
+        <li>
+            <span>...</span>
+        </li>
+        
+        <li>
+            <a href="/page/17 ">17</a>
+        </li>
+        
+        <li>
+            <a href="/page/18 ">18</a>
+        </li>
+        
+        <li>
+            <a href="/page/19 ">19</a>
+        </li>
+        
+        
+        <li class="current">
+            <span>20</span>
+        </li>
+        
+        
+        <li>
+            <a href="/page/21">21</a>
+        </li>
+        
+        <li>
+            <a href="/page/22">22</a>
+        </li>
+        
+        
+        
+        <li class="next">
+            <a href="/page/21/">»</a>
+        </li>
+        
+    </ul>
+</div>
+
+<!-- 加上这段代码原因： gitment在首页加载时, 如果找不到对应的控件会报错，此处加上，同时设置为none，防止报错 -->   
+  
+    <div id="comments-template" style="display:none"></div> 
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/Jenkins%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/7%E3%80%81Radis%E5%92%8CMongodb/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/6%E3%80%81MySQL%E6%95%B0%E6%8D%AE%E5%BA%93/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/5%E3%80%81%E9%9B%86%E7%BE%A4%EF%BC%88LVS%EF%BC%8CKeeplived%EF%BC%8CHaproxy%EF%BC%89/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/4%E3%80%81Ansible/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/2%E3%80%81Docker/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/15/%E6%80%BB%E7%BB%93/22%E3%80%81KVM/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/04.%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day31-35/31-35.%E7%8E%A9%E8%BD%ACLinux%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/58.%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/60.%E9%A1%B9%E7%9B%AE%E4%B8%8A%E7%BA%BF/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/82.k%E6%9C%80%E8%BF%91%E9%82%BB%E5%88%86%E7%B1%BB/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/85.%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/96.%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework08/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/code/hellodjango/templates/index/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/page/20/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/page/20/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/page/20/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 18.794949486159524px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 17.567043431384455px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 11.156585803369918px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 16.138391689319608px;" class="tag-cloud-link">Prometheus</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = ''
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: ''
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>
