@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>Linux系统调优 | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>Linux系统调优</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/12/%E6%80%BB%E7%BB%93/14%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/">Linux系统调优</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Linux/">Linux</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/14%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/">Linux系统调优</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-12
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Linux/">Linux</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="系统硬件资源"><a href="#系统硬件资源" class="headerlink" title="系统硬件资源"></a>系统硬件资源</h1><h3 id="1．CPU"><a href="#1．CPU" class="headerlink" title="1．CPU"></a>1．CPU</h3><p>　　CPU是操作系统稳定运行的根本，CPU的速度与性能在很大程度上决定了系统整体的性能，因此，CPU数量越多、主频越高，服务器性能也就相对越好。但事实并非完全如此。 目前大部分CPU在同一时间内只能运行一个线程，超线程的处理器可以在同一时间运行多个线程，因此，可以利用处理器的超线程特性提高系统性能。在Linux系统下，只有运行SMP内核才能支持超线程，但是，安装的CPU数量越多，从超线程获得的性能方面的提高就越少。另外，Linux内核会把多核的处理器当作多个单独的CPU来识别，例如两个4核的CPU，在Lnux系统下会被当作8个单核CPU。但是从性能角度来讲，两个4核的CPU和8个单核的CPU并不完全等价，根据权威部门得出的测试结论，前者的整体性能要比后者低25％~30％。 可能出现CPU瓶颈的应用有邮件服务器、动态Web服务器等，对于这类应用，要把CPU的配置和性能放在主要位置。</p>
+<p>　　</p>
+<h3 id="2．内存"><a href="#2．内存" class="headerlink" title="2．内存"></a>2．内存</h3><p>　　内存的大小也是影响Linux性能的一个重要的因素，内存太小，系统进程将被阻塞，应用也将变得缓慢，甚至失去响应；内存太大，导致资源浪费。Linux系统采用了物理内存和虚拟内存两种方式，虚拟内存虽然可以缓解物理内存的不足，但是占用过多的虚拟内存，应用程序的性能将明显下降，要保证应用程序的高性能运行，物理内存一定要足够大；但是过大的物理内存，会造成内存资源浪费，例如，在一个32位处理器的Linux操作系统上，超过8GB的物理内存都将被浪费。因此，要使用更大的内存，建议安装64位的操作系统，同时开启Linux的大内存内核支持。 由于处理器寻址范围的限制，在32位Linux操作系统上，应用程序单个进程最大只能使用2GB的内存，这样以来，即使系统有更大的内存，应用程序也无法“享”用，解决的办法就是使用64位处理器，安装64位操作系统。在64位操作系统下，可以满足所有应用程序对内存的使用需求，几乎没有限制。 可能出现内存性能瓶颈的应用有打印服务器、数据库服务器、静态Web服务器等，对于这类应用要把内存大小放在主要位置。</p>
+<p>　　</p>
+<h3 id="3．磁盘I-O性能"><a href="#3．磁盘I-O性能" class="headerlink" title="3．磁盘I&#x2F;O性能"></a>3．磁盘I&#x2F;O性能</h3><p>磁盘的I&#x2F;O性能直接影响应用程序的性能，在一个有频繁读写的应用中，如果磁盘I&#x2F;O性能得不到满足，就会导致应用停滞。好在现今的磁盘都采用了很多方法来提高I&#x2F;O性能，比如常见的磁盘RAID技术。</p>
+<p>　　RAID的英文全称为：RedundantArrayofIndependentDisk，即独立磁盘冗余阵列，简称磁盘阵列。RAID通过将多块独立的磁盘（物理硬盘）按不同方式组合起来形成一个磁盘组（逻辑硬盘），从而提供比单个硬盘更高的I&#x2F;O性能和数据冗余。 通过RAID技术组成的磁盘组，就相当于一个大硬盘，用户可以对它进行分区格式化、建立文件系统等操作，跟单个物理硬盘一模一样，唯一不同的是RAID磁盘组的I&#x2F;O性能比单个硬盘要高很多，同时在数据的安全性也有很大提升。</p>
+<p>　　根据磁盘组合方式的不同，RAID可以分为RAID0，RAID1、RAID2、RAID3、RAID4、RAID5、RAID6、RAID7、RAID0+1、RAID10等级别，常用的RAID级别有RAID0、RAID1、RAID5、RAID0+1，这里进行简单介绍。</p>
+<p>　　RAID0：通过把多块硬盘粘合成一个容量更大的硬盘组，提高了磁盘的性能和吞吐量。这种方式成本低，要求至少两个磁盘，但是没有容错和数据修复功能，因而只能用在对数据安全性要求不高的环境中。</p>
+<p>　　RAID1：也就是磁盘镜像，通过把一个磁盘的数据镜像到另一个磁盘上，最大限度地保证磁盘数据的可靠性和可修复性，具有很高的数据冗余能力，但磁盘利用率只有50%，因而，成本最高，多用在保存重要数据的场合。</p>
+<p>　　RAID5：采用了磁盘分段加奇偶校验技术，从而提高了系统可靠性，RAID5读出效率很高，写入效率一般，至少需要3块盘。允许一块磁盘故障，而不影响数据的可用性。</p>
+<p>　　RAID0+1：把RAID0和RAID1技术结合起来就成了RAID0+1，至少需要4个硬盘。此种方式的数据除分布在多个盘上外，每个盘都有其镜像盘，提供全冗余能力，同时允许一个磁盘故障，而不影响数据可用性，并具有快速读&#x2F;写能力。 通过了解各个RAID级别的性能，可以根据应用的不同特性，选择适合自身的RAID级别，从而保证应用程序在磁盘方面达到最优性能。</p>
+<h3 id="4．网络宽带"><a href="#4．网络宽带" class="headerlink" title="4．网络宽带"></a>4．网络宽带</h3><p>　　Linux下的各种应用，一般都是基于网络的，因此网络带宽也是影响性能的一个重要因素，低速的、不稳定的网络将导致网络应用程序的访问阻塞，而稳定、高速的网络带宽，可以保证应用程序在网络上畅通无阻地运行。幸运的是，现在的网络一般都是千兆带宽或光纤网络，带宽问题对应用程序性能造成的影响也在逐步降低。</p>
+<h1 id="操作系统相关资源"><a href="#操作系统相关资源" class="headerlink" title="操作系统相关资源"></a>操作系统相关资源</h1><p>　　基于操作系统的性能优化也是多方面的，可以从系统安装、系统内核参数、网络参数、文件系统等几个方面进行衡量，下面依次进行简单介绍。</p>
+<h3 id="1．系统安装优化"><a href="#1．系统安装优化" class="headerlink" title="1．系统安装优化"></a>1．系统安装优化</h3><p>　　系统优化可以从安装操作系统开始，当安装Linux系统时，磁盘的划分，SWAP内存的分配都直接影响以后系统的运行性能，例如，磁盘分配可以遵循应用的需求：对于对写操作频繁而对数据安全性要求不高的应用，可以把磁盘做成RAID0；而对于对数据安全性较高，对读写没有特别要求的应用，可以把磁盘做成RAID1；对于对读操作要求较高，而对写操作无特殊要求，并要保证数据安全性的应用，可以选择RAID5；对于对读写要求都很高，并且对数据安全性要求也很高的应用，可以选择RAID01。这样通过不同的应用需求设置不同的RAID级别，在磁盘底层对系统进行优化操作。</p>
+<p>　　随着内存价格的降低和内存容量的日益增大，对虚拟内存SWAP的设定，现在已经没有了所谓虚拟内存是物理内存两倍的要求，但是SWAP的设定还是不能忽略，根据经验，如果内存较小（物理内存小于4GB），一般设置SWAP交换分区大小为内存的2倍；如果物理内存大于4GB小于16GB，可以设置SWAP大小等于或略小于物理内存即可；如果内存大小在16GB以上，原则上可以设置SWAP为0，但并不建议这么做，因为设置一定大小的SWAP还是有一定作用的。</p>
+<h3 id="2．内核参数优化"><a href="#2．内核参数优化" class="headerlink" title="2．内核参数优化"></a>2．内核参数优化</h3><p>　　系统安装完成后，优化工作并没有结束，接下来还可以对系统内核参数进行优化，不过内核参数的优化要和系统中部署的应用结合起来整体考虑。例如，如果系统部署的是Oracle数据库应用，那么就需要对系统共享内存段（kernel.shmmax、kernel.shmmni、kernel.shmall）、系统信号量（kernel.sem）、文件句柄（fs.file-max）等参数进行优化设置；如果部署的是Web应用，那么就需要根据Web应用特性进行网络参数的优化，例如修改net.ipv4.ip_local_port_range、net.ipv4.tcp_tw_reuse、net.core.somaxconn等网络内核参数。</p>
+<h3 id="3．文件系统优化"><a href="#3．文件系统优化" class="headerlink" title="3．文件系统优化"></a>3．文件系统优化</h3><p>　　文件系统的优化也是系统资源优化的一个重点，在Linux下可选的文件系统有ext2、ext3、xfs、ReiserFS，根据不同的应用，选择不同的文件系统。</p>
+<p>　　Linux标准文件系统是从VFS开始的，然后是ext，接着就是ext2，应该说，ext2是Linux上标准的文件系统，ext3是在ext2基础上增加日志形成的，从VFS到ext3，其设计思想没有太大变化，都是早期UNIX家族基于超级块和inode的设计理念。</p>
+<p>　　XFS文件系统是SGI开发的一个高级日志文件系统，后来移植到了Linux系统下，XFS通过分布处理磁盘请求、定位数据、保持Cache的一致性来提供对文件系统数据的低延迟、高带宽的访问，因此，XFS极具伸缩性，非常健壮，具有优秀的日志记录功能、可扩展性强、快速写入性能等优点。 ReiserFS是在HansReiser领导下开发出来的一款高性能的日志文件系统，它通过完全平衡树结构来管理数据，包括文件数据，文件名及日志支持等，与ext2&#x2F;ext3相比，最大的优点是访问性能和安全性大幅提升。ReiserFS具有高效、合理利用磁盘空间，先进的日志管理机制，特有的搜寻方式，海量磁盘存储等优点。</p>
+<h1 id="应用程序软件资源"><a href="#应用程序软件资源" class="headerlink" title="应用程序软件资源"></a>应用程序软件资源</h1><p>　　应用程序的优化其实是整个优化工程的核心，如果一个应用程序存在BUG，那么即使所有其他方面都达到了最优状态，整个应用系统还是性能低下，所以，对应用程序的优化是性能优化过程的重中之重，这就对程序架构设计人员和程序开发人员提出了更高的要求</p>
+<h1 id="一-linux服务器性能查看"><a href="#一-linux服务器性能查看" class="headerlink" title="一 linux服务器性能查看"></a>一 linux服务器性能查看</h1><h2 id="1-1-cpu性能查看"><a href="#1-1-cpu性能查看" class="headerlink" title="1.1 cpu性能查看"></a>1.1 cpu性能查看</h2><h3 id="1、查看物理cpu个数："><a href="#1、查看物理cpu个数：" class="headerlink" title="1、查看物理cpu个数："></a>1、查看物理cpu个数：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo |grep &quot;physical id&quot;|sort|uniq|wc -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、查看每个物理cpu中的core个数："><a href="#2、查看每个物理cpu中的core个数：" class="headerlink" title="2、查看每个物理cpu中的core个数："></a>2、查看每个物理cpu中的core个数：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo |grep &quot;cpu cores&quot;|wc -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、逻辑cpu的个数："><a href="#3、逻辑cpu的个数：" class="headerlink" title="3、逻辑cpu的个数："></a>3、逻辑cpu的个数：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/cpuinfo |grep &quot;processor&quot;|wc -l</span><br></pre></td></tr></table></figure>
+
+<p>物理cpu个数*核数&#x3D;逻辑cpu个数（不支持超线程技术的情况下）</p>
+<h2 id="1-2-内存查看"><a href="#1-2-内存查看" class="headerlink" title="1.2 内存查看"></a>1.2 内存查看</h2><h3 id="1、查看内存使用情况："><a href="#1、查看内存使用情况：" class="headerlink" title="1、查看内存使用情况："></a>1、查看内存使用情况：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#free -m</span><br><span class="line">             total       used       free     shared    buffers     cached</span><br><span class="line">Mem:          3949       2519       1430          0        189       1619</span><br><span class="line">-/+ buffers/cache:        710       3239</span><br><span class="line">Swap:         3576          0       3576</span><br><span class="line"></span><br><span class="line">total：内存总数</span><br><span class="line">used：已经使用的内存数</span><br><span class="line">free：空闲内存数</span><br><span class="line">shared：多个进程共享的内存总额</span><br><span class="line">- buffers/cache：(已用)的内存数，即used-buffers-cached</span><br><span class="line">+ buffers/cache：(可用)的内存数，即free+buffers+cached</span><br><span class="line"></span><br><span class="line">Buffer Cache用于针对磁盘块的读写；</span><br><span class="line">Page Cache用于针对文件inode的读写，这些Cache能有效地缩短I/O系统调用的时间。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">对操作系统来说free/used是系统可用/占用的内存；</span><br><span class="line">对应用程序来说-/+ buffers/cache是可用/占用内存,因为buffers/cache很快就会被使用。</span><br></pre></td></tr></table></figure>
+
+<p>我们工作时候应该从应用角度来看。</p>
+<h2 id="1-3-硬盘查看"><a href="#1-3-硬盘查看" class="headerlink" title="1.3 硬盘查看"></a>1.3 硬盘查看</h2><h3 id="1、查看硬盘及分区信息："><a href="#1、查看硬盘及分区信息：" class="headerlink" title="1、查看硬盘及分区信息："></a>1、查看硬盘及分区信息：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、查看文件系统的磁盘空间占用情况：4"><a href="#2、查看文件系统的磁盘空间占用情况：4" class="headerlink" title="2、查看文件系统的磁盘空间占用情况：4"></a>2、查看文件系统的磁盘空间占用情况：4</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、查看硬盘的I-O性能（每隔一秒显示一次，显示5次）："><a href="#3、查看硬盘的I-O性能（每隔一秒显示一次，显示5次）：" class="headerlink" title="3、查看硬盘的I&#x2F;O性能（每隔一秒显示一次，显示5次）："></a>3、查看硬盘的I&#x2F;O性能（每隔一秒显示一次，显示5次）：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iostat -x 1 5</span><br></pre></td></tr></table></figure>
+
+<p>iostat是含在套装systat中的,可以用yum -y install systat来安装。</p>
+<p>常关注的参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如%util接近100%,说明产生的I/O请求太多，I/O系统已经满负荷，该磁盘可能存在瓶颈。</span><br><span class="line">如idle小于70%，I/O的压力就比较大了，说明读取进程中有较多的wait。</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、查看linux系统中某目录的大小："><a href="#4、查看linux系统中某目录的大小：" class="headerlink" title="4、查看linux系统中某目录的大小："></a>4、查看linux系统中某目录的大小：</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh /root</span><br></pre></td></tr></table></figure>
+
+<p>如发现某个分区空间接近用完，可以进入该分区的挂载点，用以下命令找出<strong>占用空间最多的文件或目录</strong>，然后按照从大到小的顺序，找出系统中占用最多空间的前10个文件或目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -cksh *|sort -rn|head -n 10</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-查看平均负载"><a href="#1-4-查看平均负载" class="headerlink" title="1.4 查看平均负载"></a>1.4 查看平均负载</h2><p>有时候系统响应很慢，但又找不到原因，这时就要查看平均负载了，看它是否有大量的进程在排队等待。</p>
+<p>最简单的命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uptime--查看过去的1分钟、5分钟和15分钟内进程队列中的平均进程数量。</span><br></pre></td></tr></table></figure>
+
+<p>还有动态命令top<br>我们只关心以下部分：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">top - 21:33:09 up  1:00,  1 user,  load average: 0.00, 0.01, 0.05</span><br><span class="line"></span><br><span class="line">如果每个逻辑cpu当前的活动进程不大于3，则系统性能良好；</span><br><span class="line">如果每个逻辑cpu当前的活动进程不大于4，表示可以接受；</span><br><span class="line">如果每个逻辑cpu当前的活动进程大于5，则系统性能问题严重。</span><br></pre></td></tr></table></figure>
+
+<p>一般计算方法：负载值&#x2F;逻辑cpu个数</p>
+<p>还可以结合vmstat命令来判断系统是否繁忙，其中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">procs</span><br><span class="line">r：等待运行的进程数。</span><br><span class="line">b：处在非中断睡眠状态的进程数。</span><br><span class="line">w：被交换出去的可运行的进程数。</span><br><span class="line"></span><br><span class="line">memeory</span><br><span class="line">swpd：虚拟内存使用情况，单位为KB。</span><br><span class="line">free：空闲的内存，单位为KB。</span><br><span class="line">buff：被用来作为缓存的内存数，单位为KB。</span><br><span class="line"></span><br><span class="line">swap</span><br><span class="line">si：从磁盘交换到内存的交换页数量，单位为KB。</span><br><span class="line">so：从内存交换到磁盘的交换页数量，单位为KB。</span><br><span class="line"></span><br><span class="line">io</span><br><span class="line">bi：发送到块设备的块数，单位为KB。</span><br><span class="line">bo：从块设备接受的块数，单位为KB。</span><br><span class="line"></span><br><span class="line">system</span><br><span class="line">in：每秒的中断数，包括时钟中断。</span><br><span class="line">cs：每秒的环境切换次数。</span><br><span class="line"></span><br><span class="line">cpu</span><br><span class="line">按cpu的总使用百分比来显示。</span><br><span class="line">us：cpu使用时间。</span><br><span class="line">sy：cpu系统使用时间。</span><br><span class="line">id：闲置时间。</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-5-其他参数"><a href="#1-5-其他参数" class="headerlink" title="1.5 其他参数"></a>1.5 其他参数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">查看内核版本号：</span><br><span class="line">uname -a</span><br><span class="line"></span><br><span class="line">简化命令：uname -r</span><br><span class="line"></span><br><span class="line">查看系统是32位还是64位的：</span><br><span class="line">file /sbin/init</span><br><span class="line"></span><br><span class="line">查看发行版：</span><br><span class="line">cat /etc/issue</span><br><span class="line">或lsb_release -a</span><br><span class="line"></span><br><span class="line">查看系统已载入的相关模块：</span><br><span class="line">lsmod</span><br><span class="line"></span><br><span class="line">查看pci设置：</span><br><span class="line">lspci</span><br></pre></td></tr></table></figure>
+
+<h1 id="二-Linux服务器性能评估"><a href="#二-Linux服务器性能评估" class="headerlink" title="二 Linux服务器性能评估"></a>二 Linux服务器性能评估</h1><h2 id="2-1-1-影响Linux服务器性能的因素"><a href="#2-1-1-影响Linux服务器性能的因素" class="headerlink" title="2.1.1 影响Linux服务器性能的因素"></a>2.1.1 影响Linux服务器性能的因素</h2><h3 id="1-操作系统级"><a href="#1-操作系统级" class="headerlink" title="1. 操作系统级"></a>1. 操作系统级</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CPU</span><br><span class="line">内存</span><br><span class="line">磁盘I/O带宽</span><br><span class="line">网络I/O带宽</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-程序应用级"><a href="#2-程序应用级" class="headerlink" title="2. 程序应用级"></a>2. 程序应用级</h3><h2 id="2-1-2-系统性能评估标准"><a href="#2-1-2-系统性能评估标准" class="headerlink" title="2.1.2 系统性能评估标准"></a>2.1.2 系统性能评估标准</h2><table>
+<thead>
+<tr>
+<th>影响性能因素</th>
+<th align="center">好</th>
+<th align="right">坏</th>
+<th align="right">糟糕</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CPU</td>
+<td align="center">user% + sys%&lt; 70%</td>
+<td align="right">user% + sys%&#x3D; 85%</td>
+<td align="right">user% + sys% &gt;&#x3D;90%</td>
+</tr>
+<tr>
+<td>内存</td>
+<td align="center">Swap In（si）＝0 Swap Out（so）＝0</td>
+<td align="right">Per CPU with 10 page&#x2F;s</td>
+<td align="right">More Swap In &amp; Swap Out</td>
+</tr>
+<tr>
+<td>磁盘</td>
+<td align="center">iowait % &lt; 20%</td>
+<td align="right">iowait % &#x3D;35%</td>
+<td align="right">iowait % &gt;&#x3D; 50%</td>
+</tr>
+</tbody></table>
+<p>其中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">%user：表示CPU处在用户模式下的时间百分比。</span><br><span class="line">%sys：表示CPU处在系统模式下的时间百分比。</span><br><span class="line">%iowait：表示CPU等待输入输出完成时间的百分比。</span><br><span class="line">swap in：即si，表示虚拟内存的页导入，即从SWAP DISK交换到RAM</span><br><span class="line">swap out：即so，表示虚拟内存的页导出，即从RAM交换到SWAP DISK</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-1-3-系统性能分析工具"><a href="#2-1-3-系统性能分析工具" class="headerlink" title="2.1.3 系统性能分析工具"></a>2.1.3 系统性能分析工具</h2><h3 id="1-常用系统命令"><a href="#1-常用系统命令" class="headerlink" title="1.常用系统命令"></a>1.常用系统命令</h3><p>Vmstat、sar、iostat、netstat、free、ps、top等</p>
+<h3 id="2-常用组合方式"><a href="#2-常用组合方式" class="headerlink" title="2.常用组合方式"></a>2.常用组合方式</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vmstat、sar、iostat检测是否是CPU瓶颈</span><br><span class="line">free、vmstat检测是否是内存瓶颈</span><br><span class="line">iostat检测是否是磁盘I/O瓶颈</span><br><span class="line">netstat检测是否是网络带宽瓶颈</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-1-4-Linux性能评估与优化"><a href="#2-1-4-Linux性能评估与优化" class="headerlink" title="2.1.4 Linux性能评估与优化"></a>2.1.4 Linux性能评估与优化</h2><p>系统整体性能评估（uptime命令）<br><code>uptime</code></p>
+<blockquote>
+<p>16:38:00 up 118 days, 3:01, 5 users,load average: 1.22, 1.02, 0.91</p>
+</blockquote>
+<p>注意：</p>
+<ul>
+<li>load average三值大小一般不能大于系统CPU的个数。</li>
+</ul>
+<blockquote>
+<p>系统有8个CPU,如load average三值长期大于8，说明CPU很繁忙，负载很高，可能会影响系统性能。</p>
+</blockquote>
+<ul>
+<li>但偶尔大于8，一般不会影响系统性能。</li>
+<li>如load average输出值小于CPU个数，则表示CPU有空闲时间片，比如本例中的输出，CPU是非常空闲的</li>
+</ul>
+<h2 id="2-2-1-CPU性能评估"><a href="#2-2-1-CPU性能评估" class="headerlink" title="2.2.1 CPU性能评估"></a>2.2.1 CPU性能评估</h2><h3 id="1-利用vmstat命令监控系统CPU"><a href="#1-利用vmstat命令监控系统CPU" class="headerlink" title="1.利用vmstat命令监控系统CPU"></a>1.利用vmstat命令监控系统CPU</h3><p>显示系统各种资源之间相关性能简要信息，主要看CPU负载情况。</p>
+<p>下面是vmstat命令在某个系统的输出结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@node1 ~]#vmstat 2 3</span><br><span class="line"></span><br><span class="line">procs</span><br><span class="line"> ———–memory———- —swap– —–io—- –system– —–cpu——</span><br><span class="line"></span><br><span class="line">r  b swpd freebuff  cache si so bi bo incs us sy idwa st</span><br><span class="line"></span><br><span class="line">0  0 0 162240 8304 67032 0 0 13 21 1007 23 0 1 98 0 0</span><br><span class="line"></span><br><span class="line">0  0 0 162240 8304 67032 0 0 1 0 1010 20 0 1 100 0 0</span><br><span class="line"></span><br><span class="line">0  0 0 162240 8304 67032 0 0 1 1 1009 18 0 1 99 0 0</span><br><span class="line">Procs</span><br></pre></td></tr></table></figure>
+
+<p>r–运行和等待cpu时间片的进程数，这个值如果长期大于系统CPU的个数，说明CPU不足，需要增加CPU</p>
+<p>b–在等待资源的进程数，比如正在等待I&#x2F;O、或者内存交换等。</p>
+<h4 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h4><h5 id="us"><a href="#us" class="headerlink" title="us"></a>us</h5><p>用户进程消耗的CPU 时间百分比。<br>us的值比较高时，说明用户进程消耗的cpu时间多，但是如果长期大于50%，就需要考虑优化程序或算法。</p>
+<h5 id="sy"><a href="#sy" class="headerlink" title="sy"></a>sy</h5><p>内核进程消耗的CPU时间百分比。Sy的值较高时，说明内核消耗的CPU资源很多。</p>
+<p>根据经验，us+sy的参考值为80%，如果us+sy大于 80%说明可能存在CPU资源不足。</p>
+<h3 id="2-利用sar命令监控系统CPU"><a href="#2-利用sar命令监控系统CPU" class="headerlink" title="2.利用sar命令监控系统CPU"></a>2.利用sar命令监控系统CPU</h3><p>sar对系统每方面进行单独统计，但会增加系统开销，不过开销可以评估，对系统的统计结果不会有很大影响。</p>
+<p>下面是sar命令对某个系统的CPU统计输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[root@webserver ~]# sar -u 3 5</span><br><span class="line"></span><br><span class="line">Linux</span><br><span class="line"> 2.6.9-42.ELsmp (webserver) 11/28/2008_i686_</span><br><span class="line"> (8 CPU)</span><br><span class="line"></span><br><span class="line">11:41:24</span><br><span class="line"> AM CPU %user %nice%system</span><br><span class="line"> %iowait %steal %idle</span><br><span class="line"></span><br><span class="line">11:41:27</span><br><span class="line"> AM all 0.88 0.00 0.29 0.00 0.00 98.83</span><br><span class="line"></span><br><span class="line">11:41:30</span><br><span class="line"> AM all 0.13 0.00 0.17 0.21 0.00 99.50</span><br><span class="line"></span><br><span class="line">11:41:33</span><br><span class="line"> AM all 0.04 0.00 0.04 0.00 0.00 99.92</span><br><span class="line"></span><br><span class="line">11:41:36</span><br><span class="line"> AM all 90.08 0.00 0.13 0.16 0.00 9.63</span><br><span class="line"></span><br><span class="line">11:41:39</span><br><span class="line"> AM all 0.38 0.00 0.17 0.04 0.00 99.41</span><br><span class="line"></span><br><span class="line">Average:</span><br><span class="line"> all 0.34 0.00 0.16 0.05 0.00 99.45</span><br></pre></td></tr></table></figure>
+
+<p>输出解释如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">%user列显示了用户进程消耗的CPU 时间百分比。</span><br><span class="line">%nice列显示了运行正常进程所消耗的CPU 时间百分比。</span><br><span class="line">%system列显示了系统进程消耗的CPU时间百分比。</span><br><span class="line">%iowait列显示了IO等待所占用的CPU时间百分比</span><br><span class="line">%steal列显示了在内存相对紧张的环境下pagein强制对不同的页面进行的steal操作 。</span><br><span class="line">%idle列显示了CPU处在空闲状态的时间百分比。</span><br><span class="line">问题</span><br></pre></td></tr></table></figure>
+
+<p>你是否遇到过系统CPU整体利用率不高，而应用缓慢的现象？</p>
+<blockquote>
+<p>在一个多CPU的系统中，如果程序使用了单线程，会出现这么一个现象，CPU的整体使用率不高，但是系统应用却响应缓慢，这可能是由于程序使用单线程的原因，单线程只使用一个CPU，导致这个CPU占用率为100%，无法处理其它请求，而其它的CPU却闲置，这就导致了整体CPU使用率不高，而应用缓慢现象的发生。</p>
+</blockquote>
+<h2 id="2-3-1-内存性能评估"><a href="#2-3-1-内存性能评估" class="headerlink" title="2.3.1 内存性能评估"></a>2.3.1 内存性能评估</h2><h3 id="1-利用free指令监控内存"><a href="#1-利用free指令监控内存" class="headerlink" title="1.利用free指令监控内存"></a>1.利用free指令监控内存</h3><p>free是监控Linux内存使用状况最常用的指令，看下面的一个输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@webserver ~]# free -m</span><br><span class="line"></span><br><span class="line">total</span><br><span class="line"> used freeshared</span><br><span class="line"> buffers cached</span><br><span class="line"></span><br><span class="line">Mem:</span><br><span class="line"> 8111 7185 926 0 243 6299</span><br><span class="line"></span><br><span class="line"> -/+</span><br><span class="line"> buffers/cache:</span><br><span class="line"> 643 7468</span><br><span class="line"></span><br><span class="line">Swap:</span><br><span class="line"> 8189 0 8189</span><br></pre></td></tr></table></figure>
+
+<p>经验公式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">应用程序可用内存/系统物理内存&gt;70%，表示系统内存资源非常充足，不影响系统性能;</span><br><span class="line">应用程序可用内存/系统物理内存&lt;20%，表示系统内存资源紧缺，需要增加系统内存;</span><br><span class="line">20%&lt;应用程序可用内存/系统物理内存&lt;70%，表示系统内存资源基本能满足应用需求，暂时不影响系统性能</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-利用vmstat命令监控内存"><a href="#2-利用vmstat命令监控内存" class="headerlink" title="2.利用vmstat命令监控内存"></a>2.利用vmstat命令监控内存</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@node1</span><br><span class="line"> ~]#</span><br><span class="line"> vmstat 2 3</span><br><span class="line"></span><br><span class="line">procs</span><br><span class="line"> ———–memory———- —swap– —–io—- –system– —–cpu——</span><br><span class="line"></span><br><span class="line">r b swpd freebuff cache si so bi bo incs us sy idwa st</span><br><span class="line"></span><br><span class="line">0 0 0 162240 8304 67032 0 0 13 21 1007 23 0 1 98 0 0</span><br><span class="line"></span><br><span class="line">0 0 0 162240 8304 67032 0 0 1 0 1010 20 0 1 100 0 0</span><br><span class="line"></span><br><span class="line">0 0 0 162240 8304 67032 0 0 1 1 1009 18 0 1 99 0 0</span><br></pre></td></tr></table></figure>
+
+<p>memory</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">swpd--切换到内存交换区的内存数量（k为单位)。如swpd值偶尔非0，不影响系统性能</span><br><span class="line">free--当前空闲的物理内存数量（k为单位）</span><br><span class="line">buff--buffers cache的内存数量，一般对块设备的读写才需要缓冲</span><br><span class="line">cache--page cached的内存数量</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>一般作为文件系统cached，频繁访问的文件都会被cached，如cache值较大，说明cached的文件数较多，如果此时IO中bi比较小，说明文件系统效率比较好。</p>
+</blockquote>
+<p>swap</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">si--由磁盘调入内存，也就是内存进入内存交换区的数量。</span><br><span class="line">so--由内存调入磁盘，也就是内存交换区进入内存的数量。</span><br></pre></td></tr></table></figure>
+
+<p>si、so的值长期不为0，表示系统内存不足。需增加系统内存。</p>
+<h2 id="2-4-1磁盘I-O性能评估"><a href="#2-4-1磁盘I-O性能评估" class="headerlink" title="2.4.1磁盘I&#x2F;O性能评估"></a>2.4.1磁盘I&#x2F;O性能评估</h2><h3 id="1-磁盘存储基础"><a href="#1-磁盘存储基础" class="headerlink" title="1.磁盘存储基础"></a>1.磁盘存储基础</h3><p>频繁访问的文件或数据尽可能用<strong>内存读写</strong>代替<strong>直接磁盘I&#x2F;O</strong>，效率高千倍。</p>
+<p>将经常进行读写的文件与长期不变的文件独立出来，分别放置到不同的磁盘设备上。</p>
+<blockquote>
+<p>对于写操作频繁的数据，可以考虑使用裸设备代替文件系统。</p>
+</blockquote>
+<p>裸设备优点：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">数据可直接读写，不需经过操作系统级缓存，节省内存资源，避免内存资源争用;</span><br><span class="line">避免文件系统级维护开销，如文件系统需维护超级块、I-node等;</span><br><span class="line">避免了操作系统cache预读功能，减少了I/O请求</span><br></pre></td></tr></table></figure>
+
+<p>使用裸设备的缺点是：</p>
+<blockquote>
+<p>数据管理、空间管理不灵活，需要很专业的人来操作。</p>
+</blockquote>
+<h3 id="2-利用iostat评估磁盘性能"><a href="#2-利用iostat评估磁盘性能" class="headerlink" title="2.利用iostat评估磁盘性能"></a>2.利用iostat评估磁盘性能</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">[root@webserver ~]# iostat -d 2 3</span><br><span class="line"></span><br><span class="line">Linux</span><br><span class="line"> 2.6.9-42.ELsmp (webserver) 12/01/2008_i686_</span><br><span class="line"> (8 CPU)</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Device:</span><br><span class="line"> tps Blk_read/sBlk_wrtn/sBlk_read</span><br><span class="line"> Blk_wrtn</span><br><span class="line"></span><br><span class="line">sda 1.87 2.58 114.12 6479462 286537372</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Device:</span><br><span class="line"> tps Blk_read/sBlk_wrtn/sBlk_read</span><br><span class="line"> Blk_wrtn</span><br><span class="line"></span><br><span class="line">sda</span><br><span class="line"> 0.00 0.00 0.00 0 0</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">Device:</span><br><span class="line"> tps Blk_read/sBlk_wrtn/sBlk_read</span><br><span class="line"> Blk_wrtn</span><br><span class="line"></span><br><span class="line">sda</span><br><span class="line"> 1.00 0.00 12.00 0 24</span><br></pre></td></tr></table></figure>
+
+<p>解释如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Blk_read/s--每秒读取数据块数</span><br><span class="line">Blk_wrtn/s--每秒写入数据块数</span><br><span class="line">Blk_read--读取的所有块数</span><br><span class="line">Blk_wrtn--写入的所有块数</span><br></pre></td></tr></table></figure>
+
+<p>可通过Blk_read&#x2F;s和Blk_wrtn&#x2F;s值对磁盘的读写性能有一个基本的了解.<br>如Blk_wrtn&#x2F;s值很大，表示磁盘写操作频繁，考虑优化磁盘或程序，<br>如Blk_read&#x2F;s值很大，表示磁盘直接读操作很多，可将读取的数据放入内存</p>
+<p>规则遵循：</p>
+<blockquote>
+<p>长期的、超大的数据读写，肯定是不正常的，这种情况一定会影响系统性能。</p>
+</blockquote>
+<h3 id="3-利用sar评估磁盘性能"><a href="#3-利用sar评估磁盘性能" class="headerlink" title="3.利用sar评估磁盘性能"></a>3.利用sar评估磁盘性能</h3><p>通过“sar –d”组合，可以对系统的磁盘IO做一个基本的统计，请看下面的一个输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">[root@webserver ~]# sar -d 2 3</span><br><span class="line"></span><br><span class="line">Linux</span><br><span class="line"> 2.6.9-42.ELsmp (webserver) 11/30/2008_i686_</span><br><span class="line"> (8 CPU)</span><br><span class="line"></span><br><span class="line">11:09:33</span><br><span class="line"> PM DEV tps rd_sec/swr_sec/savgrq-sz</span><br><span class="line"> avgqu-sz await svctm %util</span><br><span class="line"></span><br><span class="line">11:09:35</span><br><span class="line"> PM dev8-0 0.00 0.00 0.00 0.00 0.00 0.00 0.00 0.00</span><br><span class="line"></span><br><span class="line">11:09:35</span><br><span class="line"> PM DEV tps rd_sec/swr_sec/savgrq-sz</span><br><span class="line"> avgqu-sz await svctm %util</span><br><span class="line"></span><br><span class="line">11:09:37</span><br><span class="line"> PM dev8-0 1.00 0.00 12.00 12.00 0.00 0.00 0.00 0.00</span><br><span class="line"></span><br><span class="line">11:09:37</span><br><span class="line"> PM DEV tps rd_sec/swr_sec/savgrq-sz</span><br><span class="line"> avgqu-sz await svctm %util</span><br><span class="line"></span><br><span class="line">11:09:39</span><br><span class="line"> PM dev8-0 1.99 0.00 47.76 24.00 0.00 0.50 0.25 0.05</span><br><span class="line"></span><br><span class="line">Average:</span><br><span class="line"> DEV tps rd_sec/swr_sec/savgrq-sz</span><br><span class="line"> avgqu-sz await svctm %util</span><br><span class="line"></span><br><span class="line">Average:</span><br><span class="line"> dev8-0 1.00 0.00 19.97 20.00 0.00 0.33 0.17 0.02</span><br></pre></td></tr></table></figure>
+
+<p>参数含义：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">await--平均每次设备I/O操作等待时间（毫秒）</span><br><span class="line">svctm--平均每次设备I/O操作的服务时间（毫秒）</span><br><span class="line">%util--一秒中有百分之几的时间用于I/O操作</span><br></pre></td></tr></table></figure>
+
+<p>对磁盘IO性能评判标准：</p>
+<p>正常svctm应小于await值，而svctm和磁盘性能有关，CPU、内存负荷也会对svctm值造成影响，过多的请求也会间接的导致svctm值的增加。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">await值取决svctm和I/O队列长度以及I/O请求模式，</span><br><span class="line">如果svctm的值与await很接近，表示几乎没有I/O等待，磁盘性能很好，</span><br><span class="line">如果await的值远高于svctm的值，则表示I/O队列等待太长，系统上运行的应用程序将变慢，</span><br><span class="line">此时可以通过更换更快的硬盘来解决问题。</span><br></pre></td></tr></table></figure>
+
+<p>%util–衡量磁盘I&#x2F;O重要指标，</p>
+<blockquote>
+<p>如%util接近100%，表示磁盘产生的I&#x2F;O请求太多，I&#x2F;O系统已经满负荷工作，该磁盘可能存在瓶颈。</p>
+</blockquote>
+<p>可优化程序或者 通过更换 更高、更快的磁盘。</p>
+<h2 id="2-5-1-网络性能评估"><a href="#2-5-1-网络性能评估" class="headerlink" title="2.5.1. 网络性能评估"></a>2.5.1. 网络性能评估</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">（1）通过ping命令检测网络的连通性</span><br><span class="line">（2）通过netstat –i组合检测网络接口状况</span><br><span class="line">（3）通过netstat –r组合检测系统的路由表信息</span><br><span class="line">（4）通过sar –n组合显示系统的网络运行状态</span><br></pre></td></tr></table></figure>
+
+<h1 id="三-Linux服务器性能调优"><a href="#三-Linux服务器性能调优" class="headerlink" title="三 Linux服务器性能调优"></a>三 Linux服务器性能调优</h1><h2 id="1-为磁盘I-O调整Linux内核电梯算法"><a href="#1-为磁盘I-O调整Linux内核电梯算法" class="headerlink" title="1.为磁盘I&#x2F;O调整Linux内核电梯算法"></a>1.为磁盘I&#x2F;O调整Linux内核电梯算法</h2><p>选择文件系统后，该算法可以平衡低延迟需求，收集足够数据，有效组织对磁盘读写请求。</p>
+<h2 id="2-禁用不必要的守护进程，节省内存和CPU资源"><a href="#2-禁用不必要的守护进程，节省内存和CPU资源" class="headerlink" title="2.禁用不必要的守护进程，节省内存和CPU资源"></a>2.禁用不必要的守护进程，节省内存和CPU资源</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">许多守护进程或服务通常非必需，消耗宝贵内存和CPU时间。将服务器置于险地。</span><br><span class="line">禁用可加快启动时间，释放内存。</span><br><span class="line"></span><br><span class="line">减少CPU要处理的进程数</span><br></pre></td></tr></table></figure>
+
+<p>一些应被禁用的Linux守护进程，默认自动运行：</p>
+<p>序号 守护进程 描述<br>1 Apmd 高级电源管理守护进程<br>2 Nfslock 用于NFS文件锁定<br>3 Isdn ISDN Moderm支持<br>4 Autofs 在后台自动挂载文件系统(如自动挂载CD-ROM)<br>5 Sendmail 邮件传输代理<br>6 Xfs X Window的字体服务器</p>
+<h2 id="3-关掉GUI"><a href="#3-关掉GUI" class="headerlink" title="3.关掉GUI"></a>3.关掉GUI</h2><h2 id="4、清理不需要的模块或功能"><a href="#4、清理不需要的模块或功能" class="headerlink" title="4、清理不需要的模块或功能"></a>4、清理不需要的模块或功能</h2><p>服务器软件包中太多被启动的功能或模块实际上是不需要的(如Apache中的许多功能模块)，禁用掉有助于提高系统内存可用量，腾出资源给那些真正需要的软件，让它们运行得更快。</p>
+<h2 id="5、禁用控制面板"><a href="#5、禁用控制面板" class="headerlink" title="5、禁用控制面板"></a>5、禁用控制面板</h2><p>在Linux中，有许多流行的控制面板，如Cpanel，Plesk，Webmin和phpMyAdmin等，禁用释放出大约120MB内存，内存使用量大约下降30-40%。</p>
+<h2 id="6、改善Linux-Exim服务器性能"><a href="#6、改善Linux-Exim服务器性能" class="headerlink" title="6、改善Linux Exim服务器性能"></a>6、改善Linux Exim服务器性能</h2><p>使用DNS缓存守护进程，可降低解析DNS记录需要的带宽和CPU时间，DNS缓存通过消除每次都从根节点开始查找DNS记录的需求，从而改善网络性能。</p>
+<p>Djbdns是一个非常强大的DNS服务器，它具有DNS缓存功能，Djbdns比BIND DNS服务器更安全，性能更好，可以直接通过<a target="_blank" rel="noopener" href="http://cr.yp.to/%E4%B8%8B%E8%BD%BD%EF%BC%8C%E6%88%96%E9%80%9A%E8%BF%87Red">http://cr.yp.to/下载，或通过Red</a> Hat提供的软件包获得。</p>
+<h2 id="7、使用AES256增强gpg文件加密安全"><a href="#7、使用AES256增强gpg文件加密安全" class="headerlink" title="7、使用AES256增强gpg文件加密安全"></a>7、使用AES256增强gpg文件加密安全</h2><p>为提高备份文件或敏感信息安全，许多Linux系统管理员都使用gpg进行加密，在使用gpg时，最好指定gpg使用AES256加密算法，AES256使用256位密钥，它是一个开放的加密算法，美国国家安全局(NSA)使用它保护绝密信息。</p>
+<h2 id="8、远程备份服务安全"><a href="#8、远程备份服务安全" class="headerlink" title="8、远程备份服务安全"></a>8、远程备份服务安全</h2><p>安全是选择远程备份服务最重要的因素，大多数系统管理员都害怕两件事：(黑客)可以删除备份文件，不能从备份恢复系统。</p>
+<p>为了保证备份文件100%的安全，备份服务公司提供远程备份服务器，使用scp脚本或RSYNC通过SSH传输数据，这样，没有人可以直接进入和访问远程系统，因此，也没有人可以从备份服务删除数据。在选择远程备份服务提供商时，最好从多个方面了解其服务强壮性，如果可以，可以亲自测试一下。</p>
+<h2 id="9、更新默认内核参数设置"><a href="#9、更新默认内核参数设置" class="headerlink" title="9、更新默认内核参数设置"></a>9、更新默认内核参数设置</h2><p>为了顺利和成功运行企业应用程序，如数据库服务器，可能需要更新一些默认的内核参数设置，例如，2.4.x系列内核消息队列参数msgmni有一个默认值(例如，共享内存，或shmmax在Red Hat系统上默认只有33554432字节)，它只允许有限的数据库并发连接，下面为数据库服务器更好地运行提供了一些建议值(来自IBM DB2支持网站)：</p>
+<p>kernel.shmmax&#x3D;268435456 (32位)<br>kernel.shmmax&#x3D;1073741824 (64位)<br>kernel.msgmni&#x3D;1024<br>fs.file-max&#x3D;8192<br>kernel.sem&#x3D;”250 32000 32 1024″</p>
+<h2 id="10、优化TCP"><a href="#10、优化TCP" class="headerlink" title="10、优化TCP"></a>10、优化TCP</h2><p>优化TCP协议有助于提高网络吞吐量，跨广域网的通信使用的带宽越大，延迟时间越长时，建议使用越大的TCP Linux大小，以提高数据传输速率，TCP Linux大小决定了发送主机在没有收到数据传输确认时，可以向接收主机发送多少数据。</p>
+<h2 id="11、选择正确的文件系统"><a href="#11、选择正确的文件系统" class="headerlink" title="11、选择正确的文件系统"></a>11、选择正确的文件系统</h2><blockquote>
+<p>使用ext4文件系统取代ext3</p>
+</blockquote>
+<p>● Ext4是ext3文件系统的增强版，扩展了存储限制</p>
+<p>●具有日志功能，保证高水平的数据完整性(在非正常关闭事件中)</p>
+<p>●非正常关闭和重启时，它不需要检查磁盘(这是一个非常耗时的动作)</p>
+<p>●更快的写入速度，ext4日志优化了硬盘磁头动作</p>
+<h2 id="12、使用noatime文件系统挂载选项"><a href="#12、使用noatime文件系统挂载选项" class="headerlink" title="12、使用noatime文件系统挂载选项"></a>12、使用noatime文件系统挂载选项</h2><p>在文件系统启动配置文件fstab中使用noatime选项，如果使用了外部存储，这个挂载选项可以有效改善性能。</p>
+<h2 id="13、调整Linux文件描述符限制"><a href="#13、调整Linux文件描述符限制" class="headerlink" title="13、调整Linux文件描述符限制"></a>13、调整Linux文件描述符限制</h2><p>Linux限制了任何进程可以打开的文件描述符数量，默认限制是每进程1024，这些限制可能会阻碍基准测试客户端(如httperf和apachebench)和Web服务器本身获得最佳性能，Apache每个连接使用一个进程，因此不会受到影响，但单进程Web服务器，如Zeus是每连接使用一个文件描述符，因此很容易受默认限制的影响。</p>
+<p>打开文件限制是一个可以用ulimit命令调整的限制，ulimit -aS命令显示当前的限制，ulimit -aH命令显示硬限制(在未调整&#x2F;proc中的内核参数前，你不能增加限制)。</p>
+<p>Linux第三方应用程序性能技巧</p>
+<p>对于运行在Linux上的第三方应用程序，一样有许多性能优化技巧，这些技巧可以帮助你提高Linux服务器的性能，降低运行成本。</p>
+<h2 id="14、正确配置MySQL"><a href="#14、正确配置MySQL" class="headerlink" title="14、正确配置MySQL"></a>14、正确配置MySQL</h2><p>为了给MySQL分配更多的内存，可设置MySQL缓存大小，要是MySQL服务器实例使用了更多内存，就减少缓存大小，如果MySQL在请求增多时停滞不动，就增加MySQL缓存。</p>
+<h2 id="15、正确配置Apache"><a href="#15、正确配置Apache" class="headerlink" title="15、正确配置Apache"></a>15、正确配置Apache</h2><p>检查Apache使用了多少内存，再调整StartServers和MinSpareServers参数，以释放更多的内存，将有助于你节省30-40%的内存。</p>
+<h2 id="16、分析Linux服务器性能"><a href="#16、分析Linux服务器性能" class="headerlink" title="16、分析Linux服务器性能"></a>16、分析Linux服务器性能</h2><p>提高系统效率最好的办法是找出导致整体速度下降的瓶颈并解决掉，下面是找出系统关键瓶颈的一些基本技巧：</p>
+<p>● 当大型应用程序，如OpenOffice和Firefox同时运行时，计算机可能会开始变慢，内存不足的出现几率更高。</p>
+<p>● 如果启动时真的很慢，可能是应用程序初次启动需要较长的加载时间，一旦启动好后运行就正常了，否则很可能是硬盘太慢了。</p>
+<p>●CPU负载持续很高，内存也够用，但CPU利用率很低，可以使用CPU负载分析工具监控负载时间。</p>
+<h2 id="17、学习5个Linux性能命令"><a href="#17、学习5个Linux性能命令" class="headerlink" title="17、学习5个Linux性能命令"></a>17、学习5个Linux性能命令</h2><p>使用几个命令就可以管理Linux系统的性能了，下面列出了5个最常用的Linux性能命令，包括<br><strong>top、vmstat、iostat、free和sar</strong>，它们有助于系统管理员快速解决性能问题。</p>
+<h3 id="1-top"><a href="#1-top" class="headerlink" title="(1)top"></a>(1)top</h3><p>当前内核服务的任务，还显示许多主机状态的统计数据，默认情况下，它每隔5秒自动更新一次。<br>如：当前正常运行时间，系统负载，进程数量和内存使用率，</p>
+<p>此外，这个命令也显示了那些使用最多CPU时间的进程(包括每个进程的各种信息，如运行用户，执行的命令等)。</p>
+<h3 id="2-vmstat"><a href="#2-vmstat" class="headerlink" title="(2)vmstat"></a>(2)vmstat</h3><p>Vmstat命令提供当前CPU、IO、进程和内存使用率的快照，它和top命令类似，自动更新数据，如：</p>
+<p>$ vmstat 10</p>
+<h3 id="3-iostat"><a href="#3-iostat" class="headerlink" title="(3)iostat"></a>(3)iostat</h3><p>Iostat提供三个报告：CPU利用率、设备利用率和网络文件系统利用率，使用-c，-d和-h参数可以分别独立显示这三个报告。</p>
+<h3 id="4-free"><a href="#4-free" class="headerlink" title="(4)free"></a>(4)free</h3><p>显示主内存和交换空间内存统计数据，指定-t参数显示总内存，指定-b参数按字节为单位，使用-m则以兆为单位，默认情况下千字节为单位。</p>
+<p>Free命令也可以使用-s参数加一个延迟时间(单位：秒)连续运行，如：</p>
+<p>$ free -s 5</p>
+<h3 id="5-sar"><a href="#5-sar" class="headerlink" title="(5)sar"></a>(5)sar</h3><p>收集，查看和记录性能数据，这个命令比前面几个命令历史更悠久，它可以收集和显示较长周期的数据。</p>
+<p>其它</p>
+<p>下面是一些归类为其它的性能技巧：</p>
+<h2 id="18、将日志文件转移到内存中"><a href="#18、将日志文件转移到内存中" class="headerlink" title="18、将日志文件转移到内存中"></a>18、将日志文件转移到内存中</h2><p>当一台机器处于运行中时，最好是将系统日志放在内存中，当系统关闭时再将其复制到硬盘，当你运行一台开启了syslog功能的笔记本电脑或移动设备时，ramlog可以帮助你提高系统电池或移动设备闪存驱动器的寿命，使用ramlog的一个好处是，不用再担心某个守护进程每隔30秒向syslog发送一条消息，放在以前，硬盘必须随时保持运转，这样对硬盘和电池都不好。</p>
+<h2 id="19、先打包，后写入"><a href="#19、先打包，后写入" class="headerlink" title="19、先打包，后写入"></a>19、先打包，后写入</h2><p>在内存中划分出固定大小的空间保存日志文件，这意味着笔记本电脑硬盘不用一直保持运转，只有当某个守护进程需要写入日志时才运转，注意ramlog使用的内存空间大小是固定的，否则系统内存会很快被用光，如果笔记本使用固态硬盘，可以分配50-80MB内存给ramlog使用，ramlog可以减少许多写入周期，极大地提高固态硬盘的使用寿命。</p>
+<h2 id="20、一般调优技巧"><a href="#20、一般调优技巧" class="headerlink" title="20、一般调优技巧"></a>20、一般调优技巧</h2><p>尽可能使用<strong>静态内容</strong>替代动态内容，如果你在生成天气预告，或其它每隔1小时就必须更新的数据，最好是写一个程序，每隔1小时生成一个静态的文件，而不是让用户运行一个CGI动态地生成报告。</p>
+<p>为动态应用程序选择最快最合适的API，CGI可能最容易编程，但它会为每个请求产生一个进程，通常，这是一个成本很高，且不必要的过程，FastCGI是更好的选择，和Apache的mod_perl一样，都可以极大地提高应用程序的性能。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Linux系统调优'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/14/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/">Python基础题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/10.%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%92%8C%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/43.%E7%B4%A2%E5%BC%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/49.Cookie%E5%92%8CSession/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/56.%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/83.%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%88%98-1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2/index-2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/%E5%9E%83%E5%9C%BE%E5%88%86%E7%B1%BB%E6%9F%A5%E8%AF%A2/index/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example09/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_2/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/14%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/14%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/14%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 16.33305763543617px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 15.520848193470147px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 15.359102561839814px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 14.27253063789589px;" class="tag-cloud-link">Prometheus</a>
+    
+    <a href="/tags/Apache/" style="font-size: 10.009393982307419px;" class="tag-cloud-link">Apache</a>
+    
+    <a href="/tags/Shell/" style="font-size: 19.146984950187978px;" class="tag-cloud-link">Shell</a>
+    
+    <a href="/tags/Linux/" style="font-size: 13.627926463938437px;" class="tag-cloud-link">Linux</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 9.6523948377558px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 11.9699326455308px;" class="tag-cloud-link">阿里云</a>
+    
+    <a href="/tags/Ceph/" style="font-size: 10.4370411860611px;" class="tag-cloud-link">Ceph</a>
+    
+    <a href="/tags/MySQL/" style="font-size: 13.184286649341445px;" class="tag-cloud-link">MySQL</a>
+    
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 13.990238383506815px;" class="tag-cloud-link">灰度发布</a>
+    
+    <a href="/tags/OpenStack/" style="font-size: 17.902668130054114px;" class="tag-cloud-link">OpenStack</a>
+    
+    <a href="/tags/KVM/" style="font-size: 15.595473847401905px;" class="tag-cloud-link">KVM</a>
+    
+    <a href="/tags/Docker/" style="font-size: 14.174972938090173px;" class="tag-cloud-link">Docker</a>
+    
+    <a href="/tags/Ansible/" style="font-size: 13.939728790986383px;" class="tag-cloud-link">Ansible</a>
+    
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 14.543718046952208px;" class="tag-cloud-link">负载均衡</a>
+    
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 17.208417214642097px;" class="tag-cloud-link">Radis、Mongodb</a>
+    
+    <a href="/tags/Nginx/" style="font-size: 15.470805856660569px;" class="tag-cloud-link">Nginx</a>
+    
+    <a href="/tags/Tomcat/" style="font-size: 8.357891600696702px;" class="tag-cloud-link">Tomcat</a>
+    
+    <a href="/tags/DevOps/" style="font-size: 9.824812998174309px;" class="tag-cloud-link">DevOps</a>
+    
+    <a href="/tags/Jenkins/" style="font-size: 8.626857526951243px;" class="tag-cloud-link">Jenkins</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Wed Jun 12 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Wed Jun 12 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

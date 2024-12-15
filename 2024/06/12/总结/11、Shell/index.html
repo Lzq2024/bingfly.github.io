@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>Shell | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>Shell</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/12/%E6%80%BB%E7%BB%93/11%E3%80%81Shell/">Shell</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Shell/">Shell</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/11%E3%80%81Shell/">Shell</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-12
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Shell/">Shell</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>[TOC]</p>
+<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><h3 id="Shell-脚本是什么？"><a href="#Shell-脚本是什么？" class="headerlink" title="Shell 脚本是什么？"></a>Shell 脚本是什么？</h3><p>一个 Shell 脚本是一个文本文件，包含一个或多个命令。作为系统管理员，我们经常需要使用多个命令来完成一项任务，我们可以添加这些所有命令在一个文本文件(Shell 脚本)来完成这些日常工作任务。</p>
+<p><strong>什么是默认登录 Shell ？</strong></p>
+<p>在 Linux 操作系统，<code>&quot;/bin/bash&quot;</code> 是默认登录 Shell，是在创建用户时分配的。</p>
+<p>使用 chsh 命令可以改变默认的 Shell 。示例如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## chsh &lt;用户名&gt; -s &lt;新shell&gt;</span></span><br><span class="line"><span class="comment">## chsh ThinkWon -s /bin/sh</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>在 Shell 脚本中，如何写入注释？</strong></p>
+<p>注释可以用来描述一个脚本可以做什么和它是如何工作的。每一行注释以 <code>#</code> 开头。例子如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment">## This is a command</span></span><br><span class="line"><span class="built_in">echo</span> “I am logged <span class="keyword">in</span> as <span class="variable">$USER</span>”</span><br></pre></td></tr></table></figure>
+
+<h3 id="语法级"><a href="#语法级" class="headerlink" title="语法级"></a>语法级</h3><h4 id="可以在-Shell-脚本中使用哪些类型的变量？"><a href="#可以在-Shell-脚本中使用哪些类型的变量？" class="headerlink" title="可以在 Shell 脚本中使用哪些类型的变量？"></a>可以在 Shell 脚本中使用哪些类型的变量？</h4><p>在 Shell 脚本，我们可以使用两种类型的变量：</p>
+<ul>
+<li><p>系统定义变量</p>
+<blockquote>
+<p>系统变量是由系统系统自己创建的。这些变量通常由大写字母组成，可以通过 <code>set</code> 命令查看。</p>
+</blockquote>
+</li>
+<li><p>用户定义变量</p>
+<blockquote>
+<p>用户变量由系统用户来生成和定义，变量的值可以通过命令 <code>&quot;echo $&lt;变量名&gt;&quot;</code> 查看。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>Shell脚本中 $? 标记的用途是什么？</strong></p>
+<p>在写一个 Shell 脚本时，如果你想要检查前一命令是否执行成功，在 <code>if</code> 条件中使用 <code>$?</code> 可以来检查前一命令的结束状态。</p>
+<ul>
+<li><p>如果结束状态是 0 ，说明前一个命令执行成功。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~## <span class="built_in">ls</span> /usr/bin/shar</span><br><span class="line">/usr/bin/shar</span><br><span class="line">root@localhost:~## <span class="built_in">echo</span> $?</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果结束状态不是0，说明命令执行失败。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:~## <span class="built_in">ls</span> /usr/bin/share</span><br><span class="line"><span class="built_in">ls</span>: cannot access /usr/bin/share: No such file or directory</span><br><span class="line">root@localhost:~## <span class="built_in">echo</span> $?</span><br><span class="line">2</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>Bourne Shell(bash) 中有哪些特殊的变量？</strong></p>
+<p>下面的表列出了 Bourne Shell 为命令行设置的特殊变量。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">内建变量    解释</span><br><span class="line"><span class="variable">$0</span>    命令行中的脚本名字</span><br><span class="line"><span class="variable">$1</span>    第一个命令行参数</span><br><span class="line"><span class="variable">$2</span>    第二个命令行参数</span><br><span class="line">…..    …….</span><br><span class="line"><span class="variable">$9</span>    第九个命令行参数</span><br><span class="line"><span class="variable">$#</span>#    命令行参数的数量</span><br><span class="line">$*    所有命令行参数，以空格隔开</span><br></pre></td></tr></table></figure>
+
+<p><strong>如何取消变量或取消变量赋值？</strong></p>
+<p><code>unset</code> 命令用于取消变量或取消变量赋值。语法如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## unset &lt;变量名&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Shell-脚本中-if-语法如何嵌套"><a href="#Shell-脚本中-if-语法如何嵌套" class="headerlink" title="Shell 脚本中 if 语法如何嵌套?"></a>Shell 脚本中 <code>if</code> 语法如何嵌套?</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ 条件 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">命令1</span><br><span class="line">命令2</span><br><span class="line">…..</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="keyword">if</span> [ 条件 ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line">命令1</span><br><span class="line">命令2</span><br><span class="line">….</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">命令1</span><br><span class="line">命令2</span><br><span class="line">…..</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>在 Shell 脚本中如何比较两个数字？</strong></p>
+<p>在 <code>if-then</code> 中使用测试命令（ <code>-gt</code> 等）来比较两个数字。例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">x=10</span><br><span class="line">y=20</span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$x</span> -gt <span class="variable">$y</span> ]</span><br><span class="line"><span class="keyword">then</span></span><br><span class="line"><span class="built_in">echo</span> “x is greater than y”</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line"><span class="built_in">echo</span> “y is greater than x”</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Shell-脚本中-case-语句的语法"><a href="#Shell-脚本中-case-语句的语法" class="headerlink" title="Shell 脚本中 case 语句的语法?"></a>Shell 脚本中 <code>case</code> 语句的语法?</h4><p>基础语法如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">case</span> 变量 <span class="keyword">in</span></span><br><span class="line">值1)</span><br><span class="line">命令1</span><br><span class="line">命令2</span><br><span class="line">…..</span><br><span class="line">最后命令</span><br><span class="line">!!</span><br><span class="line">值2)</span><br><span class="line">命令1</span><br><span class="line">命令2</span><br><span class="line">……</span><br><span class="line">最后命令</span><br><span class="line">;;</span><br><span class="line"><span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Shell-脚本中-for-循环语法？"><a href="#Shell-脚本中-for-循环语法？" class="headerlink" title="Shell 脚本中 for 循环语法？"></a>Shell 脚本中 <code>for</code> 循环语法？</h4><p>基础语法如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 变量 <span class="keyword">in</span> 循环列表</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">命令1</span><br><span class="line">命令2</span><br><span class="line">….</span><br><span class="line">最后命令</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Shell-脚本中-while-循环语法？"><a href="#Shell-脚本中-while-循环语法？" class="headerlink" title="Shell 脚本中 while 循环语法？"></a>Shell 脚本中 <code>while</code> 循环语法？</h4><p>如同 <code>for</code> 循环，<code>while</code> 循环只要条件成立就重复它的命令块。<br>不同于 <code>for</code>循环，<code>while</code> 循环会不断迭代，直到它的条件不为真。</p>
+<p>基础语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> [ 条件 ]</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">命令…</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>do-while 语句的基本格式？</strong></p>
+<p><code>do-while</code> 语句类似于 <code>while</code> 语句，但检查条件语句之前先执行命令（LCTT 译注：意即至少执行一次。）。下面是用 <code>do-while</code> 语句的语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span></span><br><span class="line">&#123;</span><br><span class="line">命令</span><br><span class="line">&#125; <span class="keyword">while</span> (条件)</span><br></pre></td></tr></table></figure>
+
+<p><strong>Shell 脚本中 break 命令的作用？</strong></p>
+<p><code>break</code> 命令一个简单的用途是退出执行中的循环。我们可以在 <code>while</code> 和 <code>until</code> 循环中使用 <code>break</code> 命令跳出循环。</p>
+<p><strong>Shell 脚本中 continue 命令的作用？</strong></p>
+<p><code>continue</code> 命令不同于 <code>break</code> 命令，它只跳出当前循环的迭代，而不是整个循环。<code>continue</code> 命令很多时候是很有用的，例如错误发生，但我们依然希望继续执行大循环的时候。</p>
+<h4 id="如何使脚本可执行"><a href="#如何使脚本可执行" class="headerlink" title="如何使脚本可执行?"></a>如何使脚本可执行?</h4><p>使用 chmod 命令来使脚本可执行。例子如下：<code>chmod a+x myscript.sh</code> 。</p>
+<p><strong>#!&#x2F;bin&#x2F;bash 的作用？</strong></p>
+<p><code>#!/bin/bash</code> 是 Shell 脚本的第一行，称为释伴（shebang）行。</p>
+<ul>
+<li>这里 <code>#</code> 符号叫做 hash ，而 <code>!</code> 叫做 bang。</li>
+<li>它的意思是命令通过 <code>/bin/bash</code> 来执行。</li>
+</ul>
+<p><strong>如何调试 Shell脚本？</strong></p>
+<ul>
+<li>使用 <code>-x&#39;</code> 数（<code>sh -x myscript.sh</code>）可以调试 Shell脚本。</li>
+<li>另一个种方法是使用 <code>-nv</code> 参数(<code>sh -nv myscript.sh</code>)。</li>
+</ul>
+<p><strong>如何将标准输出和错误输出同时重定向到同一位置?</strong></p>
+<ul>
+<li>方法一：<code>2&gt;&amp;1 (如## ls /usr/share/doc &gt; out.txt 2&gt;&amp;1 )</code> 。</li>
+<li>方法二：<code>&amp;&gt; (如## ls /usr/share/doc &amp;&gt; out.txt )</code> 。</li>
+</ul>
+<p><strong>在 Shell 脚本中，如何测试文件？</strong></p>
+<p>test 命令可以用来测试文件。基础用法如下表格：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Test         用法</span><br><span class="line">-d 文件名    如果文件存在并且是目录，返回<span class="literal">true</span></span><br><span class="line">-e 文件名    如果文件存在，返回<span class="literal">true</span></span><br><span class="line">-f 文件名    如果文件存在并且是普通文件，返回<span class="literal">true</span></span><br><span class="line">-r 文件名    如果文件存在并可读，返回<span class="literal">true</span></span><br><span class="line">-s 文件名    如果文件存在并且不为空，返回<span class="literal">true</span></span><br><span class="line">-w 文件名    如果文件存在并可写，返回<span class="literal">true</span></span><br><span class="line">-x 文件名    如果文件存在并可执行，返回<span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="在-Shell-脚本如何定义函数呢？"><a href="#在-Shell-脚本如何定义函数呢？" class="headerlink" title="在 Shell 脚本如何定义函数呢？"></a>在 Shell 脚本如何定义函数呢？</h4><p>函数是拥有名字的代码块。当我们定义代码块，我们就可以在我们的脚本调用函数名字，该块就会被执行。示例如下所示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="function"><span class="title">diskusage</span></span> () &#123; <span class="built_in">df</span> -h ; &#125;</span><br><span class="line">译注：下面是我给的shell函数语法，原文没有</span><br><span class="line">[ <span class="keyword">function</span> ] 函数名 [()]</span><br><span class="line">&#123;</span><br><span class="line">命令;</span><br><span class="line">[<span class="built_in">return</span> int;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>如何让 Shell 就脚本得到来自终端的输入?</strong></p>
+<p>read 命令可以读取来自终端（使用键盘）的数据。read 命令得到用户的输入并置于你给出的变量中。例子如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## vi /tmp/test.sh</span></span><br><span class="line"><span class="comment">#!/bin/bash</span></span><br><span class="line"><span class="built_in">echo</span> ‘Please enter your name’</span><br><span class="line"><span class="built_in">read</span> name</span><br><span class="line"><span class="built_in">echo</span> “My Name is <span class="variable">$name</span>”</span><br><span class="line"><span class="comment">## ./test.sh</span></span><br><span class="line">Please enter your name</span><br><span class="line">ThinkWon</span><br><span class="line">My Name is ThinkWon</span><br></pre></td></tr></table></figure>
+
+<p><strong>如何执行算术运算？</strong></p>
+<p>有两种方法来执行算术运算：</p>
+<ul>
+<li>1、使用 expr 命令：<code>## expr 5 + 2</code> 。</li>
+<li>2、用一个美元符号和方括号（<code>$[ 表达式 ]</code>）：<code>test=$[16 + 4] ; test=$[16 + 4]</code> 。</li>
+</ul>
+<h3 id="编程题"><a href="#编程题" class="headerlink" title="编程题"></a>编程题</h3><h4 id="判断一文件是不是字符设备文件，如果是将其拷贝到-dev-目录下？"><a href="#判断一文件是不是字符设备文件，如果是将其拷贝到-dev-目录下？" class="headerlink" title="判断一文件是不是字符设备文件，如果是将其拷贝到 /dev 目录下？"></a>判断一文件是不是字符设备文件，如果是将其拷贝到 <code>/dev</code> 目录下？</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">read</span> -p <span class="string">&quot;Input file name: &quot;</span> FILENAME</span><br><span class="line"><span class="keyword">if</span> [ -c <span class="string">&quot;<span class="variable">$FILENAME</span>&quot;</span> ];<span class="keyword">then</span></span><br><span class="line">　　<span class="built_in">cp</span> <span class="variable">$FILENAME</span> /dev</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="添加一个新组为-class1-，然后添加属于这个组的-30-个用户，用户名的形式为-stdxx-，其中-xx-从-01-到-30-？"><a href="#添加一个新组为-class1-，然后添加属于这个组的-30-个用户，用户名的形式为-stdxx-，其中-xx-从-01-到-30-？" class="headerlink" title="添加一个新组为 class1 ，然后添加属于这个组的 30 个用户，用户名的形式为 stdxx ，其中 xx 从 01 到 30 ？"></a>添加一个新组为 class1 ，然后添加属于这个组的 30 个用户，用户名的形式为 stdxx ，其中 xx 从 01 到 30 ？</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line">groupadd class1</span><br><span class="line"><span class="keyword">for</span>((i=<span class="number">1</span>;i&lt;<span class="number">31</span>;i++))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$i</span> -le 10 ];<span class="keyword">then</span></span><br><span class="line">                useradd -g class1 std0<span class="variable">$i</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                useradd -g class1 std<span class="variable">$i</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>编写 Shell 程序，实现自动删除 50 个账号的功能，账号名为stud1 至 stud50 ？</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">for</span>((i=<span class="number">1</span>;i&lt;<span class="number">51</span>;i++))</span><br><span class="line"><span class="keyword">do</span></span><br><span class="line">                userdel -r stud<span class="variable">$i</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="写一个-sed-命令，修改-tmp-input-txt-文件的内容？"><a href="#写一个-sed-命令，修改-tmp-input-txt-文件的内容？" class="headerlink" title="写一个 sed 命令，修改 /tmp/input.txt 文件的内容？"></a>写一个 sed 命令，修改 <code>/tmp/input.txt</code> 文件的内容？</h4><p>要求：</p>
+<ul>
+<li>删除所有空行。</li>
+<li>一行中，如果包含 “11111”，则在 “11111” 前面插入 “AAA”，在 “11111” 后面插入 “BBB” 。比如：将内容为 0000111112222 的一行改为 0000AAA11111BBB2222 。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">[root@~]## <span class="built_in">cat</span> -n /tmp/input.txt</span><br><span class="line">     1  000011111222</span><br><span class="line">     2</span><br><span class="line">     3  000011111222222</span><br><span class="line">     4  11111000000222</span><br><span class="line">     5</span><br><span class="line">     6</span><br><span class="line">     7  111111111111122222222222</span><br><span class="line">     8  2211111111</span><br><span class="line">     9  112222222</span><br><span class="line">    10  1122</span><br><span class="line">    11</span><br><span class="line"></span><br><span class="line"><span class="comment">## 删除所有空行命令</span></span><br><span class="line">[root@~]## sed <span class="string">&#x27;/^$/d&#x27;</span> /tmp/input.txt</span><br><span class="line">000011111222</span><br><span class="line">000011111222222</span><br><span class="line">11111000000222</span><br><span class="line">111111111111122222222222</span><br><span class="line">2211111111</span><br><span class="line">112222222</span><br><span class="line">1122</span><br><span class="line"></span><br><span class="line"><span class="comment">## 插入指定的字符</span></span><br><span class="line">[root@~]## sed <span class="string">&#x27;s#\(11111\)#AAA\1BBB#g&#x27;</span> /tmp/input.txt</span><br><span class="line">0000AAA11111BBB222</span><br><span class="line">0000AAA11111BBB222222</span><br><span class="line">AAA11111BBB000000222</span><br><span class="line">AAA11111BBBAAA11111BBB11122222222222</span><br><span class="line">22AAA11111BBB111</span><br><span class="line">112222222</span><br><span class="line">1122</span><br></pre></td></tr></table></figure>
+
+<h1 id="一、工作中你都写过什么脚本"><a href="#一、工作中你都写过什么脚本" class="headerlink" title="一、工作中你都写过什么脚本?"></a>一、工作中你都写过什么脚本?</h1><p>1、监控脚本(监控系统、监控服务、监控硬件信息、监控性能、安全监控等)</p>
+<p>2、系统初始化脚本(创建目录,创建账户,安装软件包,设置权限,修改内核参数等)</p>
+<p>一键部署(源码安装脚本)</p>
+<p>3、备份脚本(自动备份数据库,备份网站数据,备份日志,备份配置文件等)</p>
+<p>4、日志分析脚本(分析日志数据,汇总并统计相关信息,如 PV、UV 等)</p>
+<h1 id="二、如何获取一个文件每一行的第三个元素"><a href="#二、如何获取一个文件每一行的第三个元素" class="headerlink" title="二、如何获取一个文件每一行的第三个元素?"></a>二、如何获取一个文件每一行的第三个元素?</h1><p># awk ‘{print $3}’ 文件名</p>
+<p>备注:awk 支持按列输出,通过内置变量$1,$2,$3…可以单独显示任意列,默认列是以</p>
+<p>空格或 Tab 缩进为分隔符,也可以使用-F 选项指定其他分隔符。</p>
+<h1 id="三、-shell-函数能解决什么实际问题"><a href="#三、-shell-函数能解决什么实际问题" class="headerlink" title="三、 shell 函数能解决什么实际问题?"></a>三、 shell 函数能解决什么实际问题?</h1><p>定义函数的格式:</p>
+<p>function 函数名{</p>
+<p>代码块</p>
+<p>}</p>
+<p>函数名(){</p>
+<p>代码块</p>
+<p>}</p>
+<p>使用函数可以避免代码重复</p>
+<p>使用函数可以将大的工程分割为若干小的功能模块,代码的可读性更强</p>
+<h1 id="四、使用-awk-统计-httpd-访问日志中每个客户端-IP-的出现次数"><a href="#四、使用-awk-统计-httpd-访问日志中每个客户端-IP-的出现次数" class="headerlink" title="四、使用 awk 统计 httpd 访问日志中每个客户端 IP 的出现次数?"></a>四、使用 awk 统计 httpd 访问日志中每个客户端 IP 的出现次数?</h1><p># awk ‘{ip[$1]++}END{for(i in ip){print ip[i],i}}’ &#x2F;var&#x2F;log&#x2F;httpd&#x2F;access_log</p>
+<p>备注:定义数组,数组名称为 ip,数字的下标为日志文件的第 1 列(也就是客户端的 I</p>
+<p>P 地址)</p>
+<p>,++的目的在于对客户端进行统计计数,客户端 IP 出现一次计数器就加 1。END</p>
+<p>中的指令在读取完文件后执行,通过循环将所有统计信息输出。</p>
+<p>4、哪些方式可以将标准输出和错误输出重定向到文件?</p>
+<p>答案:</p>
+<p># 命令 &amp;&gt; 文件名</p>
+<p># 命令 &gt; 文件名 1 2&gt; 文件名 2</p>
+<p># 命令 &gt; 文件名 2&gt;&amp;1</p>
+<p># 命令 &amp;&gt;&gt; 文件名</p>
+<p># 命令 &gt;&gt; 文件名 1 2&gt;&gt; 文件名 2</p>
+<p># 命令 &gt;&gt; 文件名 2&gt;&amp;1</p>
+<h1 id="五、正则表达式符号-、-、-、-、-、-n-分别代表什么含义"><a href="#五、正则表达式符号-、-、-、-、-、-n-分别代表什么含义" class="headerlink" title="五、正则表达式符号: *、+、?、[]、[^]、{n}分别代表什么含义?"></a>五、正则表达式符号: *、+、?、[]、[^]、{n}分别代表什么含义?</h1><p>*表示匹配前面的字符出现了任意次(包括 0 次)</p>
+<p>+表示匹配前面的字符出现了至少 1 次(1 次或多次)</p>
+<p>?表示匹配前面的字符出现了 0 次或 1 次</p>
+<p>[]表示集合,匹配集合中的任意单个字符</p>
+<p>[^]表示对集合取反</p>
+<p>{n}表示精确匹配前面的字符出现了 n 次</p>
+<h1 id="六、shell-中对变量字串进行截取的方式有哪些"><a href="#六、shell-中对变量字串进行截取的方式有哪些" class="headerlink" title="六、shell 中对变量字串进行截取的方式有哪些?"></a>六、shell 中对变量字串进行截取的方式有哪些?</h1><p># echo ${变量名:开始位置:长度} #注意,起始位置从 0 开始</p>
+<p># expr substr $变量名 #注意,起始位置从 1 开始</p>
+<p># echo $变量名 |</p>
+<p>开始位置 长度</p>
+<p>cut -b 开始位置-结束位置 #注意,起始位置从 1 开始</p>
+<p>\7. 使用 sed 命令如何将文件中所有的大写字母 Q 转换为小写字母 q?</p>
+<p>答案:</p>
+<p># sed -i ‘s&#x2F;Q&#x2F;q&#x2F;g’ 文件名</p>
+<h1 id="七、编写脚本-用户输入密码-脚本判断密码是否正确-输入正确则提示正确-连续输入错误密码-3-次-则报警"><a href="#七、编写脚本-用户输入密码-脚本判断密码是否正确-输入正确则提示正确-连续输入错误密码-3-次-则报警" class="headerlink" title="七、编写脚本,用户输入密码,脚本判断密码是否正确,输入正确则提示正确,连续输入错误密码 3 次,则报警?"></a>七、编写脚本,用户输入密码,脚本判断密码是否正确,输入正确则提示正确,连续输入错误密码 3 次,则报警?</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">vim test.sh</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">init=123456</span><br><span class="line"></span><br><span class="line">for I in &#123;1..3&#125;</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">read -p &quot;请输入密码:&quot; pass</span><br><span class="line"></span><br><span class="line">if [ $pass == $init ];then</span><br><span class="line"></span><br><span class="line">echo &quot;密码正确&quot;</span><br><span class="line"></span><br><span class="line">break</span><br><span class="line"></span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;警告:密码错误&quot; </span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="八、编写脚本-自动生成一个-8-位随机密码"><a href="#八、编写脚本-自动生成一个-8-位随机密码" class="headerlink" title="八、编写脚本,自动生成一个 8 位随机密码?"></a>八、编写脚本,自动生成一个 8 位随机密码?</h1><p>答案:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">vim test.sh</span><br><span class="line"></span><br><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">Str=&quot;abcdefghijklnmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345678</span><br><span class="line"></span><br><span class="line">9&quot;</span><br><span class="line"></span><br><span class="line">pass=&quot;&quot;</span><br><span class="line"></span><br><span class="line">for i in &#123;1..8&#125;</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">num=$[RANDOM%$&#123;#Str&#125;]tmp=$&#123;Str:num:1&#125;</span><br><span class="line"></span><br><span class="line">pass+=$tmp</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo $pass</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="九、递归函数，遍历目录"><a href="#九、递归函数，遍历目录" class="headerlink" title="九、递归函数，遍历目录"></a>九、递归函数，遍历目录</h1><p>递归遍历目录</p>
+<p>通过定义递归函数 files来实现</p>
+<p>Shell也可以实现递归函数,就是可以调用自己本身的函数。在Linux系统上编写Shel脚本的时候,经常需要递归遍历系统的目录,列出目录下的文件和目录,逐层递归列出,并对这些层级关系进行展示。具体的实现过程如下所示。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">function list files()</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">            for f in `ls $1`;</span><br><span class="line"></span><br><span class="line">            do</span><br><span class="line"></span><br><span class="line">                if [-d&quot;$1/Sf&quot;]: then</span><br><span class="line"></span><br><span class="line">                 echo&quot;$2$f&quot;</span><br><span class="line"></span><br><span class="line">                 list_files &quot;$1/$2&quot; &quot;  $2&quot;</span><br><span class="line"></span><br><span class="line">                else</span><br><span class="line"></span><br><span class="line">                 echo &quot;$2$&quot;</span><br><span class="line"></span><br><span class="line">                fi</span><br><span class="line"></span><br><span class="line">             done</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">list_files &quot;/var/log&quot; &quot;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="十、shell实现nginx日志自动切割"><a href="#十、shell实现nginx日志自动切割" class="headerlink" title="十、shell实现nginx日志自动切割"></a>十、shell实现nginx日志自动切割</h1><p>脚本思路【按天分割日志】</p>
+<p>a、获取昨天的日期（date -d yesterday  +%Y%m%d）,用来作为分割后日志的名称</p>
+<p>b、将源日志文件移动到新的nohuplogs文件夹里，并按时间重命名</p>
+<p>c、在源日志文件夹（logs）里新建默认日志文件(access.log)</p>
+<p>d、给nginx一个信号量，重新打开日志</p>
+<p>f、设置一个定时任务，定时执行日志切割的脚本</p>
+<p>操作步骤</p>
+<p> a、新建日志分割的文件夹nohuplogs（mkdir &#x2F;jboss&#x2F;nginx&#x2F;nohuplogs）</p>
+<p> b、编写脚本，暂且命名为：splitlogs.sh吧，脚本内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">LOGPATH=/jboss/nginx/logs/access.log</span><br><span class="line"></span><br><span class="line">BASEPATH=/jboss/nginx/nohuplogs</span><br><span class="line"></span><br><span class="line">LOGBAK=$BASEPATH/$(date -d yesterday +%Y%m%d).log</span><br><span class="line"></span><br><span class="line">#echo $LOGBAK</span><br><span class="line"></span><br><span class="line">mv  $LOGPATH $LOGBAK</span><br><span class="line"></span><br><span class="line">touch $LOGPATH</span><br><span class="line"></span><br><span class="line">kill -USR1 `cat /jboss/nginx/logs/nginx.pid</span><br></pre></td></tr></table></figure>
+
+<p>&#96;</p>
+<p>c、配置定时任务 crontab -e，如下图，增加日志分割的脚本，每天晚上23点59分切割</p>
+<p>59 23 * * * sh &#x2F;jboss&#x2F;nginx&#x2F;splitlogs.sh</p>
+<h1 id="十一、冒泡算法"><a href="#十一、冒泡算法" class="headerlink" title="十一、冒泡算法"></a>十一、冒泡算法</h1><p>请结合使用冒泡排序方法把 123.txt 文件中的数字按照降序排序输出在一行当中，并要求没有重复数字。（20分）</p>
+<p>cat 123.txt </p>
+<p>1 4 7 9</p>
+<p>2 5 8 3</p>
+<p>3 6 9 7</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">myarray() &#123;</span><br><span class="line"></span><br><span class="line">array=(`echo $@`)</span><br><span class="line"></span><br><span class="line">\#echo $&#123;array[*]&#125;</span><br><span class="line"></span><br><span class="line">a=$&#123;#array[*]&#125;</span><br><span class="line"></span><br><span class="line">for ((i=1; i&lt;$a; i++))</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">  for ((j=0; j&lt;$a-i; j++))</span><br><span class="line"></span><br><span class="line">  do</span><br><span class="line"></span><br><span class="line">    if [ $&#123;array[$j]&#125; -lt $&#123;array[$[$j + 1]]&#125;  ];then</span><br><span class="line"></span><br><span class="line">       temp=$&#123;array[$j]&#125;</span><br><span class="line"></span><br><span class="line">       array[$j]=$&#123;array[$[$j+1]]&#125;</span><br><span class="line"></span><br><span class="line">       array[$[$j+1]]=$temp</span><br><span class="line"></span><br><span class="line">     fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  done</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo $&#123;array[*]&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>###主体代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">list=`for i in $(cat 123.txt); do echo $i; done | sort -n | uniq`</span><br><span class="line"></span><br><span class="line">a=0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for value in $list</span><br><span class="line"></span><br><span class="line">do</span><br><span class="line"></span><br><span class="line">  arr[$a]=$value</span><br><span class="line"></span><br><span class="line">  let a++</span><br><span class="line"></span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">result=`myarray $&#123;arr[*]&#125;`</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>echo “排序后数组为：$result”</p>
+<p>监控网站状态是否正常，异常发邮件</p>
+<p>题目要求：</p>
+<p>写一个shell脚本，通过curl -I  返回状态码来判定所访问的网站是否正常，比如当代码状态200，才算正常</p>
+<p>写一个发邮件的脚本</p>
+<p>习题分析：</p>
+<p>1、关键问题，截取出代码状态</p>
+<p>2、在写出该shell脚本时，应该先在命令下面使用curl -I <a target="_blank" rel="noopener" href="http://www.51xit.top/%E5%91%BD%E4%BB%A4%E6%B5%8B%E8%AF%95%EF%BC%8C%E7%84%B6%E5%90%8E%E9%80%9A%E8%BF%87awk%E6%88%AA%E5%8F%96%E5%88%B0%E7%8A%B6%E6%80%81%E7%A0%81">http://www.51xit.top/命令测试，然后通过awk截取到状态码</a></p>
+<p>3、写发邮件的脚本，用的是sendEmail。生产环境有配套的模板</p>
+<p>4、判断和发邮件关联</p>
+<p>curl -I <a target="_blank" rel="noopener" href="http://www.51xit.top/">http://www.51xit.top/</a></p>
+<p>我们抓包会有交互信息   200</p>
+<p>###创建触发器及邮件报警测试##</p>
+<p>【安装邮件组件】</p>
+<p>[root@tang ~]# wget <a target="_blank" rel="noopener" href="http://caspian.dotconf.net/menu/Software/SendEmail/sendEmail-v1.56.tar.gz">http://caspian.dotconf.net/menu/Software/SendEmail/sendEmail-v1.56.tar.gz</a></p>
+<p>[root@tang ~]# tar -zxvf sendEmail-v1.56.tar.gz </p>
+<p>[root@tang ~]# cp sendEmail-v1.56&#x2F;sendEmail &#x2F;usr&#x2F;local&#x2F;bin&#x2F;</p>
+<p>[root@tang ~]# chmod 755 &#x2F;usr&#x2F;local&#x2F;bin&#x2F;sendEmail</p>
+<p>[root@tang ~]# vi &#x2F;opt&#x2F;sendEmail.sh</p>
+<p>#!&#x2F;bin&#x2F;bash</p>
+<p>#</p>
+<p># Filename:    SendEmail.sh</p>
+<p># Revision:    1.0</p>
+<p># Date:        2019&#x2F;05&#x2F;29</p>
+<p># Author:      Qicheng</p>
+<p># Email:</p>
+<p># Website:     <a target="_blank" rel="noopener" href="http://51xit.top/">http://51xit.top/</a></p>
+<p># Description: tang邮件告警脚本</p>
+<p># Notes:       使用sendEmail</p>
+<p>#</p>
+<p># 脚本的日志文件</p>
+<p>LOGFILE&#x3D;”&#x2F;tmp&#x2F;Email.log”</p>
+<p>:&gt;”$LOGFILE”</p>
+<p>exec 1&gt;”$LOGFILE”</p>
+<p>exec 2&gt;&amp;1</p>
+<p>SMTP_server&#x3D;’smtp.qq.com’                                     # SMTP服务器，变量值需要自行修改</p>
+<p>username&#x3D;‘<a href="mailto:&#x31;&#53;&#x38;&#x31;&#50;&#55;&#51;&#49;&#x35;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#x31;&#53;&#x38;&#x31;&#50;&#55;&#51;&#49;&#x35;&#x34;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a>‘                         	# 用户名，变量值需要自行修改</p>
+<p>password&#x3D;’cgdxhxqddtrafijh’                                                  # 密码(QQ邮箱用的是授权码)，变量值需要自行修改</p>
+<p>from_email_address&#x3D;‘<a href="mailto:&#49;&#53;&#x38;&#x31;&#x32;&#55;&#51;&#49;&#53;&#x34;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;">&#49;&#53;&#x38;&#x31;&#x32;&#55;&#51;&#49;&#53;&#x34;&#64;&#113;&#113;&#46;&#99;&#x6f;&#109;</a>‘         	#### 发件人Email地址，变量值需要自行修改</p>
+<p>to_email_address&#x3D;”$1”                                               	# 收件人Email地址，tang传入的第一个参数</p>
+<p>message_subject_utf8&#x3D;”$2”                                        # 邮件标题，tang传入的第二个参数</p>
+<p>message_body_utf8&#x3D;”$3”                                          	# 邮件内容，tang传入的第三个参数</p>
+<p># 转换邮件标题为GB2312，解决邮件标题含有中文，收到邮件显示乱码的问题。</p>
+<p>message_subject_gb2312&#x3D;&#96;iconv -t GB2312 -f UTF-8 &lt;&lt; EOF</p>
+<p>$message_subject_utf8</p>
+<p>EOF&#96;</p>
+<p>[ $? -eq 0 ] &amp;&amp; message_subject&#x3D;”$message_subject_gb2312” || message_subject&#x3D;”$message_subject_utf8”</p>
+<p># 转换邮件内容为GB2312，解决收到邮件内容乱码</p>
+<p>message_body_gb2312&#x3D;&#96;iconv -t GB2312 -f UTF-8 &lt;&lt; EOF</p>
+<p>$message_body_utf8</p>
+<p>EOF&#96;</p>
+<p>[ $? -eq 0 ] &amp;&amp; message_body&#x3D;”$message_body_gb2312” || message_body&#x3D;”$message_body_utf8”</p>
+<p># 发送邮件</p>
+<p>sendEmail&#x3D;’&#x2F;usr&#x2F;local&#x2F;bin&#x2F;sendEmail’</p>
+<p>set -x</p>
+<p>$sendEmail -s “$SMTP_server” -xu “$username” -xp “$password” -f “$from_email_address” -t “$to_email_address” -u “$message_subject” -m “$message_body” -o message-content-type&#x3D;text -o message-charset&#x3D;gb2312</p>
+<p>[root@tang ~]# chmod +x &#x2F;opt&#x2F;sendEmail.sh</p>
+<p>[root@tang ~]#  &#x2F;opt&#x2F;sendEmail.sh    <a href="mailto:&#49;&#x35;&#x38;&#x31;&#x32;&#x37;&#x33;&#x31;&#53;&#x34;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;">&#49;&#x35;&#x38;&#x31;&#x32;&#x37;&#x33;&#x31;&#53;&#x34;&#64;&#x71;&#113;&#x2e;&#99;&#111;&#109;</a>  测试   测试</p>
+<p>监控磁盘情况，异常发邮件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"></span><br><span class="line">disk_sda1=df -h |sed -n &#x27;3p&#x27;|awk &#x27;&#123;print $4&#125;&#x27;|cut -f 1 -d &#x27;%&#x27;</span><br><span class="line"></span><br><span class="line">if</span><br><span class="line"></span><br><span class="line">    ((disk_sda1 &gt; 80));</span><br><span class="line"></span><br><span class="line">then</span><br><span class="line"></span><br><span class="line">    echo “this is error”</span><br><span class="line"></span><br><span class="line">    echo date “192.168.56.128 this is over 70%” |mail -s “disk over 70%” 12345300@qq.com,5645645@qq.com</span><br><span class="line"></span><br><span class="line">else</span><br><span class="line"></span><br><span class="line">    echo “this is ok”</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+
+
+<p>计划任务：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost tmp]# crontab -e</span><br></pre></td></tr></table></figure>
+
+<p>添加</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3个小时检查一次</span><br><span class="line"></span><br><span class="line">\* */3 * * * /var/tmp/check_disk.sh</span><br><span class="line"></span><br><span class="line">或者十分钟检查一次</span><br><span class="line"></span><br><span class="line">*/10 * * * * /var/tmp/check_disk.sh</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="十二、特殊符号"><a href="#十二、特殊符号" class="headerlink" title="十二、特殊符号"></a>十二、特殊符号</h1><p>$0：当前脚本的文件名</p>
+<p>$n：第n个位置参数</p>
+<p>$*：传递给脚本或函数的所有参数，$*会将这些参数视为一个整体</p>
+<p>$@：传递给脚本或函数的所有参数，$@会将所有参数当作同一字符串中的多个独立的单词</p>
+<p>$#：脚本运行时携带的参数个数</p>
+<p>$*：表示所有位置参数的内容</p>
+<p>$?：最近一个命令的退出状态码</p>
+<p>$$：当前shell的进程ID（PID）</p>
+<p>$!：最近一个后台命令的PID</p>
+<p>!!：执行上一条命令</p>
+<p>IFS：内部字段分隔符，IFS环境变量定义了shell用作字段分隔符的一系列字符。默认情况下，shell会将下列字符当做字段分隔符：</p>
+<ul>
+<li>空格</li>
+<li>制表符</li>
+<li>换行符</li>
+</ul>
+<p>&amp;&gt;：将STDERR和STDOUT的输出重定向到同一个输出文件</p>
+<p>&amp;-：要关闭文件描述符，可以将它重定向到特殊符号&amp;-</p>
+<p>.：点操作符，点操作符是source命令的别名，它会在shell上下文中执行点操作符指定的脚本，而不是创建一个新的shell。</p>
+<p>[ 操作符 文件或目录 ]</p>
+<p>常用的测试操作符</p>
+<p> -d：测试是否为目录（Directory）</p>
+<p> -e：测试目录或文件是否存在（Exist）</p>
+<p> -f：测试是否为文件（File）</p>
+<p> -r：测试当前用户是否有权限读取（Read）</p>
+<p> -w：测试当前用户是否有权限写入（Write）</p>
+<p> -x：测试当前用户是否有权限执行（eXcute）</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Shell'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/14/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/">Python基础题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/14%E3%80%81Linux%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/">Linux系统调优</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/13%E3%80%81Linux%EF%BC%88%E5%85%A8%EF%BC%89/">Linux 概述</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/14/%E6%80%BB%E7%BB%93/3%E3%80%81ELK%20Kafka%20%20ZooKeeper/">ELK+Kafka+ZooKeeper</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/13/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/">Tomcat优化</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/53.%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/%E5%B9%B4%E8%96%AA50W+%E7%9A%84Python%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%86%99%E4%BB%A3%E7%A0%81/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/html+css/qq_link/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework01/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework08/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_jquery_2/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/11%E3%80%81Shell/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/11%E3%80%81Shell/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/11%E3%80%81Shell/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 18.584639477686515px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 8.837002727122545px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 18.148260342417224px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 10.872886119006917px;" class="tag-cloud-link">Prometheus</a>
+    
+    <a href="/tags/Apache/" style="font-size: 14.221633979399876px;" class="tag-cloud-link">Apache</a>
+    
+    <a href="/tags/Shell/" style="font-size: 15.844481639564133px;" class="tag-cloud-link">Shell</a>
+    
+    <a href="/tags/Linux/" style="font-size: 9.604231367922335px;" class="tag-cloud-link">Linux</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15.33412089061102px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 14.512299354944219px;" class="tag-cloud-link">阿里云</a>
+    
+    <a href="/tags/Ceph/" style="font-size: 15.25837022958855px;" class="tag-cloud-link">Ceph</a>
+    
+    <a href="/tags/MySQL/" style="font-size: 15.897141055960578px;" class="tag-cloud-link">MySQL</a>
+    
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 11.610329864437112px;" class="tag-cloud-link">灰度发布</a>
+    
+    <a href="/tags/OpenStack/" style="font-size: 16.78126959964444px;" class="tag-cloud-link">OpenStack</a>
+    
+    <a href="/tags/KVM/" style="font-size: 18.351907967743024px;" class="tag-cloud-link">KVM</a>
+    
+    <a href="/tags/Docker/" style="font-size: 17.041565876719204px;" class="tag-cloud-link">Docker</a>
+    
+    <a href="/tags/Ansible/" style="font-size: 8.632472134880834px;" class="tag-cloud-link">Ansible</a>
+    
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 17.516773737625527px;" class="tag-cloud-link">负载均衡</a>
+    
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 11.260346673207163px;" class="tag-cloud-link">Radis、Mongodb</a>
+    
+    <a href="/tags/Nginx/" style="font-size: 18.42587134733176px;" class="tag-cloud-link">Nginx</a>
+    
+    <a href="/tags/Tomcat/" style="font-size: 8.806653321687927px;" class="tag-cloud-link">Tomcat</a>
+    
+    <a href="/tags/DevOps/" style="font-size: 14.847944780909582px;" class="tag-cloud-link">DevOps</a>
+    
+    <a href="/tags/Jenkins/" style="font-size: 15.79356405163466px;" class="tag-cloud-link">Jenkins</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Wed Jun 12 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Wed Jun 12 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

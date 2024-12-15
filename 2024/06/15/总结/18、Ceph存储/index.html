@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>Ceph存储 | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>Ceph存储</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/15/%E6%80%BB%E7%BB%93/18%E3%80%81Ceph%E5%AD%98%E5%82%A8/">Ceph存储</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Ceph/">Ceph</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-15
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/15/%E6%80%BB%E7%BB%93/18%E3%80%81Ceph%E5%AD%98%E5%82%A8/">Ceph存储</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-15
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Ceph/">Ceph</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <p>优秀的性能、可靠性和可扩展性而设计的统一的、分布式文件系统</p>
+<p>Ceph 的统一体现在可以提供文件系统、块存储和对象存储，分布式体现在可以动态扩展</p>
+<p>Ceph 俨然已经发展为一整套存储解决方案，上层能够提供对象存储(RGW)、块存储(RBD)和CephFS，可以说是一套适合各种场景，非常灵活，非常有可发挥空间的存储解决方案</p>
+<h1 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h1><h3 id="基本组件"><a href="#基本组件" class="headerlink" title="基本组件"></a>基本组件</h3><p><strong>Monitor</strong>：一个 Ceph 集群需要多个 Monitor 组成的小集群，它们通过 Paxos 同步数据，用来保存 OSD 的元数据。</p>
+<p><strong>OSD</strong>：全称 <code>Object Storage Device</code>，也就是负责响应客户端请求返回具体数据的进程，一个 Ceph 集群一般都有很多个 OSD。主要功能用于数据的存储，当直接使用硬盘作为存储目标时，一块硬盘称之为 <code>OSD</code>，当使用一个目录作为存储目标的时候，这个目录也被称为 <code>OSD</code>。</p>
+<p><strong>MDS</strong>：全称 <code>Ceph Metadata Server</code>，是 CephFS 服务依赖的元数据服务，对象存储和块设备存储不需要该服务。</p>
+<p><strong>Object</strong>：Ceph 最底层的存储单元是 Object 对象，一条数据、一个配置都是一个对象，每个 Object 包含 ID、元数据和原始数据。</p>
+<p><strong>Pool</strong>：Pool 是一个存储对象的逻辑分区，它通常规定了数据冗余的类型与副本数，默认为3副本。对于不同类型的存储，需要单独的 Pool，如 RBD。</p>
+<p><strong>PG</strong>：全称 <code>Placement Grouops</code>，是一个逻辑概念，一个 OSD 包含多个 PG。引入 PG 这一层其实是为了更好的分配数据和定位数据。每个 <code>Pool</code> 内包含很多个 PG，它是一个对象的集合，服务端数据均衡和恢复的最小单位就是 PG。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104841.png" alt="1608261361982"></p>
+<ul>
+<li>pool 是 ceph 存储数据时的逻辑分区，它起到 namespace 的作用</li>
+<li>每个 pool 包含一定数量(可配置)的 PG</li>
+<li>PG 里的对象被映射到不同的 Object 上</li>
+<li>pool 是分布到整个集群的</li>
+</ul>
+<p><strong>FileStore与BlueStore</strong>：FileStore 是老版本默认使用的后端存储引擎，如果使用 FileStore，建议使用 <code>xfs</code> 文件系统。BlueStore 是一个新的后端存储引擎，可以直接管理裸硬盘，抛弃了 ext4 与 xfs 等本地文件系统。可以直接对物理硬盘进行操作，同时效率也高出很多。</p>
+<p><strong>RADOS</strong>：全称 <code>Reliable Autonomic Distributed Object Store</code>，是 Ceph 集群的精华，用于实现数据分配、Failover 等集群操作。</p>
+<p><strong>Librados</strong>：<code>Librados</code> 是 Rados 提供库，因为 RADOS 是协议很难直接访问，因此上层的 RBD、RGW 和 CephFS 都是通过 librados 访问的，目前提供 PHP、Ruby、Java、Python、C 和 C++ 支持。</p>
+<p><strong>CRUSH</strong>：<code>CRUSH</code> 是 Ceph 使用的数据分布算法，类似一致性哈希，让数据分配到预期的地方。</p>
+<p><strong>RBD</strong>：全称 <code>RADOS Block Device</code>，是 Ceph 对外提供的块设备服务，如虚拟机硬盘，支持快照功能。</p>
+<p><strong>RGW</strong>：全称是 <code>RADOS Gateway</code>，是 Ceph 对外提供的对象存储服务，接口与 S3 和 Swift 兼容。</p>
+<p><strong>CephFS</strong>：全称 <code>Ceph File System</code>，是 Ceph 对外提供的文件系统服务。</p>
+<h3 id="块存储"><a href="#块存储" class="headerlink" title="块存储"></a>块存储</h3><p><strong>典型设备</strong></p>
+<p>磁盘阵列，硬盘，主要是将裸磁盘空间映射给主机使用的。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>通过 Raid 与 LVM 等手段，对数据提供了保护。</li>
+<li>多块廉价的硬盘组合起来，提高容量。</li>
+<li>多块磁盘组合出来的逻辑盘，提升读写效率。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>采用 SAN 架构组网时，光纤交换机，造价成本高。</li>
+<li>主机之间无法共享数据。</li>
+</ul>
+<p><strong>使用场景</strong></p>
+<ul>
+<li>Docker 容器、虚拟机磁盘存储分配。</li>
+<li>日志存储</li>
+<li>文件存储</li>
+<li>…</li>
+</ul>
+<h3 id="文件存储"><a href="#文件存储" class="headerlink" title="文件存储"></a>文件存储</h3><p><strong>典型设备</strong> FTP、NFS 服务器，为了克服块存储文件无法共享的问题，所以有了文件存储，在服务器上架设 FTP 与 NFS 服务器，就是文件存储。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>造价低，随便一台机器就可以了</li>
+<li>方便文件可以共享</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>读写速率低</li>
+<li>传输速率慢</li>
+</ul>
+<p><strong>使用场景</strong></p>
+<ul>
+<li>日志存储</li>
+<li>有目录结构的文件存储</li>
+<li>…</li>
+</ul>
+<h3 id="对象存储"><a href="#对象存储" class="headerlink" title="对象存储"></a>对象存储</h3><p><strong>典型设备</strong></p>
+<p>内置大容量硬盘的分布式服务器(swift, s3)；多台服务器内置大容量硬盘，安装上对象存储管理软件，对外提供读写访问功能。</p>
+<p><strong>优点</strong></p>
+<ul>
+<li>具备块存储的读写高速。</li>
+<li>具备文件存储的共享等特性</li>
+</ul>
+<p><strong>使用场景</strong>：(适合更新变动较少的数据)</p>
+<ul>
+<li>图片存储</li>
+<li>视频存储</li>
+<li>…</li>
+</ul>
+<h1 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h1><h2 id="1、高性能："><a href="#1、高性能：" class="headerlink" title="1、高性能："></a>1、高性能：</h2><p>　　a. 摒弃了传统的集中式存储元数据寻址的方案，采用CRUSH算法，数据分布均衡，并行度高。</p>
+<p>　　b.考虑了容灾域的隔离，能够实现各类负载的副本放置规则，例如跨机房、机架感知等。</p>
+<p>　　c. 能够支持上千个存储节点的规模，支持TB到PB级的数据。</p>
+<h2 id="2、高可用性："><a href="#2、高可用性：" class="headerlink" title="2、高可用性："></a>2、高可用性：</h2><p>　　a. 副本数可以灵活控制。</p>
+<p>　　b. 支持故障域分隔，数据强一致性。</p>
+<p>　　c. 多种故障场景自动进行修复自愈。</p>
+<p>　　d. 没有单点故障，自动管理。</p>
+<h2 id="3、高可扩展性："><a href="#3、高可扩展性：" class="headerlink" title="3、高可扩展性："></a>3、高可扩展性：</h2><p>　　a. 去中心化。</p>
+<p>　　b. 扩展灵活。</p>
+<p>　　c. 随着节点增加而线性增长。</p>
+<h2 id="4、特性丰富："><a href="#4、特性丰富：" class="headerlink" title="4、特性丰富："></a>4、特性丰富：</h2><p>　　a. 支持三种存储接口：块存储、文件存储、对象存储。</p>
+<p>　　b. 支持自定义接口，支持多种语言驱动。</p>
+<h1 id="详细配置"><a href="#详细配置" class="headerlink" title="详细配置"></a>详细配置</h1><p>分布式文件系统（Distributed File System）是指文件系统管理的物理存储资源不一定直接连接在本地节点上，而是通过计算机网络与节点相连。</p>
+<p>分布式文件系统的设计基于客户机&#x2F;服务器模式</p>
+<p>常用分布式文件系统</p>
+<p>Lustre ， Hadoop ， FsatDFS , Ceph , GlusterFS</p>
+<p>Ceph组件</p>
+<p>OSDs：存储设备</p>
+<p>Monitors：集群监控组件</p>
+<p>MDSs：存放文件系统的元数据（对象存储和块存储不需要该组件）</p>
+<p>Client：ceph客户端</p>
+<h2 id="一、准备机器"><a href="#一、准备机器" class="headerlink" title="一、准备机器"></a>一、准备机器</h2><table>
+<thead>
+<tr>
+<th>hostname</th>
+<th>ip</th>
+<th>role</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>admin-node</td>
+<td>192.168.0.130</td>
+<td>ceph-deploy</td>
+<td>管理节点</td>
+</tr>
+<tr>
+<td>node1</td>
+<td>192.168.0.131</td>
+<td>mon.node1</td>
+<td>ceph节点，监控节点</td>
+</tr>
+<tr>
+<td>node2</td>
+<td>192.168.0.132</td>
+<td>osd.0</td>
+<td>ceph节点，OSD节点</td>
+</tr>
+<tr>
+<td>node3</td>
+<td>192.168.0.133</td>
+<td>osd.1</td>
+<td>ceph节点，OSD节点</td>
+</tr>
+</tbody></table>
+<p>管理节点：admin-node</p>
+<p>ceph节点：node1, node2, node3</p>
+<p>所有节点：admin-node, node1, node2, node3</p>
+<h3 id="1、修改主机名"><a href="#1、修改主机名" class="headerlink" title="1、修改主机名"></a>1、修改主机名</h3><h3 id="2、修改hosts文件"><a href="#2、修改hosts文件" class="headerlink" title="2、修改hosts文件"></a>2、修改hosts文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># vi /etc/hosts</span><br><span class="line">192.168.0.130 admin-node</span><br><span class="line">192.168.0.131 node1</span><br><span class="line">192.168.0.132 node2</span><br><span class="line">192.168.0.133 node3</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="二、Ceph节点安装"><a href="#二、Ceph节点安装" class="headerlink" title="二、Ceph节点安装"></a>二、Ceph节点安装</h2><h3 id="1-安装NPT（所有节点）"><a href="#1-安装NPT（所有节点）" class="headerlink" title="1. 安装NPT（所有节点）"></a>1. 安装NPT（所有节点）</h3><p>我们建议在所有 Ceph 节点上安装 NTP 服务（特别是 Ceph Monitor 节点），以免因时钟漂移导致故障，详情见时钟。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># sudo yum install ntp ntpdate ntp-doc</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2、管理节点配置无密码ssh登陆"><a href="#2、管理节点配置无密码ssh登陆" class="headerlink" title="2、管理节点配置无密码ssh登陆"></a>2、管理节点配置无密码ssh登陆</h3><h3 id="3、关闭核心防护"><a href="#3、关闭核心防护" class="headerlink" title="3、关闭核心防护"></a>3、关闭核心防护</h3><h3 id="4、配置yum源"><a href="#4、配置yum源" class="headerlink" title="4、配置yum源"></a>4、配置yum源</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/yum.repos.d/ceph.repo</span><br><span class="line"></span><br><span class="line">[Ceph]</span><br><span class="line">name=Ceph packages for $basearch</span><br><span class="line">baseurl=http://mirrors.aliyun.com/ceph/rpm-jewel/el7/x86_64/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">type=rpm-md</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/ceph/keys/release.asc</span><br><span class="line">priority=1</span><br><span class="line"></span><br><span class="line">[Ceph-noarch]</span><br><span class="line">name=Ceph noarch packages</span><br><span class="line">baseurl=http://mirrors.aliyun.com/ceph/rpm-jewel/el7/noarch/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">type=rpm-md</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/ceph/keys/release.asc</span><br><span class="line">priority=1</span><br><span class="line"></span><br><span class="line">[ceph-source]</span><br><span class="line">name=Ceph source packages</span><br><span class="line">baseurl=http://mirrors.aliyun.com/ceph/rpm-jewel/el7/SRPMS/</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=0</span><br><span class="line">type=rpm-md</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/ceph/keys/release.asc</span><br><span class="line">priority=1</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、搭建集群"><a href="#三、搭建集群" class="headerlink" title="三、搭建集群"></a>三、搭建集群</h2><h4 id="1-安装准备，创建文件夹"><a href="#1-安装准备，创建文件夹" class="headerlink" title="1. 安装准备，创建文件夹"></a>1. 安装准备，创建文件夹</h4><p>在管理节点上创建一个目录，用于保存 ceph-deploy 生成的配置文件和密钥对。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd ~</span><br><span class="line">$ mkdir my-cluster</span><br><span class="line">$ cd my-cluster</span><br></pre></td></tr></table></figure>
+
+<p><strong>注：若安装ceph后遇到麻烦可以使用以下命令进行清除包和配置：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 删除安装包</span><br><span class="line">$ ceph-deploy purge admin-node node1 node2 node3</span><br><span class="line"></span><br><span class="line">// 清除配置</span><br><span class="line">$ ceph-deploy purgedata admin-node node1 node2 node3</span><br><span class="line">$ ceph-deploy forgetkeys</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-创建集群和监控节点"><a href="#2-创建集群和监控节点" class="headerlink" title="2. 创建集群和监控节点"></a>2. 创建集群和监控节点</h4><p>创建集群并初始化<strong>监控节点</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy new &#123;initial-monitor-node(s)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里node1是monitor节点，所以执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy new node1</span><br></pre></td></tr></table></figure>
+
+<p>完成后，my-clster 下多了3个文件：<code>ceph.conf</code>、<code>ceph-deploy-ceph.log</code> 和 <code>ceph.mon.keyring</code>。</p>
+<blockquote>
+<ul>
+<li>问题：如果出现 “[ceph_deploy][ERROR ] RuntimeError: remote connection got closed, ensure <code>requiretty</code> is disabled for node1”，执行 sudo visudo 将 Defaults requiretty 注释掉。</li>
+</ul>
+</blockquote>
+<h4 id="3-修改配置文件"><a href="#3-修改配置文件" class="headerlink" title="3. 修改配置文件"></a>3. 修改配置文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat ceph.conf</span><br></pre></td></tr></table></figure>
+
+<p>内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">fsid = 89933bbb-257c-4f46-9f77-02f44f4cc95c</span><br><span class="line">mon_initial_members = node1</span><br><span class="line">mon_host = 192.168.0.131</span><br><span class="line">auth_cluster_required = cephx</span><br><span class="line">auth_service_required = cephx</span><br><span class="line">auth_client_required = cephx</span><br></pre></td></tr></table></figure>
+
+<p>把 Ceph 配置文件里的默认副本数从 3 改成 2 ，这样只有两个 OSD 也可以达到 active + clean 状态。把 osd pool default size &#x3D; 2 加入 [global] 段：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed -i &#x27;$a\osd pool default size = 2&#x27; ceph.conf</span><br></pre></td></tr></table></figure>
+
+<p>如果有多个网卡，<br>可以把 public network 写入 Ceph 配置文件的 [global] 段：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public network = &#123;ip-address&#125;/&#123;netmask&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-安装Ceph"><a href="#4-安装Ceph" class="headerlink" title="4. 安装Ceph"></a>4. 安装Ceph</h4><p>在所有节点上安装ceph：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy install admin-node node1 node2 node3</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ul>
+<li>问题：[ceph_deploy][ERROR ] RuntimeError: Failed to execute command: yum -y install epel-release</li>
+</ul>
+<p>解决方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum -y remove epel-release</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h4 id="5-配置初始-monitor-s-、并收集所有密钥"><a href="#5-配置初始-monitor-s-、并收集所有密钥" class="headerlink" title="5. 配置初始 monitor(s)、并收集所有密钥"></a>5. 配置初始 monitor(s)、并收集所有密钥</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy mon create-initial</span><br></pre></td></tr></table></figure>
+
+<p>完成上述操作后，当前目录里应该会出现这些密钥环：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;cluster-name&#125;.client.admin.keyring</span><br><span class="line">&#123;cluster-name&#125;.bootstrap-osd.keyring</span><br><span class="line">&#123;cluster-name&#125;.bootstrap-mds.keyring</span><br><span class="line">&#123;cluster-name&#125;.bootstrap-rgw.keyring</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-添加2个OSD"><a href="#6-添加2个OSD" class="headerlink" title="6. 添加2个OSD"></a>6. 添加2个OSD</h4><ol>
+<li>登录到 Ceph 节点、并给 OSD 守护进程创建一个目录，并添加权限。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ ssh node2</span><br><span class="line">$ sudo mkdir /var/local/osd0</span><br><span class="line">$ sudo chmod 777 /var/local/osd0/</span><br><span class="line">$ exit</span><br><span class="line"></span><br><span class="line">$ ssh node3</span><br><span class="line">$ sudo mkdir /var/local/osd1</span><br><span class="line">$ sudo chmod 777 /var/local/osd1/</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>然后，从管理节点执行 ceph-deploy 来准备 OSD 。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy osd prepare node2:/var/local/osd0 node3:/var/local/osd1</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>最后，激活 OSD 。</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy osd activate node2:/var/local/osd0 node3:/var/local/osd1</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-把配置文件和-admin-密钥拷贝到管理节点和-Ceph-节点"><a href="#7-把配置文件和-admin-密钥拷贝到管理节点和-Ceph-节点" class="headerlink" title="7.把配置文件和 admin 密钥拷贝到管理节点和 Ceph 节点"></a>7.把配置文件和 admin 密钥拷贝到管理节点和 Ceph 节点</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy admin admin-node node1 node2 node3</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-确保你对-ceph-client-admin-keyring-有正确的操作权限"><a href="#8-确保你对-ceph-client-admin-keyring-有正确的操作权限" class="headerlink" title="8. 确保你对 ceph.client.admin.keyring 有正确的操作权限"></a>8. 确保你对 ceph.client.admin.keyring 有正确的操作权限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chmod +r /etc/ceph/ceph.client.admin.keyring</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-检查集群的健康状况和OSD节点状况"><a href="#9-检查集群的健康状况和OSD节点状况" class="headerlink" title="9. 检查集群的健康状况和OSD节点状况"></a>9. 检查集群的健康状况和OSD节点状况</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[zeng@admin-node my-cluster]$ ceph health</span><br><span class="line">HEALTH_OK</span><br><span class="line"></span><br><span class="line">[zeng@admin-node my-cluster]$ ceph -s</span><br><span class="line">    cluster a3dd419e-5c99-4387-b251-58d4eb582995</span><br><span class="line">     health HEALTH_OK</span><br><span class="line">     monmap e1: 1 mons at &#123;node1=192.168.0.131:6789/0&#125;</span><br><span class="line">            election epoch 3, quorum 0 node1</span><br><span class="line">     osdmap e10: 2 osds: 2 up, 2 in</span><br><span class="line">            flags sortbitwise,require_jewel_osds</span><br><span class="line">      pgmap v22: 64 pgs, 1 pools, 0 bytes data, 0 objects</span><br><span class="line">            12956 MB used, 21831 MB / 34788 MB avail</span><br><span class="line">                  64 active+clean</span><br><span class="line">                  </span><br><span class="line">[zeng@admin-node my-cluster]$ ceph osd df</span><br><span class="line">ID WEIGHT  REWEIGHT SIZE   USE    AVAIL  %USE  VAR  PGS </span><br><span class="line"> 0 0.01659  1.00000 17394M  6478M 10915M 37.24 1.00  64 </span><br><span class="line"> 1 0.01659  1.00000 17394M  6478M 10915M 37.25 1.00  64 </span><br><span class="line">              TOTAL 34788M 12956M 21831M 37.24          </span><br><span class="line">MIN/MAX VAR: 1.00/1.00  STDDEV: 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、扩展集群（扩容）"><a href="#四、扩展集群（扩容）" class="headerlink" title="四、扩展集群（扩容）"></a>四、扩展集群（扩容）</h3><p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104854.png" alt="img"></p>
+<h4 id="1-添加OSD"><a href="#1-添加OSD" class="headerlink" title="1. 添加OSD"></a>1. 添加OSD</h4><p>在 node1 上添加一个 osd.2。</p>
+<ol>
+<li>创建目录</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ssh node1</span><br><span class="line">$ sudo mkdir /var/local/osd2</span><br><span class="line">$ sudo chmod 777 /var/local/osd2/</span><br><span class="line">$ exit</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>准备OSD</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy osd prepare node1:/var/local/osd2</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>激活OSD</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy osd activate node1:/var/local/osd2</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>检查集群状况和OSD节点：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">[zeng@admin-node my-cluster]$ ceph -s</span><br><span class="line">    cluster a3dd419e-5c99-4387-b251-58d4eb582995</span><br><span class="line">     health HEALTH_OK</span><br><span class="line">     monmap e1: 1 mons at &#123;node1=192.168.0.131:6789/0&#125;</span><br><span class="line">            election epoch 3, quorum 0 node1</span><br><span class="line">     osdmap e15: 3 osds: 3 up, 3 in</span><br><span class="line">            flags sortbitwise,require_jewel_osds</span><br><span class="line">      pgmap v37: 64 pgs, 1 pools, 0 bytes data, 0 objects</span><br><span class="line">            19450 MB used, 32731 MB / 52182 MB avail</span><br><span class="line">                  64 active+clean</span><br><span class="line"></span><br><span class="line">[zeng@admin-node my-cluster]$ ceph osd df</span><br><span class="line">ID WEIGHT  REWEIGHT SIZE   USE    AVAIL  %USE  VAR  PGS </span><br><span class="line"> 0 0.01659  1.00000 17394M  6478M 10915M 37.24 1.00  41 </span><br><span class="line"> 1 0.01659  1.00000 17394M  6478M 10915M 37.24 1.00  43 </span><br><span class="line"> 2 0.01659  1.00000 17394M  6494M 10899M 37.34 1.00  44 </span><br><span class="line">              TOTAL 52182M 19450M 32731M 37.28          </span><br><span class="line">MIN/MAX VAR: 1.00/1.00  STDDEV: 0.04</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-添加MONITORS"><a href="#2-添加MONITORS" class="headerlink" title="2. 添加MONITORS"></a>2. 添加MONITORS</h4><p>在 ndoe2 和 node3 添加监控节点。</p>
+<ol>
+<li>修改 <code>mon_initial_members</code>、<code>mon_host</code> 和 <code>public network</code> 配置：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">fsid = a3dd419e-5c99-4387-b251-58d4eb582995</span><br><span class="line">mon_initial_members = node1,node2,node3</span><br><span class="line">mon_host = 192.168.0.131,192.168.0.132,192.168.0.133</span><br><span class="line">auth_cluster_required = cephx</span><br><span class="line">auth_service_required = cephx</span><br><span class="line">auth_client_required = cephx</span><br><span class="line"></span><br><span class="line">osd pool default size = 2</span><br><span class="line">public network = 192.168.0.120/24</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>推送至其他节点：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy --overwrite-conf config push node1 node2 node3</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>添加监控节点:</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ceph-deploy mon add node2 node3</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>查看集群状态和监控节点：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[zeng@admin-node my-cluster]$ ceph -s</span><br><span class="line">    cluster a3dd419e-5c99-4387-b251-58d4eb582995</span><br><span class="line">     health HEALTH_OK</span><br><span class="line">     monmap e3: 3 mons at &#123;node1=192.168.0.131:6789/0,node2=192.168.0.132:6789/0,node3=192.168.0.133:6789/0&#125;</span><br><span class="line">            election epoch 8, quorum 0,1,2 node1,node2,node3</span><br><span class="line">     osdmap e25: 3 osds: 3 up, 3 in</span><br><span class="line">            flags sortbitwise,require_jewel_osds</span><br><span class="line">      pgmap v3919: 64 pgs, 1 pools, 0 bytes data, 0 objects</span><br><span class="line">            19494 MB used, 32687 MB / 52182 MB avail</span><br><span class="line">                  64 active+clean</span><br><span class="line">                  </span><br><span class="line">[zeng@admin-node my-cluster]$ ceph mon stat</span><br><span class="line">e3: 3 mons at &#123;node1=192.168.0.131:6789/0,node2=192.168.0.132:6789/0,node3=192.168.0.133:6789/0&#125;, election epoch 8, quorum 0,1,2 node1,node2,node3</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Ceph存储'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/14/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/">Python基础题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/13/%E6%80%BB%E7%BB%93/K8S%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">K8s基础命令</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">Linux运维常见面试题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/08.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/54.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E5%85%A5%E9%97%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/59.%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day66-80/70.NumPy%E7%9A%84%E5%BA%94%E7%94%A8-3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E5%85%AC%E5%BC%80%E8%AF%BE/%E6%96%87%E6%A1%A3/%E7%AC%AC04%E6%AC%A1%E5%85%AC%E5%BC%80%E8%AF%BE-%E5%A5%BD%E7%8E%A9%E7%9A%84Python/%E5%A5%BD%E7%8E%A9%E7%9A%84Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example06/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_table/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/15/%E6%80%BB%E7%BB%93/18%E3%80%81Ceph%E5%AD%98%E5%82%A8/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/15/%E6%80%BB%E7%BB%93/18%E3%80%81Ceph%E5%AD%98%E5%82%A8/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/15/%E6%80%BB%E7%BB%93/18%E3%80%81Ceph%E5%AD%98%E5%82%A8/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 17.752025735689866px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 17.922971983030024px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 9.437727136893638px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 14.233950551043375px;" class="tag-cloud-link">Prometheus</a>
+    
+    <a href="/tags/Apache/" style="font-size: 10.602992552254786px;" class="tag-cloud-link">Apache</a>
+    
+    <a href="/tags/Shell/" style="font-size: 10.022367852017904px;" class="tag-cloud-link">Shell</a>
+    
+    <a href="/tags/Linux/" style="font-size: 18.705933530517918px;" class="tag-cloud-link">Linux</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 15.32152842418844px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 13.312128594289046px;" class="tag-cloud-link">阿里云</a>
+    
+    <a href="/tags/Ceph/" style="font-size: 13.047049798753369px;" class="tag-cloud-link">Ceph</a>
+    
+    <a href="/tags/MySQL/" style="font-size: 18.29525340356656px;" class="tag-cloud-link">MySQL</a>
+    
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 19.63106863294901px;" class="tag-cloud-link">灰度发布</a>
+    
+    <a href="/tags/OpenStack/" style="font-size: 12.757236400534598px;" class="tag-cloud-link">OpenStack</a>
+    
+    <a href="/tags/KVM/" style="font-size: 8.15244476933528px;" class="tag-cloud-link">KVM</a>
+    
+    <a href="/tags/Docker/" style="font-size: 19.89947739934879px;" class="tag-cloud-link">Docker</a>
+    
+    <a href="/tags/Ansible/" style="font-size: 12.194869979657044px;" class="tag-cloud-link">Ansible</a>
+    
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 15.407436221621392px;" class="tag-cloud-link">负载均衡</a>
+    
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 9.049184060302395px;" class="tag-cloud-link">Radis、Mongodb</a>
+    
+    <a href="/tags/Nginx/" style="font-size: 18.816505573615803px;" class="tag-cloud-link">Nginx</a>
+    
+    <a href="/tags/Tomcat/" style="font-size: 8.021640692877748px;" class="tag-cloud-link">Tomcat</a>
+    
+    <a href="/tags/DevOps/" style="font-size: 17.874249464959966px;" class="tag-cloud-link">DevOps</a>
+    
+    <a href="/tags/Jenkins/" style="font-size: 8.329492567083172px;" class="tag-cloud-link">Jenkins</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Sat Jun 15 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Sat Jun 15 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

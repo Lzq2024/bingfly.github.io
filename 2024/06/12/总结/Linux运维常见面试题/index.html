@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>Linux运维常见面试题 | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>Linux运维常见面试题</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/12/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">Linux运维常见面试题</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Linux/">Linux</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-12
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/">Linux运维常见面试题</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-12
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Linux/">Linux</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Linux运维常见面试题"><a href="#Linux运维常见面试题" class="headerlink" title="Linux运维常见面试题"></a>Linux运维常见面试题</h1><p><img src="D:/杂记/1/image-20210127163322018.png" alt="image-20210127163322018"></p>
+<h2 id="1、什么是运维？什么是游戏运维？"><a href="#1、什么是运维？什么是游戏运维？" class="headerlink" title="1、什么是运维？什么是游戏运维？"></a><strong>1、什么是运维？什么是游戏运维？</strong></h2><p>1）运维是指大型组织已经建立好的网络软硬件的维护，就是要保证业务的上线与运作的正常，<br>在他运转的过程中，对他进行维护，他集合了网络、系统、数据库、开发、安全、监控于一身的技术<br>运维又包括很多种，有DBA运维、网站运维、虚拟化运维、监控运维、游戏运维等等<br>2）游戏运维又有分工，分为开发运维、应用运维（业务运维）和系统运维<br>开发运维：是给应用运维开发运维工具和运维平台的<br>应用运维：是给业务上线、维护和做故障排除的，用开发运维开发出来的工具给业务上线、维护、做故障排查<br>系统运维：是给应用运维提供业务上的基础设施，比如：系统、网络、监控、硬件等等<br>总结：开发运维和系统运维给应用运维提供了“工具”和“基础设施”上的支撑<br>开发运维、应用运维和系统运维他们的工作是环环相扣的<br>——————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="2、在工作中，运维人员经常需要跟运营人员打交道，请问运营人员是做什么工作的？"><a href="#2、在工作中，运维人员经常需要跟运营人员打交道，请问运营人员是做什么工作的？" class="headerlink" title="2、在工作中，运维人员经常需要跟运营人员打交道，请问运营人员是做什么工作的？"></a>2、在工作中，运维人员经常需要跟运营人员打交道，请问运营人员是做什么工作的？</h2><p>游戏运营要做的一个事情除了协调工作以外<br>还需要与各平台沟通，做好开服的时间、开服数、用户导量、活动等计划<br>————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="3、现在给你三百台服务器，你怎么对他们进行管理？"><a href="#3、现在给你三百台服务器，你怎么对他们进行管理？" class="headerlink" title="3、现在给你三百台服务器，你怎么对他们进行管理？"></a>3、现在给你三百台服务器，你怎么对他们进行管理？</h2><p>管理3百台服务器的方式：<br>1）设定跳板机，使用统一账号登录，便于安全与登录的考量。<br>2）使用saltstark、ansiable、puppet进行系统的统一调度与配置的统一管理。<br>3）建立简单的服务器的系统、配置、应用的cmdb信息管理。便于查阅每台服务器上的各种信息记录<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="4、简述raid0-raid1-raid5-三种工作模式的工作原理及特点"><a href="#4、简述raid0-raid1-raid5-三种工作模式的工作原理及特点" class="headerlink" title="4、简述raid0 raid1 raid5 三种工作模式的工作原理及特点"></a>4、简述raid0 raid1 raid5 三种工作模式的工作原理及特点</h2><p>RAID，可以把硬盘整合成一个大磁盘，还可以在大磁盘上再分区，放数据<br>还有一个大功能，多块盘放在一起可以有冗余（备份）<br>RAID整合方式有很多，常用的：0 1 5 10<br>RAID 0，可以是一块盘和N个盘组合<br>其优点读写快，是RAID中最好的<br>缺点：没有冗余，一块坏了数据就全没有了<br>RAID 1，只能2块盘，盘的大小可以不一样，以小的为准<br>10G+10G只有10G，另一个做备份。它有100%的冗余，缺点：浪费资源，成本高<br>RAID 5 ，3块盘，容量计算10*（n-1）,损失一块盘<br>特点，读写性能一般，读还好一点，写不好<br>冗余从好到坏：RAID1 RAID10 RAID 5 RAID0<br>性能从好到坏：RAID0 RAID10 RAID5 RAID1<br>成本从低到高：RAID0 RAID5 RAID1 RAID10<br>单台服务器：很重要盘不多，系统盘，RAID1<br>数据库服务器：主库：RAID10 从库 RAID5\RAID0（为了维护成本，RAID10）<br>WEB服务器，如果没有太多的数据的话，RAID5,RAID0（单盘）<br>有多台，监控、应用服务器，RAID0 RAID5<br>我们会根据数据的存储和访问的需求，去匹配对应的RAID级别<br>—————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="5、LVS、Nginx、HAproxy有什么区别？工作中你怎么选择？"><a href="#5、LVS、Nginx、HAproxy有什么区别？工作中你怎么选择？" class="headerlink" title="5、LVS、Nginx、HAproxy有什么区别？工作中你怎么选择？"></a>5、LVS、Nginx、HAproxy有什么区别？工作中你怎么选择？</h2><p>LVS： 是基于四层的转发<br>HAproxy： 是基于四层和七层的转发，是专业的代理服务器<br>Nginx： 是WEB服务器，缓存服务器，又是反向代理服务器，可以做七层的转发<br>区别： LVS由于是基于四层的转发所以只能做端口的转发<br>而基于URL的、基于目录的这种转发LVS就做不了<br>工作选择：<br>HAproxy和Nginx由于可以做七层的转发，所以URL和目录的转发都可以做<br>在很大并发量的时候我们就要选择LVS，像中小型公司的话并发量没那么大<br>选择HAproxy或者Nginx足已，由于HAproxy由是专业的代理服务器<br>配置简单，所以中小型企业推荐使用HAproxy<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="6、Squid、Varinsh和Nginx有什么区别，工作中你怎么选择？"><a href="#6、Squid、Varinsh和Nginx有什么区别，工作中你怎么选择？" class="headerlink" title="6、Squid、Varinsh和Nginx有什么区别，工作中你怎么选择？"></a>6、Squid、Varinsh和Nginx有什么区别，工作中你怎么选择？</h2><p>Squid、Varinsh和Nginx都是代理服务器<br>什么是代理服务器：<br>能当替用户去访问公网，并且能把访问到的数据缓存到服务器本地，等用户下次再访问相同的资<br>源的时候，代理服务器直接从本地回应给用户，当本地没有的时候，我代替你去访问公网，我接<br>收你的请求，我先在我自已的本地缓存找，如果我本地缓存有，我直接从我本地的缓存里回复你<br>如果我在我本地没有找到你要访问的缓存的数据，那么代理服务器就会代替你去访问公网<br>区别：<br>1）Nginx本来是反向代理&#x2F;web服务器，用了插件可以做做这个副业<br>但是本身不支持特性挺多，只能缓存静态文件<br>2）从这些功能上。varnish和squid是专业的cache服务，而nginx这些是第三方模块完成<br>3）varnish本身的技术上优势要高于squid，它采用了可视化页面缓存技术<br>在内存的利用上，Varnish比Squid具有优势，性能要比Squid高。<br>还有强大的通过Varnish管理端口，可以使用正则表达式快速、批量地清除部分缓存<br>它是内存缓存，速度一流，但是内存缓存也限制了其容量，缓存页面和图片一般是挺好的<br>4）squid的优势在于完整的庞大的cache技术资料，和很多的应用生产环境<br>工作中选择：<br>要做cache服务的话，我们肯定是要选择专业的cache服务，优先选择squid或者varnish。<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="7、Tomcat和Resin有什么区别，工作中你怎么选择？"><a href="#7、Tomcat和Resin有什么区别，工作中你怎么选择？" class="headerlink" title="7、Tomcat和Resin有什么区别，工作中你怎么选择？"></a>7、Tomcat和Resin有什么区别，工作中你怎么选择？</h2><p>区别：Tomcat用户数多，可参考文档多，Resin用户数少，可考虑文档少<br>最主要区别则是Tomcat是标准的java容器，不过性能方面比resin的要差一些<br>但稳定性和java程序的兼容性，应该是比resin的要好<br>工作中选择：现在大公司都是用resin，追求性能；而中小型公司都是用Tomcat，追求稳定和程序的兼容<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="8、什么是中间件？什么是jdk？"><a href="#8、什么是中间件？什么是jdk？" class="headerlink" title="8、什么是中间件？什么是jdk？"></a>8、什么是中间件？什么是jdk？</h2><p>中间件介绍：<br>中间件是一种独立的系统软件或服务程序，分布式应用软件借助这种软件在不同的技术之间共享资源<br>中间件位于客户机&#x2F; 服务器的操作系统之上，管理计算机资源和网络通讯<br>是连接两个独立应用程序或独立系统的软件。相连接的系统，即使它们具有不同的接口<br>但通过中间件相互之间仍能交换信息。执行中间件的一个关键途径是信息传递<br>通过中间件，应用程序可以工作于多平台或OS环境。<br>jdk：jdk是Java的开发工具包<br>它是一种用于构建在 Java 平台上发布的应用程序、applet 和组件的开发环境<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="9、讲述一下Tomcat8005、8009、8080三个端口的含义？"><a href="#9、讲述一下Tomcat8005、8009、8080三个端口的含义？" class="headerlink" title="9、讲述一下Tomcat8005、8009、8080三个端口的含义？"></a>9、讲述一下Tomcat8005、8009、8080三个端口的含义？</h2><p>8005&#x3D;&#x3D;》 关闭时使用<br>8009&#x3D;&#x3D;》 为AJP端口，即容器使用，如Apache能通过AJP协议访问Tomcat的8009端口<br>8080&#x3D;&#x3D;》 一般应用使用<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="10、什么叫CDN？"><a href="#10、什么叫CDN？" class="headerlink" title="10、什么叫CDN？"></a>10、什么叫CDN？</h2><p>即内容分发网络<br>其目的是通过在现有的Internet中增加一层新的网络架构，将网站的内容发布到<br>最接近用户的网络边缘，使用户可就近取得所需的内容，提高用户访问网站的速度<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="11、什么叫网站灰度发布？"><a href="#11、什么叫网站灰度发布？" class="headerlink" title="11、什么叫网站灰度发布？"></a>11、什么叫网站灰度发布？</h2><p>灰度发布是指在黑与白之间，能够平滑过渡的一种发布方式<br>AB test就是一种灰度发布方式，让一部用户继续用A，一部分用户开始用B<br>如果用户对B没有什么反对意见，那么逐步扩大范围，把所有用户都迁移到B上面 来灰度发布可以保证整体系统的稳定，在初始灰度的时候就可以发现、调整问题，以保证其影响度<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="12、简述DNS进行域名解析的过程？"><a href="#12、简述DNS进行域名解析的过程？" class="headerlink" title="12、简述DNS进行域名解析的过程？"></a>12、简述DNS进行域名解析的过程？</h2><p>用户要访问 <a target="_blank" rel="noopener" href="http://www.baidu.com,会先找本机的host文件,再找本地设置的dns服务器,如果也没有的话,就去网络中找根服务器,根服务器反馈结果,说只能提供一级域名服务器.cn,就去找一级域名服务器,一级域名服务器说只能提供二级域名服务器.com.cn,就去找二级域名服务器,二级域服务器只能提供三级域名服务器.baidu.com.cn,就去找三级域名服务器,三级域名服务器正好有这个网站www.baidu.com,然后发给请求的服务器,保存一份之后,再发给客户端/">www.baidu.com，会先找本机的host文件，再找本地设置的DNS服务器，如果也没有的话，就去网络中找根服务器，根服务器反馈结果，说只能提供一级域名服务器.cn，就去找一级域名服务器，一级域名服务器说只能提供二级域名服务器.com.cn,就去找二级域名服务器，二级域服务器只能提供三级域名服务器.baidu.com.cn，就去找三级域名服务器，三级域名服务器正好有这个网站www.baidu.com，然后发给请求的服务器，保存一份之后，再发给客户端</a></p>
+<p>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="13、RabbitMQ是什么东西？"><a href="#13、RabbitMQ是什么东西？" class="headerlink" title="13、RabbitMQ是什么东西？"></a>13、RabbitMQ是什么东西？</h2><p>RabbitMQ也就是消息队列中间件，消息中间件是在消息的传息过程中保存消息的容器<br>消息中间件再将消息从它的源中到它的目标中标时充当中间人的作用<br>队列的主要目的是提供路由并保证消息的传递；如果发送消息时接收者不可用<br>消息队列不会保留消息，直到可以成功地传递为止，当然，消息队列保存消息也是有期限地<br>————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="14、讲一下Keepalived的工作原理？"><a href="#14、讲一下Keepalived的工作原理？" class="headerlink" title="14、讲一下Keepalived的工作原理？"></a>14、讲一下Keepalived的工作原理？</h2><p>在一个虚拟路由器中，只有作为MASTER的VRRP(虚拟路由冗余协议)路由器会一直发送VRRP通告信息,<br>BACKUP不会抢占MASTER，除非它的优先级更高。当MASTER不可用时(BACKUP收不到通告信息)<br>多台BACKUP中优先级最高的这台会被抢占为MASTER。这种抢占是非常快速的(&lt;1s)，以保证服务的连续性<br>由于安全性考虑，VRRP包使用了加密协议进行加密。BACKUP不会发送通告信息，只会接收通告信息<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="15、讲述一下LVS三种模式的工作过程？"><a href="#15、讲述一下LVS三种模式的工作过程？" class="headerlink" title="15、讲述一下LVS三种模式的工作过程？"></a>15、讲述一下LVS三种模式的工作过程？</h2><p>LVS 有三种负载均衡的模式，分别是VS&#x2F;NAT（nat 模式） VS&#x2F;DR(路由模式) VS&#x2F;TUN（隧道模式）<br>一、NAT模式（VS-NAT）<br>原理：就是把客户端发来的数据包的IP头的目的地址，在负载均衡器上换成其中一台RS的IP地址<br>并发至此RS来处理,RS处理完后把数据交给负载均衡器,负载均衡器再把数据包原IP地址改为自己的IP<br>将目的地址改为客户端IP地址即可期间,无论是进来的流量,还是出去的流量,都必须经过负载均衡器<br>优点：集群中的物理服务器可以使用任何支持TCP&#x2F;IP操作系统，只有负载均衡器需要一个合法的IP地址<br>缺点：扩展性有限。当服务器节点（普通PC服务器）增长过多时,负载均衡器将成为整个系统的瓶颈<br>因为所有的请求包和应答包的流向都经过负载均衡器。当服务器节点过多时<br>大量的数据包都交汇在负载均衡器那，速度就会变慢！<br>二、IP隧道模式（VS-TUN）<br>原理：首先要知道，互联网上的大多Internet服务的请求包很短小，而应答包通常很大<br>那么隧道模式就是，把客户端发来的数据包，封装一个新的IP头标记(仅目的IP)发给RS<br>RS收到后,先把数据包的头解开,还原数据包,处理后,直接返回给客户端,不需要再经过<br>负载均衡器。注意,由于RS需要对负载均衡器发过来的数据包进行还原,所以说必须支持<br>IPTUNNEL协议，所以,在RS的内核中,必须编译支持IPTUNNEL这个选项<br>优点：负载均衡器只负责将请求包分发给后端节点服务器，而RS将应答包直接发给用户<br>所以，减少了负载均衡器的大量数据流动，负载均衡器不再是系统的瓶颈，就能处理很巨大的请求量<br>这种方式，一台负载均衡器能够为很多RS进行分发。而且跑在公网上就能进行不同地域的分发。<br>缺点：隧道模式的RS节点需要合法IP，这种方式需要所有的服务器支持”IP Tunneling”<br>(IP Encapsulation)协议，服务器可能只局限在部分Linux系统上<br>三、直接路由模式（VS-DR）<br>原理：负载均衡器和RS都使用同一个IP对外服务但只有DR对ARP请求进行响应<br>所有RS对本身这个IP的ARP请求保持静默也就是说,网关会把对这个服务IP的请求全部定向给DR<br>而DR收到数据包后根据调度算法,找出对应的RS,把目的MAC地址改为RS的MAC（因为IP一致）<br>并将请求分发给这台RS这时RS收到这个数据包,处理完成之后，由于IP一致，可以直接将数据返给客户<br>则等于直接从客户端收到这个数据包无异,处理后直接返回给客户端<br>由于负载均衡器要对二层包头进行改换,所以负载均衡器和RS之间必须在一个广播域<br>也可以简单的理解为在同一台交换机上<br>优点：和TUN（隧道模式）一样，负载均衡器也只是分发请求，应答包通过单独的路由方法返回给客户端<br>与VS-TUN相比，VS-DR这种实现方式不需要隧道结构，因此可以使用大多数操作系统做为物理服务器。<br>缺点：（不能说缺点，只能说是不足）要求负载均衡器的网卡必须与物理网卡在一个物理段上。<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="16、mysql的innodb如何定位锁问题，mysql如何减少主从复制延迟？"><a href="#16、mysql的innodb如何定位锁问题，mysql如何减少主从复制延迟？" class="headerlink" title="16、mysql的innodb如何定位锁问题，mysql如何减少主从复制延迟？"></a>16、mysql的innodb如何定位锁问题，mysql如何减少主从复制延迟？</h2><p>mysql的innodb如何定位锁问题:<br>在使用 show engine innodb status检查引擎状态时，发现了死锁问题<br>在5.5中，information_schema 库中增加了三个关于锁的表（MEMORY引擎）<br>innodb_trx ## 当前运行的所有事务<br>innodb_locks ## 当前出现的锁<br>innodb_lock_waits ## 锁等待的对应关系<br>mysql如何减少主从复制延迟:<br>如果延迟比较大，就先确认以下几个因素：<br>从库硬件比主库差，导致复制延迟</p>
+<p>主从复制单线程，如果主库写并发太大，来不及传送到从库</p>
+<p>就会导致延迟。更高版本的mysql可以支持多线程复制<br>慢SQL语句过多</p>
+<p>网络延迟</p>
+<p>master负载<br>主库读写压力大，导致复制延迟，架构的前端要加buffer及缓存层<br>slave负载<br>一般的做法是，使用多台slave来分摊读请求，再从这些slave中取一台专用的服务器<br>只作为备份用，不进行其他任何操作.另外， 2个可以减少延迟的参数:<br>–slave-net-timeout&#x3D;seconds 单位为秒 默认设置为 3600秒<br>#参数含义：当slave从主数据库读取log数据失败后，等待多久重新建立连接并获取数据<br>–master-connect-retry&#x3D;seconds 单位为秒 默认设置为 60秒<br>#参数含义：当重新建立主从连接时，如果连接建立失败，间隔多久后重试<br>通常配置以上2个参数可以减少网络问题导致的主从数据同步延迟<br>MySQL数据库主从同步延迟解决方案<br>最简单的减少slave同步延时的方案就是在架构上做优化，尽量让主库的DDL快速执行<br>还有就是主库是写，对数据安全性较高，比如sync_binlog&#x3D;1，innodb_flush_log_at_trx_commit<br>&#x3D; 1 之类的设置，而slave则不需要这么高的数据安全，完全可以讲sync_binlog设置为0或者关闭binlog<br>innodb_flushlog也可以设置为0来提高sql的执行效率。另外就是使用比主库更好的硬件设备作为slave<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="17、如何重置mysql-root密码？"><a href="#17、如何重置mysql-root密码？" class="headerlink" title="17、如何重置mysql root密码？"></a>17、如何重置mysql root密码？</h2><p>一、 在已知MYSQL数据库的ROOT用户密码的情况下，修改密码的方法：<br>1、 在SHELL环境下，使用mysqladmin命令设置：<br>mysqladmin –u root –p password “新密码” 回车后要求输入旧密码<br>2、 在mysql&gt;环境中,使用update命令，直接更新mysql库user表的数据：<br>Update mysql.user set password&#x3D;password(‘新密码’) where user&#x3D;’root’;<br>flush privileges;<br>注意：mysql语句要以分号”；”结束<br>3、 在mysql&gt;环境中，使用grant命令，修改root用户的授权权限。<br>grant all on . to root@’localhost’ identified by ‘新密码’；<br>二、 如查忘记了mysql数据库的ROOT用户的密码，又如何做呢？方法如下：<br>1、 关闭当前运行的mysqld服务程序：service mysqld stop（要先将mysqld添加为系统服务）<br>2、 使用mysqld_safe脚本以安全模式（不加载授权表）启动mysqld 服务<br>&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysqld_safe –skip-grant-table &amp;<br>3、 使用空密码的root用户登录数据库，重新设置ROOT用户的密码<br>＃mysql -u root<br>Mysql&gt; Update mysql.user set password&#x3D;password(‘新密码’) where user&#x3D;’root’;<br>Mysql&gt; flush privileges;<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="18、lvs-nginx-haproxy优缺点"><a href="#18、lvs-nginx-haproxy优缺点" class="headerlink" title="18、lvs&#x2F;nginx&#x2F;haproxy优缺点"></a>18、lvs&#x2F;nginx&#x2F;haproxy优缺点</h2><p>Nginx的优点是：<br>1、工作在网络的7层之上，可以针对http应用做一些分流的策略，比如针对域名、目录结构<br>它的正则规则比HAProxy更为强大和灵活，这也是它目前广泛流行的主要原因之一<br>Nginx单凭这点可利用的场合就远多于LVS了。<br>2、Nginx对网络稳定性的依赖非常小，理论上能ping通就就能进行负载功能，这个也是它的优势之一<br>相反LVS对网络稳定性依赖比较大，这点本人深有体会；<br>3、Nginx安装和配置比较简单，测试起来比较方便，它基本能把错误用日志打印出来<br>LVS的配置、测试就要花比较长的时间了，LVS对网络依赖比较大。<br>4、可以承担高负载压力且稳定，在硬件不差的情况下一般能支撑几万次的并发量，负载度比LVS相对小些。<br>5、Nginx可以通过端口检测到服务器内部的故障，比如根据服务器处理网页返回的状态码、超时等等，并且会把返回错误的请求重新提交到另一个节点，不过其中缺点就是不支持url来检测。比如用户正在上传一个文件，而处理该上传的节点刚好在上传过程中出现故障，Nginx会把上传切到另一台服务器重新处理，而LVS就直接断掉了<br>如果是上传一个很大的文件或者很重要的文件的话，用户可能会因此而不满。<br>6、Nginx不仅仅是一款优秀的负载均衡器&#x2F;反向代理软件，它同时也是功能强大的Web应用服务器<br>LNMP也是近几年非常流行的web架构，在高流量的环境中稳定性也很好。<br>7、Nginx现在作为Web反向加速缓存越来越成熟了，速度比传统的Squid服务器更快，可考虑用其作为反向代理加速器<br>8、Nginx可作为中层反向代理使用，这一层面Nginx基本上无对手，唯一可以对比Nginx的就只有lighttpd了<br>不过lighttpd目前还没有做到Nginx完全的功能，配置也不那么清晰易读，社区资料也远远没Nginx活跃<br>9、Nginx也可作为静态网页和图片服务器，这方面的性能也无对手。还有Nginx社区非常活跃，第三方模块也很多<br>Nginx的缺点是：<br>1、Nginx仅能支持http、https和Email协议，这样就在适用范围上面小些，这个是它的缺点<br>2、对后端服务器的健康检查，只支持通过端口来检测，不支持通过url来检测<br>不支持Session的直接保持，但能通过ip_hash来解决<br>LVS：使用Linux内核集群实现一个高性能、高可用的负载均衡服务器<br>它具有很好的可伸缩性（Scalability)、可靠性（Reliability)和可管理性（Manageability)<br>LVS的优点是：<br>1、抗负载能力强、是工作在网络4层之上仅作分发之用，没有流量的产生<br>这个特点也决定了它在负载均衡软件里的性能最强的，对内存和cpu资源消耗比较低<br>2、配置性比较低，这是一个缺点也是一个优点，因为没有可太多配置的东西<br>所以并不需要太多接触，大大减少了人为出错的几率<br>3、工作稳定，因为其本身抗负载能力很强，自身有完整的双机热备方案<br>如LVS+Keepalived，不过我们在项目实施中用得最多的还是LVS&#x2F;DR+Keepalived<br>4、无流量，LVS只分发请求，而流量并不从它本身出去，这点保证了均衡器IO的性能不会收到大流量的影响。<br>5、应用范围较广，因为LVS工作在4层，所以它几乎可对所有应用做负载均衡，包括http、数据库、在线聊天室等<br>LVS的缺点是：<br>1、软件本身不支持正则表达式处理，不能做动静分离<br>而现在许多网站在这方面都有较强的需求，这个是Nginx&#x2F;HAProxy+Keepalived的优势所在<br>2、如果是网站应用比较庞大的话，LVS&#x2F;DR+Keepalived实施起来就比较复杂了<br>特别后面有Windows Server的机器的话，如果实施及配置还有维护过程就比较复杂了<br>相对而言，Nginx&#x2F;HAProxy+Keepalived就简单多了。<br>HAProxy的特点是：<br>1、HAProxy也是支持虚拟主机的。<br>2、HAProxy的优点能够补充Nginx的一些缺点，比如支持Session的保持，Cookie的引导<br>同时支持通过获取指定的url来检测后端服务器的状态<br>3、HAProxy跟LVS类似，本身就只是一款负载均衡软件<br>单纯从效率上来讲HAProxy会比Nginx有更出色的负载均衡速度，在并发处理上也是优于Nginx的<br>4、HAProxy支持TCP协议的负载均衡转发，可以对MySQL读进行负载均衡<br>对后端的MySQL节点进行检测和负载均衡，大家可以用LVS+Keepalived对MySQL主从做负载均衡<br>5、HAProxy负载均衡策略非常多，HAProxy的负载均衡算法现在具体有如下8种：<br>①roundrobin，表示简单的轮询，这个不多说，这个是负载均衡基本都具备的；<br>② static-rr，表示根据权重，建议关注；<br>③leastconn，表示最少连接者先处理，建议关注；<br>④ source，表示根据请求源IP，这个跟Nginx的IP_hash机制类似<br>我们用其作为解决session问题的一种方法，建议关注；<br>⑤ri，表示根据请求的URI；<br>⑥rl_param，表示根据请求的URl参数’balance url_param’ requires an URL parameter name；<br>⑦hdr(name)，表示根据HTTP请求头来锁定每一次HTTP请求；<br>⑧rdp-cookie(name)，表示根据据cookie(name)来锁定并哈希每一次TCP请求。<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="19、mysql数据备份工具"><a href="#19、mysql数据备份工具" class="headerlink" title="19、mysql数据备份工具"></a>19、mysql数据备份工具</h2><p>mysqldump工具<br>mysqldump是mysql自带的备份工具，目录在bin目录下面：&#x2F;usr&#x2F;local&#x2F;mysql&#x2F;bin&#x2F;mysqldump<br>支持基于innodb的热备份，但是由于是逻辑备份，所以速度不是很快，适合备份数据比较小的场景<br>Mysqldump完全备份+二进制日志可以实现基于时间点的恢复。<br>基于LVM快照备份<br>在物理备份中，有基于文件系统的物理备份（LVM的快照），也可以直接用tar之类的命令对整个数据库目录<br>进行打包备份，但是这些只能进行泠备份，不同的存储引擎备份的也不一样，myisam自动备份到表级别<br>而innodb不开启独立表空间的话只能备份整个数据库。<br>tar包备份<br>percona提供的xtrabackup工具<br>支持innodb的物理热备份，支持完全备份，增量备份，而且速度非常快，支持innodb存储引起的数据在不同<br>数据库之间迁移，支持复制模式下的从机备份恢复备份恢复，为了让xtrabackup支持更多的功能扩展<br>可以设立独立表空间，打开 innodb_file_per_table功能，启用之后可以支持单独的表备份<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="20、keepalive的工作原理和如何做到健康检查"><a href="#20、keepalive的工作原理和如何做到健康检查" class="headerlink" title="20、keepalive的工作原理和如何做到健康检查"></a>20、keepalive的工作原理和如何做到健康检查</h2><p>keepalived是以VRRP协议为实现基础的，VRRP全称Virtual Router Redundancy Protocol，即虚拟路由冗余协议。<br>虚拟路由冗余协议，可以认为是实现路由器高可用的协议，即将N台提供相同功能的路由器组成一个路由器组<br>这个组里面有一个master和多个backup，master上面有一个对外提供服务的vip（该路由器所在局域网内<br>其他机器的默认路由为该vip），master会发组播，当backup收不到vrrp包时就认为master宕掉了<br>这时就需要根据VRRP的优先级来选举一个backup当master。这样就可以保证路由器的高可用了<br>keepalived主要有三个模块，分别是core、check和vrrp。core模块为keepalived的核心，负责主进程的启动、维护<br>及全局配置文件的加载和解析。check负责健康检查，包括常见的各种检查方式，vrrp模块是来实现VRRP协议的<br>Keepalived健康检查方式配置<br>HTTP_GET|SSL_GET<br>HTTP_GET | SSL_GET<br>{<br>url {<br>path &#x2F;# HTTP&#x2F;SSL 检查的url可以是多个<br>digest # HTTP&#x2F;SSL 检查后的摘要信息用工具genhash生成<br>status_code 200# HTTP&#x2F;SSL 检查返回的状态码<br>}<br>connect_port 80 # 连接端口<br>bindto<br>connect_timeout 3 # 连接超时时间<br>nb_get_retry 3 # 重连次数<br>delay_before_retry 2 #连接间隔时间<br>}<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="21、统计ip访问情况，要求分析nginx访问日志，找出访问页面数量在前十位的ip"><a href="#21、统计ip访问情况，要求分析nginx访问日志，找出访问页面数量在前十位的ip" class="headerlink" title="21、统计ip访问情况，要求分析nginx访问日志，找出访问页面数量在前十位的ip"></a>21、统计ip访问情况，要求分析nginx访问日志，找出访问页面数量在前十位的ip</h2><p>cat access.log | awk ‘{print $1}’ | uniq -c | sort -rn | head -10<br>————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="22、使用tcpdump监听主机为192-168-1-1，tcp端口为80的数据，同时将输出结果保存输出到tcpdump-log"><a href="#22、使用tcpdump监听主机为192-168-1-1，tcp端口为80的数据，同时将输出结果保存输出到tcpdump-log" class="headerlink" title="22、使用tcpdump监听主机为192.168.1.1，tcp端口为80的数据，同时将输出结果保存输出到tcpdump.log"></a>22、使用tcpdump监听主机为192.168.1.1，tcp端口为80的数据，同时将输出结果保存输出到tcpdump.log</h2><p>tcpdump ‘host 192.168.1.1 and port 80’ &gt; tcpdump.log<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="23、如何将本地80-端口的请求转发到8080-端口，当前主机IP-为192-168-2-1"><a href="#23、如何将本地80-端口的请求转发到8080-端口，当前主机IP-为192-168-2-1" class="headerlink" title="23、如何将本地80 端口的请求转发到8080 端口，当前主机IP 为192.168.2.1"></a>23、如何将本地80 端口的请求转发到8080 端口，当前主机IP 为192.168.2.1</h2><p>iptables -A PREROUTING -d 192.168.2.1 -p tcp -m tcp -dport 80 -j DNAT-to-destination 192.168.2.1:8080<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="24、简述raid0-raid1-raid5-三种工作模式的工作原理及特点"><a href="#24、简述raid0-raid1-raid5-三种工作模式的工作原理及特点" class="headerlink" title="24、简述raid0 raid1 raid5 三种工作模式的工作原理及特点"></a>24、简述raid0 raid1 raid5 三种工作模式的工作原理及特点</h2><p>RAID 0：带区卷，连续以位或字节为单位分割数据，并行读&#x2F;写于多个磁盘上，因此具有很高的数据传输率<br>但它没有数据冗余，RAID 0 只是单纯地提高性能，并没有为数据的可靠性提供保证<br>而且其中的一个磁盘失效将影响到所有数据。因此，RAID 0 不能应用于数据安全性要求高的场合<br>RAID 1：镜像卷，它是通过磁盘数据镜像实现数据冗余，在成对的独立磁盘上产生互为备份的数据<br>不能提升写数据效率。当原始数据繁忙时，可直接从镜像拷贝中读取数据，因此RAID1 可以提高读取性能<br>RAID 1 是磁盘阵列中单位成本最高的，镜像卷可用容量为总容量的1&#x2F;2，但提供了很高的数据安全性和可用性<br>当一个磁盘失效时，系统可以自动切换到镜像磁盘上读写，而不需要重组失效的数据<br>RAID5：至少由3块硬盘组成，分布式奇偶校验的独立磁盘结构，它的奇偶校验码存在于所有磁盘上<br>任何一个硬盘损坏，都可以根据其它硬盘上的校验位来重建损坏的数据（最多允许1块硬盘损坏）<br>所以raid5可以实现数据冗余，确保数据的安全性，同时raid5也可以提升数据的读写性能<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="25、你对现在运维工程师的理解和以及对其工作的认识"><a href="#25、你对现在运维工程师的理解和以及对其工作的认识" class="headerlink" title="25、你对现在运维工程师的理解和以及对其工作的认识"></a>25、你对现在运维工程师的理解和以及对其工作的认识</h2><p>运维工程师在公司当中责任重大，需要保证时刻为公司及客户提供最高、最快、最稳定、最安全的服务<br>运维工程师的一个小小的失误，很有可能会对公司及客户造成重大损失<br>因此运维工程师的工作需要严谨及富有创新精神<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="26、实时抓取并显示当前系统中tcp-80端口的网络数据信息，请写出完整操作命令"><a href="#26、实时抓取并显示当前系统中tcp-80端口的网络数据信息，请写出完整操作命令" class="headerlink" title="26、实时抓取并显示当前系统中tcp 80端口的网络数据信息，请写出完整操作命令"></a>26、实时抓取并显示当前系统中tcp 80端口的网络数据信息，请写出完整操作命令</h2><p>tcpdump -nn tcp port 80</p>
+<p>————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="27、如何优化-Linux系统（可以不说太具体）？"><a href="#27、如何优化-Linux系统（可以不说太具体）？" class="headerlink" title="27、如何优化 Linux系统（可以不说太具体）？"></a>27、如何优化 Linux系统（可以不说太具体）？</h2><p>不用root，添加普通用户，通过sudo授权管理<br>更改默认的远程连接SSH服务端口及禁止root用户远程连接<br>定时自动更新服务器时间<br>配置国内yum源<br>关闭selinux及iptables（iptables工作场景如果有外网IP一定要打开，高并发除外）<br>调整文件描述符的数量<br>精简开机启动服务（crond rsyslog network sshd）<br>内核参数优化（&#x2F;etc&#x2F;sysctl.conf）<br>更改字符集，支持中文，但建议还是用英文字符集，防止乱码<br>锁定关键系统文件<br>清空&#x2F;etc&#x2F;issue，去除系统及内核版本登录前的屏幕显示</p>
+<p>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="28、Linux系统中病毒怎么解决"><a href="#28、Linux系统中病毒怎么解决" class="headerlink" title="28、Linux系统中病毒怎么解决"></a>28、Linux系统中病毒怎么解决</h2><p>1）最简单有效的方法就是重装系统<br>2）要查的话就是找到病毒文件然后删除<br>中毒之后一般机器cpu、内存使用率会比较高<br>机器向外发包等异常情况，排查方法简单介绍下<br>top 命令找到cpu使用率最高的进程<br>一般病毒文件命名都比较乱，可以用 ps aux 找到病毒文件位置<br>rm -f 命令删除病毒文件<br>检查计划任务、开机启动项和病毒文件目录有无其他可以文件等<br>3）由于即使删除病毒文件不排除有潜伏病毒，所以最好是把机器备份数据之后重装一下<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="29、发现一个病毒文件你删了他又自动创建怎么解决"><a href="#29、发现一个病毒文件你删了他又自动创建怎么解决" class="headerlink" title="29、发现一个病毒文件你删了他又自动创建怎么解决"></a>29、发现一个病毒文件你删了他又自动创建怎么解决</h2><p>公司的内网某台linux服务器流量莫名其妙的剧增,用iftop查看有连接外网的情况<br>针对这种情况一般重点查看netstat连接的外网ip和端口。<br>用lsof -p pid可以查看到具体是那些进程，哪些文件<br>经查勘发现&#x2F;root下有相关的配置conf.n hhe两个可疑文件，rm -rf后不到一分钟就自动生成了<br>由此推断是某个母进程产生的这些文件。所以找到母进程就是找到罪魁祸首<br>查杀病毒最好断掉外网访问，还好是内网服务器，可以通过内网访问<br>断了内网，病毒就失去外联的能力，杀掉它就容易的多<br>怎么找到呢，找了半天也没有看到蛛丝马迹，没办法只有ps axu一个个排查<br>方法是查看可以的用户和和系统相似而又不是的冒牌货，果然，看到了如下进程可疑<br>看不到图片就是&#x2F;usr&#x2F;bin&#x2F;.sshd<br>于是我杀掉所有.sshd相关的进程，然后直接删掉.sshd这个可执行文件<br>然后才删掉了文章开头提到的自动复活的文件<br>总结一下，遇到这种问题，如果不是太严重，尽量不要重装系统<br>一般就是先断外网，然后利用iftop,ps,netstat,chattr,lsof,pstree这些工具顺藤摸瓜<br>一般都能找到元凶。但是如果遇到诸如此类的问题<br>&#x2F;boot&#x2F;efi&#x2F;EFI&#x2F;redhat&#x2F;grub.efi: Heuristics.Broken.Executable FOUND，个人觉得就要重装系统了<br>————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="30、说说TCP-IP的七层模型"><a href="#30、说说TCP-IP的七层模型" class="headerlink" title="30、说说TCP&#x2F;IP的七层模型"></a>30、说说TCP&#x2F;IP的七层模型</h2><p>应用层 (Application)：<br>网络服务与最终用户的一个接口。<br>协议有：HTTP FTP TFTP SMTP SNMP DNS TELNET HTTPS POP3 DHCP<br>表示层（Presentation Layer）：<br>数据的表示、安全、压缩。（在五层模型里面已经合并到了应用层）<br>格式有，JPEG、ASCll、DECOIC、加密格式等<br>会话层（Session Layer）：<br>建立、管理、终止会话。（在五层模型里面已经合并到了应用层）<br>对应主机进程，指本地主机与远程主机正在进行的会话<br>传输层 (Transport)：<br>定义传输数据的协议端口号，以及流控和差错校验。<br>协议有：TCP UDP，数据包一旦离开网卡即进入网络传输层<br>网络层 (Network)：<br>进行逻辑地址寻址，实现不同网络之间的路径选择。<br>协议有：ICMP IGMP IP（IPV4 IPV6） ARP RARP<br>数据链路层 (Link)：<br>建立逻辑连接、进行硬件地址寻址、差错校验等功能。（由底层网络定义协议）<br>将比特组合成字节进而组合成帧，用MAC地址访问介质，错误发现但不能纠正<br>物理层（Physical Layer）：<br>是计算机网络OSI模型中最低的一层<br>物理层规定:为传输数据所需要的物理链路创建、维持、拆除<br>而提供具有机械的，电子的，功能的和规范的特性<br>简单的说，物理层确保原始的数据可在各种物理媒体上传输。局域网与广域网皆属第1、2层<br>物理层是OSI的第一层，它虽然处于最底层，却是整个开放系统的基础<br>物理层为设备之间的数据通信提供传输媒体及互连设备，为数据传输提供可靠的环境<br>如果您想要用尽量少的词来记住这个第一层，那就是“信号和介质”<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="31、你常用的Nginx模块，用来做什么"><a href="#31、你常用的Nginx模块，用来做什么" class="headerlink" title="31、你常用的Nginx模块，用来做什么"></a>31、你常用的Nginx模块，用来做什么</h2><p>rewrite模块，实现重写功能<br>access模块：来源控制<br>ssl模块：安全加密<br>ngx_http_gzip_module：网络传输压缩模块<br>ngx_http_proxy_module 模块实现代理<br>ngx_http_upstream_module模块实现定义后端服务器列表<br>ngx_cache_purge实现缓存清除功能<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="32、请列出你了解的web服务器负载架构"><a href="#32、请列出你了解的web服务器负载架构" class="headerlink" title="32、请列出你了解的web服务器负载架构"></a>32、请列出你了解的web服务器负载架构</h2><p>Nginx<br>Haproxy<br>Keepalived<br>LVS<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="33、查看http的并发请求数与其TCP连接状态"><a href="#33、查看http的并发请求数与其TCP连接状态" class="headerlink" title="33、查看http的并发请求数与其TCP连接状态"></a>33、查看http的并发请求数与其TCP连接状态</h2><p>netstat -n | awk ‘&#x2F;^tcp&#x2F; {++S[$NF]} END {for(a in S) print a, S[a]}’<br>还有ulimit -n 查看linux系统打开最大的文件描述符，这里默认1024<br>不修改这里web服务器修改再大也没用，若要用就修改很几个办法，这里说其中一个：<br>修改&#x2F;etc&#x2F;security&#x2F;limits.conf<br>soft nofile 10240<br>hard nofile 10240<br>重启后生效<br>————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="34、用tcpdump嗅探80端口的访问看看谁最高"><a href="#34、用tcpdump嗅探80端口的访问看看谁最高" class="headerlink" title="34、用tcpdump嗅探80端口的访问看看谁最高"></a>34、用tcpdump嗅探80端口的访问看看谁最高</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpdump -i eth0 -tnn dst port 80 -c 1000 | awk -F&quot;.&quot; &#x27;&#123;print $1&quot;.&quot;$2&quot;.&quot;$3&quot;.&quot;$4&#125;&#x27; | sort | uniq -c | sort -nr |head -5</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/lgh1117/article/details/80213397">https://blog.csdn.net/lgh1117/article/details/80213397</a></p>
+<h2 id="35、光标下插入一行-o"><a href="#35、光标下插入一行-o" class="headerlink" title="35、光标下插入一行:o"></a>35、光标下插入一行:o</h2><h2 id="36、复制5行：5yy"><a href="#36、复制5行：5yy" class="headerlink" title="36、复制5行：5yy"></a>36、复制5行：5yy</h2><h2 id="37、删除10行：10dd"><a href="#37、删除10行：10dd" class="headerlink" title="37、删除10行：10dd"></a>37、删除10行：10dd</h2><h2 id="38、替换：-s-jingfeng-jfedu-net-g"><a href="#38、替换：-s-jingfeng-jfedu-net-g" class="headerlink" title="38、替换：:%s&#x2F;jingfeng&#x2F;jfedu.net&#x2F;g"></a>38、替换：:%s&#x2F;jingfeng&#x2F;jfedu.net&#x2F;g</h2><p>——————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="39、查找linux系统下以txt结尾，30天没有修改的文件大小大于20K同时具有执行权限的文件并备份到-data-backup-目录下。"><a href="#39、查找linux系统下以txt结尾，30天没有修改的文件大小大于20K同时具有执行权限的文件并备份到-data-backup-目录下。" class="headerlink" title="39、查找linux系统下以txt结尾，30天没有修改的文件大小大于20K同时具有执行权限的文件并备份到&#x2F;data&#x2F;backup&#x2F;目录下。"></a>39、查找linux系统下以txt结尾，30天没有修改的文件大小大于20K同时具有执行权限的文件并备份到&#x2F;data&#x2F;backup&#x2F;目录下。</h2><p>答：<br>find &#x2F; -name *txt -mtime +30 -type f -size +20k -perma&#x3D; x -exec cp {} &#x2F;data&#x2F;backup&#x2F; ;<br>————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="40、当前test-txt所属的用户为root，组为abc，请将test-txt使拥有者为abc，组为root，写出命令。"><a href="#40、当前test-txt所属的用户为root，组为abc，请将test-txt使拥有者为abc，组为root，写出命令。" class="headerlink" title="40、当前test.txt所属的用户为root，组为abc，请将test.txt使拥有者为abc，组为root，写出命令。"></a>40、当前test.txt所属的用户为root，组为abc，请将test.txt使拥有者为abc，组为root，写出命令。</h2><p>答：<br>chown abc:root test.txt<br>——————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="41、如何修改Linux启动级别为字符模式并永久生效，如何临时、永久关闭selinux及防火墙，请分别写出操作方法。"><a href="#41、如何修改Linux启动级别为字符模式并永久生效，如何临时、永久关闭selinux及防火墙，请分别写出操作方法。" class="headerlink" title="41、如何修改Linux启动级别为字符模式并永久生效，如何临时、永久关闭selinux及防火墙，请分别写出操作方法。"></a>41、如何修改Linux启动级别为字符模式并永久生效，如何临时、永久关闭selinux及防火墙，请分别写出操作方法。</h2><p>答：<br>更改字符模式：修改&#x2F;etc&#x2F;inittab一行为id:3:initdefault:<br>临时关闭selinnuxsetenforce0<br>临时关闭防火墙iptables-F<br>永久关闭selinux修改&#x2F;etc&#x2F;selinux&#x2F;config一行为SELINUX&#x3D;permissive<br>永久关闭防火墙 iptables -F; &#x2F;etc&#x2F;init.d&#x2F;iptablessave<br>———————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="41、-每次开机在-tmp目录下创建一个当天的日期文件夹-提示：当前日期表示的方法为：date-Y-m-d"><a href="#41、-每次开机在-tmp目录下创建一个当天的日期文件夹-提示：当前日期表示的方法为：date-Y-m-d" class="headerlink" title="41、.每次开机在&#x2F;tmp目录下创建一个当天的日期文件夹(提示：当前日期表示的方法为：date+%Y%m%d)"></a>41、.每次开机在&#x2F;tmp目录下创建一个当天的日期文件夹(提示：当前日期表示的方法为：date+%Y%m%d)</h2><p>答：<br>echo “mkdir&#x2F;tmp&#x2F; date+%Y%m%d” &gt;&gt; &#x2F;etc&#x2F;rc.d&#x2F;rc.local<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="43、-如何查看文件内容，命令有哪些？查看文件第1行到3行，查看文件最后一行。"><a href="#43、-如何查看文件内容，命令有哪些？查看文件第1行到3行，查看文件最后一行。" class="headerlink" title="43、.如何查看文件内容，命令有哪些？查看文件第1行到3行，查看文件最后一行。"></a>43、.如何查看文件内容，命令有哪些？查看文件第1行到3行，查看文件最后一行。</h2><p>答：<br>查看文件内容：vim、cat、head、tail<br>查看第1到行：head -3 file<br>查看最后一行：tail -1 file<br>——————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="44、-查看linux服务器IP的命令，同时只显示包含ip所在的行打印出来。"><a href="#44、-查看linux服务器IP的命令，同时只显示包含ip所在的行打印出来。" class="headerlink" title="44、.查看linux服务器IP的命令，同时只显示包含ip所在的行打印出来。"></a>44、.查看linux服务器IP的命令，同时只显示包含ip所在的行打印出来。</h2><p>答：<br>以eth0为例<br>只打印所在的行：ifconfig eth0 | grep “inetaddr:”<br>只打印ip：ifconfig eth0 | grep “inetaddr:” | awk -F: ‘{print$2}’ | awk -F ’ ’ ‘{print$1}’<br>————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————————</p>
+<h2 id="45、-将普通用户test加入root组的命令是？"><a href="#45、-将普通用户test加入root组的命令是？" class="headerlink" title="45、.将普通用户test加入root组的命令是？"></a>45、.将普通用户test加入root组的命令是？</h2><p>答：<br>usermod -G root test</p>
+<h2 id="46、linux如何挂在windows下的共享目录"><a href="#46、linux如何挂在windows下的共享目录" class="headerlink" title="46、linux如何挂在windows下的共享目录"></a>46、linux如何挂在windows下的共享目录</h2><p>mount.cifs &#x2F;&#x2F;192.168.1.3&#x2F;server &#x2F;mnt&#x2F;server -o user&#x3D;administrator,pass&#x3D;123456<br>linux 下的server需要自己手动建一个 后面的user与pass 是windows主机的账号和密码 注意空格 和逗号</p>
+<h2 id="47、查看http的并发请求数与其TCP连接状态"><a href="#47、查看http的并发请求数与其TCP连接状态" class="headerlink" title="47、查看http的并发请求数与其TCP连接状态"></a>47、查看http的并发请求数与其TCP连接状态</h2><p>netstat -n | awk ‘&#x2F;^tcp&#x2F; {++b[$NF]} END {for(a in b) print a, b[a]}’<br>还有ulimit -n 查看linux系统最大的tcp连接，这里默认1024，不修改这里web服务器修改再大也没用。若要用就修改很几个办法，这里说其中一个：<br>修改&#x2F;etc&#x2F;security&#x2F;limits.conf<br>* soft nofile 10240<br>* hard nofile 10240<br>重启后生效</p>
+<h2 id="48、查看当前系统每个IP的连接数"><a href="#48、查看当前系统每个IP的连接数" class="headerlink" title="48、查看当前系统每个IP的连接数"></a>48、查看当前系统每个IP的连接数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -n | awk &#x27;/^tcp/ &#123;print $5&#125;&#x27;| awk -F: &#x27;&#123;print $1&#125;&#x27; | sort | uniq -c | sort -rn</span><br></pre></td></tr></table></figure>
+
+<h2 id="49、查看-var-log中以-开头的日志文件的行数"><a href="#49、查看-var-log中以-开头的日志文件的行数" class="headerlink" title="49、查看&#x2F;var&#x2F;log中以-开头的日志文件的行数"></a>49、查看&#x2F;var&#x2F;log中以-开头的日志文件的行数</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /var/log/ -lR| grep &quot;^-&quot; |wc -l</span><br></pre></td></tr></table></figure>
+
+<h2 id="50、shell下32位随机密码生成"><a href="#50、shell下32位随机密码生成" class="headerlink" title="50、shell下32位随机密码生成"></a>50、shell下32位随机密码生成</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /dev/urandom | head -1 | md5sum | head -c 32 &gt;&gt; /pass</span><br></pre></td></tr></table></figure>
+
+
+<p>将生成的32位随机数 保存到&#x2F;pass文件里了</p>
+<h2 id="51、统计出apache的access-log中访问量最多的5个I"><a href="#51、统计出apache的access-log中访问量最多的5个I" class="headerlink" title="51、统计出apache的access.log中访问量最多的5个I"></a>51、统计出apache的access.log中访问量最多的5个I</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Pcat access_log | awk ’&#123;print $1&#125;’ | sort | uniq -c | sort -n -r | head -5</span><br></pre></td></tr></table></figure>
+
+<h2 id="52、如何查看二进制文件的内容"><a href="#52、如何查看二进制文件的内容" class="headerlink" title="52、如何查看二进制文件的内容"></a>52、如何查看二进制文件的内容</h2><p>我们一般通过hexdump命令 来查看二进制文件的内容。<br>hexdump -C XXX(文件名) -C是参数 不同的参数有不同的意义<br>-C 是比较规范的 十六进制和ASCII码显示<br>-c 是单字节字符显示<br>-b 单字节八进制显示<br>-o 是双字节八进制显示<br>-d 是双字节十进制显示<br>-x 是双字节十六进制显示等等等等</p>
+<h2 id="53、ps-aux-中的VSZ代表什么意思，RSS代表什么意思"><a href="#53、ps-aux-中的VSZ代表什么意思，RSS代表什么意思" class="headerlink" title="53、ps aux 中的VSZ代表什么意思，RSS代表什么意思"></a>53、ps aux 中的VSZ代表什么意思，RSS代表什么意思</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">VSZ:虚拟内存集,进程占用的虚拟内存空间</span><br><span class="line">RSS:物理内存集,进程战用实际物理内存空间</span><br></pre></td></tr></table></figure>
+
+<p>54、检测并修复&#x2F;dev&#x2F;hda5fsck用来检查和维护不一致的文件系统。若系统掉电或磁盘发生问题</p>
+<p>可利用fsck命令对文件系统进行检查,用法：fsck -P &#x2F;dev&#x2F;hda5</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Linux运维常见面试题'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/14/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/">Python基础题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/12%E3%80%81Linux%EF%BC%88%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E5%92%8C%E4%B8%89%E5%89%91%E5%AE%A2%EF%BC%89/">Linux 基础命令和三剑客</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/37.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDDL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day36-45/39.SQL%E8%AF%A6%E8%A7%A3%E4%B9%8BDQL/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/55.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day61-65/61.%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E9%87%87%E9%9B%86%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/list_by_vue/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/homework06/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_js_2/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_table/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/12/%E6%80%BB%E7%BB%93/Linux%E8%BF%90%E7%BB%B4%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 15.386294611458908px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 9.6081493937625px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 18.561877302158006px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 12.830490552320686px;" class="tag-cloud-link">Prometheus</a>
+    
+    <a href="/tags/Apache/" style="font-size: 16.663951746406102px;" class="tag-cloud-link">Apache</a>
+    
+    <a href="/tags/Shell/" style="font-size: 13.694156147341037px;" class="tag-cloud-link">Shell</a>
+    
+    <a href="/tags/Linux/" style="font-size: 12.365660111750579px;" class="tag-cloud-link">Linux</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 11.801865279223758px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 16.612139319087987px;" class="tag-cloud-link">阿里云</a>
+    
+    <a href="/tags/Ceph/" style="font-size: 14.357245034959544px;" class="tag-cloud-link">Ceph</a>
+    
+    <a href="/tags/MySQL/" style="font-size: 17.32505650141534px;" class="tag-cloud-link">MySQL</a>
+    
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 15.647730184751968px;" class="tag-cloud-link">灰度发布</a>
+    
+    <a href="/tags/OpenStack/" style="font-size: 13.136534737603279px;" class="tag-cloud-link">OpenStack</a>
+    
+    <a href="/tags/KVM/" style="font-size: 11.68186116343272px;" class="tag-cloud-link">KVM</a>
+    
+    <a href="/tags/Docker/" style="font-size: 16.272285331408483px;" class="tag-cloud-link">Docker</a>
+    
+    <a href="/tags/Ansible/" style="font-size: 8.164369750614384px;" class="tag-cloud-link">Ansible</a>
+    
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 9.52041260588637px;" class="tag-cloud-link">负载均衡</a>
+    
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 9.952917156434857px;" class="tag-cloud-link">Radis、Mongodb</a>
+    
+    <a href="/tags/Nginx/" style="font-size: 14.488694926711595px;" class="tag-cloud-link">Nginx</a>
+    
+    <a href="/tags/Tomcat/" style="font-size: 15.552694336634614px;" class="tag-cloud-link">Tomcat</a>
+    
+    <a href="/tags/DevOps/" style="font-size: 12.55709069745302px;" class="tag-cloud-link">DevOps</a>
+    
+    <a href="/tags/Jenkins/" style="font-size: 18.838832596711953px;" class="tag-cloud-link">Jenkins</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Wed Jun 12 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Wed Jun 12 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

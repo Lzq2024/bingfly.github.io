@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>Tomcat优化 | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>Tomcat优化</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/06/13/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/">Tomcat优化</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Tomcat/">Tomcat</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-06-13
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/06/13/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/">Tomcat优化</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-06-13
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/Tomcat/">Tomcat</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="Tomcat是什么？"><a href="#Tomcat是什么？" class="headerlink" title="Tomcat是什么？"></a>Tomcat是什么？</h1><p>Tomcat 服务器Apache软件基金会项目中的一个核心项目，是一个免费的开放源代码的Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试JSP 程序的首选。</p>
+<h2 id="1、Tomcat的缺省端口是多少，怎么修改"><a href="#1、Tomcat的缺省端口是多少，怎么修改" class="headerlink" title="1、Tomcat的缺省端口是多少，怎么修改"></a>1、Tomcat的缺省端口是多少，怎么修改</h2><ol>
+<li>找到Tomcat目录下的conf文件夹</li>
+<li>进入conf文件夹里面找到server.xml文件</li>
+<li>打开server.xml文件</li>
+<li>在server.xml文件里面找到下列信息</li>
+<li>把Connector标签的8080端口改成你想要的端口</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Service</span> <span class="attr">name</span>=<span class="string">&quot;Catalina&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">&quot;8080&quot;</span> <span class="attr">protocol</span>=<span class="string">&quot;HTTP/1.1&quot;</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">connectionTimeout</span>=<span class="string">&quot;20000&quot;</span> </span></span><br><span class="line"><span class="tag">               <span class="attr">redirectPort</span>=<span class="string">&quot;8443&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2、如何避免用户在访问一个不存在的页面时，Tomcat将其详细版本信息返回给用户。"><a href="#2、如何避免用户在访问一个不存在的页面时，Tomcat将其详细版本信息返回给用户。" class="headerlink" title="2、如何避免用户在访问一个不存在的页面时，Tomcat将其详细版本信息返回给用户。"></a>2、如何避免用户在访问一个不存在的页面时，Tomcat将其详细版本信息返回给用户。</h2><p>答：解决办法就是将404状态码进行重定向，以便我们自定义返回的页面信息。</p>
+<h2 id="3、Tomcat优化"><a href="#3、Tomcat优化" class="headerlink" title="3、Tomcat优化"></a>3、Tomcat优化</h2><p>答：</p>
+<p>1、内存优化；</p>
+<p>2、配置优化：Connector 优化、线程池优化</p>
+<p>3、禁用DNS查询；</p>
+<p>4、开启日志切割功能；</p>
+<p>5、关闭404错误返回的版本信息；</p>
+<p>Tomcat的优化：</p>
+<h3 id="1）、内存优化"><a href="#1）、内存优化" class="headerlink" title="1）、内存优化"></a>1）、内存优化</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">严重: Exception invoking periodic operation: java.lang.OutOfMemoryError: Java heap space  </span><br><span class="line">严重: Error processing request java.lang.OutOfMemoryError: GC overhead limit exceeded </span><br></pre></td></tr></table></figure>
+
+<p>​    说明Tomcat已经无力支持访问处理，内部GC也已经“无能无力”。所以一般情况下我们需要重新配置Tomcat的相关内存大小。</p>
+<p>在bin&#x2F;catalina.bat&#x2F;sh中，在catalina.sh中添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_OPTS=&quot;-server -Xms1G -Xmx2G -Xss256K -Djava.awt.headless=true -Dfile.encoding=utf-8 -XX:MaxPermSize=256m -XX:PermSize=128M -XX:MaxPermSize=256M&quot;</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">• -server：启用jdk的server版本。</span><br><span class="line"></span><br><span class="line">• -Xms：虚拟机初始化时的最小堆内存。</span><br><span class="line"></span><br><span class="line">• -Xmx：虚拟机可使用的最大堆内存。 #-Xms与-Xmx设成一样的值，避免JVM因为频繁的GC导致性能大起大落</span><br><span class="line"></span><br><span class="line">• -XX:PermSize：设置非堆内存初始值,默认是物理内存的1/64。</span><br><span class="line"></span><br><span class="line">• -XX:MaxNewSize：新生代占整个堆内存的最大值。</span><br><span class="line"></span><br><span class="line">• -XX:MaxPermSize：Perm（俗称方法区）占整个堆内存的最大值，也称内存最大永久保留区域。</span><br></pre></td></tr></table></figure>
+
+<p>​    <strong>验证</strong></p>
+<p>​    设置成功后我们可以利用JDK自带的工具进行验证，这些工具都在JAVA_HOME&#x2F;bin目录下：</p>
+<p>​    1）jps：用来显示本地的java进程，以及进程号，进程启动的路径等。</p>
+<p>​    2）jmap：观察运行中的JVM 物理内存的占用情况，包括Heap size , Perm size <a target="_blank" rel="noopener" href="http://item.taobao.com/item.htm?id=41222768202">下载地址</a> 等。</p>
+<p>​    进入命令行模式后，进入JAVA_HOME&#x2F;bin目录下，然后输入jps命令：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">jps</span><br><span class="line">#显示以下结果</span><br><span class="line">2340 Bootstrap</span><br><span class="line">6696 Jps  </span><br></pre></td></tr></table></figure>
+
+<p>​    其中 Bootstrap进程就是我们启动了的 Tomcat，其进程号为2340.</p>
+<p>​    然后我们利用 jmap工具查看其内存相关配置：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">jmap -heap 2340  </span><br><span class="line">#显示以下结果  </span><br><span class="line">Attaching to process ID 2340, please wait...  </span><br><span class="line">Debugger attached successfully.  </span><br><span class="line">Server compiler detected. </span><br><span class="line">JVM version is 24.65-b04  </span><br><span class="line">using thread-local object allocation.  </span><br><span class="line">Parallel GC with 4 thread(s) </span><br></pre></td></tr></table></figure>
+
+<p>若内存不足，显示500错误，一般调整Xms和Xmx，可以将Xms和Xmx设置成一样</p>
+<p>使用：set JAVA_OPTS&#x3D;-Xms512m-Xmx512m</p>
+<h3 id="2）Connector优化（运行模式）"><a href="#2）Connector优化（运行模式）" class="headerlink" title="2）Connector优化（运行模式）"></a>2）Connector优化（运行模式）</h3><p>三种。修改它的运行模式需要在主配置文件中找到connector字段中的protocol进行修改</p>
+<ul>
+<li><p><strong>BIO：同步并阻塞</strong> 一个线程处理一个请求。缺点：并发量高时，线程数较多，浪费资源。Tomcat7或以下，在Linux系统中默认使用这种方式。</p>
+<p> 配制项：protocol&#x3D;”HTTP&#x2F;1.1”</p>
+</li>
+<li><p><strong>NIO：同步非阻塞IO</strong></p>
+<p>利用Java的异步IO处理，可以通过少量的线程处理大量的请求，可以复用同一个线程处理多个connection(多路复用)。</p>
+<p>Tomcat8在Linux系统中默认使用这种方式。</p>
+<p>Tomcat7必须修改Connector配置来启动。</p>
+<p><strong>配制项</strong>：protocol&#x3D;”org.apache.coyote.http11.Http11NioProtocol”</p>
+<p><strong>备注</strong>：我们常用的Jetty，Mina，ZooKeeper等都是基于java nio实现.</p>
+</li>
+<li><p><strong>APR</strong>：即Apache Portable Runtime，从操作系统层面解决io阻塞问题。<strong>AIO方式，异步非阻塞IO</strong> (Java NIO2又叫AIO) 主要与NIO的区别主要是操作系统的底层区别.可以做个比喻:比作快递，NIO就是网购后要自己到官网查下快递是否已经到了(可能是多次)，然后自己去取快递；AIO就是快递员送货上门了(不用关注快递进度)。</p>
+<p><strong>配制项</strong>：protocol&#x3D;”org.apache.coyote.http11.Http11AprProtocol”</p>
+<p><strong>备注</strong>：需在本地服务器安装APR库。Tomcat7或Tomcat8在Win7或以上的系统中启动默认使用这种方式。Linux如果安装了apr和native，Tomcat直接启动就支持apr。</p>
+</li>
+</ul>
+<h2 id="4、Tomcat工作模式？"><a href="#4、Tomcat工作模式？" class="headerlink" title="4、Tomcat工作模式？"></a>4、Tomcat工作模式？</h2><p>Tomcat是一个JSP&#x2F;Servlet容器。其作为Servlet容器，有三种工作模式：独立的Servlet容器、进程内的Servlet容器和进程外的Servlet容器。</p>
+<p>进入Tomcat的请求可以根据Tomcat的工作模式分为如下两类：</p>
+<p>Tomcat作为应用程序服务器：请求来自于前端的web服务器，这可能是Apache, IIS, Nginx等；</p>
+<p>Tomcat作为独立服务器：请求来自于web浏览器；</p>
+<h2 id="5、Tomcat有几种部署方式？"><a href="#5、Tomcat有几种部署方式？" class="headerlink" title="5、Tomcat有几种部署方式？"></a>5、Tomcat有几种部署方式？</h2><p><strong>在Tomcat中部署Web应用的方式主要有如下几种：</strong></p>
+<ol>
+<li><p>利用Tomcat的自动部署。</p>
+<p>把web应用拷贝到webapps目录。Tomcat在启动时会加载目录下的应用，并将编译后的结果放入work目录下。</p>
+</li>
+<li><p>使用Manager App控制台部署。</p>
+<p>在tomcat主页点击“Manager App” 进入应用管理控制台，可以指定一个web应用的路径或war文件。</p>
+</li>
+<li><p>修改conf&#x2F;server.xml文件部署。</p>
+<p>修改conf&#x2F;server.xml文件，增加Context节点可以部署应用。</p>
+</li>
+<li><p>增加自定义的Web部署文件。</p>
+<p>在conf&#x2F;Catalina&#x2F;localhost&#x2F; 路径下增加 xyz.xml文件，内容是Context节点，可以部署应用。</p>
+</li>
+</ol>
+<h2 id="6、tomcat容器是如何创建servlet类实例？用到了什么原理？"><a href="#6、tomcat容器是如何创建servlet类实例？用到了什么原理？" class="headerlink" title="6、tomcat容器是如何创建servlet类实例？用到了什么原理？"></a>6、tomcat容器是如何创建servlet类实例？用到了什么原理？</h2><ol>
+<li>当容器启动时，会读取在webapps目录下所有的web应用中的web.xml文件，然后对 <strong>xml文件进行解析，并读取servlet注册信息</strong>。然后，将每个应用中注册的servlet类都进行加载，并通过 <strong>反射的方式实例化</strong>。（有时候也是在第一次请求时实例化）</li>
+<li>在servlet注册时加上1如果为正数，则在一开始就实例化，如果不写或为负数，则第一次请求实例化。</li>
+</ol>
+<h2 id="7、Tomcat工作模式"><a href="#7、Tomcat工作模式" class="headerlink" title="7、Tomcat工作模式"></a>7、Tomcat工作模式</h2><p>Tomcat作为servlet容器，有三种工作模式：</p>
+<ul>
+<li>1、独立的servlet容器，servlet容器是web服务器的一部分；</li>
+<li>2、进程内的servlet容器，servlet容器是作为web服务器的插件和java容器的实现，web服务器插件在内部地址空间打开一个jvm使得java容器在内部得以运行。反应速度快但伸缩性不足；</li>
+<li>3、进程外的servlet容器，servlet容器运行于web服务器之外的地址空间，并作为web服务器的插件和java容器实现的结合。反应时间不如进程内但伸缩性和稳定性比进程内优；</li>
+</ul>
+<p>进入Tomcat的请求可以根据Tomcat的工作模式分为如下两类：</p>
+<ul>
+<li>Tomcat作为应用程序服务器：请求来自于前端的web服务器，这可能是Apache, IIS, Nginx等；</li>
+<li>Tomcat作为独立服务器：请求来自于web浏览器；</li>
+</ul>
+<p>面试时问到Tomcat相关问题的几率并不高，正式因为如此，很多人忽略了对Tomcat相关技能的掌握，下面这一篇文章整理了Tomcat相关的系统架构，介绍了Server、Service、Connector、Container之间的关系，各个模块的功能，可以说把这几个掌握住了，Tomcat相关的面试题你就不会有任何问题了！另外，在面试的时候你还要有意识无意识的往Tomcat这个地方引，就比如说常见的Spring MVC的执行流程，一个URL的完整调用链路，这些相关的题目你是可以往Tomcat处理请求的这个过程去说的！掌握了Tomcat这些技能，面试官一定会佩服你的！</p>
+<p>学了本章之后你应该明白的是：</p>
+<ul>
+<li>Server、Service、Connector、Container四大组件之间的关系和联系，以及他们的主要功能点；</li>
+<li>Tomcat执行的整体架构，请求是如何被一步步处理的；</li>
+<li>Engine、Host、Context、Wrapper相关的概念关系；</li>
+<li>Container是如何处理请求的；</li>
+<li>Tomcat用到的相关设计模式；</li>
+</ul>
+<h2 id="8、Tomcat顶层架构"><a href="#8、Tomcat顶层架构" class="headerlink" title="8、Tomcat顶层架构"></a>8、Tomcat顶层架构</h2><p>俗话说，站在巨人的肩膀上看世界，一般学习的时候也是先总览一下整体，然后逐个部分个个击破，最后形成思路，了解具体细节，Tomcat的结构很复杂，但是 Tomcat 非常的模块化，找到了 Tomcat 最核心的模块，问题才可以游刃而解，了解了 Tomcat 的整体架构对以后深入了解 Tomcat 来说至关重要！</p>
+<p>先上一张Tomcat的顶层结构图（图A），如下：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104604.png" alt="在这里插入图片描述"></p>
+<p>Tomcat中最顶层的容器是Server，代表着整个服务器，从上图中可以看出，一个Server可以包含至少一个Service，即可以包含多个Service，用于具体提供服务。</p>
+<p>Service主要包含两个部分：Connector和Container。从上图中可以看出 Tomcat 的心脏就是这两个组件，他们的作用如下：</p>
+<ul>
+<li>Connector用于处理连接相关的事情，并提供Socket与Request请求和Response响应相关的转化;</li>
+<li>Container用于封装和管理Servlet，以及具体处理Request请求；</li>
+</ul>
+<p>一个Tomcat中只有一个Server，一个Server可以包含多个Service，一个Service只有一个Container，但是可以有多个Connectors，这是因为一个服务可以有多个连接，如同时提供Http和Https链接，也可以提供向相同协议不同端口的连接，示意图如下（Engine、Host、Context下面会说到）：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104606.png" alt="在这里插入图片描述"></p>
+<p>多个 Connector 和一个 Container 就形成了一个 Service，有了 Service 就可以对外提供服务了，但是 Service 还要一个生存的环境，必须要有人能够给她生命、掌握其生死大权，那就非 Server 莫属了！所以整个 Tomcat 的生命周期由 Server 控制。</p>
+<p>另外，上述的包含关系或者说是父子关系，都可以在tomcat的conf目录下的server.xml配置文件中看出，下图是删除了注释内容之后的一个完整的server.xml配置文件（Tomcat版本为8.0）</p>
+<p><img src="D:/杂记/1/20191021215355649.png" alt="在这里插入图片描述"></p>
+<p>详细的配置文件内容可以到Tomcat官网查看：<a target="_blank" rel="noopener" href="http://tomcat.apache.org/tomcat-8.0-doc/index.html">Tomcat配置文件</a></p>
+<p>上边的配置文件，还可以通过下边的一张结构图更清楚的理解：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104609.png" alt="在这里插入图片描述"></p>
+<p>Server标签设置的端口号为8005，shutdown&#x3D;”SHUTDOWN” ，表示在8005端口监听“SHUTDOWN”命令，如果接收到了就会关闭Tomcat。一个Server有一个Service，当然还可以进行配置，一个Service有多个Connector，Service左边的内容都属于Container的，Service下边是Connector。</p>
+<h2 id="9、Tomcat顶层架构小结"><a href="#9、Tomcat顶层架构小结" class="headerlink" title="9、Tomcat顶层架构小结"></a>9、Tomcat顶层架构小结</h2><ol>
+<li>Tomcat中只有一个Server，一个Server可以有多个Service，一个Service可以有多个Connector和一个Container；</li>
+<li>Server掌管着整个Tomcat的生死大权；</li>
+<li>Service 是对外提供服务的；</li>
+<li>Connector用于接受请求并将请求封装成Request和Response来具体处理；</li>
+<li>Container用于封装和管理Servlet，以及具体处理request请求；</li>
+</ol>
+<p>知道了整个Tomcat顶层的分层架构和各个组件之间的关系以及作用，对于绝大多数的开发人员来说Server和Service对我们来说确实很远，而我们开发中绝大部分进行配置的内容是属于Connector和Container的，所以接下来介绍一下Connector和Container。</p>
+<h2 id="10、Connector和Container的微妙关系"><a href="#10、Connector和Container的微妙关系" class="headerlink" title="10、Connector和Container的微妙关系"></a>10、Connector和Container的微妙关系</h2><p>由上述内容我们大致可以知道一个请求发送到Tomcat之后，首先经过Service然后会交给我们的Connector，Connector用于接收请求并将接收的请求封装为Request和Response来具体处理，Request和Response封装完之后再交由Container进行处理，Container处理完请求之后再返回给Connector，最后在由Connector通过Socket将处理的结果返回给客户端，这样整个请求的就处理完了！</p>
+<p>Connector最底层使用的是Socket来进行连接的，Request和Response是按照HTTP协议来封装的，所以Connector同时需要实现TCP&#x2F;IP协议和HTTP协议！</p>
+<p>Tomcat既然需要处理请求，那么肯定需要先接收到这个请求，接收请求这个东西我们首先就需要看一下Connector！</p>
+<p>Connector架构分析</p>
+<p>Connector用于接受请求并将请求封装成Request和Response，然后交给Container进行处理，Container处理完之后在交给Connector返回给客户端。</p>
+<p>因此，我们可以把Connector分为四个方面进行理解：</p>
+<ol>
+<li>Connector如何接受请求的？</li>
+<li>如何将请求封装成Request和Response的？</li>
+<li>封装完之后的Request和Response如何交给Container进行处理的？</li>
+<li>Container处理完之后如何交给Connector并返回给客户端的？</li>
+</ol>
+<p>首先看一下Connector的结构图（图B），如下所示：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104611.png" alt="在这里插入图片描述"></p>
+<p>Connector就是使用ProtocolHandler来处理请求的，不同的ProtocolHandler代表不同的连接类型，比如：Http11Protocol使用的是普通Socket来连接的，Http11NioProtocol使用的是NioSocket来连接的。</p>
+<p>其中ProtocolHandler由包含了三个部件：Endpoint、Processor、Adapter。</p>
+<ol>
+<li>Endpoint用来处理底层Socket的网络连接，Processor用于将Endpoint接收到的Socket封装成Request，Adapter用于将Request交给Container进行具体的处理。</li>
+<li>Endpoint由于是处理底层的Socket网络连接，因此Endpoint是用来实现TCP&#x2F;IP协议的，而Processor用来实现HTTP协议的，Adapter将请求适配到Servlet容器进行具体的处理。</li>
+<li>Endpoint的抽象实现AbstractEndpoint里面定义的Acceptor和AsyncTimeout两个内部类和一个Handler接口。Acceptor用于监听请求，AsyncTimeout用于检查异步Request的超时，Handler用于处理接收到的Socket，在内部调用Processor进行处理。</li>
+</ol>
+<p>至此，我们应该很轻松的回答1，2，3的问题了，但是4还是不知道，那么我们就来看一下Container是如何进行处理的以及处理完之后是如何将处理完的结果返回给Connector的？</p>
+<h2 id="11、Container架构分析"><a href="#11、Container架构分析" class="headerlink" title="11、Container架构分析"></a>11、Container架构分析</h2><p>Container用于封装和管理Servlet，以及具体处理Request请求，在Container内部包含了4个子容器，结构图如下（图C）：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104614.png" alt="在这里插入图片描述"></p>
+<p>4个子容器的作用分别是：</p>
+<ol>
+<li>Engine：引擎，用来管理多个站点，一个Service最多只能有一个Engine；</li>
+<li>Host：代表一个站点，也可以叫虚拟主机，通过配置Host就可以添加站点；</li>
+<li>Context：代表一个应用程序，对应着平时开发的一套程序，或者一个WEB-INF目录以及下面的web.xml文件；</li>
+<li>Wrapper：每一Wrapper封装着一个Servlet；</li>
+</ol>
+<p>下面找一个Tomcat的文件目录对照一下，如下图所示：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104617.png" alt="在这里插入图片描述"></p>
+<p>Context和Host的区别是Context表示一个应用，我们的Tomcat中默认的配置下webapps下的每一个文件夹目录都是一个Context，其中ROOT目录中存放着主应用，其他目录存放着子应用，而整个webapps就是一个Host站点。</p>
+<p>我们访问应用Context的时候，如果是ROOT下的则直接使用域名就可以访问，例如：<a target="_blank" rel="noopener" href="http://www.baidu.com,如果是host(webapps)下的其他应用,则可以使用www.baidu.com/docs%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE%EF%BC%8C%E5%BD%93%E7%84%B6%E9%BB%98%E8%AE%A4%E6%8C%87%E5%AE%9A%E7%9A%84%E6%A0%B9%E5%BA%94%E7%94%A8%EF%BC%88ROOT%EF%BC%89%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%BF%9B%E8%A1%8C%E8%AE%BE%E5%AE%9A%E7%9A%84%EF%BC%8C%E5%8F%AA%E4%B8%8D%E8%BF%87Host%E7%AB%99%E7%82%B9%E4%B8%8B%E9%BB%98%E8%AE%A4%E7%9A%84%E4%B8%BB%E5%BA%94%E7%94%A8%E6%98%AFROOT%E7%9B%AE%E5%BD%95%E4%B8%8B%E7%9A%84%E3%80%82">www.baidu.com，如果是Host（webapps）下的其他应用，则可以使用www.baidu.com/docs进行访问，当然默认指定的根应用（ROOT）是可以进行设定的，只不过Host站点下默认的主应用是ROOT目录下的。</a></p>
+<p>看到这里我们知道Container是什么，但是还是不知道Container是如何进行请求处理的以及处理完之后是如何将处理完的结果返回给Connector的？别急！下边就开始探讨一下Container是如何进行处理的！</p>
+<h2 id="12、Container如何处理请求的"><a href="#12、Container如何处理请求的" class="headerlink" title="12、Container如何处理请求的"></a>12、Container如何处理请求的</h2><p>Container处理请求是使用Pipeline-Valve管道来处理的！（Valve是阀门之意）</p>
+<p>Pipeline-Valve是<strong>责任链模式</strong>，责任链模式是指在一个请求处理的过程中有很多处理者依次对请求进行处理，每个处理者负责做自己相应的处理，处理完之后将处理后的结果返回，再让下一个处理者继续处理。</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104620.png" alt="在这里插入图片描述"></p>
+<p>但是！Pipeline-Valve使用的责任链模式和普通的责任链模式有些不同！区别主要有以下两点：</p>
+<ul>
+<li>每个Pipeline都有特定的Valve，而且是在管道的最后一个执行，这个Valve叫做BaseValve，BaseValve是不可删除的；</li>
+<li>在上层容器的管道的BaseValve中会调用下层容器的管道。</li>
+</ul>
+<p>我们知道Container包含四个子容器，而这四个子容器对应的BaseValve分别在：StandardEngineValve、StandardHostValve、StandardContextValve、StandardWrapperValve。</p>
+<p>Pipeline的处理流程图如下（图D）：</p>
+<p><img src="https://gitee.com/julyjo/blogimage/raw/master/img/20210127104626.png" alt="在这里插入图片描述"></p>
+<ul>
+<li>Connector在接收到请求后会首先调用最顶层容器的Pipeline来处理，这里的最顶层容器的Pipeline就是EnginePipeline（Engine的管道）；</li>
+<li>在Engine的管道中依次会执行EngineValve1、EngineValve2等等，最后会执行StandardEngineValve，在StandardEngineValve中会调用Host管道，然后再依次执行Host的HostValve1、HostValve2等，最后在执行StandardHostValve，然后再依次调用Context的管道和Wrapper的管道，最后执行到StandardWrapperValve。</li>
+<li>当执行到StandardWrapperValve的时候，会在StandardWrapperValve中创建FilterChain，并调用其doFilter方法来处理请求，这个FilterChain包含着我们配置的与请求相匹配的Filter和Servlet，其doFilter方法会依次调用所有的Filter的doFilter方法和Servlet的service方法，这样请求就得到了处理！</li>
+<li>当所有的Pipeline-Valve都执行完之后，并且处理完了具体的请求，这个时候就可以将返回的结果交给Connector了，Connector在通过Socket的方式将结果返回给客户端。</li>
+</ul>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'Tomcat优化'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/14/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/">Python基础题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/06.%E5%87%BD%E6%95%B0%E5%92%8C%E6%A8%A1%E5%9D%97%E7%9A%84%E4%BD%BF%E7%94%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/12.%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/51.%E6%97%A5%E5%BF%97%E5%92%8C%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E6%A0%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/55.RESTful%E6%9E%B6%E6%9E%84%E5%92%8CDRF%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/58.%E5%BC%82%E6%AD%A5%E4%BB%BB%E5%8A%A1%E5%92%8C%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/81.%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%92%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/87.%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/91.%E5%9B%A2%E9%98%9F%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E7%9A%84%E9%97%AE%E9%A2%98%E5%92%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/index/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_css_3/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/06/13/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/13/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/06/13/%E6%80%BB%E7%BB%93/9%E3%80%81Tomcat%E4%BC%98%E5%8C%96/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 10.317284983424301px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 11.658829249285056px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 18.476806585910808px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 12.20016162144249px;" class="tag-cloud-link">Prometheus</a>
+    
+    <a href="/tags/Apache/" style="font-size: 12.507859085836174px;" class="tag-cloud-link">Apache</a>
+    
+    <a href="/tags/Shell/" style="font-size: 12.435364346126475px;" class="tag-cloud-link">Shell</a>
+    
+    <a href="/tags/Linux/" style="font-size: 17.931513205637565px;" class="tag-cloud-link">Linux</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 13.820047297018082px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 11.336314548852787px;" class="tag-cloud-link">阿里云</a>
+    
+    <a href="/tags/Ceph/" style="font-size: 11.61441392144678px;" class="tag-cloud-link">Ceph</a>
+    
+    <a href="/tags/MySQL/" style="font-size: 11.977238708719472px;" class="tag-cloud-link">MySQL</a>
+    
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 13.27727042885912px;" class="tag-cloud-link">灰度发布</a>
+    
+    <a href="/tags/OpenStack/" style="font-size: 9.945298268621709px;" class="tag-cloud-link">OpenStack</a>
+    
+    <a href="/tags/KVM/" style="font-size: 13.986158585392882px;" class="tag-cloud-link">KVM</a>
+    
+    <a href="/tags/Docker/" style="font-size: 17.107844229016393px;" class="tag-cloud-link">Docker</a>
+    
+    <a href="/tags/Ansible/" style="font-size: 19.08505246889897px;" class="tag-cloud-link">Ansible</a>
+    
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 8.378793929546834px;" class="tag-cloud-link">负载均衡</a>
+    
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 16.110765867352963px;" class="tag-cloud-link">Radis、Mongodb</a>
+    
+    <a href="/tags/Nginx/" style="font-size: 17.40884794483264px;" class="tag-cloud-link">Nginx</a>
+    
+    <a href="/tags/Tomcat/" style="font-size: 13.230374869911659px;" class="tag-cloud-link">Tomcat</a>
+    
+    <a href="/tags/DevOps/" style="font-size: 13.514195188265223px;" class="tag-cloud-link">DevOps</a>
+    
+    <a href="/tags/Jenkins/" style="font-size: 10.44538523692787px;" class="tag-cloud-link">Jenkins</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Thu Jun 13 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Thu Jun 13 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="lzq">
+    
+    
+    
+    
+    
+    
+    <title>DevOps | 冰的技术专栏</title>
+    <link href="http://bingfly.top" rel="prefetch" />
+
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/aos.css">
+<link rel="stylesheet" href="/css/style.css">
+
+    
+<script src="/js/jquery.min.js"></script>
+
+    
+<script src="/js/bootstrap.min.js"></script>
+
+    
+<script src="/js/aos.js"></script>
+
+    
+<script src="/js/highslide/highslide-full.min.js"></script>
+
+    
+<link rel="stylesheet" href="/js/highslide/highslide.css">
+
+    <style type="text/css">
+        @media (max-width: 768px) {
+            body {
+                background-color: #f0f0f0;
+                background: url('/imgs/xsbg.gif');
+                background-attachment: fixed;
+            }
+        }
+    </style>
+    
+    <!--<script type="text/javascript">
+      if (document.images) {
+        var avatar = new Image();
+        avatar.src = '/imgs/avatar.jpg'
+        var previews = 'preview1.jpg,preview2.jpg,preview3.jpg,preview4.jpg,preview5.jpg,preview6.jpg,preview7.jpg,preview8.jpg,preview9.jpg,preview10.jpg,preview11.jpg,preview12.jpg,preview13.jpg,preview14.jpg,preview15.jpg'.split(',')
+        var previewsPreLoad = []
+        for(var i = 0; i < length; i++) {
+          previewsPreLoad.push(new Image())
+          previewsPreLoad[previewsPreLoad.length - 1].src = '/imgs/preview' + previews[i]
+        }
+      }
+    </script>-->
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+    <!-- 背景轮播图功能 -->
+    <section class="hidden-xs">
+    <ul class="cb-slideshow">
+        <li><span>天若</span></li>
+        <li><span>有情</span></li>
+        <li><span>天亦老</span></li>
+        <li><span>我为</span></li>
+        <li><span>长者</span></li>
+        <li><span>续一秒</span></li>
+    </ul>
+</section>
+    <!-- 欧尼酱功能, 谁用谁知道 -->
+    
+    <div class="gal-menu gal-dropdown">
+    <div class="circle" id="gal">
+        <div class="ring">
+            <a href="http://bingfly.top" class="menuItem" style="left: 50%; top: 15%;">首页</a>
+            
+            <a class="menuItem" style="left: 80.3109%; top: 32.5%;">下一页</a>
+            
+            <a href="/archives" class="menuItem" style="left: 80.3109%; top: 67.5%;">归档</a>
+            <a href="/about" class="menuItem" style="left: 50%; top: 85%;">关于</a>
+            <a href="/message" class="menuItem" style="left: 19.6891%; top: 67.5%;">留言板</a>
+
+            
+            <a class="menuItem" style="left: 19.6891%; top: 32.5%;">上一页</a>
+            
+        </div>
+        <audio id="audio" src="/imgs/oni.mp3"></audio>
+    </div>
+</div>
+    
+    <header class="navbar navbar-inverse" id="gal-header">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target=".bs-navbar-collapse"
+                    aria-expanded="false">
+                <span class="fa fa-lg fa-reorder"></span>
+            </button>
+            <a href="http://bingfly.top">
+                
+                <style>
+                    #gal-header .navbar-brand {
+                        height: 54px;
+                        line-height: 24px;
+                        font-size: 28px;
+                        opacity: 1;
+                        background-color: rgba(0,0,0,0);
+                        text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 15px #fff,0 0 20px #228DFF,0 0 35px #228DFF,0 0 40px #228DFF,0 0 50px #228DFF,0 0 75px #228DFF;
+                    }
+                </style>
+                <!-- 这里使用文字(navbar_text or config.title) -->
+                <div class="navbar-brand">冰的技术专栏</div>
+                
+            </a>
+        </div>
+        <div class="collapse navbar-collapse bs-navbar-collapse">
+            <ul class="nav navbar-nav" id="menu-gal">
+                
+                
+                <li class="">
+                    <a href="/">
+                        <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                
+                
+                <li class="">
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>归档
+                    </a>
+                </li>
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-list"></i>分类
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/categories/hexo-%E5%8D%9A%E5%AE%A2/">hexo+博客</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/Python%E9%9D%A2%E8%AF%95/">Python面试</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/categories/%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90/">日志分析</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/categories">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                
+                <li class="dropdown">
+                    <!-- TODO 添加hover dropdown效果 -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                        <i class="fa fa-tags"></i>标签
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="/tags/Python/">Python</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/K8s/">K8s</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/ELK/">ELK</a>
+                        </li>
+                        
+                        
+                        <li>
+                            <a href="/tags">...</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </li>
+                
+                
+                
+                
+                <li class="">
+                    <a href="/about">
+                        <i class="fa fa-user"></i>关于我
+                    </a>
+                </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</header>
+    <div id="gal-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 gal-right" id="mainstay">
+                    
+<article class="article well article-body" id="article">
+    <div class="breadcrumb">
+        <i class="fa fa-home"></i>
+        <a href="http://bingfly.top">冰的技术专栏</a>
+        >
+        <span>DevOps</span>
+    </div>
+    <!-- 大型设备详细文章 -->
+    <div class="hidden-xs">
+        <div class="title-article">
+            <h1>
+                <a href="/2024/12/10/%E6%80%BB%E7%BB%93/DevOps/">DevOps</a>
+            </h1>
+        </div>
+        <div class="tag-article">
+            
+            <span class="label label-gal">
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/DevOps/">DevOps</a>
+                
+            </span>
+            
+            <span class="label label-gal">
+                <i class="fa fa-calendar"></i> 2024-12-10
+            </span>
+            
+        </div>
+    </div>
+    <!-- 小型设备详细文章 -->
+    <div class="visible-xs">
+        <center>
+            <div class="title-article">
+                <h4>
+                    <a href="/2024/12/10/%E6%80%BB%E7%BB%93/DevOps/">DevOps</a>
+                </h4>
+            </div>
+            <p>
+                <i class="fa fa-calendar"></i> 2024-12-10
+            </p>
+            <p>
+                
+                <i class="fa fa-tags"></i>
+                
+                <a href="/tags/DevOps/">DevOps</a>
+                
+                
+                
+            </p>
+        </center>
+    </div>
+    <div class="content-article">
+        <h1 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h1><blockquote>
+<p>DevOps（Development和Operations的组合词）是一组过程、方法与系统的统称，用于促进开发（应用程序&#x2F;软件工程）、技术运营和质量保障（QA）部门之间的沟通、协作与整合。</p>
+<p>它是一种重视“软件开发人员（Dev）”和“IT运维技术人员（Ops）”之间沟通合作的文化、运动或惯例。透过自动化“软件交付”和“架构变更”的流程，来使得构建、测试、发布软件能够更加地快捷、频繁和可靠。</p>
+<p>它的出现是由于软件行业日益清晰地认识到：为了按时交付软件产品和服务，开发和运营工作必须紧密合作。</p>
+</blockquote>
+<p>从定义来看，其实devops就是为了让开发、运维和QA可以高效协作的流程。（可以把DevOps看作开发、技术运营和质量保障（QA）三者的交集。）</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1658016-161d35578db8e79b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/604/format/webp" alt="img"></p>
+<p>DevOps</p>
+<hr>
+<h1 id="二、DevOps对应用程序发布的影响"><a href="#二、DevOps对应用程序发布的影响" class="headerlink" title="二、DevOps对应用程序发布的影响"></a>二、DevOps对应用程序发布的影响</h1><p>在很多企业中，应用程序发布是一项涉及多个团队、压力很大、风险很高的活动。然而在具备DevOps能力的组织中，应用程序发布的风险很低，原因如下 [2] ：</p>
+<p><strong>（1）减少变更范围</strong></p>
+<p>与传统的瀑布模式模型相比，采用敏捷或迭代式开发意味着更频繁的发布、每次发布包含的变化更少。由于部署经常进行，因此每次部署不会对生产系统造成巨大影响，应用程序会以平滑的速率逐渐生长。</p>
+<p><strong>（2）加强发布协调</strong></p>
+<p>靠强有力的发布协调人来弥合开发与运营之间的技能鸿沟和沟通鸿沟；采用电子数据表、电话会议和企业门户（wiki、sharepoint）等协作工具来确保所有相关人员理解变更的内容并全力合作。</p>
+<p><strong>（3）自动化</strong></p>
+<p>强大的部署自动化手段确保部署任务的可重复性、减少部署出错的可能性。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1658016-5fb5bbb6c483c0d9.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/220/format/webp" alt="img"></p>
+<p>与传统开发方法那种大规模的、不频繁的发布（通常以“季度”或“年”为单位）相比，敏捷方法大大提升了发布频率（通常以“天”或“周”为单位）。</p>
+<hr>
+<h1 id="三、实现DevOps需要什么？"><a href="#三、实现DevOps需要什么？" class="headerlink" title="三、实现DevOps需要什么？"></a>三、实现DevOps需要什么？</h1><p><strong>硬性要求：工具上的准备</strong></p>
+<p>上文提到了工具链的打通，那么工具自然就需要做好准备。现将工具类型及对应的不完全列举整理如下：</p>
+<p>代码管理（SCM）：<strong>GitHub</strong>、GitLab、BitBucket、SubVersion</p>
+<p>构建工具：<strong>Ant</strong>、Gradle、<strong>maven</strong></p>
+<p>自动部署：Capistrano、CodeDeploy</p>
+<p>持续集成（CI）：Bamboo、Hudson、Jenkins</p>
+<p>配置管理：Ansible、Chef、Puppet、SaltStack、ScriptRock GuardRail</p>
+<p>容器：<strong>Docker</strong>、LXC、第三方厂商如AWS</p>
+<p>编排：Kubernetes、Core、Apache Mesos、DC&#x2F;OS</p>
+<p>服务注册与发现：<strong>Zookeeper</strong>、etcd、Consul</p>
+<p>脚本语言：python、ruby、shell</p>
+<p>日志管理：ELK、Logentries</p>
+<p>系统监控：Datadog、Graphite、Icinga、Nagios</p>
+<p>性能监控：AppDynamics、New Relic、Splunk</p>
+<p>压力测试：JMeter、Blaze Meter、loader.io</p>
+<p>预警：PagerDuty、pingdom、厂商自带如AWS SNS</p>
+<p>HTTP加速器：Varnish</p>
+<p>消息总线：ActiveMQ、SQS</p>
+<p>应用服务器：Tomcat、JBoss</p>
+<p>Web服务器：Apache、Nginx、IIS</p>
+<p>数据库：MySQL、Oracle、PostgreSQL等关系型数据库；cassandra、mongoDB、redis等NoSQL数据库</p>
+<p>项目管理（PM）：Jira、Asana、Taiga、Trello、Basecamp、Pivotal Tracker</p>
+<p>在工具的选择上，需要结合公司业务需求和技术团队情况而定。（注：更多关于工具的详细介绍可以参见此文：51 Best DevOps Tools for #DevOps Engineers）</p>
+<p><strong>软性需求：文化和人</strong></p>
+<p>DevOps成功与否，公司组织是否利于协作是关键。开发人员和运维人员可以良好沟通互相学习，从而拥有高生产力。并且协作也存在于业务人员与开发人员之间。</p>
+<p>出席了2016年伦敦企业级DevOps峰会的ITV公司在2012年就开始落地DevOps，其通用平台主管Clark在接受了InfoQ的采访，在谈及成功时表示，业务人员非常清楚他们希望在最小化可行产品中实现什么，工程师们就按需交付，不做多余工作。</p>
+<p>这样，工程师们使用通用的平台（即打通的工具链）得到更好的一致性和更高的质量。此外，DevOps对工程师个人的要求也提高了，很多专家也认为招募到优秀的人才也是一个挑战。</p>
+<h1 id="四、面试题"><a href="#四、面试题" class="headerlink" title="四、面试题"></a>四、面试题</h1><h2 id="1、您能告诉我们DevOps和Agile-敏捷-之间的根本区别吗？"><a href="#1、您能告诉我们DevOps和Agile-敏捷-之间的根本区别吗？" class="headerlink" title="1、您能告诉我们DevOps和Agile(敏捷)之间的根本区别吗？"></a>1、您能告诉我们DevOps和Agile(敏捷)之间的根本区别吗？</h2><p>答：尽管DevOps与敏捷方法（这是最流行的SDLC[Software Development Life Cycle]方法之一）有一些相似之处，但两者在软件开发方面都是根本不同的方法。以下是两者之间的各种基本差异：</p>
+<ul>
+<li><code>敏捷方法</code> 敏捷方法适用于敏捷中的开发同时敏捷方法适用于DevOps中的开发和操作。</li>
+<li><code>实践和流程</code> 敏捷涉及敏捷Scrum和敏捷看板等实践，而DevOps涉及CD（持续交付），CI（持续集成）和CT（持续测试）等流程。</li>
+<li><code>优先级</code> 敏捷优先考虑及时性，而DevOps优先考虑及时性和质量。</li>
+<li><code>发布周期</code> DevOps提供较小的发布周期并提供即时反馈，而敏捷仅提供较小的发布周期而没有立即反馈。</li>
+<li><code>反馈源</code> 敏捷依赖于客户的反馈，而DevOps涉及到自身（监控工具）的反馈。</li>
+<li><code>工作范围</code> 对于敏捷，工作范围仅是敏捷，而对于DevOps，这是敏捷和对自动化的需求。</li>
+</ul>
+<h2 id="2、为什么我们需要DevOps？"><a href="#2、为什么我们需要DevOps？" class="headerlink" title="2、为什么我们需要DevOps？"></a>2、为什么我们需要DevOps？</h2><p>答：如今，很多组织或企业正试图通过一系列的发布小的特性传递给客户，而不是发布大的特性集。这样做有几个好处，包括更好的软件质量和快速的客户反馈，所有这些好处导致更高的客户满意度，这是任何产品开发项目的最重要目标。为此，公司需要：</p>
+<ul>
+<li>增加部署频率</li>
+<li>缩短修复时间</li>
+<li>降低新版本的失败率</li>
+<li>万一新版本崩溃，请有更快的平均恢复时间</li>
+</ul>
+<p>DevOps有助于满足所有这些要求，从而实现无缝的软件交付。像Amazon，Etsy和Google这样的成熟组织已采用DevOps方法，从而实现了以前未知的性能水平。通过采用DevOps方法，组织可以在一天之内完成数以万计的部署。此外，这样做还可以提供一流的<code>可靠性</code>、<code>安全性</code>和<code>稳定性</code>。</p>
+<h2 id="3、使用DevOps有哪些重要的业务和技术优势？"><a href="#3、使用DevOps有哪些重要的业务和技术优势？" class="headerlink" title="3、使用DevOps有哪些重要的业务和技术优势？"></a>3、使用DevOps有哪些重要的业务和技术优势？</h2><p>答：DevOps为该表带来了很多业务和技术优势。下面列出了一些最重要的参数：</p>
+<ul>
+<li>商业利益：<ul>
+<li>增强的操作环境稳定性</li>
+<li>更快地交付功能</li>
+<li>更多时间为产品增值</li>
+</ul>
+</li>
+<li>技术优势：<ul>
+<li>持续交付软件</li>
+<li>更快地解决问题</li>
+<li>较小的复杂问题</li>
+</ul>
+</li>
+</ul>
+<h2 id="4、您能列举一些最常用的DevOps工具吗？"><a href="#4、您能列举一些最常用的DevOps工具吗？" class="headerlink" title="4、您能列举一些最常用的DevOps工具吗？"></a>4、您能列举一些最常用的DevOps工具吗？</h2><p>答：以下是一些使用最广泛的DevOps工具的列表：</p>
+<ul>
+<li>Ansible&#x2F;Puppet&#x2F;chef&#x2F;saltstack –配置管理和应用程序部署工具</li>
+<li>Docker –容器化工具</li>
+<li>Git&#x2F;Gitlab –版本控制系统（VCS）工具</li>
+<li>Jenkins –持续集成（CI）工具</li>
+<li>Nexus - 制品库管理工具</li>
+<li>Jira –敏捷的团队协作工具</li>
+<li>wiki -文档管理工具</li>
+<li>Promtheus –连续监控工具</li>
+<li>Selenium&#x2F;jmeter –连续测试（CT）工具</li>
+</ul>
+<h2 id="5、Selenium的用途是什么？"><a href="#5、Selenium的用途是什么？" class="headerlink" title="5、Selenium的用途是什么？"></a>5、Selenium的用途是什么？</h2><p>答：selenium用于DevOps中的连续测试。该工具专门从事功能和回归形式的测试。</p>
+<h2 id="6、您对DevOps中的Puppet有什么了解？"><a href="#6、您对DevOps中的Puppet有什么了解？" class="headerlink" title="6、您对DevOps中的Puppet有什么了解？"></a>6、您对DevOps中的Puppet有什么了解？</h2><p>答：这是一个配置管理工具，用于自动执行管理任务。Puppet利用主从结构，其中两个实体通过加密通道进行通信。系统管理员需要执行许多重复性任务，尤其是安装和配置服务器。编写脚本来自动执行此类任务是一种选择，但是当基础结构很大时，执行的操作就会变得繁琐重复。为此，配置管理是一个不错的解决方法。</p>
+<p>Puppet帮助配置、部署和管理服务器。这不仅使此类冗余任务变得更加容易，而且节省了总工作时间的很大一部分。成熟的配置管理工具：</p>
+<ul>
+<li>持续检查主机所需的配置是否到位。如果更改了，配置将自动还原</li>
+<li>为每个主机定义不同的配置</li>
+<li>对机器进行动态缩放（上下缩放）</li>
+<li>提供对所有已配置计算机的控制，以便可以将集中更改自动传播到所有这些计算机</li>
+</ul>
+<h2 id="7、您对DevOps的反模式有什么了解？"><a href="#7、您对DevOps的反模式有什么了解？" class="headerlink" title="7、您对DevOps的反模式有什么了解？"></a>7、您对DevOps的反模式有什么了解？</h2><p>答：如果其他组织通常采用的DevOps模式在特定环境下不起作用，而组织仍在继续使用它，则会导致采用反模式。换句话说，反模式是关于DevOps的神话。一些著名的反模式是：</p>
+<ul>
+<li>一个组织需要有一个单独的DevOps组</li>
+<li>敏捷等于DevOps</li>
+<li>DevOps是一个过程</li>
+<li>DevOps是开发驱动的发布管理</li>
+<li>由于组织独特唯一的，因此无法进行DevOps</li>
+<li>我们不能做DevOps因为我们已经很牛了</li>
+<li>DevOps意味着开发人员管理生产</li>
+<li>DevOps将解决所有问题</li>
+<li>无法在正在进行的DevOps过渡中包含组织的所有方面</li>
+<li>在DevOps过渡开始时未定义KPI</li>
+<li>通过一个新的DevOps团队来减少与其他组织之间的隔离</li>
+</ul>
+<h2 id="8、DevOps有一个叫做CI的东西。它是什么，目的是什么？"><a href="#8、DevOps有一个叫做CI的东西。它是什么，目的是什么？" class="headerlink" title="8、DevOps有一个叫做CI的东西。它是什么，目的是什么？"></a>8、DevOps有一个叫做CI的东西。它是什么，目的是什么？</h2><p>答：DevOps中的CI代表持续集成。CI是一种开发实践，开发人员可以在一天内多次将代码集成到共享存储库中。</p>
+<ul>
+<li>开发和测试的持续集成提高了软件的质量，并减少了交付所需的总时间。</li>
+<li>如果检查代码的团队成员遇到编译失败，则开发人员将终止构建。如果开发人员不将编译错误引入自己的工作空间中，那么其他的开发成员就无法与共享源代码存储库进行同步。</li>
+<li>这破坏了协作和共享的开发过程。因此，一旦配置项构建中断，立即识别并纠正问题就很重要。</li>
+<li>通常，持续集成(CI)流程包括一组单元、集成和回归测试，这些测试在每次编译成功时运行。如果上述任何一个测试失败，CI构建就会被认为是不稳定的(这在敏捷sprint中很常见，因为开发正在进行中)，并且没有被破坏。</li>
+</ul>
+<h2 id="9、我们经常听到DevOps向左移动。它是什么？"><a href="#9、我们经常听到DevOps向左移动。它是什么？" class="headerlink" title="9、我们经常听到DevOps向左移动。它是什么？"></a>9、我们经常听到DevOps向左移动。它是什么？</h2><p>答：画在纸上的传统软件开发生命周期有左右两边。图的左侧包括设计和开发，而右侧包括生产阶段，压力测试和用户接受度。在DevOps中向左移动仅意味着需要在右侧执行尽可能多的任务，即通常在应用程序开发过程的结尾发生，并将其纳入DevOps方法的早期阶段。有几种方法可以完成DevOps中的操作，最值得注意的是：</p>
+<ul>
+<li>在每个敏捷sprint结束时创建可用于生产的文件(制品文件)</li>
+<li>在每个版本中都包含静态代码分析程序</li>
+<li>正确执行DevOps的级别直接取决于尽可能左移的程度。</li>
+</ul>
+<h2 id="10、DevOps中的CAMS代表什么？"><a href="#10、DevOps中的CAMS代表什么？" class="headerlink" title="10、DevOps中的CAMS代表什么？"></a>10、DevOps中的CAMS代表什么？</h2><p>答：首字母缩写CAMS通常用于描述DevOps方法论的核心信条。它代表：</p>
+<ul>
+<li>文化 Culture</li>
+<li>自动化 Automation</li>
+<li>度量 Measurement</li>
+<li>分享 Sharing</li>
+</ul>
+<h2 id="11-、用来评估DevOps成功的几个KPI是什么？"><a href="#11-、用来评估DevOps成功的几个KPI是什么？" class="headerlink" title="11 、用来评估DevOps成功的几个KPI是什么？"></a>11 、用来评估DevOps成功的几个KPI是什么？</h2><p>答：kpi是关键绩效指标的简写形式。为了度量DevOps过程的成功，可以使用几个kpi。其中最流行的有:</p>
+<ul>
+<li>应用性能</li>
+<li>应用程序的使用和流量</li>
+<li>自动测试通过率</li>
+<li>可用性</li>
+<li>体量的变化</li>
+<li>客户的工单</li>
+<li>缺陷逃逸率</li>
+<li>部署频率</li>
+<li>部署时间</li>
+<li>错误率</li>
+<li>部署失败数</li>
+<li>负载时间</li>
+<li>平均故障检测时间（MTTD）</li>
+<li>平均故障恢复时间（MTTR）</li>
+</ul>
+<h2 id="12、您认为实施DevOps自动化的主要好处是什么？"><a href="#12、您认为实施DevOps自动化的主要好处是什么？" class="headerlink" title="12、您认为实施DevOps自动化的主要好处是什么？"></a>12、您认为实施DevOps自动化的主要好处是什么？</h2><p>答：以下是实现DevOps自动化的主要好处：</p>
+<ul>
+<li>从CD方程式中消除人为错误的可能性（核心收益）</li>
+<li>随着任务变得更加可预测和可重复，一旦出现问题，就很容易识别和纠正。因此，它产生了更可靠和健壮的系统</li>
+<li>从CI管道中移除瓶颈。这会导致部署频率增加和失败的部署数量减少。它们都是重要的DevOps KPI</li>
+</ul>
+<h2 id="13、您对容器了解什么？"><a href="#13、您对容器了解什么？" class="headerlink" title="13、您对容器了解什么？"></a>13、您对容器了解什么？</h2><p>答：容器是一种轻量级虚拟化形式，有助于在进程之间提供隔离。容器比chroot重，但比管理程序轻。</p>
+<h2 id="14、您对版本控制系统（VCS）有什么了解？定义其用途。"><a href="#14、您对版本控制系统（VCS）有什么了解？定义其用途。" class="headerlink" title="14、您对版本控制系统（VCS）有什么了解？定义其用途。"></a>14、您对版本控制系统（VCS）有什么了解？定义其用途。</h2><p>答：版本控制系统或VCS是一种能够记录一段时间内对一个文件或一组文件所做的更改的系统。Git和Mercurial是两个最受欢迎的版本控制系统。VCS的重要用途是：</p>
+<ul>
+<li>检查导致问题的最后修改是什么</li>
+<li>比较随着时间的变化情况</li>
+<li>识别谁在什么时间提出新的问题</li>
+<li>将一个或多个文件还原到某个较早的状态</li>
+<li>将整个项目还原到以前的状态</li>
+</ul>
+<h2 id="15、Git是流行的DevOps工2具。告诉我们您将如何还原已经推送并公开的提交。"><a href="#15、Git是流行的DevOps工2具。告诉我们您将如何还原已经推送并公开的提交。" class="headerlink" title="15、Git是流行的DevOps工2具。告诉我们您将如何还原已经推送并公开的提交。"></a>15、Git是流行的DevOps工2具。告诉我们您将如何还原已经推送并公开的提交。</h2><p>答：有两种方法可以这样做：</p>
+<ol>
+<li>通过创建新的提交来撤消已被推送并公开的提交所做的所有更改。执行以下命令：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git revert</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>通过修复或删除新提交中的错误文件，然后将其推送到远程存储库。对文件进行必要的更改后，使用以下命令将其提交到远程存储库：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">&quot;commit message&quot;</span></span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+
+<h2 id="16、什么是post-mortem-meetings？"><a href="#16、什么是post-mortem-meetings？" class="headerlink" title="16、什么是post mortem meetings？"></a>16、什么是post mortem meetings？</h2><p>参考回答：在这个会议上，我们讨论出了什么问题，应该采取什么步骤，这样失败就不会再次发生。事后分析会议并不是要找出问题的症结所在，而是要防止再次发生类似的工作，和ITIL中的问题管理是相类似的管理方法。并应重新计划新的设计基础设施，以便尽可能减少停机时间。如果错误我们无法避免，那么我们应从错误中学习，以提交IT整体的质量管理。</p>
+<h2 id="17、资产管理和配置管理之间的比较。"><a href="#17、资产管理和配置管理之间的比较。" class="headerlink" title="17、资产管理和配置管理之间的比较。"></a>17、资产管理和配置管理之间的比较。</h2><p>答：监视和维护对实体或组有价值的东西的过程称为资产管理。配置管理是指控制，识别，计划和验证服务中的配置项以支持变更管理的过程。</p>
+<h2 id="18、您能否陈述和解释连续测试的各个关键要素？"><a href="#18、您能否陈述和解释连续测试的各个关键要素？" class="headerlink" title="18、您能否陈述和解释连续测试的各个关键要素？"></a>18、您能否陈述和解释连续测试的各个关键要素？</h2><p>答：持续测试的各种关键要素包括：</p>
+<ul>
+<li>高级分析–用于预测和预测未知的未来事件</li>
+<li>策略分析–旨在改善测试过程的手段</li>
+<li>需求可追溯性–指描述需求以及从需求的起源到部署的整个过程的能力</li>
+<li>风险评估–识别可能造成潜在损害的危害和风险因素的方法或过程</li>
+<li>服务虚拟化–允许使用虚拟服务代替生产服务。仿真软件组件以进行简单测试</li>
+<li>测试优化–改善整体测试流程</li>
+</ul>
+<h2 id="19、请从开发和基础架构方面说明DevOps的核心运营。"><a href="#19、请从开发和基础架构方面说明DevOps的核心运营。" class="headerlink" title="19、请从开发和基础架构方面说明DevOps的核心运营。"></a>19、请从开发和基础架构方面说明DevOps的核心运营。</h2><p>答：DevOps在开发和基础架构方面的核心运营是：</p>
+<ul>
+<li>应用程序开发–开发能够满足所有客户要求并提供卓越质量水平的产品</li>
+<li>代码覆盖率–测量在运行自动测试时执行的代码的块，线或弧的总数</li>
+<li>代码开发–准备产品开发所需的代码库</li>
+<li>配置–以最佳方式使用产品</li>
+<li>部署–安装要由最终用户使用的软件</li>
+<li>编排–安排一些自动化任务</li>
+<li>打包–发布准备好部署时所涉及的活动</li>
+<li>供应–确保基础设施的更改及时地与需要它的代码一起到达</li>
+<li>单元测试–测试单个单元或组件的方法</li>
+</ul>
+<h2 id="20、您对DevOps有什么了解？"><a href="#20、您对DevOps有什么了解？" class="headerlink" title="20、您对DevOps有什么了解？"></a>20、您对DevOps有什么了解？</h2><p>您的答案必须简单明了。首先介绍一下DevOps在IT行业中的重要性。讨论这种方法如何旨在使开发和运营团队共同努力，以最小的故障率加速软件产品的交付。包括DevOps如何成为增值实践，开发和运维工程师在整个产品或服务生命周期中（从设计阶段到部署点）携手合作。</p>
+<h2 id="21、为什么最近几年DevOps变得突出？"><a href="#21、为什么最近几年DevOps变得突出？" class="headerlink" title="21、为什么最近几年DevOps变得突出？"></a>21、为什么最近几年DevOps变得突出？</h2><p>在谈论DevOps的日益普及之前，请讨论当前的行业情况。首先，举例说明Netflix和Facebook等大型公司如何投资DevOps来自动化和加速应用程序部署，以及这如何帮助他们发展业务。以Facebook为例，您将指出Facebook的持续部署和代码所有权模型，以及这些模型如何帮助其扩大规模，同时确保体验质量。在不影响质量，稳定性和安全性的情况下实现了数百行代码。</p>
+<p>下一个用例应该是Netflix。这家流媒体和点播视频公司采用完全自动化的流程和系统遵循类似的做法。提及这两个组织的用户群：Facebook有20亿用户，而Netflix将在线内容流传输给全球超过1亿用户。</p>
+<p>这些都是很好的例子，说明DevOps如何帮助组织确保更高的发布成功率，减少错误修复之间的准备时间，通过自动化简化并持续交付，以及总体上降低人力成本。</p>
+<h2 id="22、哪些是最受欢迎的DevOps工具？您是否有使用这些工具的经验？"><a href="#22、哪些是最受欢迎的DevOps工具？您是否有使用这些工具的经验？" class="headerlink" title="22、哪些是最受欢迎的DevOps工具？您是否有使用这些工具的经验？"></a>22、哪些是最受欢迎的DevOps工具？您是否有使用这些工具的经验？</h2><p>较流行的DevOps工具包括：</p>
+<ul>
+<li>selenium</li>
+<li>ansible</li>
+<li>git&#x2F;gitlab</li>
+<li>jenkins</li>
+<li>docker</li>
+</ul>
+<h2 id="23、您是否想要掌握所有这些Devops工具？"><a href="#23、您是否想要掌握所有这些Devops工具？" class="headerlink" title="23、您是否想要掌握所有这些Devops工具？"></a>23、您是否想要掌握所有这些Devops工具？</h2><p>彻底描述您有信心的任何工具，其功能以及为什么要使用它。例如，如果您具有Git方面的专业知识，则可以告诉采访者Git是一种分布式版本控制系统（VCS）工具，该工具可让用户跟踪文件更改并在需要时还原为特定更改。讨论Git的分布式体系结构如何为开发人员带来更多优势，使开发人员可以在本地进行更改，并可以在其本地Git存储库中拥有整个项目历史记录，以后可以与其他团队成员共享。</p>
+<h2 id="24、什么是版本控制？为什么要使用VCS？"><a href="#24、什么是版本控制？为什么要使用VCS？" class="headerlink" title="24、什么是版本控制？为什么要使用VCS？"></a>24、什么是版本控制？为什么要使用VCS？</h2><p>定义版本控制，并讨论该系统如何记录对一个或多个文件所做的任何更改并将其保存在集中式存储库中。VCS工具将帮助您重新调用以前的版本并执行以下操作：</p>
+<ul>
+<li>仔细查看一段时间内所做的更改，然后检查哪些有效，哪些无效。</li>
+<li>将特定文件或特定项目还原回旧版本。</li>
+<li>检查由于特定更改而发生的问题或错误</li>
+<li>使用VCS为开发人员提供了同时处理特定文件的灵活性，并且所有修改内容以后都可以进行逻辑组合。</li>
+</ul>
+<h2 id="25、敏捷和DevOps之间有区别吗？如果是，请解释。"><a href="#25、敏捷和DevOps之间有区别吗？如果是，请解释。" class="headerlink" title="25、敏捷和DevOps之间有区别吗？如果是，请解释。"></a>25、敏捷和DevOps之间有区别吗？如果是，请解释。</h2><p>作为一名DevOps工程师，对这样的面试问题充满期待。首先描述DevOps与敏捷之间明显的重叠。尽管DevOps的实现始终与敏捷方法保持同步，但是两者之间存在明显的差异。敏捷原则与软件的无缝生产或开发相关。另一方面，DevOps处理开发工作，然后部署软件，以确保更快的周转时间，最小的错误和可靠性。</p>
+<h2 id="26、为什么配置管理过程和工具很重要？"><a href="#26、为什么配置管理过程和工具很重要？" class="headerlink" title="26、为什么配置管理过程和工具很重要？"></a>26、为什么配置管理过程和工具很重要？</h2><p>讨论正在开发的每个软件或测试软件的多个软件构建，发行，修订和版本。继续说明存储和维护数据的需求，跟踪开发构建和简化的故障排除。不要忘了提到可用于实现这些目标的关键CM工具。讨论诸如Puppet，Ansible和Chef之类的工具如何在多个服务器上自动化软件部署和配置的过程中提供帮助。</p>
+<h2 id="27、Chef如何用作CM工具？"><a href="#27、Chef如何用作CM工具？" class="headerlink" title="27、Chef如何用作CM工具？"></a>27、Chef如何用作CM工具？</h2><p>chef被认为是行业首选的CM工具之一。例如，Facebook将其基础架构和后端IT迁移到了Chef平台。解释Chef如何通过自动化流程来帮助您避免延迟。这些脚本是用Ruby编写的。它可以与基于云的平台集成并配置新系统。它提供了许多用于基础结构开发的库，这些库以后可以部署在软件中。借助其集中式管理系统，一台Chef服务器足以用作部署各种策略的中心。</p>
+<h2 id="28、您如何解释“基础架构即代码”（IaC）的概念？"><a href="#28、您如何解释“基础架构即代码”（IaC）的概念？" class="headerlink" title="28、您如何解释“基础架构即代码”（IaC）的概念？"></a>28、您如何解释“基础架构即代码”（IaC）的概念？</h2><p>谈论IaC是一个好主意，有时将其称为可编程基础结构，在该基础结构中，与其他任何代码的感知方式相同。描述传统的基础架构管理方法如何退居二线，以及手动配置，过时的工具和自定义脚本的可靠性如何降低。接下来，重点介绍IaC的好处，以及如何使用IaC更快，更安全，更轻松地对IT基础架构进行更改。包括IaC的其他好处，例如将常规的单元测试和集成测试应用于基础结构配置，以及维护最新的基础结构文档。</p>
+<p>如果您已经完成了Amazon Web Services（AWS）的认证，并且正在接受诸如AWS认证的DevOps工程师之类的利基角色的面试，那么您必须准备以下一些AWS DevOps面试问题：</p>
+<h2 id="29、AWS在DevOps中的作用是什么？"><a href="#29、AWS在DevOps中的作用是什么？" class="headerlink" title="29、AWS在DevOps中的作用是什么？"></a>29、AWS在DevOps中的作用是什么？</h2><p>在面试中被问到此问题时，请直接说明，AWS是亚马逊提供的基于云的服务，可通过无限的计算能力和存储来确保可扩展性。AWS使IT企业能够开发和交付复杂的产品，并在云上部署应用程序。其一些关键服务包括Amazon CloudFront，Amazon SimpleDB，Amazon Relational Database Service和Amazon Elastic Computer Cloud。讨论各种云平台，并强调您过去使用云基础架构处理过的任何大数据项目。</p>
+<h2 id="30、持续集成的成功因素是什么？"><a href="#30、持续集成的成功因素是什么？" class="headerlink" title="30、持续集成的成功因素是什么？"></a>30、持续集成的成功因素是什么？</h2><ul>
+<li>维护代码库</li>
+<li>自动化构建</li>
+<li>让构建自我测试</li>
+<li>每个人每天将代码都提交到基线</li>
+<li>每次提交（到基线）都应该被构建</li>
+<li>保持快速构建</li>
+<li>在预发布环境中进行测试</li>
+<li>轻松获取最新交付物</li>
+<li>每个人都可以看到最新版本的结果</li>
+<li>自动化部署</li>
+</ul>
+<h2 id="31、你如何在我公司实践DevOps？"><a href="#31、你如何在我公司实践DevOps？" class="headerlink" title="31、你如何在我公司实践DevOps？"></a>31、你如何在我公司实践DevOps？</h2><p>参考回答：作为一名DevOps工程师，我会对DevOps项目管理的管理目标、敏捷交付、持续集成进行管理，并从敏捷项目管理新三角《敏捷项目管理》出发，与团队一起设定目标，实现简化的ITIL工作流，维护敏捷的DevOps管理范围，研究和引入新的技术或框架，通过DevOps 流水线，实现从需求转化为工作流从整体工具链进行全局优化。</p>
+<h2 id="32、配置管理工具在devops中的作用是什么"><a href="#32、配置管理工具在devops中的作用是什么" class="headerlink" title="32、配置管理工具在devops中的作用是什么?"></a>32、配置管理工具在devops中的作用是什么?</h2><p>参考回答： 配置管理工具是指支持完成配置项标识、版本控制、变化控制、审计和状态统计等任务的工具。 自动化的配置管理工具可以帮助DevOps实现持续流水线的技术支持基础。使用CM工具，可以帮着管理与存储关于系统、软件、测试相关的版本和构建及配置信息，并提供软件和测试软件之间的可跟踪性。成功的DevOps从配置管理开始。</p>
+<h2 id="33、DevOps工程师的职责是什么"><a href="#33、DevOps工程师的职责是什么" class="headerlink" title="33、DevOps工程师的职责是什么?"></a>33、DevOps工程师的职责是什么?</h2><p>参考回答：DevOps工程师与敏捷开发团队紧密合作，站在业务价值视角，拉动IT从业务需求到运营交付，确保通过高质量（JKK）的自动化测试,实现持续集成和持续交付等IT技术功能所需的环境。DevOps工程师必须经常与开发保持联系（SRE模式、丰田模式、持续交付模式、协作模式），使环境中所有需要的部分都能无缝地工作，实现高质量的增量迭代。可以扩展说说相关工具。</p>
+
+    </div>
+</article>
+
+
+<div id="comments-template"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script>
+	if(!window.commentConfig) {
+      window.commentConfig = {}
+      window.commentConfig.title = 'DevOps'
+    }
+</script>
+
+                </div>
+                <aside class="col-md-4 gal-left" id="sidebar">
+    <!-- 此为sidebar的搜索框, 非搜索结果页面 -->
+<aside id="sidebar-search">
+    <div class="search hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <form class="form-inline clearfix" id="search-form" method="get"
+              action="/search/index.html">
+            <input type="text" name="s" class="form-control" id="searchInput" placeholder="搜索文章~" autocomplete="off">
+            <button class="btn btn-danger btn-gal" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</aside>
+    <aside id="sidebar-author">
+    <div class="panel panel-gal" data-aos="flip-right" data-aos-duration="3000">
+        <div class="panel-heading" style="text-align: center">
+            <i class="fa fa-quote-left"></i>
+            lzq
+            <i class="fa fa-quote-right"></i>
+        </div>
+        <div class="author-panel text-center">
+            <img src="/imgs/avatar.jpg" width="140" height="140"
+                 alt="个人头像" class="author-image">
+            <p class="author-description"></p>
+        </div>
+    </div>
+</aside>
+    
+    <aside id="sidebar-recent_comments">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-comments"></i>
+            最新评论
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush"></ul>
+    </div>
+</aside>
+    
+    <!-- 要配置好leancloud才能开启此小工具 -->
+    
+    
+    <aside id="sidebar-recent_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            近期文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/14/Python-100-Days-master/Python%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8-%E5%9F%BA%E7%A1%80%E7%AF%87-2020/">Python基础题</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E9%82%A3%E4%BA%9B%E5%B9%B4%E6%88%91%E4%BB%AC%E8%B8%A9%E8%BF%87%E7%9A%84%E9%82%A3%E4%BA%9B%E5%9D%91/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E8%8B%B1%E8%AF%AD%E9%9D%A2%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%9F%A5%E4%B9%8E%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%94%A8%E5%87%BD%E6%95%B0%E8%BF%98%E6%98%AF%E7%94%A8%E5%A4%8D%E6%9D%82%E7%9A%84%E8%A1%A8%E8%BE%BE%E5%BC%8F/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E7%8E%A9%E8%BD%ACPyCharm/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3%E5%8F%82%E8%80%83%E7%A4%BA%E4%BE%8B/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E6%88%91%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%BA%86Python/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E5%B8%B8%E8%A7%81%E5%8F%8D%E7%88%AC%E7%AD%96%E7%95%A5%E5%8F%8A%E5%BA%94%E5%AF%B9%E6%96%B9%E6%A1%88/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/%E7%95%AA%E5%A4%96%E7%AF%87/%E4%B8%80%E4%B8%AA%E5%B0%8F%E4%BE%8B%E5%AD%90%E5%8A%A9%E4%BD%A0%E5%BD%BB%E5%BA%95%E7%90%86%E8%A7%A3%E5%8D%8F%E7%A8%8B/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="sidebar-rand_posts">
+    <div class="panel panel-gal recent hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+        <div class="panel-heading">
+            <i class="fa fa-refresh"></i>
+            随机文章
+            <i class="fa fa-times-circle panel-remove"></i>
+            <i class="fa fa-chevron-circle-up panel-toggle"></i>
+        </div>
+        <ul class="list-group list-group-flush">
+            
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/06/15/%E6%80%BB%E7%BB%93/23%E3%80%81OpenStack/">OpenStack基础理论</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day01-15/09.%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BF%9B%E9%98%B6/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/53.%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day46-60/56.%E4%BD%BF%E7%94%A8%E7%BC%93%E5%AD%98/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day81-90/81.%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%92%8C%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%BF%B0/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day91-100/96.%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95%E5%92%8C%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/old/javascript/example08/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/css_practice_3/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_bootstrap/"></a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2024/12/12/Python-100-Days-master/Day21-30/code/new/web1901/example_of_vue_element/"></a>
+                </span>
+            </li>
+            
+        </ul>
+    </div>
+</aside>
+    
+    
+    <aside id="gal-sets">
+        <div class="panel panel-gal hidden-xs" data-aos="fade-up" data-aos-duration="2000">
+            <ul class="nav nav-pills pills-gal">
+
+                
+                <li>
+                    <a href="/2024/12/10/%E6%80%BB%E7%BB%93/DevOps/index.html#sidebar-tags" data-toggle="tab" id="tags-tab">热门标签</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/10/%E6%80%BB%E7%BB%93/DevOps/index.html#sidebar-friend-links" data-toggle="tab" id="friend-links-tab">友情链接</a>
+                </li>
+                
+                
+                <li>
+                    <a href="/2024/12/10/%E6%80%BB%E7%BB%93/DevOps/index.html#sidebar-links" data-toggle="tab" id="links-tab">个人链接</a>
+                </li>
+                
+            </ul>
+            <div class="tab-content">
+                
+                <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
+    
+    <a href="/tags/Python/" style="font-size: 17.776561323908865px;" class="tag-cloud-link">Python</a>
+    
+    <a href="/tags/K8s/" style="font-size: 11.99180358716465px;" class="tag-cloud-link">K8s</a>
+    
+    <a href="/tags/ELK/" style="font-size: 12.24806671832152px;" class="tag-cloud-link">ELK</a>
+    
+    <a href="/tags/Prometheus/" style="font-size: 16.199582524921432px;" class="tag-cloud-link">Prometheus</a>
+    
+    <a href="/tags/Apache/" style="font-size: 11.29622129786778px;" class="tag-cloud-link">Apache</a>
+    
+    <a href="/tags/Shell/" style="font-size: 13.963399780093134px;" class="tag-cloud-link">Shell</a>
+    
+    <a href="/tags/Linux/" style="font-size: 19.321217706016633px;" class="tag-cloud-link">Linux</a>
+    
+    <a href="/tags/%E7%BD%91%E7%BB%9C/" style="font-size: 19.945478113832156px;" class="tag-cloud-link">网络</a>
+    
+    <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 13.237652366595693px;" class="tag-cloud-link">阿里云</a>
+    
+    <a href="/tags/Ceph/" style="font-size: 15.745195681156208px;" class="tag-cloud-link">Ceph</a>
+    
+    <a href="/tags/MySQL/" style="font-size: 16.51240801319999px;" class="tag-cloud-link">MySQL</a>
+    
+    <a href="/tags/%E7%81%B0%E5%BA%A6%E5%8F%91%E5%B8%83/" style="font-size: 12.16548387983634px;" class="tag-cloud-link">灰度发布</a>
+    
+    <a href="/tags/OpenStack/" style="font-size: 19.39868610207721px;" class="tag-cloud-link">OpenStack</a>
+    
+    <a href="/tags/KVM/" style="font-size: 10.723957877196394px;" class="tag-cloud-link">KVM</a>
+    
+    <a href="/tags/Docker/" style="font-size: 13.696174655327603px;" class="tag-cloud-link">Docker</a>
+    
+    <a href="/tags/Ansible/" style="font-size: 15.14807967041845px;" class="tag-cloud-link">Ansible</a>
+    
+    <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 14.007785390021137px;" class="tag-cloud-link">负载均衡</a>
+    
+    <a href="/tags/Radis%E3%80%81Mongodb/" style="font-size: 12.277281184226123px;" class="tag-cloud-link">Radis、Mongodb</a>
+    
+    <a href="/tags/Nginx/" style="font-size: 8.353419106207387px;" class="tag-cloud-link">Nginx</a>
+    
+    <a href="/tags/Tomcat/" style="font-size: 14.103398612724007px;" class="tag-cloud-link">Tomcat</a>
+    
+    <a href="/tags/DevOps/" style="font-size: 17.201289068680904px;" class="tag-cloud-link">DevOps</a>
+    
+    <a href="/tags/Jenkins/" style="font-size: 18.68831486897438px;" class="tag-cloud-link">Jenkins</a>
+    
+</div>
+                
+                
+                <div class="friend-links tab-pane nav bs-sidenav fade" id="sidebar-friend-links">
+    
+    <li>
+        <a href="https://www.runoob.com/" target="_blank">菜鸟教程</a>
+    </li>
+    
+    <li>
+        <a href="https://www.csdn.net/" target="_blank">CSDN</a>
+    </li>
+    
+    <li>
+        <a href="https://nowcoder.com/" target="_blank">牛客网</a>
+    </li>
+    
+    <li>
+        <a href="https://www.bilibili.com/" target="_blank">B站</a>
+    </li>
+    
+    <li>
+        <a href="https://leetcode-cn.com/" target="_blank">Leetcode</a>
+    </li>
+    
+    <li>
+        <a href="https://www.heroku.com/" target="_blank">Heroku</a>
+    </li>
+    
+</div>
+                
+                
+                <div class="links tab-pane nav bs-sidenav fade" id="sidebar-links">
+    
+    <li>
+        <a href="https://github.com/lzq2024/" target="_blank">Github</a>
+    </li>
+    
+    <li>
+        <a href="https://gitee.com/lzq2024" target="_blank">Gitee</a>
+    </li>
+    
+    <li>
+        <a href="https://www.zhihu.com/people/yr1d3j/activities" target="_blank">知乎</a>
+    </li>
+    
+</div>
+                
+            </div>
+        </div>
+    </aside>
+    
+</aside>
+            </div>
+        </div>
+    </div>
+    <footer id="gal-footer">
+    <div class="container">
+        Copyright © 2018 lzq Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>.&nbsp;Theme by <a href="https://github.com/Lzq2024" target="_blank">AONOSORA</a>
+    </div>
+</footer>
+
+<!-- 回到顶端 -->
+<div id="gal-gotop">
+    <i class="fa fa-angle-up"></i>
+</div>
+</body>
+
+<script src="/js/activate-power-mode.js"></script>
+
+<script>
+
+    // 配置highslide
+	hs.graphicsDir = '/js/highslide/graphics/'
+    hs.outlineType = "rounded-white";
+    hs.dimmingOpacity = 0.8;
+    hs.outlineWhileAnimating = true;
+    hs.showCredits = false;
+    hs.captionEval = "this.thumb.alt";
+    hs.numberPosition = "caption";
+    hs.align = "center";
+    hs.transitions = ["expand", "crossfade"];
+    hs.lang.number = '共%2张图, 当前是第%1张';
+    hs.addSlideshow({
+      interval: 5000,
+      repeat: true,
+      useControls: true,
+      fixedControls: "fit",
+      overlayOptions: {
+        opacity: 0.75,
+        position: "bottom center",
+        hideOnMouseOut: true
+      }
+    })
+
+    // 初始化aos
+    AOS.init({
+      duration: 1000,
+      delay: 0,
+      easing: 'ease-out-back'
+    });
+
+</script>
+<script>
+	POWERMODE.colorful = 'true';    // make power mode colorful
+	POWERMODE.shake = 'true';       // turn off shake
+	// TODO 这里根据具体情况修改
+	document.body.addEventListener('input', POWERMODE);
+</script>
+<script>
+    window.slideConfig = {
+      prefix: '/imgs/slide/background',
+      ext: 'jpg',
+      maxCount: '7'
+    }
+</script>
+
+<script src="/js/hs.js"></script>
+<script src="/js/blog.js"></script>
+
+
+
+<script src="/js/oni.js"></script>
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script>
+  if(window.commentConfig) {
+     window.commentConfig.client_id = 'Ov23lijIsO699goQayhr'
+     window.commentConfig.client_secret = 'd4e885f9aa839494f3927fd3fb244c2794e471a8'
+     window.commentConfig.owner = 'Lzq2024'
+     window.commentConfig.repo = 'gitalk'
+     window.commentConfig.id = 'Tue Dec 10 2024 00:00:00 GMT+0800'
+   } else {
+    window.commentConfig = {
+ 	client_id: 'Ov23lijIsO699goQayhr',
+ 	client_secret: 'd4e885f9aa839494f3927fd3fb244c2794e471a8',
+	owner: 'Lzq2024',
+	repo: 'gitalk',
+	id: 'Tue Dec 10 2024 00:00:00 GMT+0800'
+      }
+   }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
+
+
+</html>
